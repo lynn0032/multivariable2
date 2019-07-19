@@ -1,0 +1,138 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Scalar  Line  Integrals</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="scalar_line_integrals.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the definition of scalar line integrals geometrically, and be able to compute them."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 14--><p class="noindent" >We’ve seen how we can integrate vector fields along a path, using vector line integrals.
+We can also integrate scalar valued functions along a path. For instance, suppose
+we have a scalar valued function <script type="math/tex">f:\mathbb {R}^2\rightarrow \mathbb {R}</script> and a path <script type="math/tex">\vec {x}:[a,b]\rightarrow \mathbb {R}^2</script> in <script type="math/tex">\mathbb {R}^2</script>. Suppose we look at the
+portion of the graph of <script type="math/tex">f</script> lying over the path <script type="math/tex">\vec {x}</script>, and drop a “curtain” to the
+<script type="math/tex">xy</script>-plane.
+</p><!--l. 16--><p class="noindent" >PICTURE
+</p><!--l. 18--><p class="noindent" >Integrating <script type="math/tex">f</script> along the path <script type="math/tex">\vec {x}</script> will be equivalent to finding the area of this curtain. We
+can also describe this as the area between <script type="math/tex">\vec {x}(t)</script> and <script type="math/tex">f(\vec {x}(t))</script>.
+</p><!--l. 20--><p class="noindent" >Scalar line integrals aren’t only useful for finding areas of strangely shapes regions.
+They are also useful throughout physics. For example, if you have the mass density
+function of a wire, you can compute the scalar line integral of this function to find
+the total mass of the wire.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Scalar Line Integrals</h3>
+<!--l. 24--><p class="noindent" >Suppose we have a function <script type="math/tex">f:\mathbb {R}^n\rightarrow \mathbb {R}</script> and a <script type="math/tex">\mathcal {C}'</script> path <script type="math/tex">\vec {x}:[a,b]\rightarrow \mathbb {R}^n</script>, such that the composition <script type="math/tex">f(\vec {x}(t))</script> is defined on
+<script type="math/tex">[a,b]</script>.
+</p><!--l. 26--><p class="noindent" >PICTURE
+</p><!--l. 28--><p class="noindent" >In order to find the area under <script type="math/tex">f</script> and over the path <script type="math/tex">\vec {x}</script>, we will borrow an important idea
+from single variable calculus: approximating an area with rectangles.
+</p><!--l. 30--><p class="noindent" >In order to do this, we’ll partition the interval <script type="math/tex">[a,b]</script> into <script type="math/tex">n</script> subintervals, determined by <script type="math/tex; mode=display"> a=t_0<t_1<t_2<\cdots < t_k < \cdots < t_n = b. </script>
+This partition breaks the path <script type="math/tex">\vec {x}</script> into smaller paths, by restricting to the
+                                                                  
+
+                                                                  
+subintervals.
+</p><!--l. 36--><p class="noindent" >PICTURE
+</p><!--l. 38--><p class="noindent" >Our goal will be to approximate the area under <script type="math/tex">f</script> over each of these shorter paths.
+These approximations will be computed by finding the length of the short path, and
+multiplying this by a height determined by a test point, <script type="math/tex">t_k^*</script>. We can think of this as a
+curved rectangle.
+</p><!--l. 40--><p class="noindent" >PICTURE
+</p><!--l. 42--><p class="noindent" >The specific choice of the test point will be important for simplifying our result - we’ll
+come back to this later.
+</p><!--l. 44--><p class="noindent" >The height of our curved rectangle will be <script type="math/tex">f(\vec {x}(t_k^*))</script>, and the base is the distance <script type="math/tex">\Delta s_k</script> along the
+path <script type="math/tex">\vec {x}</script> from <script type="math/tex">t_{k-1}</script> to <script type="math/tex">t_k</script>.
+</p><!--l. 46--><p class="noindent" >PICTURE
+</p><!--l. 48--><p class="noindent" >Thinking back to arclength computations, this distance is given by the integral <script type="math/tex; mode=display"> \Delta s_k = \int _{t_{k-1}}^{t_k}\|\vec {x}'(t)\|dt. </script> Now,
+we need to make a careful choice for our test point <script type="math/tex">t_k^*</script> which will simplify things later.
+To do this, recall the Mean Value Theorem for Integrals, from single variable
+calculus.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem1"><a 
+ id="x1-1001r1"></a>Suppose <script type="math/tex">g</script> is a continuous function on the closed interval <script type="math/tex">[a,b]</script>. Then there exists <script type="math/tex">c</script> in <script type="math/tex">[a,b]</script> such
+that <script type="math/tex; mode=display"> \int _a^b g(t)dt = (b-a)g(c). </script>
+</div>
+<!--l. 61--><p class="noindent" >Here, we’ll take <script type="math/tex">\|\vec {x}'(t)\|</script> for the function <script type="math/tex">g(t)</script>. Since <script type="math/tex">\vec {x}</script> is <script type="math/tex">\mathcal {C}^1</script>, <script type="math/tex">\|\vec {x}'(t)\|</script> is continuous. Applying the Mean Value
+Theorem on the interval <script type="math/tex">[t_{k-1}, t_k]</script>, there exists <script type="math/tex">c_k</script> such that <script type="math/tex; mode=display"> \Delta s_k = \int _{t_{k-1}}^{t_k}\|\vec {x}'(t)\|dt = (t_k-t_{k-1})\|\vec {x}'(c_k)\|. </script> We take this <script type="math/tex">c_k</script> to be our test point,
+so that <script type="math/tex">t_k^* = c_k</script>.
+</p><!--l. 67--><p class="noindent" >Now, the area of the <script type="math/tex">k</script>th curved rectangle is <script type="math/tex">F(\vec {x}(t_k^*))\Delta s_k</script>. We add up these areas and take
+the limit as the number of rectangles, <script type="math/tex">n</script>, goes to infinity: <script type="math/tex; mode=display"> \lim _{n\rightarrow \infty } \sum _{k=1}^n f(\vec {x}(t_k^*))\Delta s_k. </script> Substituting <script type="math/tex">\Delta s_k=(t_k-t_{k-1})\|\vec {x}'(c_k)\|</script> and
+writing <script type="math/tex">\Delta t = t_k-t_{k-1}</script>, we have <script type="math/tex; mode=display"> \lim _{n\rightarrow \infty } \sum _{k=1}^n f(\vec {x}(t_k^*))\|\vec {x}'(c_k)\|\Delta t. </script> We can recognize this as the single variable integral of the
+function <script type="math/tex">f(\vec {x}(t))\|\vec {x}'(t)\|</script> over the interval <script type="math/tex">[a,b]</script>, <script type="math/tex; mode=display"> \int _a^b f(\vec {x}(t)) \|vec{x}'(t)\|dt. </script> We take this to be the definition of a scalar line
+integral.
+</p>
+<div class="theorem-like problem-environment definition" id="problem2"><a 
+ id="x1-1002r2"></a>Let <script type="math/tex">f:X\subset \mathbb {R}^n\rightarrow \mathbb {R}</script> be a continuous function defined on a <script type="math/tex">\mathcal {C}^1</script> path <script type="math/tex">\vec {x}:[a,b]\rightarrow \mathbb {R}^n</script>. The <em>scalar line integral</em> of <script type="math/tex">f</script> along <script type="math/tex">\vec {x}</script>
+is <script type="math/tex; mode=display"> \int _{\vec {x}} f\;ds = \int _a^b f(\vec {x}(t))\|\vec {x}'(t)\|dt. </script>
+</div>
+<a 
+ id="Q1-1-3"></a>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Examples</h3>
+<!--l. 90--><p class="noindent" >Let’s look at some examples of computing scalar line integrals.
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-2001r3"></a>Consider the function <script type="math/tex">f(x,y) = x^2+y^2</script> and the path <script type="math/tex">\vec {x}(t) = (\cos t, \sin t)</script> for <script type="math/tex">t\in [0,\pi ]</script>. We compute the scalar line integral of <script type="math/tex">f</script> over
+<script type="math/tex">\vec {x}</script>. <script type="math/tex; mode=display"> \begin{align*} 
+\int_{\vec{x}}f\;ds &=  \int_a^b f(\vec{x}(t))\|\vec{x}'(t)\|dt\\
+                                                                  
+
+                                                                  
+&=  \int_0^{\pi} f(\cos t, \sin t)\|(-\sin t, \cos t)\|dt \\
+&= \int_0^{\pi} (\cos^2 t + \sin^2 t)\sqrt{\sin^2 t + \cos^2 t}dt\\
+&= \int_0^{\pi} 1\;dt\\
+&= \pi
+\end{align*}</script>
+<!--l. 101--><p class="noindent" ></div>
+</p>
+<div class="theorem-like problem-environment example" id="problem4"><a 
+ id="x1-2002r4"></a>Consider the function <script type="math/tex">f(x,y) = e^{\sqrt {xy}}</script> and the path <script type="math/tex">\vec {x}(t) = (t,t)</script> for <script type="math/tex">t\in [0,1]</script>. We compute the scalar line integral of <script type="math/tex">f</script> over
+<script type="math/tex">\vec {x}</script>. <script type="math/tex; mode=display"> \begin{align*} 
+\int_{\vec{x}}f\;ds &=  \int_a^b f(\vec{x}(t))\|\vec{x}'(t)\|dt\\
+&= \int_0^1 f(t,t)\|(1, 1)\|dt\\
+&= \int_0^1 e^{\sqrt{t^2}}\sqrt{2}dt\\
+&= \sqrt{2}\int_0^1 e^t dt\\
+&= \sqrt{2}(e^1 - e^0)\\
+&= \sqrt{2}e - \sqrt{2}
+\end{align*}</script>
+<!--l. 113--><p class="noindent" ></div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+
