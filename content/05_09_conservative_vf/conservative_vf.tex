@@ -1,8 +1,8 @@
 \documentclass{ximera}  
 
-%\usepackage{xypic,amsmath,amssymb,setspace,xspace,verbatim,graphicx}
-%\usepackage{tikz-cd}
-%\usepackage{dashbox}
+\usepackage{xypic,amsmath,amssymb,setspace,xspace,verbatim,graphicx}
+\usepackage{tikz-cd}
+\usepackage{dashbox}
 
 \title{Conservative Vector Fields}  
 \author{Melissa Lynn}
@@ -162,48 +162,48 @@ We summarize the relationship between conservative vector fields, path independe
 
 %copied from handout
 
-\begin{center}
-\tikzcdset{row sep/normal=1.2cm}
-\begin{tikzcd}
-%
-% Row 1: blank, FTLI, blank
-%
-& \fbox{\parbox{1.5in}{\centering \footnotesize
-\textbf{FTLI}:\\\vspace{1em}  $\int_C \vec{F} \cdot d\vec{s} =  f(\vec{b})-f(\vec{a})$\\ for any curve $C$ in $X$ which starts at $\vec{a}$ and ends at $\vec{b}$.
-\arrow[ddl, Rightarrow, "\txt{(Using FTLI)}"']
-}} & \\
-%
-% Row 2: blank, for spacing.
-&&\\
-%
-% Row 3: PI, blank, conservative
-%
-\fbox{\parbox{2.2in}{\centering \footnotesize
-\textbf{$\vec{F}$ Path Independent on $X$}:\\\vspace{1em} $\int_{C_1} \vec{F} \cdot d\vec{s} = \int_{C_2} \vec{F} \cdot d\vec{s}$\\ for any two curves $C_1$ and $C_2$ in $X$ which start and end at the same points.}} %
-\arrow[rr, Rightarrow, "\txt{$\displaystyle X$ open, connected.}"]
-&&
-\fbox{\parbox{1.2in}{\centering \footnotesize
-\textbf{$\vec{F}$ Conservative}:\\\vspace{1em}  $\vec{F} = \nabla f$ on $X$ \\for some function $f$.
-\arrow[uul, Rightarrow, "\txt{$\displaystyle X$ open, connected.}"']
-\arrow[dd, Rightarrow, "\txt{$\displaystyle X$ open, connected.\\(via Clairaut)}"]
-}} \\
-%
-% Row 4: blank, for spacing.
-&&\\
-%
-% Row 5: zero circulation, blank, Df symmetric
-\dbox{\parbox{2.2in}{\centering \footnotesize
-$\oint_C \vec{F} \cdot d\vec{s} = 0$ for all closed curves $C$ in $X$.
-}} %
-\arrow[uu, Leftrightarrow]
-&&
-\dbox{\parbox{1.5in}{\centering \footnotesize
-$DF$ is symmetric on $X$.
-\arrow[ll, Rightarrow, "\txt{$\displaystyle X$ open, \textit{simply} connected, $\vec{F}$ is $\mathcal{C}^1$}"']
-}}
-%
-\end{tikzcd}
-\end{center}	
+%\begin{center}
+%\tikzcdset{row sep/normal=1.2cm}
+%\begin{tikzcd}
+%%
+%% Row 1: blank, FTLI, blank
+%%
+%& \fbox{\parbox{1.5in}{\centering \footnotesize
+%\textbf{FTLI}:\\\vspace{1em}  $\int_C \vec{F} \cdot d\vec{s} =  f(\vec{b})-f(\vec{a})$\\ for any curve $C$ in $X$ which starts at $\vec{a}$ and ends at $\vec{b}$.
+%\arrow[ddl, Rightarrow, "\txt{(Using FTLI)}"']
+%}} & \\
+%%
+%% Row 2: blank, for spacing.
+%&&\\
+%%
+%% Row 3: PI, blank, conservative
+%%
+%\fbox{\parbox{2.2in}{\centering \footnotesize
+%\textbf{$\vec{F}$ Path Independent on $X$}:\\\vspace{1em} $\int_{C_1} \vec{F} \cdot d\vec{s} = \int_{C_2} \vec{F} \cdot d\vec{s}$\\ for any two curves $C_1$ and $C_2$ in $X$ which start and end at the same points.}} %
+%\arrow[rr, Rightarrow, "\txt{$\displaystyle X$ open, connected.}"]
+%&&
+%\fbox{\parbox{1.2in}{\centering \footnotesize
+%\textbf{$\vec{F}$ Conservative}:\\\vspace{1em}  $\vec{F} = \nabla f$ on $X$ \\for some function $f$.
+%\arrow[uul, Rightarrow, "\txt{$\displaystyle X$ open, connected.}"']
+%\arrow[dd, Rightarrow, "\txt{$\displaystyle X$ open, connected.\\(via Clairaut)}"]
+%}} \\
+%%
+%% Row 4: blank, for spacing.
+%&&\\
+%%
+%% Row 5: zero circulation, blank, Df symmetric
+%\dbox{\parbox{2.2in}{\centering \footnotesize
+%$\oint_C \vec{F} \cdot d\vec{s} = 0$ for all closed curves $C$ in $X$.
+%}} %
+%\arrow[uu, Leftrightarrow]
+%&&
+%\dbox{\parbox{1.5in}{\centering \footnotesize
+%$DF$ is symmetric on $X$.
+%\arrow[ll, Rightarrow, "\txt{$\displaystyle X$ open, \textit{simply} connected, $\vec{F}$ is $\mathcal{C}^1$}"']
+%}}
+%%
+%\end{tikzcd}
+%\end{center}	
 
 Remember that you can often move through more than one box.  For example, if $D\vec{F}$ is continuous and symmetric on an open, simply connected set $X$, then $\vec{F}$ is conservative.  That's because an open simply-connected set is also connected, so you can follow arrows all the way up to that box.
 
