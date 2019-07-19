@@ -1,0 +1,210 @@
+\documentclass{ximera}  
+
+%\usepackage{xypic,amsmath,amssymb,setspace,xspace,verbatim,graphicx}
+%\usepackage{tikz-cd}
+%\usepackage{dashbox}
+
+\title{Conservative Vector Fields}  
+\author{Melissa Lynn}
+\outcome{}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+In this section, we'll look at several closely related properties of vector fields. We'll begin by recalling these definitions.
+
+\begin{definition}
+A vector field $\vec{F}:\mathbb{R}^n\rightarrow\mathbb{R}^n$ is \emph{conservative} if there is some function $f:\mathbb{R}^n\rightarrow\mathbb{R}$ such that $\nabla f = \vec{F}$.
+
+A continuous vector field is called \emph{path independent} if $\int_C \vec{F}\cdot d\textbf{s}=\int_D \vec{F}\cdot d\textbf{s}$ for any two simple, piecewise $\mathcal{C}^1$, oriented curves $C$ and $D$ with the same start and end points.
+
+A vector field $\vec{F}$ has \emph{no circulation} if $\oint_C \vec{F}\cdot d\vec{s} = 0$ for any simple $\mathcal{C}^1$ curve $C$.
+
+A vector field $\vec{F}$ has a \emph{symmetric derivative} if the derivative matrix $D\vec{F}$ is symmetric.
+\end{definition}
+
+It turns out that these concepts are equivalent in many cases, as long as we have a ``nice enough'' domain. Let's look at the results we have so far, and how we found them.
+
+\begin{proposition}
+Let $\vec{F}:X\subset\mathbb{R}^n\rightarrow\mathbb{R}^n$ be a $\mathcal{C}^1$ vector field defined on an open and path-connected domain $X$. If $\vec{F}$ is conservative, then $\vec{F}$ is path independent.
+\end{proposition}
+
+We proved this result using the Fundamental Theorem of Line Integrals. If we have a potential function $f$ for $\vec{F}$, then the vector line integral over any curve can be computed by evaluating $f$ at the endpoints, so it is independent of the path taken between two points.
+
+We have also shown that a conservative vector field has a symmetric derivative matrix.
+
+\begin{proposition}
+Let $\vec{F}:X\subset\mathbb{R}^n\rightarrow \mathbb{R}^n$ be a $C^1$ vector field, and let $X$ be open and path-connected. If $\vec{F}$ is conservative, then $D\vec{F}$ is symmetric.
+\end{proposition}
+
+This is shown by writing $\mathbf{F}$ as $\nabla f$ for a potential function $f$, and then observing that $D\vec{F}$ is the Hessian matrix of $f$. By Clairaut's theorem, Hessian matrices are symmetric, hence $D\vec{F}$ is symmetric.
+
+\section*{Path independence implies conservative}
+
+We've seen that, in the right circumstances, conservative vector fields will be path independent. But will path independent vector fields necessarily be conservative vector fields? In order to show this, the challenge is in constructing a potential function.
+
+\begin{proposition}
+Let $\vec{F}:X\subset\mathbb{R}^n\rightarrow \mathbb{R}^n$ be a $C^1$ vector field, and let $X$ be open and path-connected. If $\vec{F}$ is path-connected, then $\vec{F}$ is conservative.
+\end{proposition}
+
+\begin{proof}
+In order to prove this, we will construct a potential function $f:X\rightarrow\mathbb{R}$ such that $\vec{F} = \nabla f$.
+
+Fix a point $\vec{a}$ in $X$. Define the function $f$ by
+\[
+f(\vec{x}) = \int_C\vec{F}\cdot d\vec{s},
+\]
+where $C$ is a path from $\vec{a}$ to $\vec{x}$. This is where path-independence is crucial. If $\vec{F}$ were path-dependent, then the definition of $f(\vec{x})$ would depend on the choice of the path $C$, and so the function $f$ would not be well-defined. 
+
+Furthermore, this is also where we require that the domain $X$ be path-connected. If $X$ were not path-connected, there would be points $\vec{x}$ which couldn't be connected to $\vec{a}$ with a path, so $f$ would not be defined on all of $X$.
+
+Now that we've defined our function $f$, we need to show that $\nabla f$ exists and equals $\vec{F}$. To show that $\nabla f$ exists, we need to show that the partial derivatives of $f$ exist. We will show that the first partial derivative of $f$ exists, and the argument for the other partial derivatives is similar.
+
+From the definition of partial derivatives, we have
+\[
+\frac{\partial f}{\partial x_1} = \lim_{h\rightarrow 0} \frac{f(x_1+h,x_2,...,x_n) - f(x_1,x_2,...,x_n)}{h}.
+\]
+This is where we need the domain $X$ to be open. Since $X$ is open, there is an open ball around the point $(x_1,x_2,...,x_n)$ within $X$. This means that for small enough $h$, the point $(x_1+h,x_2,...,x_n)$ is in $X$, so that $f(x_1+h,x_2,...,x_n)$ is defined.
+
+PICTURE
+
+Now, let's make use of our definition of $f$, writing $\vec{b} = (x_1,x_2,...,x_n)$ and $\vec{b}' = (x_1+h,x_2,...,x_n)$ to simplify notation. Let $C$ be a path from $\vec{a}$ to $\vec{b}$, and let $C'$ be a path from $\vec{a}$ to $\vec{b}'$. Then,
+\begin{align*}
+f(x_1,x_2,...,x_n) &= \int_C\vec{F}\cdot d\vec{s}\\
+f(x_1+h,x_2,...,x_n) &= \int_{C'}\vec{F}\cdot d\vec{s}\\
+\end{align*}
+Our partial derivative is then
+\[
+\frac{\partial f}{\partial x_1} = \lim_{h\rightarrow 0} \frac{\int_C\vec{F}\cdot d\vec{s} - \int_{C'}\vec{F}\cdot d\vec{s}}{h}.
+\]
+Looking at the numerator, $\int_C\vec{F}\cdot d\vec{s} - \int_{C'}\vec{F}\cdot d\vec{s}$ will be equal to $\int_C\vec{D}\cdot d\vec{s}$, where $D$ is any path starting at $\vec{b}$ and ending at $\vec{b}'$.
+
+PICTURE
+
+We'll choose the path $D$ to be parametrized by
+\[
+\vec{x}(t) = (x_1 + ht,x_2,...,x_n)\text{ for }0\leq t\leq 1.
+\]
+Then, substituting this in, 
+\begin{align*}
+\int_C\vec{D}\cdot d\vec{s} &= \int_0^1 \vec{F}(\vec{x}(t))\cdot \vec{x}'(t)\;dt\\
+&= \int_0^1 \vec{F}(x_1 + ht,x_2,...,x_n)\cdot (h,0,...,0)\;dt\\
+\end{align*}
+Let $F_1$ be the first component of $\vec{F}$. Then $\vec{F}(x_1 + ht,x_2,...,x_n)\cdot (h,0,...,0) = hF_1(x_1 + ht,x_2,...,x_n)$. 
+
+So, for the partial derivative of $f$, we have 
+\begin{align*}
+\frac{\partial f}{\partial x_1} &= \lim_{h\rightarrow 0} \frac{\int_C\vec{D}\cdot d\vec{s}}{h}\\
+&= \lim_{h\rightarrow 0} \frac{\int_0^1 hF_1(x_1 + ht,x_2,...,x_n)\;dt}{h}\\
+&= \lim_{h\rightarrow 0} \int_0^1 F_1(x_1 + ht,x_2,...,x_n)\;dt\\
+\end{align*}
+At this point, we'll gloss over some details. Essentially, $F_1$ is a ``nice enough'' function that we can bring the limit inside of the integral, and arrive at the partial derivative,
+\begin{align*}
+\frac{\partial f}{\partial x_1} &= \int_0^1 F_1(x_1,x_2,...,x_n)\;dt\\
+&= F_1(x_1,x_2,...,x_n).
+\end{align*}
+Thus, the first partial derivative of $f$ is the first component of $\vec{F}$. Following the same argument for the other partial derivatives, we can show that $\nabla f = \vec{F}$.
+\end{proof}
+
+\section*{Path independence and circulation}
+
+Next, we will show that a vector field is path independent if and only if it has no circulation. For this result, we don't need any special requirements on the domain.
+
+\begin{proposition}
+Let $\vec{F}:X\subset\mathbb{R}^n\rightarrow \mathbb{R}^n$ be a $C^1$ vector field. Then $\vec{F}$ is path independent if and only if $\oint_C\vec{F}\cdot d\vec{s}=0$ for all closed curves $C$ in $X$.
+\end{proposition}
+
+\begin{proof}
+First, let's assume that $\vec{F}$ is path independent, and we'll show that $\vec{F}$ has no circulation. Let $C$ be any closed curve in $X$, and suppose $C$ starts and ends at the point $\vec{a}$. Let $D$ be the constant curve parametrized by $\vec{x}(t) = \vec{a}$ for $t\in [0,1]$. By path independence, we have
+\[
+\int_C \vec{F}\cdot d\vec{s} = \int_D \vec{F}\cdot d\vec{s}.
+\]
+Since $\vec{x}(t)$ is constant, $\vec{x}'(t) = \vec{0}$, so we can compute the line integral.
+\begin{align*}
+\int_D \vec{F}\cdot d\vec{s} &= \int_0^1 \vec{F}(\vec{x}(t))\cdot \vec{x}'(t)\;dt\\
+&= \int_0^1 \vec{F}(\vec{a})\cdot \vec{0}\;dt\\
+&= \int_0^1 0\;dt\\
+&= 0
+\end{align*}
+So, $\vec{F}$ has no circulation.
+
+Next, we'll assume that $\vec{F}$ has no circulation, and we'll show that $\vec{F}$ is path independent. Suppose we have two oriented curves $C$ and $D$, which both start at $\vec{a}$ and end at $\vec{b}$. Let $D'$ be $D$ with the orientation reversed, so that
+\[
+\int_D' \vec{F}\cdot d\vec{s} = - \int_D \vec{F}\cdot d\vec{s}.
+\]
+Let $E$ be the oriented curve obtained by first traversing $C$, then traversing $D'$. Then $E$ starts and ends at $\vec{a}$, and
+\begin{align*}
+\int_E \vec{F}\cdot d\vec{s} &= \int_C \vec{F}\cdot d\vec{s} + \int_D' \vec{F}\cdot d\vec{s},\\
+&= \int_C \vec{F}\cdot d\vec{s} - \int_D \vec{F}\cdot d\vec{s}.
+\end{align*}
+Since $E$ starts and ends at $\vec{a}$, it is a closed curve. The vector field $\vec{F}$ has no circulation, so $\int_E \vec{F}\cdot d\vec{s} = 0$. Thus
+\[
+0 = \int_C \vec{F}\cdot d\vec{s} - \int_D \vec{F}\cdot d\vec{s},
+\]
+so $\int_C \vec{F}\cdot d\vec{s} = \int_D \vec{F}\cdot d\vec{s}$. This shows that $\vec{F}$ is path independent.
+\end{proof}
+
+\section*{Symmetric derivative implies no circulation}
+
+Finally, suppose $\vec{F}$ has a symmetric derivative, then $\vec{F}$ has no circulation. In this case, we require our domain to be simply connected.
+
+\begin{proposition}
+Let $\vec{F}:X\subset\mathbb{R}^n\rightarrow \mathbb{R}^n$ be a $\mathcal{C}^1$ vector field, defined on an open and simply connected domain $X$. If $D\vec{F}$ is a symmetric matrix, then $\vec{F}$ has zero circulation.
+\end{proposition}
+
+Although this completes our set of equivalences, we don't yet have the tools that we need to prove this result. For this, we will need double integrals and Green's Theorem, so we'll come back to this proof later.
+
+\section*{Summary}
+
+We summarize the relationship between conservative vector fields, path independence, zero circulation, and symmetric derivatives in the following diagram. Throughout, let $\vec{F}:\mathbb{R}^n \to \mathbb{R}^n$ be a $\mathcal{C}^1$ vector field defined on a set $X \subset \mathbb{R}^n$.  
+
+%copied from handout
+
+\begin{center}
+\tikzcdset{row sep/normal=1.2cm}
+\begin{tikzcd}
+%
+% Row 1: blank, FTLI, blank
+%
+& \fbox{\parbox{1.5in}{\centering \footnotesize
+\textbf{FTLI}:\\\vspace{1em}  $\int_C \vec{F} \cdot d\vec{s} =  f(\vec{b})-f(\vec{a})$\\ for any curve $C$ in $X$ which starts at $\vec{a}$ and ends at $\vec{b}$.
+\arrow[ddl, Rightarrow, "\txt{(Using FTLI)}"']
+}} & \\
+%
+% Row 2: blank, for spacing.
+&&\\
+%
+% Row 3: PI, blank, conservative
+%
+\fbox{\parbox{2.2in}{\centering \footnotesize
+\textbf{$\vec{F}$ Path Independent on $X$}:\\\vspace{1em} $\int_{C_1} \vec{F} \cdot d\vec{s} = \int_{C_2} \vec{F} \cdot d\vec{s}$\\ for any two curves $C_1$ and $C_2$ in $X$ which start and end at the same points.}} %
+\arrow[rr, Rightarrow, "\txt{$\displaystyle X$ open, connected.}"]
+&&
+\fbox{\parbox{1.2in}{\centering \footnotesize
+\textbf{$\vec{F}$ Conservative}:\\\vspace{1em}  $\vec{F} = \nabla f$ on $X$ \\for some function $f$.
+\arrow[uul, Rightarrow, "\txt{$\displaystyle X$ open, connected.}"']
+\arrow[dd, Rightarrow, "\txt{$\displaystyle X$ open, connected.\\(via Clairaut)}"]
+}} \\
+%
+% Row 4: blank, for spacing.
+&&\\
+%
+% Row 5: zero circulation, blank, Df symmetric
+\dbox{\parbox{2.2in}{\centering \footnotesize
+$\oint_C \vec{F} \cdot d\vec{s} = 0$ for all closed curves $C$ in $X$.
+}} %
+\arrow[uu, Leftrightarrow]
+&&
+\dbox{\parbox{1.5in}{\centering \footnotesize
+$DF$ is symmetric on $X$.
+\arrow[ll, Rightarrow, "\txt{$\displaystyle X$ open, \textit{simply} connected, $\vec{F}$ is $\mathcal{C}^1$}"']
+}}
+%
+\end{tikzcd}
+\end{center}	
+
+Remember that you can often move through more than one box.  For example, if $D\vec{F}$ is continuous and symmetric on an open, simply connected set $X$, then $\vec{F}$ is conservative.  That's because an open simply-connected set is also connected, so you can follow arrows all the way up to that box.
+
+\end{document}

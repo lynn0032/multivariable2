@@ -1,0 +1,102 @@
+\documentclass{ximera}
+
+\graphicspath{{./graphics/}}
+
+\title{Vector Line Integrals}
+\author{Melissa Lynn}
+\outcome{Understand the definition of vector line integrals geometrically, and be able to compute them.}
+
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+Suppose we have a vector field $\vec{F}$ and a path $\vec{x}$ in $\mathbb{R}^2$. Imagine that the vector field represents some force, such as gravity or a magnetic field. Also imagine that a particle is traveling along the path.
+
+PICTURE
+
+Suppose we would like to measure the total effect of the force on the movement of the particle along the path. In physics, this is called the \emph{work} done by the force on the particle. 
+
+If the particle is moving against the vector field, then the force impedes the progress of the particle, so the work done by the force is negative.
+
+PICTURE
+
+If the particle is moving with the vector field, then the force aids the progress of the particle so the work done by the force is positive.
+
+PICTURE
+
+If the particle is moving perpendicular to the vector field, then the force neither impedes nor aids the progress of the particle, so the work done is zero.
+
+PICTURE
+
+In order to compute the work done by a force on the particle, we need to ``add up'' the microscopic contributions of the force at each point along the path. This leads us to the definition of vector line integrals.
+
+\section*{Vector Line Integrals}
+
+We can measure the microscopic contribution of a force to the motion of a particle using dot products. That is, if we have a vector field $\vec{F}$ and a path $\vec{x}$ in $\mathbb{R}^n$, we consider the dot product $\vec{F}(x(t))\cdot\vec{x}'(t)$.
+
+PICTURE
+
+This compares the vector field at the point $\vec{x}(t)$ with the velocity vector $\vec{x}'(t)$ of the path. Notice that if $\vec{F}$ is perpendicular to $\vec{x}'(t)$, then this dot product is zero, which is consistent with our intuition.
+
+In order to find the total contribution of the vector field to the motion along the path, we integrate this dot product from the start of the path to the end. This leads us to the definition of a vector line integral.
+
+\begin{definition}
+Let $\vec{F}:X\subset\mathbb{R}^n\rightarrow\mathbb{R}^n$ be a vector field, and let $\vec{x}:[a,b]\rightarrow\mathbb{R}^n$ be a $\mathcal{C}^1$ path in $\mathbb{R}^n$. Then the \emph{vector line integral} of $\vec{F}$ along $\vec{x}$ is
+\[
+\int_{\vec{x}}\vec{F}\cdot d\vec{s} = \int_a^b\vec{F}(\vec{x}(t))\cdot\vec{x}'(t)\;dt.
+\]
+\end{definition}
+
+Let's look at a couple of examples of computing vector line integrals.
+
+\begin{example}
+Consider the vector field $\vec{F}(x,y) = (x, y)$ and the path $\vec{x}(t) = (t\cos(t), t\sin(t))$ for $t\in [0,2\pi]$.
+
+PICTURE
+
+We'll compute the vector line integral, $\int_{\vec{x}}\vec{F}\cdot d\vec{s}$.
+\begin{align*}
+\int_{\vec{x}}\vec{F}\cdot d\vec{s} &= \int_a^b\vec{F}(\vec{x}(t))\cdot\vec{x}'(t)\;dt\\
+&=\int_0^{2\pi}\vec{F}(t\cos(t),t\sin(t))\cdot (\cos(t)-t\sin(t), \sin(t)+t\cos(t))\;dt\\
+&=\int_0^{2\pi}(t\cos(t),t\sin(t))\cdot (\cos(t)-t\sin(t), \sin(t)+t\cos(t))\;dt\\
+&=\int_0^{2\pi}t\cos^2(t)-t^2\cos(t)\sin(t) + t\sin^2(t) + t^2\cos(t)\sin(t)\;dt\\
+&=\int_0^{2\pi}t\;dt\\
+&=\frac{1}{2}t^2\vert_0^{2\pi}\\
+&=2\pi^2
+\end{align*}
+\end{example}
+
+\begin{example}
+Consider the vector field $\vec{F}(x,y) = (-x, -y)$ and the path $\vec{x}(t) = (\cos(t), \sin(t))$ for $t\in[0,2\pi]$.
+
+PICTURE
+
+We'll compute the vector line integral, $\int_{\vec{x}}\vec{F}\cdot d\vec{s}$.
+\begin{align*}
+\int_{\vec{x}}\vec{F}\cdot d\vec{s} &= \int_a^b\vec{F}(\vec{x}(t))\cdot\vec{x}'(t)\;dt\\
+&=\int_0^{2\pi}\vec{F}(\cos(t), \sin(t))\cdot (-\sin(t), \cos(t))\;dt\\
+&=\int_0^{2\pi}(-\cos(t), -\sin(t))\cdot (-\sin(t), \cos(t))\;dt\\
+&= \int_0^{2\pi}(\cos(t)\sin(t)-\sin(t)\cos(t))\;dt\\
+&= \int_0^{2\pi}0\;dt\\
+&= 0
+\end{align*}
+
+Since the vector field is always perpendicular to this path, it makes sense that the vector line integral should come out to be zero.
+
+\end{example}
+
+\section*{Circulation}
+
+Now, let's consider the special case where we integrate over a closed curve. In this case, we refer to the value of the vector line integral as circulation, and we use some special notation.
+
+\begin{definition}
+Let $\vec{F}:X\subset\mathbb{R}^n\rightarrow\mathbb{R}^n$ be a vector field, and let $\vec{x}:[a,b]\rightarrow\mathbb{R}^n$ be a $\mathcal{C}^1$ path in $\mathbb{R}^n$. Suppose further that $\vec{x}(a) = \vec{x}(b)$, so that $\vec{x}$ is a closed curve. Then the \emph{circulation} of $\vec{F}$ along $\vec{x}$ is $\int_{\vec{x}}\vec{F}\cdot d\vec{s}$, and we write
+\[
+\oint_{\vec{x}}\vec{F}\cdot d\vec{s} = \int_{\vec{x}}\vec{F}\cdot d\vec{s},
+\]
+to emphasize that $\vec{x}$ parametrizes a closed curve.
+\end{definition}
+
+
+\end{document}

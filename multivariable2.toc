@@ -1,6 +1,15 @@
 \contentsline {part}{I\hspace {1em}Vector Fields and Line Integrals}{3}{part.1}
-\contentsline {part}{II\hspace {1em}Double Integrals}{3}{part.2}
-\contentsline {part}{III\hspace {1em}Curl and Divergence}{3}{part.3}
-\contentsline {part}{IV\hspace {1em}Surface Integrals}{3}{part.4}
-\contentsline {part}{V\hspace {1em}Triple Integrals}{3}{part.5}
+\contentsline {section}{Vector Fields}{3}{section*.1}
+\contentsline {section}{Flow Lines}{6}{section*.2}
+\contentsline {section}{Gradient Fields}{9}{section*.3}
+\contentsline {section}{Vector Line Integrals}{16}{section*.4}
+\contentsline {section}{Scalar Line Integrals}{19}{section*.5}
+\contentsline {section}{Line Integrals over Simple Curves}{22}{section*.6}
+\contentsline {section}{Path-Connected and Simply Connected Regions}{25}{section*.7}
+\contentsline {section}{Path Independence and FTLI}{31}{section*.8}
+\contentsline {section}{Conservative Vector Fields}{40}{section*.9}
+\contentsline {part}{II\hspace {1em}Double Integrals}{46}{part.2}
+\contentsline {part}{III\hspace {1em}Curl and Divergence}{46}{part.3}
+\contentsline {part}{IV\hspace {1em}Surface Integrals}{46}{part.4}
+\contentsline {part}{V\hspace {1em}Triple Integrals}{46}{part.5}
 \contentsfinish 

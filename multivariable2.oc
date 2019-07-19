@@ -1,0 +1,9 @@
+\outcome {Understand the definition of vector fields and how to graph them.}
+\outcome {Understand the definition and geometry of flow lines of a vector field. Verify algebraically that paths are flow lines.}
+\outcome {Given a scalar valued function, compute and graph its gradient field. Given a vector field, determine if it is conservative, and find a potential function. Use the derivative matrix to show that a vector field is not conservative.}
+\outcome {Understand the definition of vector line integrals geometrically, and be able to compute them.}
+\outcome {Understand the definition of scalar line integrals geometrically, and be able to compute them.}
+\outcome {Understand the independence from parametrization of line integrals for simple curves.}
+\outcome {Understand the geometry and definitions of connected and simply connected sets.}
+\outcome {Understand the definition of path independent. Use the Fundamental Theorem of Line Integrals to compute vector line integrals of conservative vector fields, or to show that a vector field is path independent.}
+\outcome {}

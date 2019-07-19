@@ -1,0 +1,119 @@
+\documentclass{ximera}
+
+\graphicspath{{./graphics/}}
+
+\title{Line Integrals over Simple Curves}
+\author{Melissa Lynn}
+\outcome{Understand the independence from parametrization of line integrals for simple curves.}
+
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+We've defined vector and scalar line integrals over paths.
+
+\begin{definition}
+Let $\vec{F}:X\subset\mathbb{R}^n\rightarrow\mathbb{R}^n$ be a vector field, and let $\vec{x}:[a,b]\rightarrow\mathbb{R}^n$ be a $\mathcal{C}^1$ path in $\mathbb{R}^n$. Then the \emph{vector line integral} of $\vec{F}$ along $\vec{x}$ is
+\[
+\int_{\vec{x}}\vec{F}\cdot d\vec{s} = \int_a^b\vec{F}(\vec{x}(t))\cdot\vec{x}'(t)\;dt.
+\]
+
+Let $f:X\subset \mathbb{R}^n\rightarrow\mathbb{R}$ be a continuous function defined on a $\mathcal{C}^1$ path $\vec{x}:[a,b]\rightarrow\mathbb{R}^n$. The \emph{scalar line integral} of $f$ along $\vec{x}$ is
+\[
+\int_{\vec{x}} f\;ds = \int_a^b f(\vec{x}(t))\|\vec{x}'(t)\|dt.
+\]
+\end{definition}
+
+Both of these definitions were motivated by geometric considerations. For vector line integrals, we wanted to find the effect of a vector field on a particle moving along a curve. For scalar line integrals, we wanted the find the under the graph of a function over a curve. Although the definitions were motivated by questions about curves, we wound up with definitions that seem to depend on a parametrization of the curve. So, there's a natural follow-up question: do line integrals depend on the parametrization of the curve?
+
+To answer this question, we'll focus on simple curves.
+
+\begin{definition}
+A path $\vec{x}:[a,b]\rightarrow \mathbb{R}^n$ is \emph{simple} if $\vec{x}$ is a one-to-one function (except we'll allow $\vec{x}(a)=\vec{x}(b)$).
+
+A curve is \emph{simple} if it can be parametrized by a simple path.
+\end{definition}
+
+Essentially, a curve is simple if it doesn't intersect itself. If a curve starts and ends at the same point, but doesn't intersect itself otherwise, we'll still say that the curve is simple.
+
+Let's look at some examples of curves, and determine whether they are simple.
+
+\begin{example}
+For each of the curves, decide if it is simple.
+
+PICTURES/MULTIPLE CHOICE
+\end{example}
+
+For scalar line integrals, if we have two simple paths parametrizing the same curve, the scalar line integrals will be the same.
+
+\begin{proposition}
+Let $f:X\subset \mathbb{R}^n\rightarrow\mathbb{R}$ be a continuous function defined on a curve, which has simple $\mathcal{C}^1$ parametrizations $\vec{x}:[a,b]\rightarrow\mathbb{R}^n$ and $\vec{y}:[c,d]\rightarrow\mathbb{R}^n$. Then
+\[
+\int_{\vec{x}} f\;ds = \int_{\vec{y}} f\;ds.
+\]
+\end{proposition}
+
+Let's look at an example to see why it is important to have a simple path.
+
+\begin{example}
+Consider the function $f(x,y) = x$ and the paths $\vec{x}(t) = (t,t)$ for $t\in [0,1]$ and $\vec{y}(t)=(t^2,t^2)$ for $t\in [-1,1]$. Note that $\vec{x}$ and $\vec{y}$ are both $\mathcal{C}^1$ parametrizations of the line segment connecting $(0,0)$ and $(1,1)$. However, $\vec{y}$ is not a simple parametrization; it traverses the line segment by starting at $(1,1)$, moving along the segment to $(0,0)$, and then returning to $(1,1)$. We'll evaluate the scalar line integrals of $f$ along these paths.
+\begin{align*}
+\int_{\vec{x}} f\;ds &= \int_0^1 f(t,t)\|(1,1)\|dt\\
+&= \int_0^1 t\sqrt{2}dt\\
+&= \sqrt{2}\left(\frac{1^2}{2}-\frac{0^2}{2}\right)\\
+&= \frac{\sqrt{2}}{2}\\
+\int_{\vec{y}} f\;ds &= \int_{-1}^1 f(t^2,t^2)\|(2t,2t)\|dt\\
+&= \int_{-1}^1 t^2\sqrt{4t^2+4t^2}dt\\
+&= \sqrt{8}\int_{-1}^1 t^3dt\\
+&= \sqrt{8}\left(\frac{1^4}{4} - \frac{(-1)^4}{4}\right)\\
+&= 0
+\end{align*}
+\end{example}
+
+Next, we'll turn our attention to vector line integrals. For vector line integrals, we also need to consider the orientation of the curve. That is, we need to consider the direction in which we traverse the curve. Notice that a simple curve has exactly two choices of orientation.
+
+PICTURE
+
+The sign of a vector line integral will depend on the orientations of the paths. Let's think about why this is true. Suppose that a vector field impedes the progress of a particle moving along a path. If we reverse the direction of the path, the vector field will contribute to the motion of the particle. Thus, the sign of the vector line integral would change.
+
+PICTURE
+
+Apart from the issue of orientation, vector line integrals will be independent of the parametrization for simple paths.
+
+\begin{proposition}
+Let $\vec{F}:X\subset\mathbb{R}^n\rightarrow\mathbb{R}^n$ be a vector field, and consider a curve parametrizated by simple $\mathcal{C}^1$ parametrizations $\vec{x}:[a,b]\rightarrow\mathbb{R}^n$ and $\vec{y}:[c,d]\rightarrow\mathbb{R}^n$. 
+
+If $\vec{x}$ and $\vec{y}$ have the same orientation, then
+\[
+\int_{\vec{x}}\vec{F}\cdot d\vec{s} = \int_{\vec{y}}\vec{F}\cdot d\vec{s}.
+\]
+
+If $\vec{x}$ and $\vec{y}$ have opposite orientations, then
+\[
+\int_{\vec{x}}\vec{F}\cdot d\vec{s} = -\int_{\vec{y}}\vec{F}\cdot d\vec{s}.
+\]
+\end{proposition}
+
+In the following exercise, it's important to consider the orientation of paths as you determine which vector line integrals are equal.
+
+\begin{problem}
+Consider the following paths, which parametrize the line segment between $(1,1,1)$ and $(1,2,3)$.
+\begin{align*}
+\vec{x}(t) = (1, 1+t, 1+2t) &\text{ for }t\in [0,1]\\
+\vec{y}(t) = (1, 1+t^2, 1+2t^2) &\text{ for }t\in [0,1]\\
+\vec{y}(t) = (1, 1+t^2, 1+2t^2) &\text{ for }t\in [-1,1]\\
+\end{align*}
+Let $\vec{F}$ be a vector field, and consider the vector line integrals $\int_{\vec{x}}\vec{F}\cdot d\vec{s}$, $\int_{\vec{y}}\vec{F}\cdot d\vec{s}$, and $\int_{\vec{z}}\vec{F}\cdot d\vec{s}$. Which of these line integrals are equal?
+\begin{multipleChoice}
+\choice{None of them are equal.}
+\choice[correct]{$\int_{\vec{x}}\vec{F}\cdot d\vec{s}$ and $\int_{\vec{y}}\vec{F}\cdot d\vec{s}$ and equal}
+\choice{$\int_{\vec{x}}\vec{F}\cdot d\vec{s}$ and $\int_{\vec{z}}\vec{F}\cdot d\vec{s}$ and equal}
+\choice{$\int_{\vec{y}}\vec{F}\cdot d\vec{s}$ and $\int_{\vec{z}}\vec{F}\cdot d\vec{s}$ and equal}
+\choice{All of them are equal.}
+\end{multipleChoice}
+\end{problem}
+
+
+
+\end{document}

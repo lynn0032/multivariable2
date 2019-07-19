@@ -1,0 +1,120 @@
+\documentclass{ximera}
+
+\graphicspath{{./graphics/}}
+
+\title{Scalar Line Integrals}
+\author{Melissa Lynn}
+\outcome{Understand the definition of scalar line integrals geometrically, and be able to compute them.}
+
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+We've seen how we can integrate vector fields along a path, using vector line integrals. We can also integrate scalar valued functions along a path. For instance, suppose we have a scalar valued function $f:\mathbb{R}^2\rightarrow\mathbb{R}$ and a path $\vec{x}:[a,b]\rightarrow\mathbb{R}^2$ in $\mathbb{R}^2$. Suppose we look at the portion of the graph of $f$ lying over the path $\vec{x}$, and drop a ``curtain'' to the $xy$-plane.
+
+PICTURE
+
+Integrating $f$ along the path $\vec{x}$ will be equivalent to finding the area of this curtain. We can also describe this as the area between $\vec{x}(t)$ and $f(\vec{x}(t))$.
+
+Scalar line integrals aren't only useful for finding areas of strangely shapes regions. They are also useful throughout physics. For example, if you have the mass density function of a wire, you can compute the scalar line integral of this function to find the total mass of the wire.
+
+\section*{Scalar Line Integrals}
+
+Suppose we have a function $f:\mathbb{R}^n\rightarrow\mathbb{R}$ and a $\mathcal{C}'$ path $\vec{x}:[a,b]\rightarrow\mathbb{R}^n$, such that the composition $f(\vec{x}(t))$ is defined on $[a,b]$.
+
+PICTURE
+
+In order to find the area under $f$ and over the path $\vec{x}$, we will borrow an important idea from single variable calculus: approximating an area with rectangles.
+
+In order to do this, we'll partition the interval $[a,b]$ into $n$ subintervals, determined by
+\[
+a=t_0<t_1<t_2<\cdots < t_k < \cdots < t_n = b.
+\]
+This partition breaks the path $\vec{x}$ into smaller paths, by restricting to the subintervals.
+
+PICTURE
+
+Our goal will be to approximate the area under $f$ over each of these shorter paths. These approximations will be computed by finding the length of the short path, and multiplying this by a height determined by a test point, $t_k^*$. We can think of this as a curved rectangle.
+
+PICTURE
+
+The specific choice of the test point will be important for simplifying our result - we'll come back to this later.
+
+The height of our curved rectangle will be $f(\vec{x}(t_k^*))$, and the base is the distance $\Delta s_k$ along the path $\vec{x}$ from $t_{k-1}$ to $t_k$.
+
+PICTURE
+
+Thinking back to arclength computations, this distance is given by the integral
+\[
+\Delta s_k = \int_{t_{k-1}}^{t_k}\|\vec{x}'(t)\|dt.
+\]
+Now, we need to make a careful choice for our test point $t_k^*$ which will simplify things later. To do this, recall the Mean Value Theorem for Integrals, from single variable calculus.
+
+\begin{theorem}
+Suppose $g$ is a continuous function on the closed interval $[a,b]$. Then there exists $c$ in $[a,b]$ such that
+\[
+\int_a^b g(t)dt = (b-a)g(c).
+\]
+\end{theorem}
+
+Here, we'll take $\|\vec{x}'(t)\|$ for the function $g(t)$. Since $\vec{x}$ is $\mathcal{C}^1$, $\|\vec{x}'(t)\|$ is continuous. Applying the Mean Value Theorem on the interval $[t_{k-1}, t_k]$, there exists $c_k$ such that
+\[
+\Delta s_k = \int_{t_{k-1}}^{t_k}\|\vec{x}'(t)\|dt = (t_k-t_{k-1})\|\vec{x}'(c_k)\|.
+\]
+We take this $c_k$ to be our test point, so that $t_k^* = c_k$.
+
+Now, the area of the $k$th curved rectangle is $F(\vec{x}(t_k^*))\Delta s_k$. We add up these areas and take the limit as the number of rectangles, $n$, goes to infinity:
+\[
+\lim_{n\rightarrow \infty} \sum_{k=1}^n f(\vec{x}(t_k^*))\Delta s_k.
+\]
+Substituting $\Delta s_k=(t_k-t_{k-1})\|\vec{x}'(c_k)\|$ and writing $\Delta t = t_k-t_{k-1}$, we have
+\[
+\lim_{n\rightarrow \infty} \sum_{k=1}^n f(\vec{x}(t_k^*))\|\vec{x}'(c_k)\|\Delta t.
+\]
+We can recognize this as the single variable integral of the function $f(\vec{x}(t))\|\vec{x}'(t)\|$ over the interval $[a,b]$,
+\[
+\int_a^b f(\vec{x}(t)) \|vec{x}'(t)\|dt.
+\]
+We take this to be the definition of a scalar line integral.
+
+\begin{definition}
+Let $f:X\subset \mathbb{R}^n\rightarrow\mathbb{R}$ be a continuous function defined on a $\mathcal{C}^1$ path $\vec{x}:[a,b]\rightarrow\mathbb{R}^n$. The \emph{scalar line integral} of $f$ along $\vec{x}$ is
+\[
+\int_{\vec{x}} f\;ds = \int_a^b f(\vec{x}(t))\|\vec{x}'(t)\|dt.
+\]
+\end{definition}
+
+\section*{Examples}
+
+Let's look at some examples of computing scalar line integrals.
+
+\begin{example}
+Consider the function $f(x,y) = x^2+y^2$ and the path $\vec{x}(t) = (\cos t, \sin t)$ for $t\in [0,\pi]$. We compute the scalar line integral of $f$ over $\vec{x}$.
+\begin{align*}
+\int_{\vec{x}}f\;ds &=  \int_a^b f(\vec{x}(t))\|\vec{x}'(t)\|dt\\
+&=  \int_0^{\pi} f(\cos t, \sin t)\|(-\sin t, \cos t)\|dt \\
+&= \int_0^{\pi} (\cos^2 t + \sin^2 t)\sqrt{\sin^2 t + \cos^2 t}dt\\
+&= \int_0^{\pi} 1\;dt\\
+&= \pi
+\end{align*}
+\end{example}
+
+\begin{example}
+Consider the function $f(x,y) = e^{\sqrt{xy}}$ and the path $\vec{x}(t) = (t,t)$ for $t\in [0,1]$. We compute the scalar line integral of $f$ over $\vec{x}$.
+\begin{align*}
+\int_{\vec{x}}f\;ds &=  \int_a^b f(\vec{x}(t))\|\vec{x}'(t)\|dt\\
+&= \int_0^1 f(t,t)\|(1, 1)\|dt\\
+&= \int_0^1 e^{\sqrt{t^2}}\sqrt{2}dt\\
+&= \sqrt{2}\int_0^1 e^t dt\\
+&= \sqrt{2}(e^1 - e^0)\\
+&= \sqrt{2}e - \sqrt{2}
+\end{align*} 
+\end{example}
+
+
+
+
+
+
+\end{document}

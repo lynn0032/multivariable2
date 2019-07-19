@@ -1,0 +1,120 @@
+\documentclass{ximera}
+
+\graphicspath{{./graphics/}}
+
+\title{Flow Lines}
+\author{Melissa Lynn}
+\outcome{Understand the definition and geometry of flow lines of a vector field. Verify algebraically that paths are flow lines.}
+
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+Imagine you have a vector field representing gravitational force in space, and that you have a spaceship floating around in space. The spaceship will move in the direction of the gravitational force, following the vector at its position. As the space ship continues to float through space, it will continue to move in the direction prescribed by the vector field, and trace out a path through space.
+
+PICTURE
+
+A path like this is called a flow line of the vector field. This is the path that ``matches'' the vectors as it moves through the vector fields. This means that the vectors in the vector field should be tangent to the path, and they will actually be the tangent vectors to the path. This leads us to the definition of the flow lines of a vector field.
+
+\section*{Flow Lines}
+
+\begin{definition}
+Let $\vec{F}:X\subset \mathbb{R}^n\rightarrow\mathbb{R}^n$ be a vector field, and let $\vec{x}:I\subset \mathbb{R}\rightarrow\mathbb{R}^n$ be a path in $\mathbb{R}^n$. Then we say that $\vec{x}$ is a \emph{flow line} of $\vec{F}$ if 
+\[
+\vec{x}'(t) = \vec{F}(\vec{x}(t))
+\]
+for all $t\in I$.
+\end{definition}
+
+Before we figure out how to find flow lines, we'll give a few examples.
+
+\begin{example}
+Consider the vector field $\vec{F}(x,y) = (-y,x)$, and the path $\vec{x}(t) = (\cos(t),\sin(t))$. We'll verify algebraically that $\vec{x}$ is a flow line of $\vec{F}$.
+
+First, we compute $\vec{x}'(t)$.
+\begin{align*}
+\vec{x}'(t) &= \left(\frac{d}{dt} \cos(t), \frac{d}{dt} \sin(t)\right)\\
+& = (-\sin(t), \cos(t)).
+\end{align*}
+
+Next, we find $\vec{F}(\vec{x}(t))$.
+\begin{align*}
+\vec{F}(\vec{x}(t)) &= \vec{F}(\cos(t), \sin(t))\\
+&= (-\sin(t),\cos(t)).
+\end{align*}
+
+We see that this is equal to $\vec{x}'(t)$, so we have verified that $\vec{x}$ is a flow line of $\vec{F}$.
+
+We can also plot $\vec{F}$ and $\vec{x}$, to see how the path $\vec{x}$ follows the vectors of $\vec{F}$.
+
+PICTURE
+\end{example}
+
+\begin{example}
+Consider the vector field $\vec{F}(x,y) = (x,y)$, and the path $\vec{x}(t) = (e^t, e^t)$. We'll verify that $\vec{x}$ is a flow line of $\vec{F}$.
+
+First, we'll compute $\vec{x}'(t)$.
+\[
+\vec{x}'(t) = \answer{(e^t, e^t)}
+\]
+Next, we'll compute $\vec{F}(\vec{x}(t))$.
+\[
+\vec{F}(\vec{x}(t)) = \answer{(e^t, e^t)}
+\]
+So, we can see that $\vec{x}$ is a flow line of the vector field $\vec{F}$.
+
+Let's also graph $\vec{F}$ and $\vec{x}$, so we can see how the path follows the vectors of the vector field.
+\end{example}
+
+
+\section*{How to Find Flow Lines}
+
+Although it's relatively straightforward to check if a given path is a flow line for a vector field, it can be difficult to compute the flow lines of a vector field. This is because computing flow lines involves solving a system of differential equations, which is not always possible - even when a solution exists! We'll look at a couple of examples where we can find the flow lines.
+
+\begin{example}
+Consider the vector field $\vec{F}(x,y) = (-x,-y)$. To find flowlines, we need to find the paths $\vec{x}$ such that $\vec{x}'(t) = \vec{F}(\vec{x}(t))$. If we write $\vec{x}(t) = (x(t), y(t))$, we need to solve
+\[
+(x'(t), y'(t)) = \vec{F}(x(t), y(t)) = (-x(t), -y(t))
+\]
+for $x(t)$ and $y(t)$. We can write this as a system of differential equations,
+\[
+\begin{cases}
+x'(t) = -x(t)\\
+y'(t) = -y(t)
+\end{cases}
+\]
+Looking at the first equation, we have the solution $x(t) = Ae^{-t}$ for some constant $A$. From the second equation, we have the solution $y(t) = Be^{-t}$ for some constant $B$. Putting these together, we have the flowlines
+\[
+\vec{x}(t) = (Ae^{-t}, Be^{-t}),
+\]
+for constants $A$ and $B$.
+
+If we graph several flow lines and the vector field $\vec{F}$, we can see how the flow lines follow the vectors of the vector field.
+
+PICTURE
+\end{example}
+
+\begin{example}
+Consider the vector field $\vec{F}(x,y) = (-y,x)$. To find flowlines, we need to find the paths $\vec{x}$ such that $\vec{x}'(t) = \vec{F}(\vec{x}(t))$. If we write $\vec{x}(t) = (x(t), y(t))$, we need to solve
+\[
+(x'(t),y'(t)) = \vec{F}(x(t), y(t)) = (-y(t), x(t))
+\]
+for $x(t)$ and $y(t)$. We can write this as a system of differential equations,
+\[
+\begin{cases}
+x'(t) = -y(t)\\
+y'(t) = x(t)
+\end{cases}
+\]
+Solve this system of differential equations yields $x(t) = r\cos(t)$ and $y(t) = r\sin(t)$, so we have the flow lines
+\[
+\vec{x}(t) = (r\cos(t), r\sin(t))
+\]
+for real numbers $r$. Notice that these paths trace circles of radius $r$. We graph a few flow lines along with the vector field $\vec{F}$, to see how the paths follow the vector field.
+
+PICTURE
+\end{example}
+
+
+\end{document}
