@@ -1,0 +1,106 @@
+\documentclass{ximera}  
+
+\title{Area of a Region}  
+\author{Melissa Lynn}
+\outcome{Use Green's theorem to compute the area of a region in the plane.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+We've seen how Green's theorem relates a vector line integral over the boundary of a region to a double integral over the region.
+
+\begin{theorem}
+\textbf{Green's Theorem.} Let $D$ be a closed an bounded region in $\mathbb{R}^2$, whose boundary $\partial D$ consists of finitely many simple and piecewise smooth curves. Let $\vec{F}$ be a $\mathcal{C}^1$ vector field defined on $D$, written in components as $\vec{F}(x,y) = (M(x,y), N(x,y))$. Then
+\[
+\oint_{\partial D}\vec{F}\cdot d\vec{s} = \iint_D \left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\;dA.
+\]
+\end{theorem}
+
+We've used Green's theorem to more easily compute some vector line integrals, and in this section, we'll see how Green's theorem can be used to find the area of a region in $\mathbb{R}^2$.
+
+\section*{Area of a region}
+
+Suppose we wish to find the area of a region $D$ in $\mathbb{R}^2$.
+
+PICTURE
+
+To find this area, we can instead find a volume with the same value. That is, we can create a solid of height $1$ over the region, and find the volume of this solid.
+
+PICTURE
+
+We can use a double integral to compute this volume, giving us the area of the region $D$.
+
+\begin{proposition}
+Let $D$ be a region in $\mathbb{R}^2$. Then
+\[
+\text{area of D} = \iint_D 1\;dA.
+\]
+\end{proposition}
+
+We'll use this fact to find the area of the unit circle. From geometry, we expect this area to be $\pi$.
+
+\begin{example}
+Let $D$ be the unit circle in $\mathbb{R}^2$. To find the area of $D$, we use
+\[
+\text{area of D} = \iint_D 1\;dA.
+\]
+In polar coordinates, the unit circle can be described with the inequalities
+\begin{align*}
+0\leq r\leq 1,\\
+0\leq \theta\leq 2\pi.
+\end{align*}
+Changing to polar coordinates to evaluate the double integral, we have
+\begin{align*}
+\iint_D 1\;dA &= \int_0^{2\pi} \int_0^1 r\;drd\theta\\
+&= \int_0^{2\pi} \frac{1}{2}r^2|_0^1\;d\theta\\
+&= \int_0^{2\pi} \frac{1}{2}\;d\theta\\
+&= \pi.
+\end{align*}
+So, we have confirmed that the area of the unit circle is $\pi$.
+\end{example}
+
+\section*{Area using Green's theorem}
+
+Now, let's see how we can use Green's theorem to find the area of a region. Suppose we have a curve $C$ enclosing a region $D$, satisfying the hypotheses for Green's theorem.
+
+PICTURE
+
+Now, suppose we have a vector field $\vec{F}(x,y) = (M(x,y), N(x,y))$ such that $\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y} = 1$. There are many possible choices for such a vector field; examples include
+\begin{align*}
+\vec{F}(x,y) &= (x,x),\\
+\vec{F}(x,y) &= (-y/2, x/2),\\
+\vec{F}(x,y) &= \left(y+\sin(x), e^{y^2}\right).
+\end{align*}
+
+Then, Green's theorem gives us
+\[
+\oint_{C}\vec{F}\cdot d\vec{s} = \iint_D 1\;dA.
+\]
+So, we can find the area of $D$ by integrating the vector field $F$ over the boundary of $D$.
+
+Let's look at an example to see this in action.
+
+\begin{example}
+We'll find the area enclosed by an ellipse $C$, given by the equation $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$.
+
+PICTURE
+
+In this example, we'll use the vector field $\vec{F}(x,y) = (-y/2, x/2)$ to compute this area. By Green's theorem, we have
+\begin{align*}
+\text{Area} &= \iint_D 1\;dA\\
+&= \oint_{C}\vec{F}\cdot d\vec{s}.
+\end{align*}
+We can parametrize the ellipse as $\vec{x}(t) = (a\cos t, b\sin t)$ for $0\leq t\leq 2\pi$. Notice that this parametrization gives the correct orientation for the ellipse. Now, we evaluate our line integral.
+\begin{align*}
+\oint_{C}\vec{F}\cdot d\vec{s} &= \int_0^{2\pi} \vec{F}(a\cos t, b\sin t)\cdot (-a\sin t, b\cos t)dt\\
+&= \int_0^{2\pi} \left(-\frac{b}{2}\sin t, \frac{a}{2}\cos t\right)\cdot (-a\sin t, b\cos t)dt\\
+&= \int_0^{2\pi} \left(\frac{ab}{2}\sin^2 t + \frac{ab}{2}\cos^2 t\right)dt\\
+&= \int_0^{2\pi} \left(\frac{ab}{2}\right)dt\\
+&= ab\pi
+\end{align*}
+Thus, the area enclosed by the ellipse $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ is $ab\pi$.
+\end{example}
+
+\end{document}

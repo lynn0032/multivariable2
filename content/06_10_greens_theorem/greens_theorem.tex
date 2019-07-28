@@ -1,0 +1,137 @@
+\documentclass{ximera}  
+
+\title{Green's Theorem}  
+\author{Melissa Lynn}
+\outcome{Understand the statement of Green's theorem, and its geometric justification.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+Suppose you are standing at the only door of an initially empty cafeteria, and you keep a count of how many people enter and exit the cafeteria: for each person who enters, you add one, and for each person who leaves, you subtract one. By keeping track of everyone who's entering and exiting, you know the exact count of everyone who's in the cafeteria at any given time.
+
+Green's theorem follows the same idea, but for a curve enclosing a region in $\mathbb{R}^2$.
+
+PICTURE
+
+If we look at how a vector field acts on the boundary curve, this tells us something about what's happening inside of the enclosed region. We'll state this more precisely soon, but we first need to discuss how to orient the boundary.
+
+\section*{Orientation}
+
+Suppose we have a closed, bounded region $D$ whose boundary consists of finitely many piecewise smooth curves. We write $\partial D$ for the boundary of $D$.
+
+PICTURE
+
+We say that the boundary $\partial D$ is \emph{positively oriented} if, as you traverse the curve in the indicated direction, the region is on your left.
+
+\begin{example}
+Each of the boundary curves below is positively oriented.
+
+PICTURE
+
+Each of the boundary curves below is \emph{not} positively oriented.
+
+PICTURE
+\end{example}
+
+\section*{Green's Theorem}
+
+Now, we are ready to state Green's Theorem.
+
+\begin{theorem}
+\textbf{Green's Theorem.} Let $D$ be a closed an bounded region in $\mathbb{R}^2$, whose boundary $\partial D$ consists of finitely many simple and piecewise smooth curves. Let $\vec{F}$ be a $\mathcal{C}^1$ vector field defined on $D$, written in components as $\vec{F}(x,y) = (M(x,y), N(x,y))$. Then
+\[
+\oint_{\partial D}\vec{F}\cdot d\vec{s} = \iint_D \left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\;dA.
+\]
+\end{theorem}
+
+Let's look at an example where we apply Green's theorem to simplify computation of a vector line integral.
+
+\begin{example}
+Let $C$ be the curve below, enclosing the unit square $[0,1]\times [0,1]$, and consider vector field $\vec{F}(x,y)= (xy + e^x, x+y^4)$.
+
+PICTURE
+
+Suppose we wish to evaluate the vector line integral $\int_C\vec{F}\cdot d\vec{s}$. We could do this directly, but this would involve evaluating four separate line integrals, one on each side of the square. Instead, we'll use Green's Theorem to compute a double integral over the square $D = [0,1]\times [0,1]$, since $\partial D = C$. By Green's theorem, we have
+\begin{align*}
+\int_C\vec{F}\cdot d\vec{s} &= \iint_D \left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\;dA\\
+&= \iint_D\left(1 - x\right)\;dA\\
+&= \int_0^1\int_0^1(1-x)\;dxdy\\
+&= \int_0^1 \left(x - \frac{x^2}{2}\right)|_{x=0}^{x=1}\;dy\\
+&= \int_0^1\left(1 - \frac{1}{2}\right)\;dy\\
+&= \frac{1}{2}.
+\end{align*}
+
+In this example, we saw how Green's theorem can be used to more easily compute some vector line integrals.
+\end{example}
+
+\section*{Proof of Green's theorem}
+
+Now that we've seen how Green's theorem can useful, let's sketch a proof of it. This proof will require some approximations, and a perfectly rigorous proof would require showing that these approximations can be made arbitrarily accurate. However, in the interest of brevity, we will gloss over those details.
+
+\begin{proof}
+In order to prove Green's theorem, we will make use of two approximation. We begin by deriving these approximations.
+
+Consider the path $\vec{x}(t) = (t,y_0)$ for $t\in[x_0, x_0+\Delta x]$. Then $\vec{x}'(t) = (1,0)$, and if we write $F(x,y) = (M(x,y), N(x,y))$, we have
+\begin{align*}
+\int_{\vec{x}}\vec{F}\cdot d\vec{s} &= \int_{x_0}^{x_0+\Delta x} (M(t,y_0), N(t,y_0))\cdot (1,0)\;dt\\
+&= \int_x^{x_0+\Delta x} M(t,y_0)\;dt
+\end{align*}
+For small $\Delta x$, the area represented by this definite integral can be approximated with a single rectangle.
+
+PICTURE
+
+That is, the integral can be approximated by $M(x_0,y_0)\Delta x$. Thus, we have
+\[
+\int_{\vec{x}}\vec{F}\cdot d\vec{s}\approx M(x_0,y_0)\Delta x.
+\]
+
+Using a similar argument for the path $\vec{y}(t) = (x_0, t)$ for $t\in[y_0, y_0+\Delta y]$, we have the approximation
+\[
+\int_{\vec{y}}\vec{F}\cdot d\vec{s} = N(x_0, y_0)\Delta y.
+\]
+
+Now that we have the approximations that we need, we'll look at the special case of Green's theorem on a tiny rectangle. We'll then use this special case to prove the general case for Green's theorem.
+
+Consider the rectangle $R$ below, with corners $(x_0, y_0)$, $(x_0+\Delta x, y_0)$, $(x_0+\Delta x, y_0+\Delta y)$, and $(x_0, y_0+\Delta y)$. We label the sides of this rectangle $C_1$, $C_2$, $C_3$, and $C_4$.
+
+PICTURE
+
+If $C$ is the entire boundary of the rectangle, we have
+\[
+\oint_C\vec{F}\cdot d\vec{s} = \int_{C_1}\vec{F}\cdot d\vec{s} + \int_{C_2}\vec{F}\cdot d\vec{s} + \int_{C_3}\vec{F}\cdot d\vec{s} + \int_{C_4}\vec{F}\cdot d\vec{s}.
+\]
+Using the approximations from above, we then have
+\[
+\oint_C\vec{F}\cdot d\vec{s} \approx M(x_0,y_0)\Delta x + N(x_0+\Delta x, y_0)\Delta y - M(x_0, y_0+\Delta y)\Delta x - N(x_0,y_0)\Delta y
+\]
+For small $\Delta x$. Regrouping this approximation, we have
+\[
+\oint_C\vec{F}\cdot d\vec{s} \approx \left(\frac{N(x_0+\Delta x, y_0) - N(x_0, y_0)}{\Delta x} - \frac{M(x_0, y_0+\Delta y) - M(x_0,y_0)}{\Delta y}\right)\Delta x\Delta y.
+\]
+As $\Delta x$ and $\Delta y$ go to $0$, this approaches $\left(N_x(x_0,y_0)-M_y(x_0,y_0)\right) \Delta x\Delta y$.
+
+Furthermore, for a small rectangle, the volume $\iint_R N_x-My\;dA$ can be approximated with a single box, with volume $\left(N_x(x_0,y_0)-M_y(x_0,y_0)\right) \Delta x\Delta y$. Putting all of this together, we have the approximation
+\[
+\oint_C\vec{F}\cdot d\vec{s}\approx\iint_R N_x-My\;dA.
+\]
+
+Now, suppose we have a closed region $D$, and fill $D$ with tiny rectangles that share common edges.
+
+PICTURE
+
+Notice that if all of the rectangles are positively oriented, the adjoining edges have opposite directions. This means that vector line integrals over these edges will cancel. This gives us
+\begin{align*}
+\oint_{\partial D}\vec{F}\cdot d\vec{s}&\approx \oint_{\partial B_1}\vec{F}\cdot d\vec{s} + \cdots + \oint_{\partial B_n}\vec{F}\cdot d\vec{s}\\
+&\approx \iint_{B_1}N_x-M_y\;dA + \cdots + \iint_{B_n}N_x-M_y\;dA\\
+&\approx \iint_D N_x - M_y\;dA.
+\end{align*}
+As the boxes get smaller, this approximation improves, giving us the conclusion of Green's Theorem.
+\end{proof}
+
+
+
+
+
+\end{document}

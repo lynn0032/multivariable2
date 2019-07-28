@@ -6,4 +6,24 @@
 \outcome {Understand the independence from parametrization of line integrals for simple curves.}
 \outcome {Understand the geometry and definitions of connected and simply connected sets.}
 \outcome {Understand the definition of path independent. Use the Fundamental Theorem of Line Integrals to compute vector line integrals of conservative vector fields, or to show that a vector field is path independent.}
-\outcome {}
+\outcome {Understand the relationships between conservative vector fields, path independence, circulation, and symmetric derivatives. Understand the hypotheses under which the equivalences hold.}
+\outcome {Understand the geometric motivation behind the definition of a double integral.}
+\outcome {Understand the geometric interpretation of iterated integrals, and compute them.}
+\outcome {Understand the connection between iterated integrals and double integrals.}
+\outcome {Identify and describe elementary regions.}
+\outcome {Set up and evaluate double integrals over elementary regions.}
+\outcome {Change the order of integration in double integrals over elementary regions.}
+\outcome {Revisit $u$-substitution from single variable calculus, in preparation for substitution in double integrals.}
+\outcome {Understand how to change variables.}
+\outcome {Solidify the ability to change variables in double integrals.}
+\outcome {Understand the statement of Green's theorem, and its geometric justification.}
+\outcome {Understand how Green's Theorem can be used to more easily compute integrals.}
+\outcome {Use Green's theorem to compute the area of a region in the plane.}
+\outcome {Understand the definition of the curl of a vector field, and be able to compute curl.}
+\outcome {Understand the geometric interpretation of the curl as a measure of local rotation.}
+\outcome {Understand why the curl of a conservative vector field is zero, and how to state Green's theorem using curl.}
+\outcome {Understand the definition and geometric intepretation of divergence.}
+\outcome {Explore further examples of computing and understanding the geometry of divergence.}
+\outcome {Understand the relationship between divergence and curl, and the divergence theorem in the plane.}
+\outcome {Compute the surface area of a parametric surface.}
+\outcome {Compute and understand the geometric meaning of scalar surface integrals.}

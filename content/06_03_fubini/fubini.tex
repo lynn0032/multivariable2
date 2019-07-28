@@ -1,0 +1,67 @@
+\documentclass{ximera}  
+
+\title{Fubini's Theorem}  
+\author{Melissa Lynn}
+\outcome{Understand the connection between iterated integrals and double integrals.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+We've now seen two different approaches to finding the signed volume between the graph of a function $f:\mathbb{R}^2\rightarrow\mathbb{R}$ and the $xy$-plane over some rectangle $R = [a,b]\times [c,d]$. First, we defined double integrals, motivated by approximating volume with boxes.
+\[
+\iint_R f(x,y) dA = \lim_{n\rightarrow \infty} \sum_{i,j} f(\vec{c}_{ij})\Delta x\Delta y.
+\]
+PICTURE
+
+The second approach we took was using iterated integrals, which computed volume by finding the area of cross sections, and then integrating this area function.
+\[
+V = \int_c^d\int_a^b f(x,y)dxdy = \int_a^b\int_c^d f(x,y)dydx
+\]
+PICTURE
+
+Although both of these methods were designed to compute the volume of the same region, for a function $f$ that isn't ``nice enough,'' they could theoretically give different answers, or one of them might not exist. In this section, we'll explore the relationship between double integrals and iterated integrals through Fubini's Theorem.
+
+\section*{Fubini's theorem}
+
+Fubini's theorem gives us an equivalence between double integrals and iterated integrals, as we'd expect.
+
+\begin{theorem}
+\textbf{Fubini's Theorem.} Let $f:R\subset\mathbb{R}^2\rightarrow\mathbb{R}$ be a continuous function defined on a rectangle $R = [a,b]\times [c,d]$. Then
+\[
+\iint_R f\;dA = \int_c^d\int_a^b f(x,y)\;dxdy = \int_a^b\int_c^d f(x,y)\;dydx.
+\]
+\end{theorem}
+
+Notice that Fubini's theorem requires that we have a continuous function. In many cases where the a function has a limited number of discontinuities, we'll be able to piece together some integrals to compute a double integral. We'll return to this idea when we compute double integrals over arbitrary regions.
+
+Now, we'll prove Fubini's theorem.
+
+\begin{proof}
+Since $f$ is a continuous function, it is integrable, so $\iint_R f\;dA$ exists.
+
+BLAAAAAHHH
+\end{proof}
+
+\begin{example}
+We'll compute the double integral $\iint_{[-1,1]\times [2,3]} sin(x)e^{y^2}dA$. Because $f(x,y) = sin(x)e^{y^2}$ is a continuous function, we can apply Fubini's theorem and compute the double integral using iterated integrals. Then,
+\begin{align*}
+\iint_{[-1,1]\times [2,3]} sin(x)e^{y^2}dA &= \int_{-1}^1\int_2^3sin(x)e^{y^2} dydx\\
+&= \int_{-1}^1sin(x)\left(\int_2^3e^{y^2} dy\right)dx.
+\end{align*}
+Here, we run into a problem computing $\int_2^3e^{y^2} dy$. This integral isn't possible to evaluate precisely using common methods from single variable calculus. Instead, let's compute the double integral using the other iterated integral, where we integrate with respect to $x$ first, then with respect to $y$.
+\begin{align*}
+\iint_{[-1,1]\times [2,3]} sin(x)e^{y^2}dA &= \int_2^3\int_{-1}^1 sin(x)e^{y^2} dxdy\\
+&= \int_2^3\left(-\cos(x)e^{y^2}\right)|_{x = -1}^{x = 1}dy\\
+&= \int_2^3\left(-\cos(1)e^{y^2} + \cos(-1)e^{y^2}\right)dy
+\end{align*}
+Since $\cos(1) = \cos(-1)$, the terms in the integrand cancel, and we're left with 
+\[
+\iint_{[-1,1]\times [2,3]} sin(x)e^{y^2}dA = 0.
+\]
+For this function, it turned out that one of the iterated integrals was easier to compute than the other, and Fubini's theorem allowed us to choose which one to compute.
+\end{example}
+
+
+\end{document}

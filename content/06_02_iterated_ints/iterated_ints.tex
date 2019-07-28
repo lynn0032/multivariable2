@@ -1,0 +1,102 @@
+\documentclass{ximera}  
+
+\title{Iterated Integrals}  
+\author{Melissa Lynn}
+\outcome{Understand the geometric interpretation of iterated integrals, and compute them.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+We've defined double integrals to compute the signed volume between the graph of a function $f:\mathbb{R}^2\rightarrow\mathbb{R}$ and the $xy$-plane.
+
+PICTURE
+
+\begin{definition}
+Let $f:R\subset\mathbb{R}^2\rightarrow\mathbb{R}$ be a function defined on a rectangle $R$ in $\mathbb{R}^2$. The \emph{double integral} of $f$ over $R$ is
+\[
+\iint_R f(x,y) dA = \lim_{n\rightarrow \infty} \sum_{i,j} f(\vec{c}_{ij})\Delta x\Delta y,
+\]
+provided this limit exists.
+\end{definition}
+
+Although this definition has a useful geometric interpretation, and we can use it to approximate double integrals, it isn't practical for computing double integrals. Instead, we'll compute using iterated integrals.
+
+For now, we'll focus on a different geometric interpretation of volume, and see how this can be computed using iterated integrals. Then, in the next section, we'll see how double integrals can be computed using iterated integrals.
+
+\section*{Iterated integrals}
+
+Back in single variable calculus, we were able to compute the volume of some solids using cross sections.
+
+PICTURE
+
+Once we found the area $A(x)$ of a cross section at $x$, we were able to compute volume by integrating this function $A(x)$.
+\[
+V = \int_a^b A(x)dx
+\]
+We'll use the same idea for iterated integrals
+
+Suppose we wish to integrate a function $f:\mathbb{R}^2\rightarrow\mathbb{R}$ over a rectangle $R = [a,b] \times [c,d]$.
+
+PICTURE
+
+To find the area of the cross section at $x$, we integrate $f(x,y)$ from $y=c$ to $y=d$. This gives us
+\[
+A(x) = \int_c^d f(x,y)dy.
+\]
+Now that we have the area of a cross section, we can compute the volume of the region by integrating over our $x$ values.
+\begin{align*}
+V &= \int_a^b A(x)dx\\
+&= \int_a^b\left(\int_c^d f(x,y)dy\right)dx\\
+&= \int_a^b\int_c^d f(x,y)dydx\\
+\end{align*}
+
+\begin{example}
+We'll use such an iterated integral to compute the volume between $f(x,y) = x^2y$ and $xy$-plane, over the rectangle $[0,2]\times [1,2]$.
+\begin{align*}
+V &=\int_0^2\int_1^2 x^2y\;dydx\\
+&=  \int_0^2\left(\int_1^2 x^2y\;dy\right)dx\\
+&= \int_0^2\left(\frac{1}{2}x^2y^2|_{y=1}^{y=2}\right)dx\\
+&= \int_0^2\left(2x^2 - \frac{1}{2}x^2\right)dx\\
+&= \int_0^2\frac{3}{2}x^2\;dx\\
+&= \frac{1}{2}x^3|_{x=0}^{x=2}\\
+&= \frac{1}{2}\cdot 2^3 - \frac{1}{2}\cdot 0^3\\
+&= 4
+\end{align*}
+\end{example}
+
+Alternatively, we can find the volume by taking cross sections which are constant with respect to $y$.
+
+PICTURE
+
+Then, we can compute the area of the cross section at $y$ by integrating $f(x,y)$ from $x=a$ to $x=b$. This gives us
+\[
+A(y) = \int_a^b f(x,y)dx.
+\]
+Then, we compute the volume of the region by integrating the function $A(y)$ over our range of $y$ values.
+\begin{align*}
+V &= \int_c^d A(y)dy\\
+&= \int_c^d\left(\int_a^b f(x,y)dx\right)dy\\
+&= \int_c^d\int_a^b f(x,y)dxdy
+\end{align*}
+
+\begin{example}
+We'll use an iterated integral to compute the volume between $f(x,y) = x^2y$ and $xy$-plane, over the rectangle $[0,2]\times [1,2]$. This time, we'll integrate with respect to $y$ first.
+\begin{align*}
+V &=\int_1^2\int_0^2 x^2y\;dxdy\\
+&=  \int_1^2\left(\int_0^2 x^2y\;dx\right)dy\\
+&= \int_1^2\left(\frac{1}{3}x^3y|_{x=0}^{x=2}\right)dy\\
+&= \int_1^2\left(\frac{8}{3}y - 0\right)dy\\
+&= \frac{8}{3}\int_1^2\frac{8}{3}y\;dy\\
+&= \frac{8}{3}\left(\frac{1}{2}y^2|_{y=1}^{x=2}\right)\\
+&= \frac{8}{3}\cdot\left(4 - \frac{1}{2}\right)\\
+&= 4
+\end{align*}
+\end{example}
+
+Notice that iterated integrals are computed by just computing one integral after another, which is why they are called ``iterated.''
+
+At this point, you might be wondering why we bothered defining double integrals at all. Iterated integrals are relatively easy to compute, and can also be used to find volume, which makes them seem like a much better choice. In many situations, double integrals and iterated integrals are perfectly interchangeable, and we will explore this in the next section. However, there exist some strange functions where iterated integrals won't be defined, and yet the double integral will exist. Because of this, double integrals are a more general concept than iterated integrals.
+
+\end{document}

@@ -1,0 +1,103 @@
+\documentclass{ximera}  
+
+\title{Additional Examples of Change of Variables}  
+\author{Melissa Lynn}
+\outcome{Solidify the ability to change variables in double integrals.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+Recall how we can perform a change of variables in a double integral.
+
+\begin{proposition}
+Let $\vec{T}:\mathbb{R}^2\rightarrow\mathbb{R}^2$ be a $C^1$ function which maps a region $D^*\subset\mathbb{R}^2$ onto a region $D\subset\mathbb{R}^2$, so that $\vec{T}$ restricted to $D^*$ is one-to-one. Suppose $f:D\rightarrow\mathbb{R}$ is an integrable function. Then
+\[
+\iint_D f(x,y)\;dxdy = \iint_{D^*} f(\vec{T}(u,v))\left|\text{det}(D\vec{T}(u,v))\right|\;dudv.
+\]
+\end{proposition}
+
+In this section, we'll look at some further examples of changes of variables, and encounter some common challenges along the way.
+
+\section*{Examples}
+
+\begin{example}
+We will evaluate the double integral $\iint_D 2xy\;dA$, where $D$ is the region below, bounded by the lines $y=2x$, $y=-2x$, and $y=x+3$.
+
+PICTURE
+
+If we take $u=y-2x$ and $v=y+2x$, then the lines $y=2x$ and $y=-2x$ correspond to $u=0$ and $v=0$, respectively. Solving for $x$ and $y$ in terms of $u$ and $v$, we have
+\begin{align*}
+x &= \frac{u+v}{2},\\
+y &= \frac{v-u}{4},
+\end{align*}
+and the change of coordinates is given by $\vec{T}(u,v) = \left(\frac{u+v}{2}, \frac{v-u}{4}\right)$. From this, we compute
+\begin{align*}
+\left|\text{det}(D\vec{T}(u,v))\right| &= \left|\text{det}\begin{pmatrix}1/2 & 1/2\\ -1/4 & 1/4\end{pmatrix}\right|\\
+&= \frac{1}{4}.
+\end{align*}
+
+The line $y=x+3$ corresponds to $\frac{v-u}{4} = \frac{u+v}{2} + 3$, which can be simplified to $v= -3u-12$.
+
+PICTURE
+
+So, in $uv$-coordinates, our region can be described by the inequalities
+\begin{align*}
+-4\leq u\leq 0,\\
+-3u-12\leq v\leq 0.
+\end{align*}
+
+Putting all of this together, we have
+\begin{align*}
+\iint_D 2xy\;dA &= \int_{-4}^0\int_{-3u-12}^0 2\frac{u+v}{2}\frac{v-u}{4}\cdot\frac{1}{4}dvdu\\
+&= \int_{-4}^0\int_{-3u-12}^0 \frac{v^2-u^2}{16}dvdu\\
+&= \int_{-4}^0\left(\frac{v^3}{48}-\frac{u^2v}{16}\right)|_{v = -3u-12}^{v=0}\;du\\
+&= \int_{-4}^0\left(\frac{(-3u-12)^3}{48}-\frac{u^2(-3u-12)}{16}\right)\;du\\
+&= \int_{-4}^0\left(\frac{-3u^3}{8} - 6u^2 - 27u - 36\right)\;du\\
+&= \left(\frac{-3u^4}{32} - 2u^3 - \frac{27u^2}{2} - 36u\right)|_{u=-4}^{u=0}\\
+&= 32
+\end{align*}
+
+
+\end{example}
+
+Sometimes, we may be able to carry out a change of variables without explicitly finding the transformation $\vec{T}$. We see this in the next example.
+
+\begin{example}
+We will evaluate the double integral $\iint_D (x+y)dA$, where $D$ is the region below.
+
+PICTURE
+
+Since $D$ can be described with the inequalities
+\begin{align*}
+1\leq xy\leq 4,\\
+0\leq y-x \leq 2,
+\end{align*}
+we will change to the coordinates $u=xy$ and $v=y-x$. Now, in order to find the area expansion factor $\left|\text{det}(D\vec{T}(u,v))\right|$, we would typically find the transformation $\vec{T}$. That is, we would find $x$ and $y$ in terms of $u$ and $v$. However, in this situation, it's difficult to solve for $x$ and $y$. Fortunately, we will be able to work around this issue.
+
+Although we don't have the transformation $\vec{T}(u,v)$, we do have the inverse transformation, $\vec{T}^{-1}$, which is defined by
+\[
+\vec{T}^{-1}(x,y) = (xy, y-x).
+\]
+Since $\vec{T}$ and $\vec{T}^{-1}$ are inverse transformations, their derivative matrices $D\vec{T}$ and $D\vec{T}^{-1}$ are also inverses. In order make use of this fact, we compute
+\begin{align*}
+\left|\text{det}(D\vec{T}^{-1}(x,y))\right| &= \left|\text{det}\begin{pmatrix}y & x\\
+-1 & 1\end{pmatrix}\right|\\
+&= \left|y+x\right|.
+\end{align*}
+Then, from properties of derivatives and inverse matrices, we have
+\[
+\left|\text{det}(D\vec{T}(u,v))\right| = \frac{1}{\left|y+x\right|},
+\]
+If we write $x$ and $y$ in terms of $u$ and $v$.
+
+At first glance, this doesn't seem particularly useful, since we'd still need to find $x$ and $y$ in terms of $u$ and $v$! However, let's take a look at our integrand, which is $x+y$. Since $x+y\geq 0$ on our region, we have $\frac{1}{\left|y+x\right|} = \frac{1}{y+x}$. So, when we make our change of coordinates, the integrand will cancel with the area expansion factor. This gives us
+\begin{align*}
+\iint_D (x+y)dA &= \int_1^4\int_0^2 1\;dvdu\\
+&= 6.
+\end{align*}
+\end{example}
+
+
+\end{document}

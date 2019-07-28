@@ -1,0 +1,84 @@
+\documentclass{ximera}  
+
+\title{Elementary Regions}  
+\author{Melissa Lynn}
+\outcome{Identify and describe elementary regions.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+We've defined double integrals over rectangles, and we've used Fubini's theorem to convert them to iterated integrals, which are straightforward to compute. But what if we need to integrate a function over a region that isn't a rectangle?
+
+For example, consider the region below, which is bounded by the curves $y=x^2$, $y=x^2+1$, $x=1$, and $x=2$.
+
+PICTURE
+
+We can describe this region as the set of points $(x,y)$ such that $1\leq x\leq 2$ and $x^2\leq y\leq x^2+1$. Here, we can describe the region by bounding the $x$-coordinate with constants, and bounding the $y$-coordinate with continuous functions of $x$. We'll soon see that this kind of description translates easily to integration, and this is our first example of an elementary region.
+
+\section*{Elementary regions}
+
+We give the definition of elementary regions, which will be the most natural regions to integrate over.
+
+\begin{definition}
+The following are types of \emph{elementary regions}.
+
+Suppose a region $R$ can be described as the set of points $(x,y)$ such that
+\begin{align*}
+a\leq &x\leq b\text{, and}\\
+f(x)\leq &y \leq g(x),
+\end{align*}
+where $f(x)$ and $g(x)$ are continuous functions. Then we say that $R$ is \emph{$x$-simple}.
+
+Suppose a region $R$ can be described as the set of points $(x,y)$ such that
+\begin{align*}
+c\leq & y\leq d\text{, and}\\
+f(y)\leq & x \leq g(y),
+\end{align*}
+where $f(y)$ and $g(y)$ are continuous functions. Then we say that $R$ is \emph{$y$-simple}.
+\end{definition}
+
+We'll now look at some examples of $x$-simple and $y$-simple regions. Note that some regions are both $x$-simple and $y$-simple.
+
+\begin{example}
+Consider the region $R$ below, which is bounded by the graphs of $y=x^2$ and $x=y^2$.
+
+PICTURE
+
+This region is both $x$-simple and $y$-simple. To see that it is $x$-simple, we can describe $R$ as the set of points $(x,y)$ such that 
+\begin{align*}
+0\leq &x\leq 1\text{, and}\\
+x^2\leq y\leq \sqrt{x}.
+\end{align*}
+To see that $R$ is $y$-simple, we can describe it as the set of points $(x,y)$ such that
+\begin{align*}
+0\leq &y\leq 1\text{, and}\\
+y^2\leq &x\leq \sqrt{y}.
+\end{align*}
+\end{example}
+
+\begin{example}
+Consider the region $R$ below, which is bounded by the graphs of $y=\cos x$, $y=1$, $x=-\pi$, and $x=\pi$.
+
+PICTURE
+
+This region is $x$-simple, since $R$ is the set of points $(x,y)$ such that
+\begin{align*}
+-\pi\leq &x\leq \pi\text{, and}\\
+\cos x\leq &y\leq 1.
+\end{align*}
+The region $R$ is not $y$-simple, since any inequality $f(y)\leq x\leq g(y)$ cannot have a ``hole'' in the middle. However, $R$ is the union of two $y$-simple regions $R_1$ and $R_2$, where $R_1$ is the set of points $(x,y)$ such that
+\begin{align*}
+-1\leq &y\leq 1\text{, and}\\
+-\pi\leq &x\leq -\arccos y,
+\end{align*} 
+and $R_2$ is the set of points $(x,y)$ such that
+\begin{align*}
+-1\leq &y\leq 1\text{, and}\\
+\arccos y\leq &x\leq 1.
+\end{align*} 
+\end{example}
+
+
+\end{document}

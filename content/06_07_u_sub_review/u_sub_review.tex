@@ -1,0 +1,82 @@
+\documentclass{ximera}  
+
+\title{Review of $u$-substitution}  
+\author{Melissa Lynn}
+\outcome{Revisit $u$-substitution from single variable calculus, in preparation for substitution in double integrals.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+One of the most commonly used strategies for evaluating single variable integrals is $u$-substitution. For example, suppose we wish to evaluate the integral $\int_1^3 2x e^{x^2}\;dx$. Here, it's useful to make the substitution $u=x^2$, and this allows us to evaluate the integral.
+\begin{align*}
+\int_1^3 2x e^{x^2}\;dx &= \int_1^9 e^u\;du\\
+&= e^u |_{u=1}^{u=9}\\
+&= e^9 - e
+\end{align*}
+We would like to apply the same ideas to double integrals, in order to make evaluation possible in more cases. Before we do this, we'll review the details of single variable $u$-substitution, in order to prepare for the more difficult two variable case.
+
+There are three important parts of this process that we wish to highlight here.
+\begin{itemize}
+\item Changing the variable
+\item Changing the differential
+\item Changing the interval of integration
+\end{itemize}
+
+
+\section*{Changing the variable}
+
+Choosing the change of variable is the most important step of $u$-substitution. Suppose we are performing a $u$-substitution on a definite integral $\int_a^b F(x)dx$. Here, we make a choice for $u$ as a function of $x$, so we write $u=g(x)$ for some function $g$. This choice is often made in conjunction with planning for the change of differential. That is, we choose $u=g(x)$ in a way so that the integrand can be written as
+\[
+F(x) = f(g(x))g'(x),
+\]
+for some function $f$.
+
+For example, consider the integral $\int_1^3 2x e^{x^2}\;dx$. To evaluate this integral, we choose $u = g(x)$ for $g(x)=x^2$, since then the integrand can be written as
+\[
+2x e^{x^2} = g'(x) e^{g(x)}.
+\]
+
+Choosing a ``good'' substitution often requires experience and intuition, built through trying different substitutions, and determining what works well. A common strategy for choosing substitutions is to look for a composition of functions, and taking $u$ to be the ``inner'' function. In our example, we have the composition $e^{x^2}$, and took $u=x^2$. 
+
+\section*{Changing the interval of integration}
+
+Once we've made a choice of substitution $u=g(x)$, we start to tranform our integral to be with respect to $u$. As part of this process, we need to change the bounds of the integral. The new bounds will be $c = g(a)$ and $d = g(b)$. In order to see why this is necessary, let's look at the area represented by the definite integral $\int_a^b F(x)dx$. 
+
+PICTURE
+
+Here, we are finding the area under the graph of the function $F(x)$ on the closed interval from $x=a$ to $x=b$. When we make a $u$-substitution, we are evaluating a different integral $\int_c^d f(u)du$. This represents the area under the function $f(u)$ over the closed interval from $c$ to $d$. Since our new integral is with respect the $u$, it doesn't make sense to use the old bounds $x=a$ and $x=b$, since these were bounds for the variable $x$. Instead, we need to find the bounds on $u$ which correspond to the old bounds on $x$. When we look at how the function $g$ affects $a$ and $b$, this gives us our new bounds, $c=g(a)$ and $d = g(b)$. We can also think about this as looking at how $g$ affects the closed interval $[a,b]$. If $g$ is an increasing function, then the image of the interval $[a,b]$ under $g$ is the closed interval $[g(a), g(b)]$.
+
+PICTURE
+
+So, when we're converting an area over the interval $[a,b]$ using the function $g$, we will be working with an area over the interval $[g(a),g(b)]$.
+
+PICTURE
+
+To phrase this change more generally, when we make a change of variable, we need to consider how this substitution affects the domain of integration.
+
+\section*{Changing the differential}
+
+The final step necessary for a $u$-substitution is to change the differential, so we have an integral with respect to $u$ instead of $x$. We often think about this step as making the replacement
+\[
+du = g'(x)dx,
+\]
+but why is this change necessary? To see this, let's think back to the definition of a definite integral. We approximate the area under a curve with rectangles, and then take the limit as the width of the rectangles goes to zero.
+
+PICTURE
+
+Now, suppose we are approximating the area under a curve with eight rectangles. Then, suppose we make a change of variables $u=g(x)$, and let's look at how this affects the rectangles.
+
+PICTURE
+
+Here, we see that the width of the rectangles are affected by the change $u=g(x)$. This stretches or shrinks the rectangles. The proportion of this stretching or shrinking is determined by the rate of change of the function $g$, so by $g'(x)$. This is where the change in differential comes in - we make the replacement $du = g'(x)dx$ in order to account for the stretching or shrinking caused by the substitution $u=g(x)$.
+
+To phrase this change more generally, when we make a change of variable, we need to consider how the substitution affects the shape and size of the domain of integration, and account for this with an expansion factor, such as $g'(x)$.
+
+\section*{Double Integrals}
+
+In the next section, we'll look at how we can change variables in double integrals, and we'll see how this process resembles $u$-substitution from single variable calculus. When making the change of variables, we will again need to consider how to change the domain of integration, as well as the differential.
+
+
+\end{document}

@@ -1,0 +1,198 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Path-Connected and Simply Connected Regions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="connected.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the geometry and definitions of connected and simply connected sets."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >We will soon begin to study properties of line integrals and conservative vector
+fields. In order to do this, we need to pay attention to the topology of our
+domains. Recall that we’ve previously classified sets in <script type="math/tex">\mathbb {R}^n</script> as open, closed, or
+neither.
+</p><!--l. 14--><p class="noindent" >We’ll begin by recalled the definition of an open set.
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a 
+ id="x1-17r1"></a>In <script type="math/tex">\mathbb {R}^n</script>, we call <script type="math/tex">B_r(\mathbf {x})=\{\mathbf {y}\in \mathbb {R}^n\,:\,|\mathbf {x}-\mathbf {y}|<r\}</script> the <em>open ball</em> of radius <script type="math/tex">r>0</script> centered at <script type="math/tex">\mathbf {x}</script>.
+<!--l. 19--><p class="noindent" >A set <script type="math/tex">U\subset \mathbb {R}^n</script> is <em>open</em> if for every <script type="math/tex">\mathbf {a}\in U</script>, there is a radius <script type="math/tex">r>0</script> such that <script type="math/tex">B_r(\mathbf {a})\subset U</script>.
+</div>
+</p><!--l. 22--><p class="noindent" >In words, for any point <script type="math/tex">\mathbf {a}</script> in <script type="math/tex">U</script>, we can find a radius <script type="math/tex">r</script> small enough that the entire ball of
+radius <script type="math/tex">r</script> centered at <script type="math/tex">\mathbf {a}</script> is contained in <script type="math/tex">U</script>. We can also restate the definition of an open set
+as “every point is an interior point.”
+</p>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-18r2"></a>The following are examples of open sets.
+<!--l. 27--><p class="noindent" ><script type="math/tex">\{x\;:\;0<x<1\}</script> in <script type="math/tex">\mathbb {R}</script>.
+</p><!--l. 29--><p class="noindent" >PICTURE
+</p><!--l. 31--><p class="noindent" ><script type="math/tex">\{(x,y)\;:\;0<x<1\}</script> in <script type="math/tex">\mathbb {R}^2</script>.
+</p><!--l. 33--><p class="noindent" >PICTURE
+</p><!--l. 35--><p class="noindent" ><script type="math/tex">\{(x,y)\;:\;x^2+y^2<1\}</script> in <script type="math/tex">\mathbb {R}^2</script>.
+</p><!--l. 37--><p class="noindent" >PICTURE
+</div>
+</p><!--l. 40--><p class="noindent" >We now recall the definition of a closed set, which is given relative to open
+                                                                  
+
+                                                                  
+sets.
+</p>
+<div class="theorem-like problem-environment definition" id="problem3"><a 
+ id="x1-19r3"></a>A set <script type="math/tex">X\subset \mathbb {R}^n</script> is <em>closed</em> if its complement is open.
+</div>
+<!--l. 46--><p class="noindent" >Furthermore, a set is closed if and only if it contains all of its boundary
+points.
+</p>
+<div class="theorem-like problem-environment example" id="problem4"><a 
+ id="x1-20r4"></a>The following are examples of closed sets.
+<!--l. 51--><p class="noindent" ><script type="math/tex">\{x\;:\;0\leq x\leq 1\}</script> in <script type="math/tex">\mathbb {R}</script>.
+</p><!--l. 53--><p class="noindent" >PICTURE
+</p><!--l. 55--><p class="noindent" ><script type="math/tex">\{(x,y)\;:\;0\leq x\leq 1\}</script> in <script type="math/tex">\mathbb {R}^2</script>.
+</p><!--l. 57--><p class="noindent" >PICTURE
+</p><!--l. 59--><p class="noindent" ><script type="math/tex">\{(x,y)\;:\;x^2+y^2\leq 1\}</script> in <script type="math/tex">\mathbb {R}^2</script>.
+</p><!--l. 61--><p class="noindent" >PICTURE
+</div>
+</p><!--l. 64--><p class="noindent" >For the results we wish to prove about line integrals and conservative vector
+fields, we will also need to consider if sets are connected, and how they are
+connected.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Path-connected sets</h3>
+<!--l. 68--><p class="noindent" >You probably have a pretty good intuitive idea of what it should mean for a set to be
+connected: if you imagine the set to be land, and the complement of the set to be
+lava, then you can get to the entire set while staying on land, and without jumping.
+This idea translates to mathematics, using paths.
+</p>
+<div class="theorem-like problem-environment definition" id="problem5"><a 
+ id="x1-1001r5"></a>A set <script type="math/tex">X\subset \mathbb {R}^n</script> is path-connected if any two points can be connected by a path which lies
+entirely in <script type="math/tex">X</script>.
+</div>
+<!--l. 74--><p class="noindent" >Notice that we use the word “path-connected” instead of just connected. This is
+because “connected” actually has a different meaning in topology. However, in some
+situations, “connected” and “path-connected” are equivalent.
+</p>
+<div role="article" class="problem-environment problem" id="problem6"><a 
+ id="x1-1002r6"></a>
+<!--l. 78--><p class="noindent" >For each of the following sets, determine whether or not they are path-connected.
+     </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+                                                                  
+
+                                                                  
+ (a) </dt><dd 
+class="enumerate-enumitem"><div class="image-environment" role="img" aria-labelledby="image-alt-1">  <img 
+src="./connected-figure0.svg" alt=""  
+ />
+     </div>
+     <div class="multiple-choice" id="problem7"><span class="choice correct "   id="choice1">path-connected</span> <span class="choice  "   id="choice2">not path-connected</span> </div>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd 
+class="enumerate-enumitem"><div class="image-environment" role="img" aria-labelledby="image-alt-2">  <img 
+src="./connected-figure1.svg" alt=""  
+ />
+     </div>
+     <div class="multiple-choice" id="problem8"><span class="choice correct "   id="choice3">path-connected</span> <span class="choice  "   id="choice4">not path-connected</span> </div>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd 
+class="enumerate-enumitem"><div class="image-environment" role="img" aria-labelledby="image-alt-3">  <img 
+src="./connected-figure2.svg" alt=""  
+ />
+     </div>
+     <div class="multiple-choice" id="problem9"><span class="choice  "   id="choice5">path-connected</span> <span class="choice correct "   id="choice6">not path-connected</span> </div>
+     </dd></dl>
+</div>
+<a 
+ id="Q1-1-3"></a>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Simply Connected Sets</h3>
+<!--l. 113--><p class="noindent" >The last topological concept we will cover is when a path-connected set
+is “simply connected.” Intuitively, this depends on whether or not the set
+has holes. Our definition for simply connected is a bit hand wavy, but this
+will serve our purpose just fine. It can be made rigorous using continuous
+maps.
+</p>
+<div class="theorem-like problem-environment definition" id="problem10"><a 
+ id="x1-2001r7"></a>A path-connected set <script type="math/tex">X\subset \mathbb {R}^n</script> is <em>simply connected</em> if any closed path (i.e., loop) can be
+shrunk to a point, where the shrinking occurs entirely in <script type="math/tex">X</script>.
+</div>
+<!--l. 121--><p class="noindent" >Note that a set needs to be path-connected in order to be considered simply
+connected.
+</p>
+<div role="article" class="problem-environment problem" id="problem11"><a 
+ id="x1-2002r8"></a>
+<!--l. 125--><p class="noindent" >For each of the following sets, determine whether or not they are simply
+connected.
+     </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd 
+class="enumerate-enumitem"><script type="math/tex">\mathbb {R}^2\setminus \{(0,0)\}</script>
+     <div class="image-environment" role="img" aria-labelledby="image-alt-4">  <img 
+src="./connected-figure3.svg" alt=""  
+ />
+     </div>
+     <div class="multiple-choice" id="problem12"><span class="choice  "   id="choice7">simply connected</span> <span class="choice correct "   id="choice8">not simply connected</span> </div>
+                                                                  
+
+                                                                  
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd 
+class="enumerate-enumitem"><script type="math/tex">\mathbb {R}^2</script>
+     <div class="image-environment" role="img" aria-labelledby="image-alt-5">  <img 
+src="./connected-figure4.svg" alt=""  
+ />
+     </div>
+     <div class="multiple-choice" id="problem13"><span class="choice correct "   id="choice9">simply connected</span> <span class="choice  "   id="choice10">not simply connected</span> </div>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd 
+class="enumerate-enumitem"><script type="math/tex">\{(x,y,z)\,:\,x^2+y^2+z^2=1\}</script>
+     <div class="image-environment" role="img" aria-labelledby="image-alt-6">  <img 
+src="./connected-figure5.svg" alt=""  
+ />
+     </div>
+     <div class="multiple-choice" id="problem14"><span class="choice correct "   id="choice11">simply connected</span> <span class="choice  "   id="choice12">not simply connected</span> </div>
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd 
+class="enumerate-enumitem">A torus (the surface of a donut)
+     <div class="image-environment" role="img" aria-labelledby="image-alt-7">  <img 
+src="./connected-figure6.svg" alt=""  
+ />
+     </div>
+     <div class="multiple-choice" id="problem15"><span class="choice  "   id="choice13">simply connected</span> <span class="choice correct "   id="choice14">not simply connected</span> </div>
+     </dd></dl>
+</div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

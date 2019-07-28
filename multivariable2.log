@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  18 JUL 2019 15:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  28 JUL 2019 16:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1394,29 +1394,28 @@ LaTeX Warning: No \author given.
 [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./multivariable2.toc)
+(./multivariable2.toc [2
+
+])
 \tf@toc=\write11
 \openout11 = `multivariable2.toc'.
 
- [2
-
-] (./content/05_01_vector_fields/vector_fields.tex
-[3
+ [3] (./content/05_01_vector_fields/vector_fields.tex [4
 
 
-] [4]) [5] (./content/05_02_flow_lines/flow_lines.tex [6
+] [5]) [6] (./content/05_02_flow_lines/flow_lines.tex [7
 
-] [7]) [8]
-(./content/05_03_gradient_fields/gradient_fields.tex [9
+] [8]) [9]
+(./content/05_03_gradient_fields/gradient_fields.tex [10
 
-] [10]
+] [11]
 Overfull \hbox (3.72144pt too wide) in paragraph at lines 122--123
 [][]\OT1/cmr/bx/n/10 Example 10. []\OT1/cmr/m/it/10 Find a po-ten-tial func-tio
 n for the vec-tor field $\OT1/cmr/bx/n/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x;
  y; z\OT1/cmr/m/n/10 ) = (2\OML/cmm/m/it/10 xy; x[] \OT1/cmr/m/n/10 +
  []
 
-[11] [12] [13]
+[12] [13] [14]
 \c@depthICount=\count370
 
 
@@ -1424,22 +1423,22 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/sl' undefined
 (Font)              using `OT1/cmss/bx/n' instead on input line 247.
 
 \c@depthIICount=\count371
-[14]) [15] (./content/05_04_vector_line_integrals/vector_line_integrals.tex
-[16
+[15]) [16] (./content/05_04_vector_line_integrals/vector_line_integrals.tex
+[17
 
-] [17]) [18]
-(./content/05_05_scalar_line_integrals/scalar_line_integrals.tex [19
+] [18]) [19]
+(./content/05_05_scalar_line_integrals/scalar_line_integrals.tex [20
 
-] [20])
-[21] (./content/05_06_simple_curves/simple_curves.tex [22
+] [21])
+[22] (./content/05_06_simple_curves/simple_curves.tex [23
 
-] [23]) [24]
-(./content/05_07_connected/connected.tex [25
+] [24]) [25]
+(./content/05_07_connected/connected.tex [26
 
-] [26] [27] [28] [29]) [30]
-(./content/05_08_FTLI/FTLI.tex [31
+] [27] [28] [29] [30]) [31]
+(./content/05_08_FTLI/FTLI.tex [32
 
-] [32] [33] [34] [35] [36]
+] [33] [34] [35] [36] [37]
 Overfull \hbox (10.59384pt too wide) in paragraph at lines 272--273
 [][]\OT1/cmr/bx/n/10 Example 24. []\OT1/cmr/m/it/10 Let $[]\OT1/cmr/m/n/10 (\OM
 L/cmm/m/it/10 x; y\OT1/cmr/m/n/10 ) = (2\OML/cmm/m/it/10 xy[]; \OT1/cmr/m/n/10 
@@ -1454,40 +1453,326 @@ Overfull \hbox (29.0669pt too wide) detected at line 281
 []
  []
 
-[37] [38]) [39] (./content/05_09_conservative_vf/conservative_vf.tex [40
+[38] [39]) [40] (./content/05_09_conservative_vf/conservative_vf.tex [41
 
 ]
-[41] [42] [43]
-Overfull \hbox (153.09285pt too wide) in paragraph at lines 205--206
- [] 
+[42] [43] [44]) [45] (./content/06_01_double_ints/double_ints.tex [46
+
+] [47]
+[48]
+Overfull \hbox (253.73894pt too wide) detected at line 158
+[]
  []
 
-[44]) [45] [46
+) [49] (./content/06_02_iterated_ints/iterated_ints.tex [50
+
+] [51]) [52]
+(./content/06_03_fubini/fubini.tex [53
+
+]) [54]
+(./content/06_04_elementary_regions/elementary_regions.tex [55
+
+]) [56]
+(./content/06_05_di_elementary/di_elementary.tex [57
+
+] [58] [59]) [60]
+(./content/06_06_changing_order/changing_order.tex [61
+
+] [62]) [63]
+(./content/06_07_u_sub_review/u_sub_review.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 10.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 10.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+ [64
+
+] [65])
+[66] (./content/06_08_substitution/substitution.tex [67
+
+] [68] [69] [70])
+[71] (./content/06_09_substitution_examples/substitution_examples.tex [72
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
+[73]) [74] (./content/06_10_greens_theorem/greens_theorem.tex [75
+
+] [76]
+Overfull \hbox (10.21906pt too wide) detected at line 112
+[][] [] \OMS/cmsy/m/n/10 ^^A \OML/cmm/m/it/10 d[] \OMS/cmsy/m/n/10 ^^Y [] \OT1/
+cmr/m/n/10 ^^A\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 y:
+ []
+
+[77]) [78] (./content/06_11_greens_theorem_ex/greens_theorem_ex.tex [79
+
+])
+[80] (./content/06_12_area/area.tex [81
+
+] [82]) [83]
+(./content/07_01_curl_comp/curl_comp.tex
+Overfull \hbox (3.67343pt too wide) in paragraph at lines 13--14
+[]\OT1/cmr/m/n/10 REWORK THIS TO BUILD DEF-I-NI-TION FROM GE-OM-E-TRY. THEN NEX
+T
+ []
+
+[84
+
+]
+\c@depthIIICount=\count372
+\c@depthIVCount=\count373
+
+Overfull \hbox (11.83388pt too wide) in paragraph at lines 57--58
+[]\OT1/cmr/m/sl/10 From this, we can de-duce that $\OMS/cmsy/m/n/10 r$ \OT1/cmr
+/m/sl/10 should mean $[]$.
+ []
+
+[85]
+Overfull \hbox (107.87029pt too wide) in paragraph at lines 98--99
+[][]\OT1/cmr/bx/n/10 Definition 22. []\OT1/cmr/m/it/10 The \OT1/cmr/m/n/10 curl
+ \OT1/cmr/m/it/10 of a three-dimensional vec-tor field $\OT1/cmr/bx/n/10 F\OT1/
+cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 ) = (\OML/cmm/m/it/10 M\OT1
+/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; N\OT1/
+cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; P\OT1/c
+mr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 ))$
+ []
+
+[86] [87]) [88] (./content/07_02_curl_geo/curl_geo.tex [89
+
+] [90]
+Overfull \hbox (1.66492pt too wide) in paragraph at lines 178--179
+[]\OT1/cmr/m/n/10 Note that this cor-re-sponds to a larger value of $\OML/cmm/m
+/it/10 N[]$ \OT1/cmr/m/n/10 (the change in the $\OML/cmm/m/it/10 y$\OT1/cmr/m/n
+/10 -component
+ []
+
+[91] [92]
+Overfull \hbox (1.5896pt too wide) in paragraph at lines 225--225
+|\OT1/cmr/bx/n/14.4 Geometric Sig-nif-i-cance of Three-dimensional Curl| 
+ []
+
+
+Overfull \hbox (1.33823pt too wide) detected at line 240
+[]
+ []
+
+
+Overfull \hbox (23.36295pt too wide) in paragraph at lines 254--255
+[]\OT1/cmr/m/sl/10 Consider the vec-tor field $\OT1/cmr/bx/n/10 F\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 ) = []$\OT1/cmr/m/sl/10 .
+ []
+
+[93]) [94] (./content/07_03_curl_connect/curl_connect.tex
+Overfull \hbox (2.06386pt too wide) in paragraph at lines 37--38
+[]\OT1/cmr/m/n/10 Now, we will use Clairaut's The-o-rem to sim-plify this vec-t
+or. Since $\OT1/cmr/bx/n/10 F \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 M; N; P\OT1/c
+mr/m/n/10 )$
+ []
+
+[95
+
+] [96]) [97] (./content/07_04_divergence/divergence.tex [98
+
+] [99]) [100]
+(./content/07_05_div_examples/div_examples.tex [101
+
+] [102]) [103]
+(./content/07_06_div_properties/div_properties.tex
+Overfull \hbox (43.67632pt too wide) in paragraph at lines 22--23
+\OT1/cmr/m/n/10 Consider a three-dimensional $\OMS/cmsy/m/n/10 C[]$ \OT1/cmr/m/
+n/10 vec-tor field $[](\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 ) = (\OML/cmm/m/
+it/10 M\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 )\OML/cmm/m/it/
+10 ; N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 )\OML/cmm/m/it/1
+0 ; P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 ))$.
+ []
+
+[104
+
+] [105]) [106] (./content/08_01_surface_area/surface_area.tex
+Overfull \hbox (4.51788pt too wide) in paragraph at lines 28--29
+[]\OT1/cmr/m/n/10 We can ap-prox-i-mate the sides of the curvy rect-an-gle with
+ the vec-tors $[](\OML/cmm/m/it/10 s[]; t[]\OT1/cmr/m/n/10 )^^A\OML/cmm/m/it/10
+ s$
+ []
+
+[107
+
+]
+Overfull \hbox (82.99649pt too wide) detected at line 75
+[]
+ []
+
+
+Overfull \hbox (237.62434pt too wide) detected at line 87
+[]
+ []
+
+[108] [109] [110]) [111]
+(./content/08_02_scalar_surface_ints/scalar_surface_ints.tex [112
+
+]
+Overfull \hbox (16.5839pt too wide) detected at line 71
+[]
+ []
+
+
+Overfull \hbox (216.26326pt too wide) detected at line 83
+[]
+ []
+
+[113] [114]) [115] [116
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 64.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
  (./multivariable2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 64.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 64.
 Package rerunfilecheck Info: File `multivariable2.out' has not changed.
-(rerunfilecheck)             Checksum: 8FDBDE1CF53ED285596070584DC7D758;865.
+(rerunfilecheck)             Checksum: 2E4631356D5080D4C4296463184D18BC;2237.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 64.
  ) 
 Here is how much of TeX's memory you used:
- 42181 strings out of 492649
- 944009 string characters out of 6129622
- 1131466 words of memory out of 5000000
- 45194 multiletter control sequences out of 15000+600000
- 545496 words of font info for 77 fonts, out of 8000000 for 9000
+ 42476 strings out of 492649
+ 947537 string characters out of 6129622
+ 1132477 words of memory out of 5000000
+ 45156 multiletter control sequences out of 15000+600000
+ 548765 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,20n,101p,10421b,1223s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not ex
+ 75i,20n,101p,10421b,969s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.58} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.57} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.56} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.55} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.54} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.53} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.52} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.51} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.50} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.49} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.48} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.47} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.46} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.45} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.44} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.43} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.42} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.41} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.40} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.39} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.38} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.37} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.36} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.35} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.34} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.33} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.32} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.31} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.30} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.29} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.28} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.27} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.26} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.25} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.24} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.23} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.21} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.20} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.19} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1543,34 +1828,33 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
 usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/
 local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></us
 r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
-18/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2018/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2018/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-di
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2018/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2018/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on multivariable2.pdf (46 pages, 397373 bytes).
+Output written on multivariable2.pdf (116 pages, 573468 bytes).
 PDF statistics:
- 560 PDF objects out of 1000 (max. 8388607)
- 479 compressed objects within 5 object streams
- 177 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1203 PDF objects out of 1440 (max. 8388607)
+ 1047 compressed objects within 11 object streams
+ 423 named destinations out of 1000 (max. 500000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

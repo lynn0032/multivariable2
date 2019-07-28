@@ -1,0 +1,196 @@
+\documentclass{ximera}  
+
+\title{Change of Variables in Double Integrals}  
+\author{Melissa Lynn}
+\outcome{Understand how to change variables.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+When performing a $u$-substitution on a definite integral in single variable calculus, we paid careful attention to the following steps.
+\begin{itemize}
+\item Changing the variable
+\item Changing the differential
+\item Changing the interval of integration
+\end{itemize}
+For example, making a $u$-substitution in the integral $\int_1^3 2x e^{x^2}\;dx$, we chose the change of variable $u=x^2$, changed the differential to $du = g'(x)dx$, and changed the bounds of integration to $1^2 = 1$ and $3^2 = 9$. This gave us
+\[
+\int_1^3 2x e^{x^2}\;dx = \int_1^9 e^u\;du,
+\]
+which we could then evaluate.
+
+We'll now turn our attention to change of variables in double integrals, which will be a useful tool for evaluating these integrals. When we used $u$-substitution in single variable calculus, we often focused on making the \emph{integrand} easier to integrate. That is, we wished to transform the integrand, so that it had a more obvious antiderivative.
+
+In contract, when performing a change of variables on double integrals, we're often more focused on how the change of variables affects the region of integration. Consider the following regions in $\mathbb{R}^2$. The region on the left can most easily be described using polar coordinates, while the region on the right can most easily be described using a linear change of coordinates.
+
+PICTURE
+
+For double integrals, rather than finding complicated combinations of elementary regions to describe a domain, it will be useful to make a change of coordinates in order to describe the domain of integration more simply.
+
+\section*{A linear change of coordinates}
+
+Let's look at what happens when we make a linear change of coordinates. Consider the region $D$ below, and consider the double integral $\iint_D (x+y)\;dxdy$.
+
+PICTURE
+
+The region $D$ can most easily be described with the inequalities
+\begin{align*}
+1\leq 2x+y \leq 3,\\
+0\leq x-3y \leq 1.
+\end{align*}
+
+This motivates the change of coordinates $u=2x+y$ and $v=x-3y$. This is a linear change of coordinates, which can be represented with a matrix. That is, we can write
+\[
+\begin{pmatrix}
+u\\ v
+\end{pmatrix}
+ = \begin{pmatrix}
+2 & 1\\
+1 & -3
+\end{pmatrix}
+\begin{pmatrix}
+x\\ y
+\end{pmatrix}.
+\]
+Now, let's look at how this linear transformation changes the region of integration. In $(u,v)$-coordinates, our region of integration can be described as
+\begin{align*}
+1\leq u \leq 3,\\
+0\leq v \leq 1.
+\end{align*}
+This corresponds to a parallelogram in $(x,y)$-coordinates.
+
+PICTURE
+
+We can see that the linear transformation changes the domain of integration, and we will need to account for this as we make our change of coordinates.
+
+We'll begin with the simplest step, which is changing our integrand. If we take the equations $u=2x+y$ and $v=x-3y$, and solve for $x$ and $y$, we have
+\begin{align*}
+x &= \frac{3}{7}u + \frac{1}{7}v,
+y &= \frac{1}{7}u - \frac{2}{7}v.
+\end{align*}
+So, our integrand becomes
+\begin{align*}
+x+y &= \left(\frac{3}{7}u + \frac{1}{7}v\right)+\left(\frac{1}{7}u - \frac{2}{7}v\right)\\
+&= \frac{4}{7}u - \frac{1}{7}v.
+\end{align*}
+
+Next, let's look at our bounds of integration. Since the region of integration can be described using the bounds
+\begin{align*}
+1\leq u \leq 3,\\
+0\leq v \leq 1,
+\end{align*}
+our integral will have the form
+\[
+\int_0^1\int_1^3 ?\;dudv.
+\]
+
+Finally, we need to consider how the change of coordinates affects the differential. That is, what will the area expansion factor be?
+
+When we apply the linear transformation $\begin{pmatrix}
+2 & 1\\
+1 & -3
+\end{pmatrix}$ to any rectangle, the area of the rectangle is multiplied by $\left|\text{det}\begin{pmatrix}
+2 & 1\\
+1 & -3
+\end{pmatrix}\right| = \left|2\cdot -3 - 1\cdot 1\right| = 7$.
+
+So, when we change to $(u,v)$-coordinates, we need to divide by $7$, in order to account for this change in area. This gives us the change of coordinates,
+\[
+\iint_D (x+y)\;dxdy =\int_0^1\int_1^3 \left(\frac{4}{7}u - \frac{1}{7}v\right)\frac{1}{7}dudv.
+\]
+From here, we can evaluate the integral.
+\begin{align*}
+\int_0^1\int_1^3 \left(\frac{4}{7}u - \frac{1}{7}v\right)\frac{1}{7}dudv
+&= \int_0^1 \left(\frac{2}{49}u^2 - \frac{1}{49}vu\right)|_{u=1}^{u=3}dv\\
+&= \int_0^1 \left(\frac{2}{49}3^2 - \frac{1}{49}v\cdot 3\right) - \left(\frac{2}{49}1^2 - \frac{1}{49}v\cdot 1\right)dv\\
+&= \int_0^1 \left(\frac{16}{49} - \frac{2}{49}v\right)dv\\
+&= \left(\frac{16}{49}v - \frac{1}{49}v^2\right)|_{v=0}^{v=1}\\
+&= \frac{15}{49}
+\end{align*}
+
+\section*{Change of variables in general}
+
+Now, let's look at change of variables for double integrals in general, where the change of coordinates might not be linear.
+
+Suppose we are computing a double integral $\iint_D f(x,y)dxdy$, and suppose that $\vec{T}:\mathbb{R}^2\rightarrow\mathbb{R}^2$ is a change of coordinates which maps some region $D^*$ onto $D$. Suppose further that $T$ is $\mathcal{C}^1$, and that $T$ is one-to-one on $D^*$.
+
+PICTURE
+
+We think of the domain of $T$ as being in $(u,v)$-coordinates, and the codomain of $T$ as being in $(x,y)$-coordinates. So, the region $D^*$ would be described in terms of $u$ and $v$, and is mapped to $D$, which is described in terms of $x$ and $y$.
+
+We can see that our change of coordinates will have the form
+\[
+\iint_D f(x,y)dxdy = \iint_{D^*} ? dudv,
+\]
+but we still need to determine how the differential will change, by finding the area expansion factor.
+
+Suppose we have a tiny rectangle $R$ in $D^*$, and we apply the transformation $\vec{T}$ to this rectangle, to obtain a region $\vec{T}(R)$.
+
+PICTURE
+
+We can approximate the transformation $\vec{T}$ with the linear transformation given by its derivative matrix $D\vec{T}$, so the area of $\vec{T}(R)$ can be approximated as
+\[
+\text{area } \vec{T}(R) \approx \left|\text{det}(D\vec{T})\right|(\text{area }R).
+\]
+This idea gives us our area expansion factor, and we change the differential according to
+\[
+dxdy = \left|\text{det}(D\vec{T})\right|\;dudv.
+\]
+Now, we can fully describe how to change variables in double integrals.
+
+\begin{proposition}
+Let $\vec{T}:\mathbb{R}^2\rightarrow\mathbb{R}^2$ be a $C^1$ function which maps a region $D^*\subset\mathbb{R}^2$ onto a region $D\subset\mathbb{R}^2$, so that $\vec{T}$ restricted to $D^*$ is one-to-one. Suppose $f:D\rightarrow\mathbb{R}$ is an integrable function. Then
+\[
+\iint_D f(x,y)\;dxdy = \iint_{D^*} f(\vec{T}(u,v))\left|\text{det}(D\vec{T}(u,v))\right|\;dudv.
+\]
+\end{proposition}
+
+\section*{Polar coordinates}
+
+Consider the double integral $\iint_D (x^2+y^2)\;dxdy$, where $D$ is the region below.
+
+PICTURE
+
+The region $D$ can most easily be described using polar coordinates, so that
+\begin{align*}
+0\leq r\leq 2,\\
+\pi/4\leq \theta\leq \pi/2.
+\end{align*}
+Recall that polar coordinates relate to Cartesian coordinates via
+\begin{align*}
+x &= r\cos\theta,\\
+y &= r\sin\theta.
+\end{align*}
+Thus, our transformation $T$ is given by $T(r,\theta) = (r\cos\theta, r\sin\theta)$. In order to see how we must change the differential in the double integral, we compute $\left|\text{det}(D\vec{T}(u,v))\right|$.
+\begin{align*}
+\left|\text{det}(D\vec{T}(u,v))\right| &= \left|\text{det}\begin{pmatrix}\cos\theta & \sin\theta \\ -r\sin\theta & r\cos\theta\end{pmatrix}\right|\\
+&= \left|\cos\theta\cdot r\cos\theta - \sin\theta \cdot -r\sin\theta \right|\\
+&= \left|r\right|\\
+\end{align*}
+Since we describe our region using only nonnegative values for $r$, the absolute value is unnecessary. Thus, our differential will change according to
+\[
+dxdy = r\;drd\theta.
+\]
+Finally, let's look at our integrand. Using the substitutions $x = r\cos\theta$ and $y = r\sin\theta$, we have
+\[
+x^2 +y^2 = r^2\cos^2\theta + r^2\sin^2\theta = r^2.
+\]
+Putting all of this together, we have our change of variables for the double integral, and we can evaluate our transformed integral.
+\begin{align*}
+\iint_D (x^2+y^2)\;dxdy &= \int_{\pi/4}^{\pi/2}\int_0^2 r^2\cdot r\;drd\theta\\
+&= \int_{\pi/4}^{\pi/2}\int_0^2 r^3\;drd\theta\\
+&= \int_{\pi/4}^{\pi/2}\frac{1}{4}r^4|_{r = 0}^{r = 2}d\theta\\
+&= \int_{\pi/4}^{\pi/2}4d\theta\\
+&= 4\left(\frac{\pi}{2}-\frac{\pi}{4}\right)\\
+&= \pi.
+\end{align*}
+
+Notice that any time we change to polar coordinates, we will complete the same computation for the area expansion factor. That is, for changing to polar coordinates, we always have
+\[
+dxdy = r\;drd\theta.
+\]
+
+
+\end{document}

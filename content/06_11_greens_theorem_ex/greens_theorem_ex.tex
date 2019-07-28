@@ -1,0 +1,56 @@
+\documentclass{ximera}  
+
+\title{Green's Theorem Examples}  
+\author{Melissa Lynn}
+\outcome{Understand how Green's Theorem can be used to more easily compute integrals.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+We've seen how Green's theorem relates a vector line integral over the boundary of a region to a double integral over the region.
+
+\begin{theorem}
+\textbf{Green's Theorem.} Let $D$ be a closed an bounded region in $\mathbb{R}^2$, whose boundary $\partial D$ consists of finitely many simple and piecewise smooth curves. Let $\vec{F}$ be a $\mathcal{C}^1$ vector field defined on $D$, written in components as $\vec{F}(x,y) = (M(x,y), N(x,y))$. Then
+\[
+\oint_{\partial D}\vec{F}\cdot d\vec{s} = \iint_D \left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\;dA.
+\]
+\end{theorem}
+
+Now, we'll look at several examples of using Green's theorems to simplify some computations.
+
+\section*{Green's theorem examples}
+
+\begin{example}
+Consider the integral $\oint_C \vec{F}\cdot d\vec{s}$, where $\vec{F}(x,y) = (x^2, e^y)$, and $C$ is the unit circle, oriented counterclockwise.
+
+PICTURE
+
+By Green's theorem, this is equivalent to a double integral over the unit disc. That is,
+\begin{align*}
+\oint_C \vec{F}\cdot d\vec{s} &= \iint_D \left(\frac{\partial}{\partial x}e^y - \frac{\partial}{\partial y}x^2\right)\;dA\\
+&= \iint_D 0\;dA\\
+&= 0.
+\end{align*}
+\end{example}
+
+\begin{example}
+Consider the integral $\oint_C \vec{F}\cdot d\vec{s}$, where $\vec{F}(x,y) = (y, -x)$, and $C$ is the unit circle, oriented \emph{clockwise}.
+
+PICTURE
+
+Let $D$ be the unit disc, enclosed by the unit circle. Although this curve isn't positively oriented, we can still use Green's theorem to help evaluate our line integral. This will require a sign change.
+
+\begin{align*}
+\oint_C\vec{F}\cdot d\vec{s} &= - \oint_{-C}\vec{F}\cdot d\vec{s}\\
+&= -\iint_D \left(\frac{\partial}{\partial x}(-x) - \frac{\partial}{\partial y}(y)\right)\;dA\\
+&= -\iint_D \left(-2\right)\;dA\\
+&= 2\cdot (\text{area of }D)\\
+&= 2\pi.
+\end{align*}
+\end{example}
+
+
+
+\end{document}

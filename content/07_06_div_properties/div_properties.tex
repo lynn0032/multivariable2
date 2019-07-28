@@ -1,0 +1,93 @@
+\documentclass{ximera}  
+
+\title{Properties of Divergence}  
+\author{Melissa Lynn}
+\outcome{Understand the relationship between divergence and curl, and the divergence theorem in the plane.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+We've defined the divergence of a vector field, and seen how this can be used as a measure of local expansion or contraction.
+
+\begin{definition}
+Let $\vec{F}:\mathbb{R}^n\rightarrow\mathbb{R}^n$ be a differentiable vector field. Then the \emph{divergence} of $\vec{F}$ is $\nabla\cdot \vec{F}$.
+\end{definition}
+
+In this section, we'll explore some properties of divergence, and how it relates to topics we covered previously.
+
+\section*{Divergence and curl}
+
+Consider a three-dimensional $\mathcal{C}^2$ vector field $\vec{F}(x,y,z) = (M(x,y,z), N(x,y,z), P(x,y,z))$. We can compute the curl of $\vec{F}$ as
+\[
+\nabla\times \vec{F} = \left(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}, \frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}, \frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right).
+\]
+Notice that we can view $\nabla\times \vec{F}$ as a function from $\mathbb{R}^3$ to $\mathbb{R}^3$. So, we can view it as a vector field, and compute its divergence. This gives us
+\begin{align*}
+\nabla\cdot (\nabla\times \vec{F}) &= \nabla\cdot \left(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}, \frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}, \frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\\
+&= \frac{\partial}{\partial x}\left(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}\right) + \frac{\partial}{\partial y}\left(\frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}\right) + \frac{\partial}{\partial z}\left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\\
+&= \frac{\partial^2 P}{\partial x \partial y} - \frac{\partial^2 N}{\partial x \partial z} + \frac{\partial^2 M}{\partial y \partial z} - \frac{\partial^2 P}{\partial y\partial x} + \frac{\partial^2 N}{\partial z\partial x} - \frac{\partial^2 M}{\partial z\partial y}.
+\end{align*}
+
+Now, since $\vec{F}$ is $\mathcal{C}^2$, Clairaut's theorem tells us that the order of the mixed partials doesn't matter. That is,
+\begin{align*}
+\frac{\partial^2 M}{\partial y \partial z} &= \frac{\partial^2 M}{\partial z \partial y},\\
+\frac{\partial^2 N}{\partial x \partial z} &= \frac{\partial^2 N}{\partial z \partial x},\\
+\frac{\partial^2 P}{\partial x \partial y} &= \frac{\partial^2 P}{\partial y \partial x}.
+\end{align*}
+So, all of the terms above cancel, and we're left with
+\[
+\nabla \cdot (\nabla \times \vec{F}) = 0.
+\]
+Using a similar argument, the same result holds for two-dimensional vector fields.
+
+\begin{proposition}
+Let $\vec{F}$ be an $n$-dimensional $\mathcal{C}^2$ vector field, for $n=2$ or $n=3$. Then
+\[
+\nabla \cdot (\nabla \times \vec{F}) = 0.
+\]
+\end{proposition}
+
+\section*{Divergence theorem in the plane}
+
+Consider a region $D$, satisfying the hypotheses of Green's theorem. That is, let $D$ be a closed an bounded region in $\mathbb{R}^2$, whose boundary $\partial D$ consists of finitely many simple and piecewise smooth curves.
+
+PICTURE
+
+Let $\vec{F}$ be a $\mathcal{C}^1$ vector field defined on $D$. Since $\nabla\cdot \vec{F}$ is a scalar valued function, we can integrate it over $D$. Let's think about what the integral
+\[
+\iint_D \nabla\cdot \vec{F}\;dA
+\]
+represents. Since the divergence $\nabla\cdot \vec{F}$ gives the microscopic expansion or contraction of the vector field, the double integral $\iint_D \nabla\cdot \vec{F}\;dA$ represents the total expansion or contraction across the region $D$. Another way to say this is that $\iint_D \nabla\cdot \vec{F}\;dA$ gives the total net flow across the region $D$. 
+
+PICTURE
+
+Now, let's try to relate this total net flow to something happening on the boundary, analogously to Green's theorem.
+
+Suppose we approximate the region $D$ with a bunch of small rectangles. When we look at the flow across one of the interior rectangle edges, any flow out of one rectangle will flow into another rectangle. So all of the flow happening inside of the region will cancel out in the double integral, and the only flow that matters happens across the edge.
+
+How can we measure the flow across the edge? If $\vec{n}$ is the unit normal vector pointing outside of the boundary curve, then we can measure the flow through a boundary point with $\vec{F}\cdot \vec{n}$.
+
+PICTURE
+
+This works because if $\vec{F}$ and $\vec{n}$ are in the same direction, there is positive flow out of the region. If $\vec{F}$ and $\vec{n}$ are perpendicular, there is zero flow across the boundary at that point.
+
+So, we can find the total flow across the boundary by computing the scalar line integral
+\[
+\oint_{\partial D}\vec{F}\cdot \vec{n} ds.
+\]
+
+
+The above argument provides a sketch of a proof for the following theorem, sometimes called the divergence theorem in the plane.
+
+\begin{theorem}
+Let $D$ be a closed an bounded region in $\mathbb{R}^2$, whose boundary $\partial D$ consists of finitely many simple and piecewise smooth curves. Let $\vec{F}:D\subset\mathbb{R}^2\rightarrow\mathbb{R}^2$ be a $\mathcal{C}^1$ vector field, and suppose that $\vec{n}$ is the outward pointing normal vector to the boundary of $D$. Then
+\[
+\oint_{\partial D}\vec{F}\cdot \vec{n}\;ds = \iint_D \nabla\cdot \vec{F}\;dA.
+\]
+\end{theorem}
+
+This theorem has applications similar to Green's theorem; we can use it to more easily compute some integrals.
+
+\end{document}

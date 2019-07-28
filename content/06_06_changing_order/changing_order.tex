@@ -1,0 +1,103 @@
+\documentclass{ximera}  
+
+\title{Changing the Order of Integration}  
+\author{Melissa Lynn}
+\outcome{Change the order of integration in double integrals over elementary regions.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+Consider the integral $\iint_D \sin(y^2)\;dA$, where $D$ is the region below.
+
+PICTURE
+
+The region $D$ is $x$-simple, and can be described with the inequalities
+\begin{align*}
+0\leq &x\leq \sqrt{\pi}\text{, and}\\
+0\leq &y\leq 2x
+\end{align*}
+Thus, we can write the double integral as
+\[
+\iint_D f\;dA = \int_0^{\sqrt{\pi}}\int_0^{2x}\sin(y^2)\;dy\;dx.
+\]
+
+Alternatively, the region $D$ is $y$-simple, and can be described with the inequalities
+\begin{align*}
+0\leq &y\leq \frac{1}{2}\sqrt{\pi}\text{, and}\\
+0\leq &x\leq \frac{y}{2}.
+\end{align*}
+Thus, we can write the double integral as
+\[
+\iint_D f\;dA = \int_0^{\sqrt{\pi}/2}\int_0^{y/2} \sin(y^2)\;dxdy.
+\]
+
+Notice that for the first integral, we integrate with respect to $y$ and then with respect to $x$. For the other integral, we integrate with respect to $x$ and then with respect to $y$. These integrals can be used to evaluate the double integral of the same function over the same region, so they should give the same value.
+
+Let's see what happens when we evaluate each of the integrals. For the first integral, we have
+\[
+\iint_D f\;dA = \int_0^{\sqrt{\pi}}\int_0^{2x}\sin(y^2)\;dy\;dx.
+\]
+Here, we're stuck right away. We don't have a nice, easy formula for an antiderivative of $\sin(y^2)$.
+
+Maybe we'll have better luck with the second integral.
+
+\begin{align*}
+\iint_D f\;dA &= \int_0^{\sqrt{\pi}/2}\int_0^{y/2} \sin(y^2)\;dxdy\\
+&= \int_0^{\sqrt{\pi}/2}\left(\sin(y^2)x\right)|_{x=0}^{x=y/2}\;dy\\
+&= \int_0^{\sqrt{\pi}/2}\left(\frac{y}{2}\sin(y^2)\right)\;dy\\
+&= \left(-\frac{1}{4}\cos(y^2)\right)|_{y=0}^{y=\sqrt{\pi}}\\
+&= -\frac{1}{4}\cos(\sqrt{\pi}^2) + \frac{1}{4}\cos(0^2)\\
+&= \frac{1}{2}
+\end{align*}
+
+In this example, evaluate the integral with respect to $x$ and then $y$ was much easier than integrating with respect to $y$ and then $x$.
+
+\section*{Changing the order of integration}
+
+As in the example above, sometimes a certain order of integration will be easier than the other, and it can be useful to change the order of integration. When we do this, it's important to pay careful attention to the bounds, and it can be useful to sketch the region of integration.
+
+Let's look at some examples of changing the order of integration.
+
+\begin{example}
+Consider the integral
+\[
+\int_0^2\int_{x^2}^{2x} x^3\;dydx.
+\]
+We could evaluate this integral directly, but instead, we'll change the order of integration for this integral, and then evaluate the resulting integral. In order to change the order of integration, we'll start by sketching the region of integration.
+
+PICTURE
+
+We can describe this region using the inequalities
+\begin{align*}
+0\leq &y\leq 4\text{, and}\\
+y/2 \leq &x\leq \sqrt{y}.
+\end{align*}
+So, we can change the order of integration, writing
+\[
+\int_0^2\int_{x^2}^{2x} x^3\;dydx = \int_0^4\int_{y/2}^{\sqrt{y}}x^3\;dxdy.
+\]
+Evaluating our new integral, we have
+\begin{align*}
+\int_0^4\int_{y/2}^{\sqrt{y}}x^3\;dxdy &= \int_0^4\left(\frac{1}{4}x^4\right)|_{x=y/2}^{x=\sqrt{y}}dy\\
+&= \int_0^4\left(\frac{1}{4}\sqrt{y}^4 - \frac{1}{4}\left(\frac{y}{2}\right)^4\right)dy\\
+&= \int_0^4\left(\frac{1}{4}y^2 - \frac{1}{64}y^4\right)dy\\
+&= \left(\frac{1}{12}y^3 - \frac{1}{320}y^5\right)|_{y=0}^{y=4}\\
+&= 32/15.
+\end{align*}
+\end{example}
+
+\begin{example}
+Now, consider the integral $\int_0^2\int_0^{x+1}x^2y\;dydx$. We'll change the order of integration for this integral. To do this, we start by sketching the region of integration.
+
+PICTURE
+
+We can describe this region as points $(x,y)$ with $0\leq y\leq 3$, but the bounds for $x$ change. When $0\leq y\leq 1$, the bounds for $x$ are $0\leq x\leq 2$. When $1 \leq y\leq 3$, the bounds for $x$ are $y-1\leq x\leq 2$. Because of this, we need two integrals. That is, we have
+\[
+\int_0^2\int_0^{x+1}x^2y\;dydx = \int_0^1\int_0^2 x^2y\;dydx + \int_1^3\int_{y-1}^2 x^2y\;dxdy.
+\]
+We could then evaluate these integrals.
+\end{example}
+
+\end{document}

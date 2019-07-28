@@ -1,0 +1,134 @@
+\documentclass{ximera}  
+
+\title{Double Integrals over Elementary Regions}  
+\author{Melissa Lynn}
+\outcome{Set up and evaluate double integrals over elementary regions.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+We've defined double integrals over rectangles, by approximating the volume under a surface with boxes.
+
+PICTURE
+
+\begin{definition}
+Let $f:R\subset\mathbb{R}^2\rightarrow\mathbb{R}$ be a function defined on a rectangle $R$ in $\mathbb{R}^2$. The \emph{double integral} of $f$ over $R$ is
+\[
+\iint_R f(x,y) dA = \lim_{n\rightarrow \infty} \sum_{i,j} f(\vec{c}_{ij})\Delta x\Delta y,
+\]
+provided this limit exists.
+\end{definition}
+
+We used Fubini's theorem to show that we can evaluate double integrals using iterated integrals.
+
+Now, we would like to define and evaluate double integrals over regions which aren't rectangles. We will start by defining these double integrals.
+
+\section*{Double integrals over an arbitrary region}
+
+Suppose we wish to integrate a function $f:X\subset\mathbb{R}^2\rightarrow\mathbb{R}$ over a bounded region $D\subset X$ contained in the domain of $f$. This region, $D$, may be an elementary region, but this is not required for the definition.
+
+PICTURE
+
+We will define the double integral of $f$ over $D$, using a double integral over a rectangle. That is, consider a function $f^{\text{ext}}$, which is defined to be equal to $f$ on $D$, and zero elsewhere.
+
+\begin{definition}
+Let $f^{\text{ext}}:\mathbb{R}^2\rightarrow\mathbb{R}$ be the function defined by
+\[
+f^{\text{ext}}(x,y) = \begin{cases}
+f(x,y), & (x,y)\in D\\
+0, & (x,y)\notin D
+\end{cases}.
+\]
+\end{definition}
+
+Now, let $R$ be a rectangle containing $D$. Since $D$ is bounded, such a rectangle exists. Then, we can see that the volume under $f$ and over $D$ is equivalent to the the volume under $f^{\text{ext}}$ and over $R$.
+
+PICTURE
+
+Thus, we define the double integral of $f$ over $D$ using the double integral of $f^{\text{ext}}$ over $R$.
+
+\begin{definition}
+Let $D$ be a bounded region in $\mathbb{R}^2$, and let $R$ be a rectangle containing $D$. Let $f:X\subset\mathbb{R}^2\rightarrow\mathbb{R}$ be a function defined on $D$. Then we define the \emph{double integral of $f$ over $D$} to be
+\[
+\iint_D f\;dA = \iint_R f^{\text{ext}}\;dA.
+\]
+\end{definition}
+
+Although this provides us with a definition for double integrals, this definition isn't very useful for evaluating double integrals. Next, we'll look at how we can evaluate double integrals over elementary regions.
+
+\section*{Evaluating double integrals over elementary regions}
+
+When $D$ is an elementary regions, we can describe it using inequalities, and then use these inequalities for the bounds of integration.
+
+\begin{proposition}
+Consider an $x$-simple region $D$, which can be described as the set of points $(x,y)$ such that
+\begin{align*}
+a\leq &x\leq b\text{, and}\\
+g(x)\leq &y \leq h(x),
+\end{align*}
+where $g(x)$ and $h(x)$ are continuous functions. Then we can evaluate the double integral of a function $f(x,y)$ over $D$ as
+\[
+\iint_D f(x,y)\;dA = \int_a^b\int_{g(x)}^{h(x)} f(x,y)\;dydx.
+\]
+
+Consider a $y$-simple region $D$, which can be described as the set of points $(x,y)$ such that
+\begin{align*}
+c\leq & y\leq d\text{, and}\\
+g(y)\leq & x \leq h(y),
+\end{align*}
+where $g(y)$ and $h(y)$ are continuous functions. Then we can evaluate the double integral of a function $f(x,y)$ over $D$ as
+\[
+\iint_D f(x,y)\;dA = \int_c^d\int_{g(y)}^{h(y)} f(x,y)\;dxdy.
+\]
+\end{proposition}
+
+Let's look at how we can evaluate double integrals over elementary regions.
+
+\begin{example}
+Consider the $x$-simple region $D$ below, which is bounded by the curves $x=-1$, $x=1$, $y=0$, and $y=x^2$. 
+
+PICTURE
+
+Let's integrate the function $f(x,y)=x^2y$ over this region. Since $D$ can be described with the inequalities
+\begin{align*}
+-1\leq &x\leq 1\text{, and}\\
+0\leq &y\leq x^2.
+\end{align*}
+We have
+\begin{align*}
+\iint_D f\;dA &= \int_{-1}^1\int_0^{x^2}x^2y\;dydx\\
+&=\int_{-1}^1\left(\frac{1}{2}x^2y^2|_{y=0}^{y=x^2}\right)\;dx\\
+&= \int_{-1}^1\left(\frac{1}{2}x^2(x^2)^2 - 0\right)\;dx\\
+&= \int_{-1}^1\left(\frac{1}{2}x^6\right)\;dx\\
+&= \left(\frac{1}{14}x^7\right)|_{x=-1}^{x=1}\\
+&= \left(\frac{1}{14}\cdot 1^7\right) - \left(\frac{1}{14}\cdot (-1)^7\right)\\
+&= \frac{1}{7}.
+\end{align*}
+\end{example}
+
+When evaluating these double integrals, it can be very useful to start be drawing the region of integration, in order to determine the bounds.
+
+\begin{example}
+We'll evaluate the double integral $\iint_D f\;dA$, where $f(x,y) = \sin(y^2)$ and $D$ is the region below.
+
+PICTURE
+
+The region $D$ is $y$-simple, and can be described with the inequalities
+\begin{align*}
+0\leq &y\leq \sqrt{\pi}\text{, and}\\
+-y\leq &x\leq y.
+\end{align*}
+We evaluate the double integral.
+\begin{align*}
+\iint_D f\;dA &= \int_0^{\sqrt{\pi}}\int_{-y}^y \sin(y^2)\;dxdy\\
+&= \int_0^{\sqrt{\pi}}\left(\sin(y^2)x\right)|_{x={-y}}^{x=y}\;dy\\
+&= \int_0^{\sqrt{\pi}}\left(2y\sin(y^2)\right)\;dy\\
+&= \left(-\cos(y^2)\right)|_{y=0}^{y=\sqrt{\pi}}\\
+&= -\cos(\sqrt{\pi}^2) + \cos(0^2)\\
+&= 2
+\end{align*}
+\end{example}
+
+\end{document}

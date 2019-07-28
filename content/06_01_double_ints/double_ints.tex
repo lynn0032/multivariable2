@@ -1,0 +1,163 @@
+\documentclass{ximera}  
+
+\title{Double Integrals}  
+\author{Melissa Lynn}
+\outcome{Understand the geometric motivation behind the definition of a double integral.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+We would like to be able to integrate functions $f:\mathbb{R}^2\rightarrow\mathbb{R}$, finding the net volume between the graph of $f$ and the $xy$-plane. Before we figure out how to do this, let's review how we defined integrals in single variable calculus.
+
+Consider a continuous (or piece-wise continuous) function $f$ defined on the closed interval $[a,b]$. We would like to find the signed area between the graph of $f$ and the $x$-axis over this interval, where area below the $x$-axis counts as negative.
+
+PICTURE
+
+We can approximate this area with rectangles. To do this, we divide the interval $[a,b]$ into subintervals, and use a sample point to determine the height of the rectangle over that subinterval.
+
+PICTURE
+
+The area of the $i$th rectangle will be $f(x_i)\Delta x$, where $x_i$ is the $i$th sample point, and $\Delta x$ is the length of each subinterval. To approximate the area under $f$, we add up the area of the rectangles, $\sum_{i=1}^n f(x_i)\Delta x$. As the number of rectangles increases, the approximation becomes more accurate, so we take the limit as the number of rectangles, $n$, goes to infinity, and we arrive at the definition of the definite integral.
+\[
+\int_a^b f(x)dx = \lim_{n\rightarrow \infty} \sum_{i=1}^n f(x_i)\Delta x
+\]
+To define the integral of a function from $\mathbb{R}^2$ to $\mathbb{R}$, we'll follow this same idea of approximating area with rectangles. Since we'll be dealing with volume instead, we'll approximate with boxes.
+
+\section*{Double Integrals}
+
+Consider a function $f:R\subset\mathbb{R}^2\rightarrow\mathbb{R}$ defined on a rectangle $R\subset\mathbb{R}^2$.
+
+PICTURE
+
+We'll approximate the signed area between the graph of $f$ and the $xy$-plane using boxes. To do this, we'll partition $R$ into subrectangles, and take a box over each rectangle. The height of the box will be given by the value of $f$ at a sample point, $\vec{c}_{ij}$, in the subrectangle.
+
+PICTURE
+
+Then, the volume of the box over the $(i,j)$th rectangle is $f(\vec{c}_{ij})\Delta x\Delta y$, where $\vec{c}_{ij}$ is the sample point, $\Delta x$ is the width of the rectangle, and $\Delta y$ is the length of the rectangle.
+
+When we add up the total area volume of the boxes, this approximates the volume under the graph of $f$.
+\[
+\text{Volume}\approx \sum_{i,j} f(\vec{c}_{ij})\Delta x\Delta y
+\]
+
+PICTURE
+
+When we increase the number of subrectangles, this approximation becomes more accurate. So, when we take the limit as the number of rectangles, $n$, goes to infinity, we compute the exact volume, which leads us to the definition of a double integral.
+
+\begin{definition}
+Let $f:R\subset\mathbb{R}^2\rightarrow\mathbb{R}$ be a function defined on a rectangle $R$ in $\mathbb{R}^2$. The \emph{double integral} of $f$ over $R$ is
+\[
+\iint_R f(x,y) dA = \lim_{n\rightarrow \infty} \sum_{i,j} f(\vec{c}_{ij})\Delta x\Delta y,
+\]
+provided this limit exists. Here, $n$, $\vec{c}_{ij}$, $\Delta x$, and $\Delta y$ are as defined above.
+
+If the double integral above exists, we say that $f$ is \emph{integrable} over $R$.
+\end{definition}
+
+The double integral represented the signed volume between the graph of $f$ and the $xy$-plane. Unsurprisingly, continuous functions are always integrable.
+
+\begin{theorem}
+Let $f:R\subset\mathbb{R}^2\rightarrow\mathbb{R}$ be a continuous function defined on a rectangle $R$. Then $f$ is integrable.
+\end{theorem}
+
+Unfortunately, this definition isn't practical for computing double integrals. For computations, we'll use iterated integrals, which will be defined in the next section. Using Fubini's Theorem, we'll see why we can use iterated integrals to compute double integrals.
+
+Although we won't typically use the definition of a double integral for computation, we can approximate double integrals using a finite number of boxes.
+
+\section*{Approximating double integrals}
+
+We'll now look at a couple of examples of approximating double integrals.
+
+\begin{example}
+Consider the function $f(x,y) = x^2+y^2$ over the rectangle $[0,1]\times[0,1]$.
+
+PICTURE
+
+We'll partition the rectangle $[0,1]\times [0,1]$ into nine subrectangles, and use the upper right corner of each rectangle for a sample point.
+
+PICTURE
+
+Next, we'll evaluate $f$ at each of our sample points.
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$(\vec{c}_{ij})$ & $f(\vec{c}_{ij})$\\
+\hline
+$(1/3, 1/3)$ & $2/9$\\
+$(1/3, 2/3)$ & $5/9$\\
+$(1/3, 1)$ & $10/9$\\
+$(2/3, 1/3)$ & $5/9$\\
+$(2/3, 2/3)$ & $8/9$\\
+$(2/3, 1)$ & $13/9$\\
+$(1, 1/3)$ & $10/9$\\
+$(1, 2/3)$ & $13/9$\\
+$(1, 1)$ & $2$\\
+\hline
+\end{tabular}
+\end{center}
+
+The base of each box has area $\frac{1}{3}\cdot \frac{1}{3} = \frac{1}{9}$, so the volume of the $ij$th box is $\frac{1}{9}f(\vec{c}_{ij})$.
+
+To approximate the double integral $\iint_R f(x,y)dA$, we add up the volume of all of these boxes.
+\begin{align*}
+\iint_R f(x,y)dA &\approx \sum_{i,j} \frac{1}{9}f(\vec{c}_{ij})\\
+&= \frac{1}{9}\sum_{i,j} f(\vec{c}_{ij})\\
+&= \frac{1}{9}\left(\frac{2}{9} + \frac{5}{9} + \frac{10}{9} + \frac{5}{9} + \frac{8}{9} + \frac{13}{9} + \frac{10}{9} + \frac{13}{9} + 2\right)\\
+&= \frac{28}{27}
+\end{align*}
+So, we have the approximation $\iint_R f(x,y)dA\approx \frac{28}{27}$.
+\end{example}
+
+\begin{example}
+Consider the function $f(x,y) = e^{xy^2}$ over the rectangle $[0,2]\times [1,2]$.
+
+PICTURE
+
+We'll partition the rectangle $[0,2]\times [1,2]$ into sixteen subrectangles, and we'll use the lower right corners as sample points.
+
+PICTURE
+
+We evaluate $f$ at each of our sample points.
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$\vec{c}_{ij}$ & $f(\vec{c}_{ij})$ \\
+\hline
+$(1/2, 1)$ & $e^{1/2}$\\
+$(1, 1)$ & $e$\\
+$(3/2, 1)$ & $e^{3/2}$\\
+$(2, 1)$ & $e^{2}$\\
+$(1/2, 5/4)$ & $e^{25/32}$\\
+$(1, 5/4)$ & $e^{25/16}$\\
+$(3/2, 5/4)$ & $e^{75/32}$\\
+$(2, 5/4)$ & $e^{25/8}$\\
+$(1/2, 3/2)$ & $e^{9/8}$\\
+$(1, 3/2)$ & $e^{9/4}$\\
+$(3/2, 3/2)$ & $e^{27/8}$\\
+$(2, 3/2)$ & $e^{9/2}$\\
+$(1/2, 7/4)$ & $e^{49/32}$\\
+$(1, 7/4)$ & $e^{49/16}$\\
+$(3/2, 7/4)$ & $e^{147/32}$\\
+$(2, 7/4)$ & $e^{49/8}$\\
+\hline
+\end{tabular}
+\end{center}
+\end{example}
+
+The base of each box is $\frac{1}{2}\cdot \frac{1}{4} = \frac{1}{8}$, so the volume of the $ij$th box is $\frac{1}{8}f(\vec{c}_{ij})$.
+
+To approximate the double integral $\iint_R f(x,y)dA$, we add up the volume of all of these boxes.
+\begin{align*}
+\iint_R f(x,y)dA &\approx \frac{1}{8}\sum_{i,j} f(\vec{c}_{ij})\\
+&= \frac{1}{8}\left(e^{1/2} + e + e^{3/2} + e^2 + e^{25/32} + e^{25/16} + e^{75/32} + e^{25/8} + e^{9/8} + e^{9/4} + e^{27/8} + e^{9/2} + e^{49/32} + e^{49/16} + e^{147/32} + e^{49/8}\right)\\
+&\approx 96.27
+\end{align*}
+So, we have the approximation $\iint_R f(x,y)dA\approx 96.27$.
+
+In the next section, we'll introduce iterated integrals, which we'll be able to use to compute the exact value of double integrals.
+
+\end{document}
