@@ -1,0 +1,154 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>More  on  Stokes  Theorem</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="more_stokes.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand additional ways that Stokes theorem can be used, and learn some connections to earlier material."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >We’ve seen how Stokes theorem relates the line integral of a vector field over the
+boundary of a surface with the double integral of curl over the entire surface, given
+consistent orientations.
+</p><!--l. 14--><p class="noindent" >PICTURE
+</p>
+<div class="theorem-like problem-environment theorem" id="problem1"><a 
+ id="x1-17r1"></a><strong>Stokes Theorem.</strong> Suppose <script type="math/tex">S</script> is a smooth and bounded surface in <script type="math/tex">\mathbb {R}^3</script>, and that <script type="math/tex">\partial S</script> consists
+of finitely many closed, simple, and piecewise <script type="math/tex">\mathcal {C}^1</script> curves. Suppose further that <script type="math/tex">S</script> and <script type="math/tex">\partial S</script> are
+consistently oriented. Let <script type="math/tex">\vec {F}</script> be a <script type="math/tex">\mathcal {C}^1</script> vector field, which is defined on <script type="math/tex">S</script>. Then <script type="math/tex; mode=display"> \oint _{\partial S}\vec {F}\cdot d\vec {s} = \iint _S \nabla \times \vec {F}\cdot d\vec {S}, </script> where <script type="math/tex">\nabla \times \vec {F}</script>
+denotes the curl of <script type="math/tex">\vec {F}</script>.
+</div>
+<!--l. 24--><p class="noindent" >We’ll now look at another way to use Stokes theorem, as well as some ways Stokes
+theorem can be used to understand earlier material.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Replacing a surface</h3>
+<!--l. 28--><p class="noindent" >In the following example, we’ll see how Stokes theorem can be used to evaluate a
+double integral over a surface, by replacing the surface with a different surface that
+has the same boundary.
+</p>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-1001r2"></a>Consider the paraboloid <script type="math/tex">S</script> defined by the equation <script type="math/tex">z = 1-x^2-y^2</script>, for <script type="math/tex">z\geq 0</script>, oriented with the upward
+pointing normal vector.
+<!--l. 33--><p class="noindent" >PICTURE
+                                                                  
+
+                                                                  
+</p><!--l. 35--><p class="noindent" >Also consider the vector field <script type="math/tex">\vec {F} = (x^2, z^2, y^3, z)</script>, and notice that the curl of <script type="math/tex">\vec {F}</script> is <script type="math/tex; mode=display"> \nabla \times \vec {F} = (3y^2z-2z, 0, 0). </script> Suppose we wish to
+evaluate the vector surface integral <script type="math/tex">\iint _S (3y^2z-2z, 0, 0)\;d\vec {S}</script>. We have a few options for how we could
+approach evaluating this surface integral. We could parametrize <script type="math/tex">S</script> and evalute
+directly, or we could apply Stokes theorem, and integral <script type="math/tex">\vec {F}</script> over the boundary of <script type="math/tex">S</script>
+instead.
+</p><!--l. 41--><p class="noindent" >Notice that the boundary of <script type="math/tex">S</script> is the unit circle in the <script type="math/tex">xy</script>-plane, pictured below.
+</p><!--l. 43--><p class="noindent" >PICTURE
+</p><!--l. 45--><p class="noindent" >Although this approach is possible by Stokes theorem, it doesn’t necessarily seem any
+easier than evaluating the surface integral directly. However, notice that <script type="math/tex">\partial S</script> is also the
+boundary of a simpler surface, the unit disc <script type="math/tex">D</script> in the <script type="math/tex">xy</script>-plane.
+</p><!--l. 47--><p class="noindent" >PICTURE
+</p><!--l. 49--><p class="noindent" >Because of this, we can apply Stokes theorem twice, to get <script type="math/tex; mode=display"> \iint _S \nabla \times \vec {F}\;d\vec {S} = \oint _{\partial S} \vec {F}\cdot d\vec {s} = \iint _D \nabla \times \vec {F}\;d\vec {S}. </script> So, we’ll
+evaluate <script type="math/tex">\iint _D \nabla \times \vec {F}\;d\vec {S}</script>. Now, <script type="math/tex">D</script> lies in the <script type="math/tex">xy</script>-plane, and <script type="math/tex">\nabla \times \vec {F}(x,y,z) = (3y^2z-2z, 0, 0)</script>. So, when <script type="math/tex">z=0</script>, <script type="math/tex">\nabla \times \vec {F}(x,y,z) = (0,0,0)</script>. This means
+that the vector field <script type="math/tex">\nabla \times \vec {F}</script> is zero on the disc <script type="math/tex">D</script>. Putting all of this together,
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_S \nabla\times \vec{F}\;d\vec{S} &= \oint_{\partial S} \vec{F}\cdot d\vec{s}\\
+ &= \iint_D \nabla\times \vec{F}\;d\vec{S}\\
+ &= \iint_D (0,0,0)\;d\vec{S}\\
+ &= 0.
+\end{align*}</script>
+<!--l. 60--><p class="noindent" >In this case, we were able to use Stokes theorem to replace our surface integral with a
+different surface integral, over a surface with the same boundary. This gave us a
+much easier integral to evaluate.
+</div>
+<a 
+ id="Q1-1-3"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Stokes theorem and circulation</h3>
+<!--l. 65--><p class="noindent" >Now, we’ll use Stokes theorem to show that if the curl of a vector field <script type="math/tex">\vec {F}</script> is zero, then <script type="math/tex">\vec {F}</script>
+has no circulation over any (reasonably nice) closed curve.
+</p>
+<div class="theorem-like problem-environment proposition" id="problem3"><a 
+ id="x1-2001r3"></a>Let <script type="math/tex">\vec {F}:D\subset \mathbb {R}^3\rightarrow \mathbb {R}^3</script> be a <script type="math/tex">\mathcal {C}^1</script> vector field defined on an open and simply connected domain <script type="math/tex">D</script>, and
+suppose that <script type="math/tex">\nabla \times \vec {F} = (0,0,0)</script>. Let <script type="math/tex">C</script> be a closed, simple, and piecewise <script type="math/tex">\mathcal {C}^1</script> curve contained in <script type="math/tex">D</script>. Then
+<script type="math/tex; mode=display"> \oint _C\vec {F}\cdot d\vec {s} = 0. </script>
+</div>
+<!--l. 74--><p class="noindent" >We’ll give a sketch of a proof of this proposition, glossing over some of the
+details.
+</p><!--l. 76--><p class="noindent" >
+</p>
+                                                                  
+
+                                                                  
+<div class="proof">
+<!--l. 77--><p class="noindent" ><span class="head">
+</p><dl class="trivlist"><dt class="trivlist">
+Proof   </dt><dd 
+class="trivlist"></span>Since <script type="math/tex">D</script> is open and simply connected, there is some smooth surface <script type="math/tex">S</script> in <script type="math/tex">D</script>
+such that <script type="math/tex">C</script> is the boundary of <script type="math/tex">D</script>. A rigorous proof of this assertion is very involved,
+so we’ll skip over this detail.
+<!--l. 79--><p class="noindent" >Furthermore, we can orient <script type="math/tex">D</script> so that Stokes theorem will apply. Then we have <script type="math/tex; mode=display"> \oint _C\vec {F}\cdot d\vec {s} = \iint _S\nabla \times \vec {F}\cdot d\vec {S}. </script>
+Since the curl of <script type="math/tex">\vec {F}</script> is zero, this gives us <script type="math/tex; mode=display"> \oint _C\vec {F}\cdot d\vec {s}=0, </script> as desired.                                      <script type="math/tex">\blacksquare </script></p></dd></dl>
+</div>
+<a 
+ id="Q1-1-5"></a>
+<h3 class="likesectionHead"><a 
+ id="x1-3000"></a>Curl as microscopic rotation</h3>
+<!--l. 92--><p class="noindent" >We’ve previously discussed how curl represents microscopic rotation, and we’ve given
+some geometric justification for why this should be the case. We’ll now use Stokes
+theorem to provide further justification that curl represents microscopic
+rotation.
+</p><!--l. 94--><p class="noindent" >Consider a point <script type="math/tex">\vec {a}</script> in <script type="math/tex">\mathbb {R}^3</script>, and let <script type="math/tex">S_r</script> be a small disc of radius <script type="math/tex">r</script>, centered at <script type="math/tex">\vec {a}</script>, with unit
+normal vector <script type="math/tex">\vec {n}</script>.
+</p><!--l. 96--><p class="noindent" >PICTURE
+</p><!--l. 98--><p class="noindent" >Applying Stokes theorem to this disc, we have <script type="math/tex; mode=display"> \int _{\partial S_r}\vec {F}\cdot d\vec {s} = \iint _{S_r} (\nabla \times \vec {F})\cdot \vec {n}\;dS </script> Since we are integrating over a very small surface,
+we can approximate the integrand with a constant, <script type="math/tex; mode=display"> (\nabla \times \vec {F}(x,y,z))\cdot \vec {n} \approx (\nabla \times \vec {F})(\vec {a})\cdot \vec {n}. </script> Then our integral can be approximated as
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int_{\partial S_r}\vec{F}\cdot d\vec{s} &= \iint_{S_r} (\nabla\times \vec{F})\cdot \vec{n}\;dS\\
+&\approx \iint_{S_r} (\nabla\times \vec{F})(\vec{a})\cdot \vec{n}\;dS\\
+& = \pi r^2\;(\nabla\times \vec{F})(\vec{a})\cdot \vec{n}.
+\end{align*}</script>
+<!--l. 112--><p class="noindent" >This means that <script type="math/tex; mode=display"> (\nabla \times \vec {F})(\vec {a})\cdot \vec {n} \approx \frac {1}{\pi r^2}\int _{S_r}\vec {F}\cdot d\vec {s}. </script> As <script type="math/tex">r</script> approaches zero, this approximation becomes arbitrarily good,
+so we have <script type="math/tex; mode=display"> (\nabla \times \vec {F})(\vec {a})\cdot \vec {n} = \lim _{r\rightarrow 0^+} \frac {1}{\pi r^2}\int _{S_r}\vec {F}\cdot d\vec {s}. </script> The quantity on the right represents the circulation or rotation at the
+point <script type="math/tex">\vec {a}</script> and in the plane perpendicular to <script type="math/tex">\vec {n}</script>, so we see that <script type="math/tex">(\nabla \times \vec {F})(\vec {a})\cdot \vec {n}</script> measures this
+rotation.
+</p><!--l. 122--><p class="noindent" >Furthermore, notice that <script type="math/tex">(\nabla \times \vec {F})(\vec {a})\cdot \vec {n}</script> is largest when <script type="math/tex">\vec {n}</script> and <script type="math/tex">\nabla \times \vec {F}(\vec {a})</script> point in the same direction. This
+means that the curl gives the axis of rotation.
+</p><!--l. 124--><p class="noindent" >Putting this together, we have that <script type="math/tex">(\nabla \times \vec {F})(\vec {a})</script> gives the axis of rotation induced by <script type="math/tex">\vec {F}</script> at <script type="math/tex">\vec {a}</script>, and
+provides a measure of this microscopic rotation. </body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

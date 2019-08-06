@@ -1,0 +1,108 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Fubini’s Theorem for Triple Integrals</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="fubini.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Evaluate triple integrals using Fubini's theorem."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >When we studied double integrals, we found that we could most easily compute
+double integrals as iterated integrals. This was possible because of Fubini’s
+theorem.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem1"><a 
+ id="x1-17r1"></a><strong>Fubini’s Theorem.</strong> Let <script type="math/tex">f:R\subset \mathbb {R}^2\rightarrow \mathbb {R}</script> be a continuous function defined on a rectangle <script type="math/tex">R = [a,b]\times [c,d]</script>. Then
+<script type="math/tex; mode=display"> \iint _R f\;dA = \int _c^d\int _a^b f(x,y)\;dxdy = \int _a^b\int _c^d f(x,y)\;dydx. </script>
+</div>
+<!--l. 21--><p class="noindent" >In this section, we’ll see that we can prove a version of Fubini’s theorem for triple
+integrals, so we can evaluate triple integrals using iterated integrals.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Fubini’s theorem for triple integrals</h3>
+<!--l. 25--><p class="noindent" >The statement of Fubini’s theorem for triple integrals is unsurprisingly similar to the
+statement for double integrals. Notice that there are six different ways that the
+iterated integrals can be ordered.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem2"><a 
+ id="x1-1001r2"></a><strong>Fubini’s Theorem.</strong> Let <script type="math/tex">f:B\subset \mathbb {R}^3\rightarrow \mathbb {R}</script> be a continuous function defined on a box <script type="math/tex">B= [m,n]\times [p,q]\times [r,s]</script> in <script type="math/tex">\mathbb {R}^3</script>. Then
+<script type="math/tex; mode=display"> \begin{align*} 
+\iiint_B f\;dV &= \int_r^s\int_p^q\int_m^n f(x,y,z)\;dxdydz\\
+&= \int_p^q\int_r^s\int_m^n f(x,y,z)\;dxdzdy\\
+&= \int_p^q\int_m^n\int_r^s f(x,y,z)\;dzdxdy\\
+&= \int_r^s\int_m^n\int_p^q f(x,y,z)\;dydxdz\\
+                                                                  
+
+                                                                  
+&= \int_m^n\int_r^s\int_p^q f(x,y,z)\;dydzdx\\
+&= \int_m^n\int_p^q\int_r^s f(x,y,z)\;dzdydx.
+\end{align*}</script>
+<!--l. 37--><p class="noindent" ></div>
+</p><!--l. 39--><p class="noindent" >The proof of this theorem echoes the proof for double integrals, so we will omit it
+here. We’ll now look at an example of using iterated integrals to evaluate triple
+integrals, which is possible as a result of Fubini’s theorem.
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-1002r3"></a>We’ll integrate the function <script type="math/tex">f(x,y,z) = x+2y+3z</script> over the box <script type="math/tex">B = [0,1]\times [0,2]\times [0,3]</script>. Since <script type="math/tex">f</script> is a continuous function, Fubini’s
+theorem applies, and we can evaluate the triple integral as an iterated integral.
+<script type="math/tex; mode=display"> \begin{align*} 
+\iiint_B f\;dV &= \int_0^1\int_0^2\int_0^3 (x+2y+3z)\;dzdydx\\
+&= \int_0^1\int_0^2 \left(xz+2yz + \frac{3}{2}z^2\right)_{z=0}^{z=3}\;dydx\\
+&= \int_0^1\int_0^2 \left(3x+6y+\frac{27}{2}\right)\;dydx\\
+&= \int_0^1 \left(3xy+3y^2+\frac{27}{2}y\right)_{y=0}^{y=2}\;dx\\
+&= \int_0^1\left(6x+12+27\right)\;dx\\
+&= \left(3x^2+39x\right)_{x=0}^{x=1}\\
+&= 42
+\end{align*}</script>
+<!--l. 52--><p class="noindent" >Alternatively, we could use a different order of integration for the iterated integral,
+and we should see that we’ll get the same result. Here, we’ll choose the order <script type="math/tex">dydxdz</script>.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iiint_B f\;dV &= \int_0^3\int_0^1\int_0^2 (x+2y+3z)\;dydxdz\\
+&= \int_0^3\int_0^1 (xy+y^2+3zy)_{y=0}^{y=2}\;dxdz\\
+&= \int_0^3\int_0^1 (2x+4+6z)\;dxdz\\
+&= \int_0^3 (x^2+4x+6zx)_{x=0}^{x=1}\;dz\\
+&= \int_0^3 (1+4+6z)\;dz\\
+&= (5z+3z^2)_{z=0}^{z=3}\\
+&= 42
+\end{align*}</script>
+<!--l. 62--><p class="noindent" >Indeed, we have the same result.
+</div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

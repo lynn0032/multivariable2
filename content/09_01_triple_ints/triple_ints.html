@@ -1,0 +1,127 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Triple Integrals</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="triple_ints.tex" /> 
+<meta name="author" content="Melissa Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the geometric ideas behind the definition of a triple integral."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >We’ve defined single variable integrals, by approximating an area with rectangles,
+and taking the limit as the width of the rectangles goes to zero.
+</p><!--l. 14--><p class="noindent" >PICTURE
+</p><!--l. 16--><p class="noindent" >In order to do this, we split the domain, <script type="math/tex">[a,b]</script> into subintervals, and pick a sample point in
+each subinterval.
+</p><!--l. 18--><p class="noindent" >PICTURE
+</p><!--l. 20--><p class="noindent" >We’ve also defined double integrals over rectangles, by approximating a
+volume with boxes, and taking the limit as the base of the boxes goes to
+zero.
+</p><!--l. 22--><p class="noindent" >PICTURE
+</p><!--l. 24--><p class="noindent" >In order to do this, we split the domain, <script type="math/tex">[a,b]\times [c,d]</script> into subrectangles, and pick a sample point
+in each subrectangles.
+</p><!--l. 26--><p class="noindent" >PICTURE
+</p><!--l. 28--><p class="noindent" >In this section, we’ll define triple integrals.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Triple integrals</h3>
+<!--l. 33--><p class="noindent" >Consider a function <script type="math/tex">f:B\subset \mathbb {R}^3\rightarrow \mathbb {R}</script> defined over a box <script type="math/tex">B = [m,n]\times [p,q]\times [r,s]</script>. We can think of the triple integral as
+representing a four-dimensional hyper-volume, but this is hard to visualize, since
+it’s a four-dimensional object. We can, however, visualize the domain of
+integration.
+                                                                  
+
+                                                                  
+</p><!--l. 35--><p class="noindent" >PICTURE
+</p><!--l. 37--><p class="noindent" >We divide this box up into small boxes, and choose a sample point <script type="math/tex">(x_i, y_j, z_k)</script> in each
+box.
+</p><!--l. 39--><p class="noindent" >PICTURE
+</p><!--l. 41--><p class="noindent" >Then, we evaluate the function <script type="math/tex">f</script> at each of the sample points, and multiply by the
+area of a box. We then add these up, and take the limit as the size of the boxes goes
+to zero. <script type="math/tex; mode=display"> \lim _{\Delta x, \Delta y, \Delta z\rightarrow 0}\sum f(x_i,y_j,z_k)\;\Delta x\Delta y\Delta z. </script>
+</p><!--l. 46--><p class="noindent" >This gives us our definition of a triple integral.
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a 
+ id="x1-1001r1"></a>Let <script type="math/tex">f:B\subset \mathbb {R}^3\rightarrow \mathbb {R}</script> be a function defined on the box <script type="math/tex">B=[m,n]\times [p,q]\times [r,s]</script> in <script type="math/tex">\mathbb {R}^3</script>. Let <script type="math/tex">\Delta x</script>, <script type="math/tex">\Delta y</script>, <script type="math/tex">\Delta z</script>, <script type="math/tex">x_i</script>, <script type="math/tex">y_j</script>, and <script type="math/tex">z_k</script> be as above. The <em>triple
+integral</em> of <script type="math/tex">f</script> over <script type="math/tex">B</script> is defined to be <script type="math/tex; mode=display"> \iiint _B f\;dV = \sum _{i,j,k} f(x_i,y_j,z_k)\Delta x\Delta y\Delta z . </script>
+</div>
+<!--l. 55--><p class="noindent" >Now, we’ll look at we use this definition to approximate triple integrals.
+<a 
+ id="Q1-1-3"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Approximating triple integrals</h3>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-2001r2"></a>We’ll approximate the triple integral of <script type="math/tex">f(x,y,z) = x^2+y^2+z^2</script> over the box <script type="math/tex">B = [0,1]\times [0,1]\times [0,1]</script>.
+<!--l. 62--><p class="noindent" >To approximate this triple integral, we’ll split <script type="math/tex">B</script> into eight subboxes of equal size. For
+sample points, we take the center of each box. These boxes, listed with their sample points,
+are: </p><script type="math/tex; mode=display"> \begin{align*} 
+[0,1/2]\times [0,1/2]\times [0,1/2],\hspace{.5cm}& (1/4, 1/4, 1/4);\\
+[0,1/2]\times [0,1/2]\times  [1/2,1],\hspace{.5cm} & (1/4, 1/4, 3/4);\\
+[0,1/2]\times [1/2,1]\times  [0,1/2],\hspace{.5cm} & (1/4, 3/4, 1/4);\\
+[0,1/2]\times [1/2,1]\times  [1/2,1],\hspace{.5cm} & (1/4, 3/4, 3/4);\\
+[1/2,1]\times [0,1/2]\times  [0,1/2],\hspace{.5cm} & (3/4, 1/4, 1/4);\\
+[1/2,1]\times [0,1/2]\times  [1/2,1],\hspace{.5cm} & (3/4, 1/4, 3/4);\\
+[1/2,1]\times [1/2,1]\times  [0,1/2],\hspace{.5cm} & (3/4, 3/4, 1/4);\\
+[1/2,1]\times [1/2,1]\times  [1/2,1],\hspace{.5cm} & (3/4, 3/4, 3/4).\\
+\end{align*}</script>
+<!--l. 73--><p class="noindent" >Evaluating the function <script type="math/tex">f</script> at each of the test points, we have </p><script type="math/tex; mode=display"> \begin{align*} 
+f(1/4, 1/4, 1/4) = 3/16\\
+f(1/4, 1/4, 3/4) = 11/16\\
+f(1/4, 3/4, 1/4) = 11/16\\
+f(1/4, 3/4, 3/4) = 19/16\\
+f(3/4, 1/4, 1/4) = 11/16\\
+f(3/4, 1/4, 3/4) = 19/16\\
+                                                                  
+
+                                                                  
+f(3/4, 3/4, 1/4) = 19/16\\
+f(3/4, 3/4, 3/4) = 27/16.\\
+\end{align*}</script>
+<!--l. 84--><p class="noindent" >The volume of each subbox is <script type="math/tex">1/2\cdot 1/2\cdot 1/2 = 1/8</script>, so we can approximate the triple integral as
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iiint_B f\;dV &\approx \frac{1}{8}\left(\frac{3}{16}+\frac{11}{16}+\frac{11}{16}+\frac{19}{16}+\frac{11}{16}+\frac{19}{16}+\frac{19}{16}+\frac{27}{16}\right)\\
+&= \frac{15}{16}.
+\end{align*}</script>
+<!--l. 89--><p class="noindent" ></div>
+</p><!--l. 91--><p class="noindent" >Of course, we would like to be able to compute the exact values of triple integrals,
+and we would like to do this without using the limit definition. In the next section,
+we’ll prove a version of Fubini’s theorem for triple integrals, which will allow us to
+evaluate triple integrals more easily.
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

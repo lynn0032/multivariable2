@@ -1,0 +1,182 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Stokes Theorem</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="stokes_thm.tex" /> 
+<meta name="author" content="Melissa Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the statement of Stokes theorem, and its geometric interpretation."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >Recall that Green’s theorem gave us a relationship between a double integral over a
+region in <script type="math/tex">\mathbb {R}^2</script>, and the line integral of a vector field over the boundary.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem1"><a 
+ id="x1-17r1"></a><strong>Green’s Theorem.</strong> Let <script type="math/tex">D</script> be a closed an bounded region in <script type="math/tex">\mathbb {R}^2</script>, whose boundary <script type="math/tex">\partial D</script>
+consists of finitely many simple and piecewise smooth curves. Let <script type="math/tex">\vec {F}</script> be a <script type="math/tex">\mathcal {C}^1</script> vector field
+defined on <script type="math/tex">D</script>, written in components as <script type="math/tex">\vec {F}(x,y) = (M(x,y), N(x,y))</script>. Then <script type="math/tex; mode=display"> \oint _{\partial D}\vec {F}\cdot d\vec {s} = \iint _D \left (\frac {\partial N}{\partial x} - \frac {\partial M}{\partial y}\right )\;dA. </script>
+</div>
+<!--l. 21--><p class="noindent" >For Green’s theorem to hold, it was important that the boundary be oriented so that
+if you traverse the boundary in the given direction, the region is on your
+left.
+</p><!--l. 23--><p class="noindent" >PICTURE
+</p><!--l. 25--><p class="noindent" >Green’s theorem applies to regions in <script type="math/tex">\mathbb {R}^2</script>, and we will now work towards generalizing
+Green’s theorem to surfaces in <script type="math/tex">\mathbb {R}^3</script>. This result will be called Stokes theorem, and our
+first step towards Stokes theorem will be determining how to orient the boundary of
+a surface in <script type="math/tex">\mathbb {R}^3</script>.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Orientation</h3>
+<!--l. 29--><p class="noindent" >Consider a surface in <script type="math/tex">\mathbb {R}^3</script>.
+</p><!--l. 31--><p class="noindent" >PICTURE
+</p><!--l. 33--><p class="noindent" >We could try to orient this surface according to the same rule as Green’s theorem,
+but that would be ambiguous. Whether or not the surface is on the left of
+the boundary would depend on the direction from which you viewed the
+                                                                  
+
+                                                                  
+surface.
+</p><!--l. 35--><p class="noindent" >PICTURE
+</p><!--l. 37--><p class="noindent" >In order to orient the boundary consistently with the surface, we need to be given an
+orientation for the surface. We say that normal vector points in the direction of the
+positive side of the surface. Then, we will determine how to orient the boundary by
+looking at the surface from the positive side.
+</p><!--l. 39--><p class="noindent" >PICTURE
+</p><!--l. 41--><p class="noindent" >As with Green’s theorem, if you traverse the boundary with your head pointing in
+the positive direction, the surface will be on your left. Here are a couple of other ways
+to think about this: </p>
+     <ul class="itemize1">
+     <li class="itemize">The boundary is oriented counterclockwise if you view it from the positive
+     side.
+     </li>
+     <li class="itemize">The  boundary  follows  the  right  hand  rule  with  the  orientation  of  the
+     surface: if you point your right thumb in the direction of the normal vector,
+     your fingers curl in the direction of the orientation on the boundary.</li></ul>
+<!--l. 47--><p class="noindent" >PICTURES/VIDEO
+</p>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-1001r2"></a>For each of the surfaces below, determine the direction in which the boundary should
+be oriented.
+<!--l. 52--><p class="noindent" >EXAMPLES/PICTURES
+</div>
+<a 
+ id="Q1-1-3"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Stokes theorem</h3>
+<!--l. 57--><p class="noindent" >We’re now ready to state Stokes theorem.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem3"><a 
+ id="x1-2001r3"></a><strong>Stokes Theorem.</strong> Suppose <script type="math/tex">S</script> is a smooth and bounded surface in <script type="math/tex">\mathbb {R}^3</script>, and that <script type="math/tex">\partial S</script> consists
+of finitely many closed, simple, and piecewise <script type="math/tex">\mathcal {C}^1</script> curves. Suppose further that <script type="math/tex">S</script> and <script type="math/tex">\partial S</script> are
+consistently oriented. Let <script type="math/tex">\vec {F}</script> be a <script type="math/tex">\mathcal {C}^1</script> vector field, which is defined on <script type="math/tex">S</script>. Then <script type="math/tex; mode=display"> \oint _{\partial S}\vec {F}\cdot d\vec {s} = \iint _S \nabla \times \vec {F}\cdot d\vec {S}, </script> where <script type="math/tex">\nabla \times \vec {F}</script>
+denotes the curl of <script type="math/tex">\vec {F}</script>.
+</div>
+<!--l. 67--><p class="noindent" >The proof of Stokes theorem follows the same idea as Green’s theorem: when we
+integrate the curl of <script type="math/tex">\vec {F}</script> over <script type="math/tex">S</script>, we are “adding up” all of the microscopic rotation of the
+vector field over the surface, and this is equal to the global circulation over the
+boundary, since circulation on the interior of the surface will cancel. Because of the
+similarity to the proof of Green’s theorem, we will omit a complete proof of Stokes
+theorem.
+                                                                  
+
+                                                                  
+</p><!--l. 69--><p class="noindent" >Instead, let’s look at some examples of Stokes theorem in action.
+</p>
+<div class="theorem-like problem-environment example" id="problem4"><a 
+ id="x1-2002r4"></a>Consider the upper unit hemisphere pictured below, oriented with the upward
+pointing normal vector.
+<!--l. 74--><p class="noindent" >PICTURE
+</p><!--l. 76--><p class="noindent" >Consider the vector field <script type="math/tex">\vec {F}(x,y,z) = (y^2, -xy, z^2)</script>. We’ll verify Stokes theorem for this surface and vector
+field, by computing both the line integral over the boundary and the double integral
+over the surface.
+</p><!--l. 78--><p class="noindent" >Let’s begin with the line integral over the boundary. In order to be consistent
+with the orientation of the surface, we orient the boundary as indicated
+below.
+</p><!--l. 80--><p class="noindent" >PICTURE
+</p><!--l. 82--><p class="noindent" >Then, we can parametrize the boundary as <script type="math/tex; mode=display"> \vec {x}(t) = (\cos t, \sin t, 0), </script> for <script type="math/tex">0\leq t\leq 2\pi </script>. Integrating <script type="math/tex">\vec {F}</script> over this path, we have
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\oint_{\partial S} \vec{F}\cdot d\vec{s} &= \int_0^{2\pi} \vec{F}(\vec{x}(t))\cdot \vec{x}'(t)\;dt\\
+&= \int_0^{2\pi}\vec{F}(\cos t, \sin t, 0)\cdot (-\sin t, \cos t, 0)\;dt\\
+&= \int_0^{2\pi}(\sin^2 t, -\cos t\sin t, 0)\cdot (-\sin t, \cos t, 0)\;dt\\
+&= \int_0^{2\pi} -\sin^3 t -\cos^2 t\sin t\;dt\\
+&= \int_0^{2\pi} -\sin t\;dt\\
+&= (\cos t)_{t = 0}^{2\pi}\\
+&= 0.
+\end{align*}</script>
+<!--l. 96--><p class="noindent" >For comparison, we integrate <script type="math/tex">\nabla \times \vec {F}</script> over the surface <script type="math/tex">S</script>. We can
+parametrize <script type="math/tex">S</script> as <script type="math/tex; mode=display"> \vec {X}(s,t) = (\cos s\sin t, \sin s\sin t, \cos t), </script> for <script type="math/tex">0\leq s\leq 2\pi </script> and <script type="math/tex">0\leq t\leq \pi /2</script>. We’ll now compute the normal vector, <script type="math/tex">\vec {X}_s\times \vec {X}_t</script>.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{X}_s(s,t)\times\vec{X}_t(s,t) &= (-\sin s\sin t, \cos s\sin t, 0)\times (\cos s\cos t, \sin s\cos t, -\sin t)\\
+&= (-\cos s\sin^2 t,-\sin s\sin^2 t,-\sin t\cos t)
+\end{align*}</script>
+<!--l. 105--><p class="noindent" >Notice that this is the downward pointing normal vector, so does not represent the
+correct orientation. So, we will work with <script type="math/tex">(\cos s\sin ^2 t,\sin s\sin ^2 t,\sin t\cos t)</script> as the normal vector instead.
+</p><!--l. 107--><p class="noindent" >Now,  let’s  integrate  <script type="math/tex">\nabla \times \vec {F}</script>  over  <script type="math/tex">S</script>.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_S \nabla\times\vec{F}\cdot d\vec{S} &= \iint_S (0,0,-3y)\cdot d\vec{S}\\
+&= \int_0^{\pi/2}\int_0^{2\pi} (0,0,-3\sin s\sin t)\cdot (-\cos s\sin^2 t,-\sin s\sin^2 t,-\sin t\cos t)\;dsdt\\
+&= \int_0^{\pi/2}\int_0^{2\pi} -3\sin s\sin^2 t \cos t\;dsdt\\
+&= \int_0^{\pi/2}(3\cos s\sin^2t\cos t)_{s = 0}^{s = 2\pi}\;dt\\
+&= \int_0^{\pi/2} 0\;dt\\
+                                                                  
+
+                                                                  
+&= 0.
+\end{align*}</script>
+<!--l. 117--><p class="noindent" >So, we have verified that Stokes theorem holds in this case.
+</div>
+</p>
+<div class="theorem-like problem-environment example" id="problem5"><a 
+ id="x1-2003r5"></a>Consider the surface <script type="math/tex">S</script> pictured below, and the vector field <script type="math/tex">\vec {F}(x,y,z) = (x,y,z)</script>.
+<!--l. 123--><p class="noindent" >PICTURE
+</p><!--l. 125--><p class="noindent" >Suppose we wish to integrate <script type="math/tex">\vec {F}</script> over the boundary of <script type="math/tex">S</script>. We could try to parametrize <script type="math/tex">S</script>
+and evaluate this line integral directly, but this would be very difficult! Instead, let’s
+try applying Stokes theorem. In this case, Stokes theorem is particularly effective,
+since </p><script type="math/tex; mode=display"> \begin{align*} 
+\nabla \times\vec{F}(x,y,z) &= \nabla\times (x,y,z)\\
+&= (0,0,0).
+\end{align*}</script>
+<!--l. 130--><p class="noindent" >So, we have </p><script type="math/tex; mode=display"> \begin{align*} 
+\oint_{\partial S}\vec{F}\cdot d\vec{s} &= \iint_S\nabla\times\vec{F}\cdot d\vec{S}\\
+&= \iint_S (0,0,0)\cdot d\vec{S}\\
+&= 0.
+\end{align*}</script>
+<!--l. 136--><p class="noindent" ></div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

@@ -1,0 +1,203 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Vector  Surface  Integrals</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="vector_surface_ints.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Compute and understand the geometric meaning of vector surface integrals."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >Suppose you have water flowing through some filter, and you’d like a measure of how
+much water is going through the filter. If we represent the water flow with a vector
+field and the filter with a surface in <script type="math/tex">\mathbb {R}^3</script>, we can conceptualize this question as measuring
+the flow of the vector field through a surface.
+</p><!--l. 14--><p class="noindent" >PICTURE
+</p><!--l. 16--><p class="noindent" >We will find a way to integrate a vector field over a surface, so that the integral will
+represent the flow of the vector field through the surface.
+</p><!--l. 18--><p class="noindent" >We’ve discussed how the orientation of the surface will affect whether we view the
+flow as positive or negative. An orientation on a surface is a continuous choice of unit
+normal vector on the surface, and the normal vector indicates the direction of
+positive flow.
+</p><!--l. 20--><p class="noindent" >PICTURE
+</p><!--l. 22--><p class="noindent" >As we begin to construct our definition of vector surface integrals, let’s start with the
+special case where our surface is the plane <script type="math/tex">x = 0</script> in <script type="math/tex">\mathbb {R}^3</script>, and our vector field is constant,
+<script type="math/tex">\vec {F} = \vec {c}</script>.
+</p><!--l. 24--><p class="noindent" >If <script type="math/tex">\vec {c}</script> is parallel to the plane <script type="math/tex">x=0</script>, there is no flow through the surface, so it makes sense
+that the vector line integral should be zero.
+</p><!--l. 26--><p class="noindent" >PICTURE
+</p><!--l. 28--><p class="noindent" >We can also see that the flow through the surface will be largest when <script type="math/tex">\vec {c}</script> is
+perpendicular to the plane.
+</p><!--l. 30--><p class="noindent" >PICTURE
+</p><!--l. 32--><p class="noindent" >So, the flow is zero when the vector field is parallel to the surface, and the flow is
+largest when the vector field is perpendicular to the surface. This indicates that we
+                                                                  
+
+                                                                  
+should be comparing the vector field <script type="math/tex">\vec {F}</script> to a normal vector <script type="math/tex">\vec {n}</script> to the surface, and
+considering the dot product <script type="math/tex">\vec {F}\cdot \vec {n}</script>.
+</p><!--l. 34--><p class="noindent" >This brings us to the definition of vector surface integrals.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Vector surface integrals</h3>
+<!--l. 38--><p class="noindent" >Let <script type="math/tex">\vec {X}:D\subset \mathbb {R}^2\rightarrow \mathbb {R}^3</script> be a parametrization of a surface <script type="math/tex">S</script> in <script type="math/tex">\mathbb {R}^3</script>, so that <script type="math/tex">\vec {X}_s\times \vec {X}_t</script> is continuous and nonzero. Let <script type="math/tex">\vec {F}</script>
+be a vector field defined on <script type="math/tex">S</script>. We would like to find the flow of <script type="math/tex">\vec {F}</script> through the surface
+<script type="math/tex">S</script>, and we have seen that this can be done by integrating <script type="math/tex">\vec {F}\cdot \vec {n}</script> over <script type="math/tex">S</script>, where <script type="math/tex">\vec {n} = \frac {\vec {X}_s\times \vec {X}_t}{\|\vec {X}_s\times \vec {X}_t\|}</script> is
+the normal vector giving the orientation on <script type="math/tex">\vec {X}</script>. That is, we have the integral
+<script type="math/tex; mode=display"> \iint _S\vec {F}\cdot \vec {n}\;dS. </script>
+</p><!--l. 43--><p class="noindent" >Evaluating a vector surface integral as a scalar surface integral isn’t ideal; let’s take a look at
+this integral to see if we can simplify things. By the definition of scalar surface integrals, we
+have </p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_{\vec{X}}\vec{F}\cdot d\vec{S} &= \iint_S\vec{F}\cdot \vec{n}\;dS\\
+&= \iint_D (\vec{F}(\vec{X}(s,t))\cdot\vec{n}(s,t))\|\vec{X}_s\times\vec{X}_t\|\;dsdt\\
+&= \iint_D \left(\vec{F}(\vec{X}(s,t))\cdot\frac{\vec{X}_s\times\vec{X}_t}{\|\vec{X}_s\times\vec{X}_t\|}\right)\|\vec{X}_s\times\vec{X}_t\|\;dsdt\\
+&= \iint_D \vec{F}(\vec{X}(s,t))\cdot (\vec{X}_s\times\vec{X}_t)\;dsdt.
+\end{align*}</script>
+<!--l. 51--><p class="noindent" >We make this our definition of vector surface integrals.
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a 
+ id="x1-1001r1"></a>Let <script type="math/tex">\vec {X}:D\subset \mathbb {R}^2\rightarrow \mathbb {R}^3</script> be a parametrization of a surface <script type="math/tex">S</script> in <script type="math/tex">\mathbb {R}^3</script>, so that <script type="math/tex">\vec {X}_s\times \vec {X}_t</script> is continuous and nonzero. Let <script type="math/tex">\vec {F}</script>
+be a vector field defined on <script type="math/tex">S</script>. The <em>vector line integral</em> of <script type="math/tex">\vec {F}</script> over <script type="math/tex">\vec {X}</script> is <script type="math/tex; mode=display"> \iint _{\vec {X}}\vec {F}\cdot d\vec {S} = \iint _D \vec {F}(\vec {X}(s,t))\cdot (\vec {X}_s\times \vec {X}_t)\;dsdt. </script>
+</div>
+<a 
+ id="Q1-1-3"></a>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Computing vector surface integrals</h3>
+<!--l. 62--><p class="noindent" >We’ll now look at an example of computing vector surface integrals.
+</p>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-2001r2"></a>Let’s evaluate the vector surface integral of <script type="math/tex">\vec {F}(x,y,z) = (yz, xz, xy)</script> over the paraboloid parametrized by <script type="math/tex; mode=display"> \vec {X}(s,t) = (s, t, s^2+t^2), </script> for
+<script type="math/tex">0\leq s,t\leq 1</script>.
+<!--l. 71--><p class="noindent" >PICTURE
+</p><!--l. 73--><p class="noindent" >First, let’s find the partial derivatives <script type="math/tex">\vec {X}_s</script> and <script type="math/tex">\vec {X}_t</script>. </p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{X}_s(s,t) &= (1,0,2s)\\
+\vec{X}_t(s,t) &= (0,1,2t)
+\end{align*}</script>
+                                                                  
+
+                                                                  
+<!--l. 78--><p class="noindent" >Next, we find the cross product <script type="math/tex">\vec {X}_s\times \vec {X}_t</script>. </p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{X}_s(s,t)\times\vec{X}_t(s,t) &= \text{det}\begin{pmatrix}
+\vec{i} & \vec{j} & \vec{k}\\
+1 & 0 & 2s\\
+0 & 1 & 2t
+\end{pmatrix}\\
+&= (-2s)\vec{i} + (-2t)\vec{j} + \vec{k}\\
+&= (-2s,-2t,1)
+\end{align*}</script>
+<!--l. 88--><p class="noindent" >Now, we evaluate the vector surface integral,
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_{\vec{X}}\vec{F}\cdot d\vec{S} &= \iint_D \vec{F}(\vec{X}(s,t))\cdot (\vec{X}_s\times\vec{X}_t)\;dsdt\\
+&= \int_0^1\int_0^1\vec{F}(s, t, s^2+t^2)\cdot (-2s,-2t,1)\;dsdt\\
+&= \int_0^1\int_0^1 (s^2t+t^3, s^3+st^2, st)\cdot (-2s,-2t,1)\;dsdt\\
+&= \int_0^1\int_0^1 -2s^3t-2st^3 + -2s^3t -2st^3 + st\;dsdt\\
+&= \int_0^1\int_0^1 -4s^3t-4st^3 + st\;dsdt\\
+&= \int_0^1 \left(-s^4t - 2s^2t^3 + \frac{1}{2}s^2 t\right)_{s = 0}^{s = 1}\;dt\\
+&= \int_0^1 -t - 2t^3 + \frac{1}{2}t\;dt\\
+&= \int_0^1 -\frac{1}{2}t - 2t^3\;dt\\
+&= \left(-\frac{1}{4}t^2 - \frac{1}{2}t^4\right)_{t=0}^{t=1}\\
+&= -\frac{1}{4} - \frac{1}{2}\\
+&= \frac{3}{4}.
+\end{align*}</script>
+<!--l. 102--><p class="noindent" ></div>
+<a 
+ id="Q1-1-5"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-3000"></a>Choice of orientation</h3>
+<!--l. 106--><p class="noindent" >When we were figuring out how to define an orientation on a surface, we noticed that
+the orientation will affect the sign of a vector surface integral. That is, if the
+normal vector is in approximately the same direction as the vector field, the
+flow will be positive. However, the opposite orientation should give negative
+flow.
+</p><!--l. 108--><p class="noindent" >PICTURE
+</p><!--l. 110--><p class="noindent" >Let’s see how this manifests itself in our definition of a vector surface integral,
+<script type="math/tex; mode=display"> \iint _{\vec {X}}\vec {F}\cdot d\vec {S} = \iint _D \vec {F}(\vec {X}(s,t))\cdot (\vec {X}_s\times \vec {X}_t)\;dsdt. </script>
+                                                                  
+
+                                                                  
+</p><!--l. 115--><p class="noindent" >This uses the orientation <script type="math/tex">\vec {n}(s,t) = \frac {\vec {X}_s\times \vec {X}_t}{\|\vec {X}_s\times \vec {X}_t\|}</script>. Every orientable closed surface has exactly two
+orientations, and the other orientation is given by <script type="math/tex">-\vec {n}(s,t) = -\frac {\vec {X}_s\times \vec {X}_t}{\|\vec {X}_s\times \vec {X}_t\|}</script>. When we replace the normal
+vector <script type="math/tex">\vec {X}_s\times \vec {X}_t</script> in the vector surface integral with the opposite normal vector, <script type="math/tex">-(\vec {X}_s\times \vec {X}_t)</script>, we get <script type="math/tex; mode=display"> \iint _D \vec {F}(\vec {X}(s,t))\cdot -(\vec {X}_s\times \vec {X}_t)\;dsdt = -\iint _D \vec {F}(\vec {X}(s,t))\cdot (\vec {X}_s\times \vec {X}_t)\;dsdt, </script> as
+we’d hope.
+</p><!--l. 121--><p class="noindent" >Thus, if we’re attempting to evaluate a vector surface integral, and we find that our
+parametrization gives the wrong orientation, we can fix this by changing the sign of
+the normal vector. We’ll see how this works in an example.
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-3001r3"></a>Consider the vector field <script type="math/tex">\vec {F}(x,y,z) = (x,y,z)</script>, and let <script type="math/tex">S</script> be the unit sphere, oriented with the outward
+pointing normal vector.
+<!--l. 126--><p class="noindent" >PICTURE
+</p><!--l. 128--><p class="noindent" >The sphere can be parametrized as <script type="math/tex; mode=display"> \vec {X}(s,t) = (\cos s \sin t, \sin s \sin t, \cos t) </script> for <script type="math/tex">0\leq s\leq 2\pi </script> and <script type="math/tex">0\leq t\leq \pi </script>.
+</p><!--l. 134--><p class="noindent" >We start by computing the partial derivatives, <script type="math/tex">\vec {X}_s</script> and <script type="math/tex">\vec {X}_t</script>.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{X}_s(s,t) &= (-\sin s \sin t, \cos s \sin t, 0)\\
+\vec{X}_t(s,t) &= (\cos s\cos t, \sin s\cos t, -\sin t)
+\end{align*}</script>
+<!--l. 139--><p class="noindent" >Now, we compute the cross product </p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{X}_s(s,t)\times \vec{X}_t(s,t) &= \text{det}\begin{pmatrix}
+\vec{i} & \vec{j} & \vec{k}\\
+-\sin s \sin t & \cos s \sin t & 0\\
+\cos s\cos t & \sin s\cos t & -\sin t
+\end{pmatrix}\\
+&= (-\cos s\sin^2 t)\vec{i} + (-\sin s\sin^2 t)\vec{j} + (-\sin^2 s\sin t\cos t - \cos^2 s\sin t\cos t)\vec{k}\\
+&=  (-\cos s\sin^2 t,-\sin s\sin^2 t,-\sin t\cos t).
+\end{align*}</script>
+<!--l. 149--><p class="noindent" >Notice that this is the inward pointing normal vector, but the surface was oriented
+with the outward pointing normal vector. We can salvage our computation by using
+the normal vector <script type="math/tex">-\vec {X}_s\times \vec {X}_t</script> instead.
+</p><!--l. 151--><p class="noindent" >Now, we can evaluate the vector surface integral.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_{\vec{X}}\vec{F}\cdot d\vec{S} &= \iint_D \vec{F}(\vec{X}(s,t))\cdot -(\vec{X}_s\times\vec{X}_t)\;dsdt\\
+&= \int_0^\pi\int_0^{2\pi} \vec{F}(\cos s \sin t, \sin s \sin t, \cos t)\cdot (\cos s\sin^2 t,\sin s\sin^2 t,\sin t\cos t)\;dsdt\\
+&= \int_0^\pi\int_0^{2\pi} (\cos s \sin t, \sin s \sin t, \cos t)\cdot (\cos s\sin^2 t,\sin s\sin^2 t,\sin t\cos t)\;dsdt\\
+&= \int_0^\pi\int_0^{2\pi} \cos^2 s\sin^3 t + \sin^2 s\sin^3 t + \sin t\cos^2 t\;dsdt\\
+&= \int_0^\pi\int_0^{2\pi} \sin^3 t + \sin t\cos^2 t\;dsdt\\
+&= \int_0^\pi\int_0^{2\pi} \sin t\;dsdt\\
+                                                                  
+
+                                                                  
+&= \int_0^\pi 2\pi\sin t\;dt\\
+&= (-2\pi\cos t)_{t=0}^{t = \pi}\\
+&= 2\pi +2\pi\\
+&= 4\pi.
+\end{align*}</script>
+<!--l. 164--><p class="noindent" ></div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

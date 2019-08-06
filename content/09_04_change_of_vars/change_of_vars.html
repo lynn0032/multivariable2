@@ -1,0 +1,186 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Change of Variables in Triple Integrals</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="change_of_vars.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand how to change coordinates in triple integrals."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >When working with double integrals, we found that it was sometimes advantageous
+to change coordinates. This was often used to make the region of integration easier to
+describe.
+</p><!--l. 14--><p class="noindent" >When we change from one coordinate system to another, this can change volumes
+and areas. To account for this, we incorporated a scaling factor into our
+differential.
+</p><!--l. 16--><p class="noindent" >More precisely, if we have a change of coordinates given by a function <script type="math/tex">T:\mathbb {R}^2\rightarrow \mathbb {R}^2</script>, we need to
+consider how this transformation affects the area of a small rectangle. We can some
+linear algebra, along with the derivative matrix of <script type="math/tex">T</script>, and see that area is scaled by
+approximately <script type="math/tex">\text {det}(D\vec {T}(u,v))</script>.
+</p><!--l. 18--><p class="noindent" >PICTURE
+</p><!--l. 20--><p class="noindent" >Below, we repeat the entire statement for change of variables in double integrals.
+</p>
+<div class="theorem-like problem-environment proposition" id="problem1"><a 
+ id="x1-17r1"></a>Let <script type="math/tex">\vec {T}:\mathbb {R}^2\rightarrow \mathbb {R}^2</script> be a <script type="math/tex">C^1</script> function which maps a region <script type="math/tex">D^*\subset \mathbb {R}^2</script> onto a region <script type="math/tex">D\subset \mathbb {R}^2</script>, so that <script type="math/tex">\vec {T}</script> restricted to <script type="math/tex">D^*</script> is
+one-to-one. Suppose <script type="math/tex">f:D\rightarrow \mathbb {R}</script> is an integrable function. Then <script type="math/tex; mode=display"> \iint _D f(x,y)\;dxdy = \iint _{D^*} f(\vec {T}(u,v))\left |\text {det}(D\vec {T}(u,v))\right |\;dudv. </script>
+</div>
+<!--l. 29--><p class="noindent" >In this section, we’ll see how we can change coordinates in triple integrals.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Change of variables in triple integrals</h3>
+<!--l. 33--><p class="noindent" >Suppose we have a transformation <script type="math/tex">\vec {T}:\mathbb {R}^3\rightarrow \mathbb {R}^3</script> giving our desired change of coordinates. As with
+double integrals, we need to consider how this transformation scales. That is, if we
+                                                                  
+
+                                                                  
+have a parallelepiped in <script type="math/tex">\mathbb {R}^3</script>, how does applying <script type="math/tex">T</script> affect the volume?
+</p><!--l. 35--><p class="noindent" >PICTURE
+</p><!--l. 37--><p class="noindent" >We can approximate the transformation <script type="math/tex">\vec {T}</script> using its derivative matrix, and the absolute
+value of the determinant of <script type="math/tex">D\vec {T}</script> then gives the scaling factor. So, we have the following
+result for change of variables in triple integrals.
+</p>
+<div class="theorem-like problem-environment proposition" id="problem2"><a 
+ id="x1-1001r2"></a>Let <script type="math/tex">\vec {T}:\mathbb {R}^3\rightarrow \mathbb {R}^3</script> be a <script type="math/tex">\mathcal {C}^1</script> function which maps a region <script type="math/tex">D^*\subset \mathbb {R}^3</script> onto a region <script type="math/tex">D\subset \mathbb {R}^3</script>, so that <script type="math/tex">\vec {T}</script> restricted to <script type="math/tex">D^*</script> is
+one-to-one. Suppose <script type="math/tex">f:D\rightarrow \mathbb {R}</script> is an integrable function. Then <script type="math/tex; mode=display"> \iiint _D f(x,y,z)\;dxdydz = \iiint _{D^*} f(\vec {T}(u,v,w))\left |\text {det}(D\vec {T}(u,v,w))\right |\;dudvdw. </script>
+</div>
+<!--l. 46--><p class="noindent" >We’ll look at examples of this, where we convert to cylindrical and spherical
+coordinates.
+<a 
+ id="Q1-1-3"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Cylindrical coordinates</h3>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-2001r3"></a>Consider the cylinder <script type="math/tex">D</script> pictured below, bounded by <script type="math/tex">x^2+y^2=1</script>, <script type="math/tex">z=0</script>, and <script type="math/tex">z=2</script>.
+<!--l. 53--><p class="noindent" >PICTURE
+</p><!--l. 55--><p class="noindent" >Consider the integral <script type="math/tex">\iiint _D x\;dxdydz</script>. We’ll evaluate this integral by converting to cylindrical
+coordinates.
+</p><!--l. 57--><p class="noindent" >The cylinder <script type="math/tex">D</script> can be described in cylindrical coordinates by </p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq &\theta \leq 2\pi\\
+0\leq &r\leq 1\\
+0\leq z\leq 2,
+\end{align*}</script>
+<!--l. 63--><p class="noindent" >and these with provide the bounds for our transformed integral.
+</p><!--l. 65--><p class="noindent" >Recall the relationship between Cartesian coordinates and cylindrical coordinates,
+</p><script type="math/tex; mode=display"> \begin{align*} 
+x &= r\cos \theta\\
+y &= r\sin\theta\\
+z &= z.
+\end{align*}</script>
+<!--l. 71--><p class="noindent" >Then if <script type="math/tex">\vec {T}(\theta , r, z) = (r\cos \theta , r\sin \theta , z)</script> is the transformation taking cylindrical coordinate to Cartesian coordinates,
+we have </p><script type="math/tex; mode=display"> \begin{align*} 
+\text{det}(D\vec{T}) &= \text{det}\begin{pmatrix}
+\frac{\partial}{\partial \theta} r\cos\theta & \frac{\partial}{\partial r} r\cos\theta & \frac{\partial}{\partial z} r\cos\theta\\
+\frac{\partial}{\partial \theta} r\sin\theta & \frac{\partial}{\partial r} r\cos\theta & \frac{\partial}{\partial z} r\sin\theta\\
+\frac{\partial}{\partial \theta} z & \frac{\partial}{\partial r} r\cos\theta & \frac{\partial}{\partial z} z
+\end{pmatrix}\\
+                                                                  
+
+                                                                  
+&= \text{det}\begin{pmatrix}
+-r\sin\theta & \cos\theta & 0\\
+r\cos\theta & \sin\theta & 0\\
+0 & 0 & 1
+\end{pmatrix}\\
+&= -r\sin^2\theta -r\cos^2\theta\\
+&= -r.
+\end{align*}</script>
+<!--l. 86--><p class="noindent" >Since <script type="math/tex">r</script> is nonnegative, the absolute value of this is <script type="math/tex">r</script>. Now, we can
+complete our change of variables. <script type="math/tex; mode=display"> \iiint _D x\;dxdydz = \int _0^2\int _0^1\int _0^{2\pi }(r\cos \theta )r\;d\theta drdz </script> We can then evaluate the integral.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int_0^2\int_0^1\int_0^{2\pi}(r\cos\theta)r\;d\theta drdz &= \int_0^2\int_0^1(r^2\sin\theta)_0^{2\pi}\; drdz\\
+&= \int_0^2\int_0^1 0\; drdz\\
+&= 0
+\end{align*}</script>
+<!--l. 96--><p class="noindent" ></div>
+</p><!--l. 98--><p class="noindent" >In general, the change in differential from cylindrical coordinates to Cartesian
+coordinates is given by <script type="math/tex; mode=display"> dxdydz = r\;drd\theta dz. </script>
+<a 
+ id="Q1-1-5"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-3000"></a>Spherical coordinates</h3>
+<div class="theorem-like problem-environment example" id="problem4"><a 
+ id="x1-3001r4"></a>Consider the solid sphere <script type="math/tex">D</script> of radius <script type="math/tex">1</script> centered at the origin.
+<!--l. 108--><p class="noindent" >PICTURE
+</p><!--l. 110--><p class="noindent" >The volume of this sphere is given by <script type="math/tex; mode=display"> \text {volume}(D) = \iiint _D 1\;dV. </script> We’ll compute this volume by changing to
+spherical coordinates. In spherical coordinates, the sphere <script type="math/tex">D</script> can be described with the
+inequalities </p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq &\rho\leq 1,\\
+0\leq &\theta\leq 2\pi,\\
+0\leq &\phi\leq \pi.
+\end{align*}</script>
+<!--l. 120--><p class="noindent" >These will provide the bounds for our iterated integral.
+</p><!--l. 122--><p class="noindent" >Now, consider the transformation <script type="math/tex; mode=display"> \vec {T}(\rho ,\theta ,\phi ) = (\rho \cos \theta \sin \phi , \rho \sin \theta \sin \phi ,\rho \cos \phi ), </script> which converts from spherical coordinates to
+Cartesian coordinates. We find the scaling factor for this transformation.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\text{det}(D\vec{T}) &= \text{det}\begin{pmatrix}
+                                                                  
+
+                                                                  
+\frac{\partial}{\partial \rho}\rho\cos\theta\sin\phi & \frac{\partial}{\partial \theta}\rho\cos\theta\sin\phi & \frac{\partial}{\partial \phi}\rho\cos\theta\sin\phi\\
+\frac{\partial}{\partial \rho} \rho\sin\theta\sin\phi & \frac{\partial}{\partial \theta}\rho\sin\theta\sin\phi & \frac{\partial}{\partial \phi}\rho\sin\theta\sin\phi\\
+\frac{\partial}{\partial \rho}\rho\cos\phi & \frac{\partial}{\partial \theta}\rho\cos\phi & \frac{\partial}{\partial \phi}\rho\cos\phi
+\end{pmatrix}\\
+&= \text{det}\begin{pmatrix}
+\cos\theta\sin\phi & -\rho\sin\theta\sin\phi & \rho\cos\theta\cos\phi\\
+\sin\theta\sin\phi & \rho\cos\theta\sin\phi & \rho\sin\theta\cos\phi\\
+\cos\phi & 0 & -\rho\sin\phi
+\end{pmatrix}\\
+&= -\cos\phi\left(-\rho^2\sin^2\theta\sin\phi\cos\phi - \rho^2\cos^2\theta\sin\phi\cos\phi\right) + \rho\sin\theta\left(\rho\cos^2\theta\sin^2\phi + \rho\sin^2\theta\sin^2\phi\right)\\
+&= -\cos\phi\left(-\rho^2\sin\phi\cos\phi\right) + \rho\sin\theta\left(\rho\sin^2\phi\right)\\
+&= \rho^2\sin\phi\cos^2\phi + \rho^2\sin^3\phi\\
+&= \rho^2\sin\phi
+\end{align*}</script>
+<!--l. 143--><p class="noindent" >Notice that this is nonnegative, since <script type="math/tex">0\leq \phi \leq \pi </script>. Now, we can complete our change of
+variables. <script type="math/tex; mode=display"> \iiint _D 1\;dV = \int _0^{2\pi }\int _0^\pi \int _0^1 (\rho ^2\sin \phi )\;d\rho d\phi d\theta </script> We then evaluate our integral to find the volume of the sphere.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int_0^{2\pi}\int_0^{\pi}\int_0^1 (\rho^2\sin\phi)\;d\rho d\phi d\theta &= \int_0^{2\pi}\int_0^{\pi}\left(\frac{1}{3}\rho^3\sin\phi\right)_0^1 \; d\phi d\theta\\
+&= \int_0^{2\pi}\int_0^{\pi}\left(\frac{1}{3}\sin\phi\right)\; d\phi d\theta\\
+&= \int_0^{2\pi}\left(-\frac{1}{3}\cos\phi\right)_0^{\pi}\; d\theta\\
+&= \int_0^{2\pi}\left(\frac{2}{3}\right)\; d\theta\\
+&= \frac{4}{3}\pi
+\end{align*}</script>
+<!--l. 155--><p class="noindent" >Thus, we have that the volume of the unit sphere is <script type="math/tex">\frac {4}{3}\pi </script>.
+</div>
+</p><!--l. 158--><p class="noindent" >In general, the change in differential from spherical to Cartesian coordinates is
+<script type="math/tex; mode=display"> dxdydz = \rho ^2\sin \phi \;d\rho d\theta d\phi . </script>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

@@ -1,0 +1,260 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Triple Integrals over Elementary Regions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="change_of_order.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Evaluate triple integrals over elementary regions, and change the order of integration. Focus on visualizing regions."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >In this section, we’ll look at how we can evaluate triple integrals over elementary
+regions. This will be similar to integrating double integrals over elementary regions,
+so we’ll start with a quick review.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Review of double integrals over elementary regions</h3>
+<!--l. 16--><p class="noindent" >To define a double integral over a region <script type="math/tex">D</script>, we used an extension function in
+order to leverage our definition of double integrals over rectangles. This
+extension function was defined as <script type="math/tex; mode=display"> f^{\text {ext}}(x,y) = \begin {cases} f(x,y), & (x,y)\in D\\ 0, & (x,y)\notin D \end {cases}. </script> We were then able to define the double
+integral of <script type="math/tex">f</script> over <script type="math/tex">D</script> using a double integral of <script type="math/tex">f^{\text {ext}}</script> over a rectangle containing
+<script type="math/tex">D</script>.
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a 
+ id="x1-1001r1"></a>Let <script type="math/tex">D</script> be a bounded region in <script type="math/tex">\mathbb {R}^2</script>, and let <script type="math/tex">R</script> be a rectangle containing <script type="math/tex">D</script>. Let <script type="math/tex">f:X\subset \mathbb {R}^2\rightarrow \mathbb {R}</script> be
+a function defined on <script type="math/tex">D</script>. Then we define the <em>double integral of <script type="math/tex">f</script> over <script type="math/tex">D</script></em> to be
+<script type="math/tex; mode=display"> \iint _D f\;dA = \iint _R f^{\text {ext}}\;dA. </script>
+</div>
+<!--l. 32--><p class="noindent" >We describe elementary regions in <script type="math/tex">\mathbb {R}^2</script> using inequalities, which then provide our bounds
+of integration.
+</p>
+<div class="theorem-like problem-environment proposition" id="problem2"><a 
+ id="x1-1002r2"></a>Consider an <script type="math/tex">x</script>-simple region <script type="math/tex">D</script>, which can be described as the set of points <script type="math/tex">(x,y)</script> such that
+<script type="math/tex; mode=display"> \begin{align*} 
+a\leq &x\leq b\text{, and}\\
+g(x)\leq &y \leq h(x),
+                                                                  
+
+                                                                  
+\end{align*}</script>
+<!--l. 40--><p class="noindent" >where <script type="math/tex">g(x)</script> and <script type="math/tex">h(x)</script> are continuous functions. Then we can evaluate the double integral of a
+function <script type="math/tex">f(x,y)</script> over <script type="math/tex">D</script> as <script type="math/tex; mode=display"> \iint _D f(x,y)\;dA = \int _a^b\int _{g(x)}^{h(x)} f(x,y)\;dydx. </script>
+</p><!--l. 45--><p class="noindent" >Consider a <script type="math/tex">y</script>-simple region <script type="math/tex">D</script>, which can be described as the set of points <script type="math/tex">(x,y)</script> such that
+</p><script type="math/tex; mode=display"> \begin{align*} 
+c\leq & y\leq d\text{, and}\\
+g(y)\leq & x \leq h(y),
+\end{align*}</script>
+<!--l. 50--><p class="noindent" >where <script type="math/tex">g(y)</script> and <script type="math/tex">h(y)</script> are continuous functions. Then we can evaluate the double integral of a
+function <script type="math/tex">f(x,y)</script> over <script type="math/tex">D</script> as <script type="math/tex; mode=display"> \iint _D f(x,y)\;dA = \int _c^d\int _{g(y)}^{h(y)} f(x,y)\;dxdy. </script>
+</div>
+</p><!--l. 56--><p class="noindent" >When we wished to change the order of integration, it was important to visualize the
+region of integration, in order to correctly transform the inequalities.
+<a 
+ id="Q1-1-3"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Triple integrals over elementary regions</h3>
+<!--l. 60--><p class="noindent" >We’ll now define the triple integral of a function <script type="math/tex">f</script> over a bounded region <script type="math/tex">D</script> in
+<script type="math/tex">\mathbb {R}^3</script>.
+</p>
+<div class="theorem-like problem-environment definition" id="problem3"><a 
+ id="x1-2001r3"></a>Let <script type="math/tex">f:D\subset \mathbb {R}^3\rightarrow \mathbb {R}</script> be a function defined on a bounded region <script type="math/tex">D</script> in <script type="math/tex">\mathbb {R}^3</script>. We define an extension function
+by <script type="math/tex; mode=display"> f^{\text {ext}}(x,y,z) = \begin {cases} f(x,y,z), & (x,y,z)\in D\\ 0, & (x,y,z)\notin D \end {cases}. </script> Let <script type="math/tex">B</script> be a box containing <script type="math/tex">D</script>. We define the <em>triple integral of <script type="math/tex">f</script> over <script type="math/tex">D</script></em> to be
+<script type="math/tex; mode=display"> \iiint _D f\;dV = \iiint _B f^{\text {ext}}\;dV. </script>
+</div>
+<!--l. 76--><p class="noindent" >As with double integrals, we could most easily evaluate integrals over elementary
+regions, which we now define in <script type="math/tex">\mathbb {R}^3</script>.
+</p>
+<div class="theorem-like problem-environment definition" id="problem4"><a 
+ id="x1-2002r4"></a>An <em>elementary region</em> <script type="math/tex">D</script> in <script type="math/tex">\mathbb {R}^3</script> is the set of points <script type="math/tex">(x,y,z)</script> which can be described as one of the
+following:
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">a\leq x\leq b</script>, <script type="math/tex">f_1(x)\leq y \leq f_2(x)</script>, and <script type="math/tex">g_1(x,y)\leq z\leq g_2(x,y)</script>, where <script type="math/tex">f_1</script>, <script type="math/tex">f_2</script>, <script type="math/tex">g_1</script> and <script type="math/tex">g_2</script> are continuous functions. In this case, <script type="math/tex; mode=display"> \iiint _D f\;dv = \int _a^b\int _{f_1(x)}^{f_2(x)}\int _{g_1(x,y)}^{g_2(x,y)}f\;dzdydx. </script>
+     </li>
+     <li class="itemize"><script type="math/tex">a\leq x\leq b</script>, <script type="math/tex">f_1(x)\leq z \leq f_2(x)</script>, and <script type="math/tex">g_1(x,z)\leq y\leq g_2(x,z)</script>, where <script type="math/tex">f_1</script>, <script type="math/tex">f_2</script>, <script type="math/tex">g_1</script> and <script type="math/tex">g_2</script> are continuous functions. In this case, <script type="math/tex; mode=display"> \iiint _D f\;dv = \int _a^b\int _{f_1(x)}^{f_2(x)}\int _{g_1(x,z)}^{g_2(x,z)}f\;dydzdx. </script>
+     </li>
+     <li class="itemize"><script type="math/tex">a\leq y\leq b</script>, <script type="math/tex">f_1(y)\leq x \leq f_2(y)</script>, and <script type="math/tex">g_1(x,y)\leq z\leq g_2(x,y)</script>, where <script type="math/tex">f_1</script>, <script type="math/tex">f_2</script>, <script type="math/tex">g_1</script> and <script type="math/tex">g_2</script> are continuous functions. In this case, <script type="math/tex; mode=display"> \iiint _D f\;dv = \int _a^b\int _{f_1(y)}^{f_2(y)}\int _{g_1(x,y)}^{g_2(x,y)}f\;dzdxdy. </script>
+     </li>
+     <li class="itemize"><script type="math/tex">a\leq y\leq b</script>, <script type="math/tex">f_1(y)\leq z \leq f_2(y)</script>, and <script type="math/tex">g_1(y,z)\leq x\leq g_2(y,z)</script>, where <script type="math/tex">f_1</script>, <script type="math/tex">f_2</script>, <script type="math/tex">g_1</script> and <script type="math/tex">g_2</script> are continuous functions. In this case, <script type="math/tex; mode=display"> \iiint _D f\;dv = \int _a^b\int _{f_1(y)}^{f_2(y)}\int _{g_1(y,z)}^{g_2(y,z)}f\;dxdzdy. </script>
+     </li>
+                                                                  
+
+                                                                  
+     <li class="itemize"><script type="math/tex">a\leq z\leq b</script>, <script type="math/tex">f_1(z)\leq x \leq f_2(z)</script>, and <script type="math/tex">g_1(x,z)\leq y\leq g_2(x,z)</script>, where <script type="math/tex">f_1</script>, <script type="math/tex">f_2</script>, <script type="math/tex">g_1</script> and <script type="math/tex">g_2</script> are continuous functions. In this case, <script type="math/tex; mode=display"> \iiint _D f\;dv = \int _a^b\int _{f_1(z)}^{f_2(z)}\int _{g_1(x,z)}^{g_2(x,z)}f\;dydxdz. </script>
+     </li>
+     <li class="itemize"><script type="math/tex">a\leq z\leq b</script>, <script type="math/tex">f_1(z)\leq y \leq f_2(z)</script>, and <script type="math/tex">g_1(y,z)\leq x\leq g_2(y,z)</script>, where <script type="math/tex">f_1</script>, <script type="math/tex">f_2</script>, <script type="math/tex">g_1</script> and <script type="math/tex">g_2</script> are continuous functions. In this case, <script type="math/tex; mode=display"> \iiint _D f\;dv = \int _a^b\int _{f_1(z)}^{f_2(z)}\int _{g_1(y,z)}^{g_2(y,z)}f\;dxdydz. </script></li></ul>
+<!--l. 106--><p class="noindent" ></div>
+</p><!--l. 108--><p class="noindent" >Since there are so many different types of elementary regions in <script type="math/tex">\mathbb {R}^3</script>, we will not bother
+to distinguish between them.
+</p><!--l. 110--><p class="noindent" >We’ll now look at an example of evaluating triple integrals over elementary regions in
+<script type="math/tex">\mathbb {R}^3</script>.
+</p>
+<div class="theorem-like problem-environment example" id="problem5"><a 
+ id="x1-2003r5"></a>Consider the region <script type="math/tex">D</script> in <script type="math/tex">\mathbb {R}^3</script> bounded by the surfaces <script type="math/tex">x=1</script>, <script type="math/tex">y=-x^2</script>, <script type="math/tex">y=x^2</script>, <script type="math/tex">z = -1</script>, and <script type="math/tex">z=xy^2</script>, pictured below.
+<!--l. 115--><p class="noindent" >PICTURE
+</p><!--l. 117--><p class="noindent" >This region can be described with the inequalities </p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq &x\leq 1,\\
+-x^2\leq &y\leq x^2,\\
+-1\leq &z\leq xy^2.
+\end{align*}</script>
+<!--l. 123--><p class="noindent" >So, we can integrate the function <script type="math/tex">f(x,y,z) = xz</script> over <script type="math/tex">D</script> as
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iiint_D f\;dV &= \int_0^1\int_{-x^2}^{x^2}\int_{-1}^{xy^2} xz\;dzdydx\\
+&= \int_0^1\int_{-x^2}^{x^2}\left(\frac{1}{2}xz^2\right)_{z = -1}^{z = xy^2}\;dydx\\
+&= \int_0^1\int_{-x^2}^{x^2}\left(\frac{1}{2}x^3y^4-\frac{1}{2}x\right)\;dydx\\
+&= \int_0^1 \left(\frac{1}{10}x^3y^5 - \frac{1}{2}xy\right)_{y=-x^2}^{y=x^2}\;dx\\
+&= \int_0^1 \left(\left(\frac{1}{10}x^{13} - \frac{1}{4}x^3\right) - \left(-\frac{1}{10}x^{13} + \frac{1}{4}x^3\right)\right)\;dx\\
+&= \int_0^1\left(\frac{1}{5}x^{13} - \frac{1}{2}x^3\right)\;dx\\
+&= \left(\frac{1}{70}x^{14} - \frac{1}{8}x^4\right)_{x = 0}^{x=1}\\
+&= \frac{1}{70} - \frac{1}{8}\\
+&= -\frac{31}{280}.
+\end{align*}</script>
+<!--l. 135--><p class="noindent" ></div>
+<a 
+ id="Q1-1-5"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-3000"></a>Changing the order of integration</h3>
+<!--l. 139--><p class="noindent" >Now let’s look at how we can change the order of integration in a triple integral. The
+most challenging part of this process is accurately visualizing the domain of
+integration from different perspectives. It can be helpful to think of the “shadow”
+                                                                  
+
+                                                                  
+that the region casts on the <script type="math/tex">xy</script>-, <script type="math/tex">xz</script>-, and <script type="math/tex">yz</script>-planes, in order to more effectively visualize the
+region.
+</p>
+<div class="theorem-like problem-environment example" id="problem6"><a 
+ id="x1-3001r6"></a>Consider the region <script type="math/tex">D</script> in the first octant, bounded by the plane <script type="math/tex">x+2y+3z = 6</script>. This region is
+pictured below, along with its projections onto the <script type="math/tex">xy</script>-, <script type="math/tex">xz</script>-, and <script type="math/tex">yz</script>-planes.
+<!--l. 144--><p class="noindent" >PICTURE
+</p><!--l. 146--><p class="noindent" >We’ll set up integrals over this region, with three different orders of integration.
+</p><!--l. 148--><p class="noindent" >First, let’s set up a <script type="math/tex">dzdydx</script> integral. Here, it’s helpful to look at the projection of <script type="math/tex">D</script> onto the
+<script type="math/tex">xy</script>-plane.
+</p><!--l. 150--><p class="noindent" >PICTURE
+</p><!--l. 152--><p class="noindent" >We see that this projection can be described with the inequalities </p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq &x\leq 6,\\
+0\leq &y\leq \frac{6-x}{2}.
+\end{align*}</script>
+<!--l. 158--><p class="noindent" >Then, we also have <script type="math/tex">0\leq z\leq \frac {6-2y-x}{3}</script>. So we can set up an integral <script type="math/tex; mode=display"> \iiint _D f\;dV = \int _0^6\int _0^{(6-x)/2}\int _0^{(6-2y-x)/3} f\;dzdydx. </script>
+</p><!--l. 163--><p class="noindent" >Next, let’s set up a <script type="math/tex">dzdxdy</script> integral. Again, we’ll look at the projection of <script type="math/tex">D</script> onto the
+<script type="math/tex">xy</script>-plane.
+</p><!--l. 165--><p class="noindent" >PICTURE
+</p><!--l. 167--><p class="noindent" >From a different perspective, this projection can be described with the inequalities
+</p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq &y\leq 3,\\
+0\leq &x\leq 6-2y.
+\end{align*}</script>
+<!--l. 173--><p class="noindent" >We also have <script type="math/tex">0\leq z\leq \frac {6-2y-x}{3}</script>, so we can set up an integral <script type="math/tex; mode=display"> \iiint _D f\;dV = \int _0^3\int _0^{6-2y}\int _0^{(6-2y-x)/3} f\;dzdxdy. </script>
+</p><!--l. 178--><p class="noindent" >Finally, we’ll set up a <script type="math/tex">dxdydz</script> integral. Here, it will be helpful to look at the projection of <script type="math/tex">D</script>
+onto the <script type="math/tex">yz</script>-plane.
+</p><!--l. 180--><p class="noindent" >PICTURE
+</p><!--l. 182--><p class="noindent" >This projection can be described with the inequalities </p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq &y\leq 3,\\
+0\leq &z\leq \frac{6-2y}{3}.
+\end{align*}</script>
+<!--l. 188--><p class="noindent" >We also have <script type="math/tex">0\leq x\leq 6-2y-3z</script>, so we can set up an integral <script type="math/tex; mode=display"> \iiint _D f\;dV = \int _0^3\int _0^{(6-2y)/3}\int _0^{6-2y-3z} f\;dxdydz. </script>
+</div>
+</p>
+<div class="theorem-like problem-environment example" id="problem7"><a 
+ id="x1-3002r7"></a>Consider the integral <script type="math/tex; mode=display"> \int _1^3\int _{-x}^0\int _0^{x+y} e^{x^2}y\;dzdydx. </script> We’ll change the order of integration to <script type="math/tex">dxdydz</script>. To do this, we first
+need to figure out what the domain of integration looks like. From the bounds on <script type="math/tex">x</script>
+                                                                  
+
+                                                                  
+and <script type="math/tex">y</script>, we have the inequalities <script type="math/tex; mode=display"> \begin{align*} 
+1\leq &x\leq 3,\\
+-x\leq y\leq 0.
+\end{align*}</script>
+<!--l. 204--><p class="noindent" >These determine the following region in the <script type="math/tex">xy</script>-plane.
+</p><!--l. 206--><p class="noindent" >PICTURE
+</p><!--l. 208--><p class="noindent" >Putting this together with the bounds <script type="math/tex">0\leq z\leq x+y</script>, we can visualize our region of integration in
+<script type="math/tex">\mathbb {R}^3</script>.
+</p><!--l. 210--><p class="noindent" >PICTURE
+</p><!--l. 212--><p class="noindent" >Below, we have the projection of this region onto the <script type="math/tex">yz</script>-plane.
+</p><!--l. 214--><p class="noindent" >PICTURE
+</p><!--l. 216--><p class="noindent" >We can describe the projection with the inequalities </p><script type="math/tex; mode=display"> \begin{align*} 
+-3\leq &y\leq 0,\\
+0\leq &z\leq y+3.\\
+\end{align*}</script>
+<!--l. 221--><p class="noindent" >Over this projection, the <script type="math/tex">x</script>-coordinates in our region are bounded by the planes <script type="math/tex">z=x+y</script> and <script type="math/tex">x=3</script>.
+In inequalities, this can be written <script type="math/tex; mode=display"> y-z\leq x\leq 3. </script> So, we have <script type="math/tex; mode=display"> \int _1^3\int _{-x}^0\int _0^{x+y} e^{x^2}y\;dzdydx = \int _{-3}^0\int _0^{y+3}\int _{y-z}^3 e^{x^2}y\;dxdydz </script>
+</p><!--l. 230--><p class="noindent" ></div>
+<a 
+ id="Q1-1-7"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-4000"></a>Volume of an elementary region</h3>
+<!--l. 234--><p class="noindent" >When working with double integrals, we discovered that we could find the area of a
+region in <script type="math/tex">\mathbb {R}^2</script> by integrating <script type="math/tex">1</script> over the region. That is, <script type="math/tex; mode=display"> \text {area}(D) = \iint _D 1\;dA. </script>
+</p><!--l. 239--><p class="noindent" >Similarly, we can find the volume of a region in <script type="math/tex">\mathbb {R}^3</script> by integrating <script type="math/tex">1</script> over the
+region.
+</p>
+<div class="theorem-like problem-environment proposition" id="problem8"><a 
+ id="x1-4001r8"></a>If <script type="math/tex">D</script> is an elementary region in <script type="math/tex">\mathbb {R}^3</script>, then <script type="math/tex; mode=display"> \text {volume}(D) = \iiint _D 1\;dV. </script>
+</div>
+<!--l. 248--><p class="noindent" >Let’s look at an example of using this to compute volume.
+</p>
+<div class="theorem-like problem-environment example" id="problem9"><a 
+ id="x1-4002r9"></a>Let <script type="math/tex">D</script> be the region in the first octant bounded by the plane <script type="math/tex">x+y+z=1</script>. We’ll find the volume of
+this region.
+<!--l. 253--><p class="noindent" >PICTURE
+</p><!--l. 255--><p class="noindent" >The region <script type="math/tex">D</script> can be described with the inequalities </p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq x\leq 1,\\
+0\leq y\leq 1-x,\\
+                                                                  
+
+                                                                  
+0\leq z\leq 1-x-y.
+\end{align*}</script>
+<!--l. 261--><p class="noindent" >So we have </p><script type="math/tex; mode=display"> \begin{align*} 
+\text{volume}(D) = \int_0^1\int_0^{1-x}\int_0^{1-x-y} 1\;dzdydx\\
+&= \int_0^1\int_0^{1-x}(z)_0^{1-x-y} \;dydx\\
+&= \int_0^1\int_0^{1-x}1-x-y \;dydx\\
+&= \int_0^1\left(y-xy-\frac{1}{2}y^2\right)_0^{1-x} \;dx\\
+&= \int_0^1\left((1-x)-x(1-x)-\frac{1}{2}(1-x)^2\right) \;dx\\
+&= \int_0^1\left(1-x-x+x^2-\frac{1}{2}+x-\frac{1}{2}x^2\right) \;dx\\
+&= \int_0^1\left(\frac{1}{2}-x+\frac{1}{2}x^2\right) \;dx\\
+&= \left(\frac{1}{2}x-\frac{1}{2}x^2+\frac{1}{6}x^3\right)_{x=0}^{x=1}\\
+&= \frac{1}{6}.
+\end{align*}</script>
+<!--l. 273--><p class="noindent" >Thus, the volume of the region <script type="math/tex">D</script> is <script type="math/tex">\frac {1}{6}</script>.
+</div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+
