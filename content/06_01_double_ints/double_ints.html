@@ -1,0 +1,289 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Double Integrals</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="double_ints.tex" /> 
+<meta name="author" content="Melissa Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the geometric motivation behind the definition of a double integral."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >We would like to be able to integrate functions <script type="math/tex">f:\mathbb {R}^2\rightarrow \mathbb {R}</script>, finding the net volume between the
+graph of <script type="math/tex">f</script> and the <script type="math/tex">xy</script>-plane. Before we figure out how to do this, let’s review how we
+defined integrals in single variable calculus.
+</p><!--l. 14--><p class="noindent" >Consider a continuous (or piece-wise continuous) function <script type="math/tex">f</script> defined on the
+closed interval <script type="math/tex">[a,b]</script>. We would like to find the signed area between the graph
+of <script type="math/tex">f</script> and the <script type="math/tex">x</script>-axis over this interval, where area below the <script type="math/tex">x</script>-axis counts as
+negative.
+</p><!--l. 16--><p class="noindent" >PICTURE
+</p><!--l. 18--><p class="noindent" >We can approximate this area with rectangles. To do this, we divide the interval <script type="math/tex">[a,b]</script> into
+subintervals, and use a sample point to determine the height of the rectangle over
+that subinterval.
+</p><!--l. 20--><p class="noindent" >PICTURE
+</p><!--l. 22--><p class="noindent" >The area of the <script type="math/tex">i</script>th rectangle will be <script type="math/tex">f(x_i)\Delta x</script>, where <script type="math/tex">x_i</script> is the <script type="math/tex">i</script>th sample point, and <script type="math/tex">\Delta x</script> is the length
+of each subinterval. To approximate the area under <script type="math/tex">f</script>, we add up the area of the
+rectangles, <script type="math/tex">\sum _{i=1}^n f(x_i)\Delta x</script>. As the number of rectangles increases, the approximation becomes more
+accurate, so we take the limit as the number of rectangles, <script type="math/tex">n</script>, goes to infinity, and we
+arrive at the definition of the definite integral. <script type="math/tex; mode=display"> \int _a^b f(x)dx = \lim _{n\rightarrow \infty } \sum _{i=1}^n f(x_i)\Delta x </script> To define the integral of a
+function from <script type="math/tex">\mathbb {R}^2</script> to <script type="math/tex">\mathbb {R}</script>, we’ll follow this same idea of approximating area with
+rectangles. Since we’ll be dealing with volume instead, we’ll approximate with
+boxes.
+<a 
+ id="Q1-1-1"></a>
+</p>
+                                                                  
+
+                                                                  
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Double Integrals</h3>
+<!--l. 30--><p class="noindent" >Consider a function <script type="math/tex">f:R\subset \mathbb {R}^2\rightarrow \mathbb {R}</script> defined on a rectangle <script type="math/tex">R\subset \mathbb {R}^2</script>.
+</p><!--l. 32--><p class="noindent" >PICTURE
+</p><!--l. 34--><p class="noindent" >We’ll approximate the signed area between the graph of <script type="math/tex">f</script> and the <script type="math/tex">xy</script>-plane using boxes.
+To do this, we’ll partition <script type="math/tex">R</script> into subrectangles, and take a box over each rectangle.
+The height of the box will be given by the value of <script type="math/tex">f</script> at a sample point, <script type="math/tex">\vec {c}_{ij}</script>, in the
+subrectangle.
+</p><!--l. 36--><p class="noindent" >PICTURE
+</p><!--l. 38--><p class="noindent" >Then, the volume of the box over the <script type="math/tex">(i,j)</script>th rectangle is <script type="math/tex">f(\vec {c}_{ij})\Delta x\Delta y</script>, where <script type="math/tex">\vec {c}_{ij}</script> is the sample point, <script type="math/tex">\Delta x</script> is
+the width of the rectangle, and <script type="math/tex">\Delta y</script> is the length of the rectangle.
+</p><!--l. 40--><p class="noindent" >When we add up the total area volume of the boxes, this approximates the volume
+under the graph of <script type="math/tex">f</script>. <script type="math/tex; mode=display"> \text {Volume}\approx \sum _{i,j} f(\vec {c}_{ij})\Delta x\Delta y </script>
+</p><!--l. 45--><p class="noindent" >PICTURE
+</p><!--l. 47--><p class="noindent" >When we increase the number of subrectangles, this approximation becomes more
+accurate. So, when we take the limit as the number of rectangles, <script type="math/tex">n</script>, goes to infinity,
+we compute the exact volume, which leads us to the definition of a double
+integral.
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a 
+ id="x1-1001r1"></a>Let <script type="math/tex">f:R\subset \mathbb {R}^2\rightarrow \mathbb {R}</script> be a function defined on a rectangle <script type="math/tex">R</script> in <script type="math/tex">\mathbb {R}^2</script>. The <em>double integral</em> of <script type="math/tex">f</script> over <script type="math/tex">R</script> is <script type="math/tex; mode=display"> \iint _R f(x,y) dA = \lim _{n\rightarrow \infty } \sum _{i,j} f(\vec {c}_{ij})\Delta x\Delta y, </script>
+provided this limit exists. Here, <script type="math/tex">n</script>, <script type="math/tex">\vec {c}_{ij}</script>, <script type="math/tex">\Delta x</script>, and <script type="math/tex">\Delta y</script> are as defined above.
+<!--l. 56--><p class="noindent" >If the double integral above exists, we say that <script type="math/tex">f</script> is <em>integrable</em> over <script type="math/tex">R</script>.
+</div>
+</p><!--l. 59--><p class="noindent" >The double integral represented the signed volume between the graph of <script type="math/tex">f</script> and the
+<script type="math/tex">xy</script>-plane. Unsurprisingly, continuous functions are always integrable.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem2"><a 
+ id="x1-1002r2"></a>Let <script type="math/tex">f:R\subset \mathbb {R}^2\rightarrow \mathbb {R}</script> be a continuous function defined on a rectangle <script type="math/tex">R</script>. Then <script type="math/tex">f</script> is integrable.
+</div>
+<!--l. 65--><p class="noindent" >Unfortunately, this definition isn’t practical for computing double integrals. For
+computations, we’ll use iterated integrals, which will be defined in the next section.
+Using Fubini’s Theorem, we’ll see why we can use iterated integrals to compute
+double integrals.
+</p><!--l. 67--><p class="noindent" >Although we won’t typically use the definition of a double integral for computation,
+we can approximate double integrals using a finite number of boxes.
+<a 
+ id="Q1-1-3"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Approximating double integrals</h3>
+<!--l. 71--><p class="noindent" >We’ll now look at a couple of examples of approximating double integrals.
+                                                                  
+
+                                                                  
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-2001r3"></a>Consider the function <script type="math/tex">f(x,y) = x^2+y^2</script> over the rectangle <script type="math/tex">[0,1]\times [0,1]</script>.
+<!--l. 76--><p class="noindent" >PICTURE
+</p><!--l. 78--><p class="noindent" >We’ll partition the rectangle <script type="math/tex">[0,1]\times [0,1]</script> into nine subrectangles, and use the upper right corner
+of each rectangle for a sample point.
+</p><!--l. 80--><p class="noindent" >PICTURE
+</p><!--l. 82--><p class="noindent" >Next, we’ll evaluate <script type="math/tex">f</script> at each of our sample points.
+</p>
+<div class="center" 
+>
+<!--l. 84--><p class="noindent" >
+</p>
+<div class="tabular"> <table id="TBL-1" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1" /></colgroup><colgroup id="TBL-1-2g"><col 
+id="TBL-1-2" /></colgroup><tr 
+class="hline"><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-1"  
+class="td11"> <script type="math/tex">(\vec {c}_{ij})</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-2"  
+class="td11"> <script type="math/tex">f(\vec {c}_{ij})</script> </td></tr><tr 
+class="hline"><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-1"  
+class="td11">  <script type="math/tex">(1/3, 1/3)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-2"  
+class="td11">  <script type="math/tex">2/9</script></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-1"  
+class="td11"> <script type="math/tex">(1/3, 2/3)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-2"  
+class="td11"> <script type="math/tex">5/9</script> </td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-1"  
+class="td11">  <script type="math/tex">(1/3, 1)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-2"  
+class="td11">  <script type="math/tex">10/9</script></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-1"  
+class="td11"> <script type="math/tex">(2/3, 1/3)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-2"  
+class="td11"> <script type="math/tex">5/9</script> </td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-6-1"  
+class="td11">  <script type="math/tex">(2/3, 2/3)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-6-2"  
+class="td11">  <script type="math/tex">8/9</script></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-7-1"  
+class="td11"> <script type="math/tex">(2/3, 1)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-7-2"  
+class="td11"> <script type="math/tex">13/9</script> </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-8-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-8-1"  
+class="td11"> <script type="math/tex">(1, 1/3)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-8-2"  
+class="td11"> <script type="math/tex">10/9</script> </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-9-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-9-1"  
+class="td11"> <script type="math/tex">(1, 2/3)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-9-2"  
+class="td11"> <script type="math/tex">13/9</script> </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-10-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-10-1"  
+class="td11"> <script type="math/tex">(1, 1)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-10-2"  
+class="td11"> <script type="math/tex">2</script> </td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-11-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-11-1"  
+class="td11">   </td>
+</tr></table></div></div>
+<!--l. 102--><p class="noindent" >The base of each box has area <script type="math/tex">\frac {1}{3}\cdot \frac {1}{3} = \frac {1}{9}</script>, so the volume of the <script type="math/tex">ij</script>th box is <script type="math/tex">\frac {1}{9}f(\vec {c}_{ij})</script>.
+</p><!--l. 104--><p class="noindent" >To approximate the double integral <script type="math/tex">\iint _R f(x,y)dA</script>, we add up the volume of all of these boxes.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_R f(x,y)dA &\approx \sum_{i,j} \frac{1}{9}f(\vec{c}_{ij})\\
+&= \frac{1}{9}\sum_{i,j} f(\vec{c}_{ij})\\
+&= \frac{1}{9}\left(\frac{2}{9} + \frac{5}{9} + \frac{10}{9} + \frac{5}{9} + \frac{8}{9} + \frac{13}{9} + \frac{10}{9} + \frac{13}{9} + 2\right)\\
+&= \frac{28}{27}
+\end{align*}</script>
+<!--l. 111--><p class="noindent" >So, we have the approximation <script type="math/tex">\iint _R f(x,y)dA\approx \frac {28}{27}</script>.
+</div>
+</p>
+<div class="theorem-like problem-environment example" id="problem4"><a 
+ id="x1-2002r4"></a>Consider the function <script type="math/tex">f(x,y) = e^{xy^2}</script> over the rectangle <script type="math/tex">[0,2]\times [1,2]</script>.
+<!--l. 117--><p class="noindent" >PICTURE
+</p><!--l. 119--><p class="noindent" >We’ll partition the rectangle <script type="math/tex">[0,2]\times [1,2]</script> into sixteen subrectangles, and we’ll use the lower right
+corners as sample points.
+</p><!--l. 121--><p class="noindent" >PICTURE
+</p><!--l. 123--><p class="noindent" >We evaluate <script type="math/tex">f</script> at each of our sample points.
+</p>
+                                                                  
+
+                                                                  
+<div class="center" 
+>
+<!--l. 125--><p class="noindent" >
+</p>
+<div class="tabular"> <table id="TBL-2" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1" /></colgroup><colgroup id="TBL-2-2g"><col 
+id="TBL-2-2" /></colgroup><tr 
+class="hline"><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-1"  
+class="td11"> <script type="math/tex">\vec {c}_{ij}</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-2"  
+class="td11"> <script type="math/tex">f(\vec {c}_{ij})</script> </td></tr><tr 
+class="hline"><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-1"  
+class="td11">  <script type="math/tex">(1/2, 1)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-2"  
+class="td11">  <script type="math/tex">e^{1/2}</script></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-1"  
+class="td11"> <script type="math/tex">(1, 1)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-2"  
+class="td11"> <script type="math/tex">e</script> </td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-1"  
+class="td11">  <script type="math/tex">(3/2, 1)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-2"  
+class="td11">  <script type="math/tex">e^{3/2}</script></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-1"  
+class="td11"> <script type="math/tex">(2, 1)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-2"  
+class="td11"> <script type="math/tex">e^{2}</script> </td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-1"  
+class="td11">  <script type="math/tex">(1/2, 5/4)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-2"  
+class="td11">  <script type="math/tex">e^{25/32}</script></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-7-1"  
+class="td11"> <script type="math/tex">(1, 5/4)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-7-2"  
+class="td11"> <script type="math/tex">e^{25/16}</script> </td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-8-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-8-1"  
+class="td11">  <script type="math/tex">(3/2, 5/4)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-8-2"  
+class="td11">  <script type="math/tex">e^{75/32}</script></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-9-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-9-1"  
+class="td11"> <script type="math/tex">(2, 5/4)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-9-2"  
+class="td11"> <script type="math/tex">e^{25/8}</script> </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-10-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-10-1"  
+class="td11"> <script type="math/tex">(1/2, 3/2)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-10-2"  
+class="td11"> <script type="math/tex">e^{9/8}</script> </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-11-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-11-1"  
+class="td11"> <script type="math/tex">(1, 3/2)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-11-2"  
+class="td11"> <script type="math/tex">e^{9/4}</script> </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-12-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-12-1"  
+class="td11"> <script type="math/tex">(3/2, 3/2)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-12-2"  
+class="td11"> <script type="math/tex">e^{27/8}</script> </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-13-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-13-1"  
+class="td11"> <script type="math/tex">(2, 3/2)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-13-2"  
+class="td11"> <script type="math/tex">e^{9/2}</script> </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-14-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-14-1"  
+class="td11"> <script type="math/tex">(1/2, 7/4)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-14-2"  
+class="td11"> <script type="math/tex">e^{49/32}</script> </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-15-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-15-1"  
+class="td11"> <script type="math/tex">(1, 7/4)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-15-2"  
+class="td11"> <script type="math/tex">e^{49/16}</script> </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-16-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-16-1"  
+class="td11"> <script type="math/tex">(3/2, 7/4)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-16-2"  
+class="td11"> <script type="math/tex">e^{147/32}</script> </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-17-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-17-1"  
+class="td11"> <script type="math/tex">(2, 7/4)</script> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-17-2"  
+class="td11"> <script type="math/tex">e^{49/8}</script> </td>
+</tr><tr 
+class="hline"><td><hr /></td><td><hr /></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-18-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-18-1"  
+class="td11">   </td>
+</tr></table></div></div>
+<!--l. 149--><p class="noindent" ></div>
+</p><!--l. 151--><p class="noindent" >The base of each box is <script type="math/tex">\frac {1}{2}\cdot \frac {1}{4} = \frac {1}{8}</script>, so the volume of the <script type="math/tex">ij</script>th box is <script type="math/tex">\frac {1}{8}f(\vec {c}_{ij})</script>.
+</p><!--l. 153--><p class="noindent" >To approximate the double integral <script type="math/tex">\iint _R f(x,y)dA</script>, we add up the volume of all of these boxes.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_R f(x,y)dA &\approx \frac{1}{8}\sum_{i,j} f(\vec{c}_{ij})\\
+&= \frac{1}{8}\left(e^{1/2} + e + e^{3/2} + e^2 + e^{25/32} + e^{25/16} + e^{75/32} + e^{25/8} + e^{9/8} + e^{9/4} + e^{27/8} + e^{9/2} + e^{49/32} + e^{49/16} + e^{147/32} + e^{49/8}\right)\\
+&\approx 96.27
+\end{align*}</script>
+<!--l. 159--><p class="noindent" >So, we have the approximation <script type="math/tex">\iint _R f(x,y)dA\approx 96.27</script>.
+</p><!--l. 161--><p class="noindent" >In the next section, we’ll introduce iterated integrals, which we’ll be able to use to
+compute the exact value of double integrals.
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

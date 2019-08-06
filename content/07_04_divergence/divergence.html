@@ -1,0 +1,122 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Divergence</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="divergence.tex" /> 
+<meta name="author" content="Melissa Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the definition and geometric intepretation of divergence."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >We’ve seen how the curl of a vector field measures local rotation, and how we can
+compute the curl of a vector field as <script type="math/tex">\nabla \times \vec {F}</script>.
+</p><!--l. 14--><p class="noindent" >PICTURE
+</p><!--l. 16--><p class="noindent" >We’ll now look at another local property of a vector field: local expansion or
+contraction. That is, how can we measure if a vector field is expanding or contracting
+near a point?
+</p><!--l. 18--><p class="noindent" >Imagine that we take a tiny ball around a point. If we look at the number and length
+of vectors entering and leaving this ball, we can decide if there is local expansion or
+contraction.
+</p><!--l. 20--><p class="noindent" >In the pictures below, we have some example of local expansion and contraction.
+</p><!--l. 22--><p class="noindent" >PICTURE
+</p><!--l. 24--><p class="noindent" >In this section, we’ll see how we can compute this local expansion or contraction,
+similarly to how we computed curl.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Divergence of a vector field</h3>
+<!--l. 28--><p class="noindent" >Consider a two-dimensional vector field <script type="math/tex">\vec {F}:\mathbb {R}^2\rightarrow \mathbb {R}^2</script>, pictured below. Write <script type="math/tex">\vec {F}(x,y) = (M(x,y), N(x,y))</script>.
+</p><!--l. 30--><p class="noindent" >PICTURE
+</p><!--l. 32--><p class="noindent" >At the point <script type="math/tex">P</script>, we can see that there is local expansion.
+</p><!--l. 34--><p class="noindent" >Focusing on the change in the vector field as we move in the positive <script type="math/tex">x</script>-direction near <script type="math/tex">P</script>,
+we see that the <script type="math/tex">x</script>-coordinates of the vectors are increasing. This means that <script type="math/tex">\frac {\partial M}{\partial x}</script> is
+                                                                  
+
+                                                                  
+positive.
+</p><!--l. 36--><p class="noindent" >Focusing on the change in the vector field as we move in the positive <script type="math/tex">y</script>-direction near <script type="math/tex">P</script>,
+we can see that the <script type="math/tex">y</script>-coordinates of the vectors are increasing. This means that <script type="math/tex">\frac {\partial N}{\partial y}</script> is
+positive.
+</p><!--l. 38--><p class="noindent" >When we take the sum <script type="math/tex">\frac {\partial M}{\partial x} + \frac {\partial N}{\partial y}</script>, this gives us a measure of the local expansion of the vector
+field. Let’s look at how we can rewrite this using the operator <script type="math/tex">\nabla </script> and a dot product.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\frac{\partial M(x,y)}{\partial x} + \frac{\partial N(x,y)}{\partial y} &= \left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}\right)\cdot (M(x,y), N(x,y))\\
+&= \nabla \cdot \vec{F}(x,y).
+\end{align*}</script>
+<!--l. 44--><p class="noindent" >This leads us to the definition of divergence, for an <script type="math/tex">n</script>-dimensional vector field.
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a 
+ id="x1-1001r1"></a>Let <script type="math/tex">\vec {F}:\mathbb {R}^n\rightarrow \mathbb {R}^n</script> be a differentiable vector field. Then the <em>divergence</em> of <script type="math/tex">\vec {F}</script> is <script type="math/tex">\nabla \cdot \vec {F}</script>.
+</div>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-1002r2"></a>Consider the vector field <script type="math/tex">\vec {F}(x,y,z) = (x^2+yz, y^2z, x^2y^3z^4)</script> in <script type="math/tex">\mathbb {R}^3</script>. We’ll compute the divergence of this vector field at the the point <script type="math/tex">(1,2,3)</script>.
+<script type="math/tex; mode=display"> \begin{align*} 
+\nabla\cdot \vec{F}(x,y,z) &= \frac{\partial}{\partial x}(x^2+yz) + \frac{\partial}{\partial y}(y^2z) + \frac{\partial}{\partial z}(x^2y^3z^4)\\
+&= 2x + 2yz + 4x^2y^3z^3
+\end{align*}</script>
+<!--l. 56--><p class="noindent" >Evaluating  at  the  point  <script type="math/tex">(1,2,3)</script>,  we  have
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\nabla\cdot \vec{F}(1,2,3) &= 2\cdot 1 + 2\cdot 2\cdot 3 + 4\cdot 1^2\cdot 2^3\cdot 4^3\\
+&= 2062.
+\end{align*}</script>
+<!--l. 61--><p class="noindent" ></div>
+<a 
+ id="Q1-1-3"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Geometric interpretation of divergence</h3>
+<!--l. 65--><p class="noindent" >Recall that divergence of a vector field measures the local expansion or contraction of
+a vector field near a point. With this in mind, for each of the vector fields below,
+estimate whether the divergence of <script type="math/tex">F</script> at <script type="math/tex">P</script> is positive, negative, or zero.
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-2001r3"></a>PICTURE
+<div class="multiple-choice" id="problem4"><span class="choice correct "   id="choice1">positive</span> <span class="choice  "   id="choice2">negative</span> <span class="choice  "   id="choice3">zero</span> </div>
+</div>
+<div class="theorem-like problem-environment example" id="problem5"><a 
+ id="x1-2002r4"></a>PICTURE
+                                                                  
+
+                                                                  
+<div class="multiple-choice" id="problem6"><span class="choice  "   id="choice4">positive</span> <span class="choice  "   id="choice5">negative</span> <span class="choice correct "   id="choice6">zero</span> </div>
+</div>
+<div class="theorem-like problem-environment example" id="problem7"><a 
+ id="x1-2003r5"></a>PICTURE
+<div class="multiple-choice" id="problem8"><span class="choice  "   id="choice7">positive</span> <span class="choice correct "   id="choice8">negative</span> <span class="choice  "   id="choice9">zero</span> </div>
+</div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

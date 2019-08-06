@@ -1,0 +1,94 @@
+\documentclass{ximera}  
+
+\title{Triple Integrals}  
+\author{Melissa Lynn}
+\outcome{Understand the geometric ideas behind the definition of a triple integral.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+We've defined single variable integrals, by approximating an area with rectangles, and taking the limit as the width of the rectangles goes to zero.
+
+PICTURE
+
+In order to do this, we split the domain, $[a,b]$ into subintervals, and pick a sample point in each subinterval.
+
+PICTURE
+
+We've also defined double integrals over rectangles, by approximating a volume with boxes, and taking the limit as the base of the boxes goes to zero.
+
+PICTURE
+
+In order to do this, we split the domain, $[a,b]\times[c,d]$ into subrectangles, and pick a sample point in each subrectangles.
+
+PICTURE
+
+In this section, we'll define triple integrals.
+
+
+\section*{Triple integrals}
+
+Consider a function $f:B\subset \mathbb{R}^3\rightarrow\mathbb{R}$ defined over a box $B = [m,n]\times[p,q]\times[r,s]$. We can think of the triple integral as representing a four-dimensional hyper-volume, but this is hard to visualize, since it's a four-dimensional object. We can, however, visualize the domain of integration.
+
+PICTURE
+
+We divide this box up into small boxes, and choose a sample point $(x_i, y_j, z_k)$ in each box.
+
+PICTURE
+
+Then, we evaluate the function $f$ at each of the sample points, and multiply by the area of a box. We then add these up, and take the limit as the size of the boxes goes to zero.
+\[
+\lim_{\Delta x, \Delta y, \Delta z\rightarrow 0}\sum f(x_i,y_j,z_k)\;\Delta x\Delta y\Delta z.
+\]
+
+This gives us our definition of a triple integral.
+
+\begin{definition}
+Let $f:B\subset \mathbb{R}^3\rightarrow\mathbb{R}$ be a function defined on the box $B=[m,n]\times[p,q]\times[r,s]$ in $\mathbb{R}^3$. Let $\Delta x$, $\Delta y$, $\Delta z$, $x_i$, $y_j$, and $z_k$ be as above. The \emph{triple integral} of $f$ over $B$ is defined to be
+\[
+\iiint_B f\;dV = \sum_{i,j,k} f(x_i,y_j,z_k)\Delta x\Delta y\Delta z .
+\]
+\end{definition}
+
+Now, we'll look at we use this definition to approximate triple integrals.
+
+\section*{Approximating triple integrals}
+
+\begin{example}
+We'll approximate the triple integral of $f(x,y,z) = x^2+y^2+z^2$ over the box $B = [0,1]\times [0,1]\times [0,1]$.
+
+To approximate this triple integral, we'll split $B$ into eight subboxes of equal size. For sample points, we take the center of each box. These boxes, listed with their sample points, are:
+\begin{align*}
+[0,1/2]\times [0,1/2]\times [0,1/2],\hspace{.5cm}& (1/4, 1/4, 1/4);\\
+[0,1/2]\times [0,1/2]\times  [1/2,1],\hspace{.5cm} & (1/4, 1/4, 3/4);\\
+[0,1/2]\times [1/2,1]\times  [0,1/2],\hspace{.5cm} & (1/4, 3/4, 1/4);\\
+[0,1/2]\times [1/2,1]\times  [1/2,1],\hspace{.5cm} & (1/4, 3/4, 3/4);\\
+[1/2,1]\times [0,1/2]\times  [0,1/2],\hspace{.5cm} & (3/4, 1/4, 1/4);\\
+[1/2,1]\times [0,1/2]\times  [1/2,1],\hspace{.5cm} & (3/4, 1/4, 3/4);\\
+[1/2,1]\times [1/2,1]\times  [0,1/2],\hspace{.5cm} & (3/4, 3/4, 1/4);\\
+[1/2,1]\times [1/2,1]\times  [1/2,1],\hspace{.5cm} & (3/4, 3/4, 3/4).\\
+\end{align*}
+Evaluating the function $f$ at each of the test points, we have
+\begin{align*}
+f(1/4, 1/4, 1/4) = 3/16\\
+f(1/4, 1/4, 3/4) = 11/16\\
+f(1/4, 3/4, 1/4) = 11/16\\
+f(1/4, 3/4, 3/4) = 19/16\\
+f(3/4, 1/4, 1/4) = 11/16\\
+f(3/4, 1/4, 3/4) = 19/16\\
+f(3/4, 3/4, 1/4) = 19/16\\
+f(3/4, 3/4, 3/4) = 27/16.\\
+\end{align*}
+The volume of each subbox is $1/2\cdot 1/2\cdot 1/2 = 1/8$, so we can approximate the triple integral as
+\begin{align*}
+\iiint_B f\;dV &\approx \frac{1}{8}\left(\frac{3}{16}+\frac{11}{16}+\frac{11}{16}+\frac{19}{16}+\frac{11}{16}+\frac{19}{16}+\frac{19}{16}+\frac{27}{16}\right)\\
+&= \frac{15}{16}.
+\end{align*}
+\end{example}
+
+Of course, we would like to be able to compute the exact values of triple integrals, and we would like to do this without using the limit definition. In the next section, we'll prove a version of Fubini's theorem for triple integrals, which will allow us to evaluate triple integrals more easily.
+
+
+\end{document}

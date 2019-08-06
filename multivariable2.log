@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  28 JUL 2019 16:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  6 AUG 2019 14:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1328,23 +1328,27 @@ Package: xparse 2018/02/21 L3 Experimental document command parser
 . Defining command \hobbyclearpath with sig. '' on line 770.
 .................................................
 )))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/esint/esint.sty
+Package: esint 
+\symlargesymbolsA=\mathgroup6
+)
 (./multivariable2.aux)
 \openout1 = `multivariable2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1364,29 +1368,34 @@ LaTeX Font Info:    ... okay on input line 11.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 11.
+ on input line 12.
 
 \c@lstlisting=\count369
 \AtBeginShipoutBox=\box69
-Package hyperref Info: Link coloring ON on input line 11.
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
+Package hyperref Info: Link coloring ON on input line 12.
+LaTeX Info: Redefining \ref on input line 12.
+LaTeX Info: Redefining \pageref on input line 12.
+LaTeX Info: Redefining \nameref on input line 12.
 (./multivariable2.out) (./multivariable2.out)
 \@outlinefile=\write10
 \openout10 = `multivariable2.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 11.
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 11.
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.39998pt on input line 11.
+LaTeX Font Info:    Try loading font information for U+esint on input line 12.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/esint/uesint.fd
+File: uesint.fd 
+)
+Package xypdf Info: Line width: 0.39998pt on input line 12.
 
 
 LaTeX Warning: No \author given.
@@ -1460,7 +1469,7 @@ Overfull \hbox (29.0669pt too wide) detected at line 281
 
 ] [47]
 [48]
-Overfull \hbox (253.73894pt too wide) detected at line 158
+Overfull \hbox (250.68329pt too wide) detected at line 158
 []
  []
 
@@ -1627,32 +1636,169 @@ Overfull \hbox (216.26326pt too wide) detected at line 83
 []
  []
 
-[113] [114]) [115] [116
+[113] [114]) [115] (./content/08_03_orientation/orientation.tex [116
+
+] [117]
+[118]) [119] (./content/08_04_vector_surface_ints/vector_surface_ints.tex
+[120
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 64.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
+Overfull \hbox (6.34406pt too wide) in paragraph at lines 65--66
+[][]\OT1/cmr/bx/n/10 Example 59. []\OT1/cmr/m/it/10 Let's eval-u-ate the vec-to
+r sur-face in-te-gral of $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m
+/n/10 ) = (\OML/cmm/m/it/10 yz; xz; xy\OT1/cmr/m/n/10 )$
+ []
+
+[121] [122]
+Overfull \hbox (60.20084pt too wide) detected at line 148
+[]
+ []
+
+
+Overfull \hbox (40.92494pt too wide) detected at line 163
+[]
+ []
+
+[123]) [124] (./content/08_05_stokes_thm/stokes_thm.tex [125
+
+] [126]
+Overfull \hbox (53.4146pt too wide) detected at line 115
+[]
+ []
+
+[127]
+Overfull \hbox (19.16672pt too wide) in paragraph at lines 121--122
+[][]\OT1/cmr/bx/n/10 Example 63. []\OT1/cmr/m/it/10 Con-sider the sur-face $\OM
+L/cmm/m/it/10 S$ \OT1/cmr/m/it/10 pic-tured be-low, and the vec-tor field $[]\O
+T1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 ) =
+ []
+
+) [128] (./content/08_06_more_stokes/more_stokes.tex [129
+
+] [130] [131])
+[132] (./content/09_01_triple_ints/triple_ints.tex [133
+
+] [134]) [135]
+(./content/09_02_fubini/fubini.tex [136
+
+]) [137]
+(./content/09_03_change_of_order/change_of_order.tex [138
+
+]
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 81.
+ [139] [140] [141]
+[142] [143]
+Overfull \hbox (28.88705pt too wide) detected at line 272
+[]
+ []
+
+) [144] (./content/09_04_change_of_vars/change_of_vars.tex [145
+
+] [146]
+Overfull \hbox (100.02003pt too wide) detected at line 142
+[]
+ []
+
+[147]) [148] (./content/09_05_divergence_thm/divergence_thm.tex [149
+
+] [150])
+[151] (./content/09_06_more_div_thm/more_div_thm.tex [152
+
+] [153] [154] [155])
+[156] (./content/09_07_generalized_stokes/generalized_stokes.tex [157
+
+] [158])
+[159]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 83.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 83.
  (./multivariable2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 64.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 64.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 83.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
 Package rerunfilecheck Info: File `multivariable2.out' has not changed.
-(rerunfilecheck)             Checksum: 2E4631356D5080D4C4296463184D18BC;2237.
+(rerunfilecheck)             Checksum: 3EEBE66DF71BD21EA1DB1E65AEB93157;3009.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 64.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 83.
  ) 
 Here is how much of TeX's memory you used:
- 42476 strings out of 492649
- 947537 string characters out of 6129622
- 1132477 words of memory out of 5000000
- 45156 multiletter control sequences out of 15000+600000
- 548765 words of font info for 90 fonts, out of 8000000 for 9000
+ 42712 strings out of 492649
+ 951287 string characters out of 6129622
+ 1132723 words of memory out of 5000000
+ 45212 multiletter control sequences out of 15000+600000
+ 549234 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,20n,101p,10421b,969s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.58} has been referenced but does not ex
+pdfTeX warning (dest): name{Hfootnote.80} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.79} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.78} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.77} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.76} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.75} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.74} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.73} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.72} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.71} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.70} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.69} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.68} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.67} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.66} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.65} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.64} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.63} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.62} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.61} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.60} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.59} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.58} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.57} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1849,12 +1995,13 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2018/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-di
+st/fonts/type1/public/esint-type1/esint10.pfb></usr/local/texlive/2018/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2018/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on multivariable2.pdf (116 pages, 573468 bytes).
+Output written on multivariable2.pdf (159 pages, 691406 bytes).
 PDF statistics:
- 1203 PDF objects out of 1440 (max. 8388607)
- 1047 compressed objects within 11 object streams
- 423 named destinations out of 1000 (max. 500000)
- 291 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1568 PDF objects out of 1728 (max. 8388607)
+ 1365 compressed objects within 14 object streams
+ 552 named destinations out of 1000 (max. 500000)
+ 379 words of extra memory for PDF output out of 10000 (max. 10000000)
 

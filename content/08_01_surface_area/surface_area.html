@@ -1,0 +1,200 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Surface Area</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="surface_area.tex" /> 
+<meta name="author" content="Melissa Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Compute the surface area of a parametric surface."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >Suppose we have a parametrized surface, <script type="math/tex">\vec {X}:D\subset \mathbb {R}^2\rightarrow \mathbb {R}^3</script>, and suppose we wish to find the surface
+area of this surface.
+</p><!--l. 14--><p class="noindent" >PICTURE
+</p><!--l. 16--><p class="noindent" >Recall that by fixing one parameter, we get a coordinate curve. Doing this for several
+values for each parameter, we obtain a “grid” on the surface.
+</p><!--l. 18--><p class="noindent" >PICTURE
+</p><!--l. 20--><p class="noindent" >This grid consists of many small regions, which we’ll describe as curvy rectangles. If
+we can approximate the area of the curvy rectangles, and add all of these areas
+together, we’ll approximate the surface area. This provides us with the idea for our
+surface area computation.
+</p><!--l. 22--><p class="noindent" >To implement this, we need to begin by approximating the area of a small curvy
+rectangle. We can think of the curvy rectangle as the image of a rectangle in
+<script type="math/tex">(s,t)</script>-coordinates, under a transformation <script type="math/tex">\vec {X}</script>.
+</p><!--l. 24--><p class="noindent" >PICTURE
+</p><!--l. 26--><p class="noindent" >In <script type="math/tex">(s,t)</script>-coordinates, suppose that the rectangle has base <script type="math/tex">\Delta s</script> and height <script type="math/tex">\Delta t</script>, so the area is
+<script type="math/tex">\Delta s\Delta t</script>.
+</p><!--l. 28--><p class="noindent" >We can approximate the sides of the curvy rectangle with the vectors <script type="math/tex">\vec {X}_s(s_0,t_0)\Delta s</script> and
+<script type="math/tex">\vec {X}_t(s_0,t_0)\Delta t</script>.
+</p><!--l. 30--><p class="noindent" >PICTURE
+</p><!--l. 32--><p class="noindent" >This is a reasonable approximation because these vectors are tangent to the
+grid curves, and are scaled to the appropriate length by the rectangle in
+<script type="math/tex">(s,t)</script>-coordinates.
+</p><!--l. 34--><p class="noindent" >Then, we can approximate the curvy rectangle with the rectangle determined by the
+                                                                  
+
+                                                                  
+vectors <script type="math/tex">\vec {X}_s(s_0,t_0)\Delta s</script> and <script type="math/tex">\vec {X}_t(s_0,t_0)\Delta t</script>.
+</p><!--l. 36--><p class="noindent" >PICTURE
+</p><!--l. 38--><p class="noindent" >From linear algebra, we know that this rectangle has area <script type="math/tex; mode=display"> \left \|\vec {X}_s(s_0,t_0)\Delta s\times \vec {X}_t(s_0,t_0)\Delta t\right \|, </script> and we can rewrite this as <script type="math/tex; mode=display"> \left \|\vec {X}_s(s_0,t_0)\times \vec {X}_t(s_0,t_0)\right \|\Delta s\Delta t. </script>
+Now, if we add up the areas of all of these approximations, and let <script type="math/tex">\Delta s\rightarrow 0</script> and <script type="math/tex">\Delta t \rightarrow 0</script> (so
+that the rectangles get very small), we obtain the double integral, <script type="math/tex; mode=display"> \iint _D\|\vec {X}_s\times \vec {X}_t\|\;dsdt. </script> This
+provides us with a formula to compute the surface area of a parametrized
+surface.
+</p>
+<div class="theorem-like problem-environment proposition" id="problem1"><a 
+ id="x1-17r1"></a>Let <script type="math/tex">\vec {X}:D\subset \mathbb {R}^2\rightarrow \mathbb {R}^3</script> be a parametric surface in <script type="math/tex">\mathbb {R}^3</script>. Then the surface area of <script type="math/tex">\vec {X}</script> is given by <script type="math/tex; mode=display"> \text {area}(\vec {X}) = \iint _D\|\vec {X}_s\times \vec {X}_t\|\;dsdt. </script>
+</div>
+<a 
+ id="Q1-1-1"></a>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Surface area computations</h3>
+<!--l. 61--><p class="noindent" >We’ll now use our formula for the surface area of a parametric surface to confirm
+several well-known surface area formulas from geometry.
+</p>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-1001r2"></a>We’ll find the surface area of a sphere of radius <script type="math/tex">R</script>, which can be
+parametrized by <script type="math/tex; mode=display"> \vec {X}(s,t) = (R\cos s\sin t, R\sin s\sin t, R\cos t), </script> for <script type="math/tex">0\leq t\leq \pi </script> and <script type="math/tex">0\leq s\leq 2\pi </script>. First, let’s find the derivatives <script type="math/tex">\vec {X}_s</script> and <script type="math/tex">\vec {X}_t</script>.
+<script type="math/tex; mode=display"> \begin{align*} 
+\vec{X}_s(s,t) &= \left(\frac{\partial}{\partial s} R\cos s\sin t, \frac{\partial}{\partial s} R\sin s\sin t, \frac{\partial}{\partial s}\cos t\right)\\
+&= (-R\sin s\sin t, R\cos s\sin t, 0)
+\vec{X}_t(s,y) &= \left(\frac{\partial}{\partial t} R\cos s\sin t, \frac{\partial}{\partial t} R\sin s\sin t, \frac{\partial}{\partial t}R\cos t\right)\\
+&= (R\cos s\cos t, R\sin s\cos t, -R\sin t)
+\end{align*}</script>
+<!--l. 76--><p class="noindent" >Next,  we’ll  find  the  cross  product,  <script type="math/tex">\vec {X}_s\times \vec {X}_t</script>.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{X}_s(s,t)\times \vec{X}_t(s,t) &= (-R\sin s\sin t, R\cos s\sin t, 0)\times (R\cos s\cos t, R\sin s\cos t, -R\sin t) \\
+&= \text{det}\begin{pmatrix}
+\vec{i} & \vec{j} & \vec{k}\\
+-R\sin s\sin t & R\cos s\sin t & 0\\
+R\cos s\cos t & R\sin s\cos t & -R\sin t
+\end{pmatrix}\\
+&= (R\cos s\sin t)(-R\sin t)\vec{i} - (-R\sin s\sin t)(-R\sin t)\vec{j} + (-R\sin s\sin t)(R\sin s\cos t)\vec{k} - (R\cos s\sin t)(R\cos s\cos t)\vec{k}\\
+&= (-R^2\cos s\sin^2t,-R^2\sin s\sin^2 t,-R^2\sin^2s\cos t\sin t - R^2\cos^2 s\cos t\sin t)\\
+&= (-R^2\cos s\sin^2t,-R^2\sin s\sin^2 t, -R^2\cos t\sin t)
+\end{align*}</script>
+                                                                  
+
+                                                                  
+<!--l. 88--><p class="noindent" >The  length  of  this  vector  is
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\|\vec{X}_s(s,t)\times \vec{X}_t(s,t)\| &= \left\|(-R^2\cos s\sin^2t,-R^2\sin s\sin^2 t, -R^2\cos t\sin t)\right\|\\
+&= \sqrt{R^4\cos^2 s\sin^4t, R^4\sin^2 s\sin^4 t, R^4\cos^2 t\sin^2 t}\\
+&= \sqrt{R^4\sin^4t + R^4\cos^2 t\sin^2 t}\\
+&= \sqrt{R^4\sin^2 t}\\
+&= R^2|\sin t|
+\end{align*}</script>
+<!--l. 96--><p class="noindent" >Since <script type="math/tex">0\leq t \leq \pi </script>, this is <script type="math/tex">R^2\sin t</script>.
+</p><!--l. 98--><p class="noindent" >Then  the  surface  area  is
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\text{area} &= \int_0^{\pi}\int_0^{2\pi}\|\vec{X}_s(s,t)\times \vec{X}_t(s,t)\|\;dsdt\\
+&= \int_0^{\pi}\int_0^{2\pi}R^2\sin t\;ds\;dt\\
+&= \int_0^{\pi}2\pi R^2\sin t\;dt\\
+&= 2\pi R^2(-\cos t)_{t = 0}^{t=\pi}\\
+&= 2\pi R^2(-(-1) - (-1))\\
+&= 4\pi R^2.
+\end{align*}</script>
+<!--l. 107--><p class="noindent" >Thus, we have shown that the surface area of a sphere of radius <script type="math/tex">R</script> is <script type="math/tex">4\pi R^2</script>.
+</div>
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-1002r3"></a>We’ll compute the surface area of a right circular cone of radius <script type="math/tex">R</script> and height
+<script type="math/tex">H</script>.
+<!--l. 113--><p class="noindent" >PICTURE
+</p><!--l. 115--><p class="noindent" >In order to do this, we’ll need to split the surface into two pieces: the top disc, and
+the rest of the cone.
+</p><!--l. 117--><p class="noindent" >PICTURE
+</p><!--l. 119--><p class="noindent" >We’ll start by finding the surface area of the top disc. We can parametrize the disc as <script type="math/tex; mode=display"> \vec {X}(s,t) = (s\cos t, s\sin t, H), </script> for <script type="math/tex">0\leq s\leq R</script>
+and <script type="math/tex">0\leq t\leq 2\pi </script>. The partial derivatives are then </p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{X}_s(s,t) = (\cos t, \sin t, 0),\\
+\vec{X}_t(s,t) = (-s\sin t, s\cos t, 0).
+\end{align*}</script>
+<!--l. 128--><p class="noindent" >Taking the cross product, we have </p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{X}_s(s,t)\times\vec{X}_t(s,t) &= \text{det}\begin{pmatrix}
+\vec{i} & \vec{j} & \vec{k}\\
+\cos t & \sin t & 0\\
+                                                                  
+
+                                                                  
+-s\sin t & s\cos t & 0
+\end{pmatrix}\\
+&= (s\cos^2 t + s\sin^2 t)\vec{k}\\
+&= s\vec{k}
+\end{align*}</script>
+<!--l. 138--><p class="noindent" >Since <script type="math/tex">s</script> is nonnegative, the length of this vector is <script type="math/tex; mode=display"> \|\vec {X}_s(s,t)\times \vec {X}_t(s,t)\| = s. </script> Now, we can find the surface area
+of the disc. </p><script type="math/tex; mode=display"> \begin{align*} 
+\text{area} &= \int_0^{2\pi}\int_0^R s\;dsdt\\
+&= \int_0^{2\pi} \left(\frac{s^2}{2}\right)_{s = 0}^{s = R}\;dt\\
+&= \int_0^{2\pi} \frac{R^2}{2}\;dt\\
+&= \pi R^2
+\end{align*}</script>
+<!--l. 149--><p class="noindent" >Unsurprisingly, this is the area of a circle of radius <script type="math/tex">R</script>.
+</p><!--l. 151--><p class="noindent" >Next, we’ll find the surface area of the remaining portion of the cone. This can be
+parametrized as <script type="math/tex; mode=display"> \vec {Y}(s,t) = \left (s \cos t, s \sin t, \frac {H}{R}s\right ), </script> for <script type="math/tex">0\leq s\leq R</script> and <script type="math/tex">0\leq t\leq 2\pi </script>.
+</p><!--l. 157--><p class="noindent" >The partial derivatives are </p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{Y}_s(s,t) &= (\cos t, \sin t, H/R),\\
+\vec{Y}_t(s,t) &= (-s\sin t, s\cos t, 0).
+\end{align*}</script>
+<!--l. 162--><p class="noindent" >Taking the cross product of these vectors, we have
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{Y}_s(s,t)\times\vec{Y}_t(s,t) &= \text{det}\begin{pmatrix}
+\vec{i} & \vec{j} & \vec{k} \\
+\cos t & \sin t & H/R\\
+-s\sin t & s\cos t & 0
+\end{pmatrix}\\
+&= (-(H/R) s\cos t)\vec{i} + (-(H/R)s\sin t)\vec{j} + (s\cos^2 t + s\sin^2 t)\vec{k}\\
+&= (-(H/R) s\cos t)\vec{i} + (-(H/R)s\sin t)\vec{j} + s\vec{k}.
+\end{align*}</script>
+<!--l. 172--><p class="noindent" >The  length  of  this  vector  is
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\|\vec{Y}_s(s,t)\times\vec{Y}_t(s,t)\| &= \sqrt{(-(H/R) s\cos t)^2 + (-(H/R) s\sin t)^2 + s^2}\\
+&= \sqrt{H^2/R^2\cdot s^2 + s^2}\\
+&= s\sqrt{H^2/R^2+1},
+\end{align*}</script>
+                                                                  
+
+                                                                  
+<!--l. 178--><p class="noindent" >since <script type="math/tex">s</script> is nonnegative.
+</p><!--l. 180--><p class="noindent" >Now, we can compute the surface area. </p><script type="math/tex; mode=display"> \begin{align*} 
+\text{area} &= \int_0^{2\pi}\int_0^R s\sqrt{H^2/R^2+1}\;dsdt\\
+&= \sqrt{H^2/R^2+1}\int_0^{2\pi} \left(\frac{s^2}{2}\right)_{s = 0}^{s = R}\;dt\\
+&= \sqrt{H^2/R^2+1}\int_0^{2\pi} \frac{R^2}{2}\;dt\\
+&= \sqrt{H^2/R^2+1}\cdot \pi R^2
+\end{align*}</script>
+<!--l. 187--><p class="noindent" >So, the total surface area of the cone is <script type="math/tex; mode=display"> \pi R^2 + \sqrt {H^2/R^2+1}\cdot \pi R^2 = \pi R \left (R + \sqrt {H^2 + R^2}\right ). </script>
+</div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

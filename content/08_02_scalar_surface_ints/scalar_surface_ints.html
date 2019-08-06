@@ -1,0 +1,178 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Scalar  Surface  Integrals</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="scalar_surface_ints.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Compute and understand the geometric meaning of scalar surface integrals."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >We’ve seen how we can compute the surface area of a parametrized surface using a
+double integral.
+</p>
+<div class="theorem-like problem-environment proposition" id="problem1"><a 
+ id="x1-17r1"></a>Let <script type="math/tex">\vec {X}:D\subset \mathbb {R}^2\rightarrow \mathbb {R}^3</script> be a parametric surface in <script type="math/tex">\mathbb {R}^3</script>. Then the surface area of <script type="math/tex">\vec {X}</script> is given by <script type="math/tex; mode=display"> \text {area}(\vec {X}) = \iint _D\|\vec {X}_s\times \vec {X}_t\|\;dsdt. </script>
+</div>
+<!--l. 21--><p class="noindent" >We found this by looking at how grid curves divided the surface up into tiny curved
+rectangles, and then approximating the areas of these rectangles, and adding them
+up.
+</p><!--l. 23--><p class="noindent" >PICTURE
+</p><!--l. 25--><p class="noindent" >Now, suppose we have some thin surface, and we want to find its mass. If the density
+of the surface is constant, this is simple - we multiply the density by the surface area,
+and we’re done. For example, if we have a hollow sphere of radius <script type="math/tex">1</script> cm and density <script type="math/tex">3 \text { kg/cm}^2</script>,
+then the sphere has surface area <script type="math/tex">\frac {4}{3}\pi \text { cm}^2</script>, and mass <script type="math/tex; mode=display"> 3\cdot \frac {4}{3}\pi = 4\pi \text { kg}. </script> But what if the density of the sphere
+isn’t constant, and instead varies across the surface? That is, if the density is given
+by some function <script type="math/tex">\rho :S\rightarrow \mathbb {R}</script> defined on the sphere <script type="math/tex">S</script>, how can we find the total mass across the
+entire surface?
+</p><!--l. 31--><p class="noindent" >More generally, how do we integrate a scalar-valued function over a surface? This
+brings us to scalar surface integrals.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Scalar surface integrals</h3>
+<!--l. 35--><p class="noindent" >Let’s think back to how we found the surface area of a parametrized surface, <script type="math/tex">\vec {X}:D\rightarrow \mathbb {R}^3</script>. We did
+                                                                  
+
+                                                                  
+this by approximating the area of curvy rectangles along the surface, with
+<script type="math/tex">\|\vec {X}_s\times \vec {X}_t\|</script>.
+</p><!--l. 37--><p class="noindent" >PICTURE
+</p><!--l. 39--><p class="noindent" >Now, suppose the density across this curvy rectangle is a constant, <script type="math/tex">\rho </script>. Then the mass
+of the curvy rectangle is <script type="math/tex">\rho \|\vec {X}_s\times \vec {X}_t\|</script>. Even if the density is not constant, but is given by some
+function <script type="math/tex">\rho (\vec {X})</script> that takes points on the surface and returns the density, we can still
+approximate the mass using the density at a sample point, <script type="math/tex">\vec {X}^*</script>, in the curvy
+rectangle.
+</p><!--l. 41--><p class="noindent" >PICTURE
+</p><!--l. 43--><p class="noindent" >That is, the mass of the curvy rectangle will be approximately <script type="math/tex">\rho (\vec {X}^*) \rho \|\vec {X}_s\times \vec {X}_t\|</script>. When we add up the
+masses of curvy rectangles across the entire surface, and take the limit as the
+rectangles get arbitrarily small, we obtain a double integral, <script type="math/tex; mode=display"> \iint _S \rho (\vec {X}(s,t)\|\vec {X}_s\times \vec {X}_t\|\;dsdt. </script> Thus, we arrive at the
+definition of a scalar surface integral.
+</p>
+<div class="theorem-like problem-environment definition" id="problem2"><a 
+ id="x1-1001r2"></a>Let <script type="math/tex">\vec {X}:D\subset \mathbb {R}^2\rightarrow \mathbb {R}^3</script> be a parametrization for a surface <script type="math/tex">S</script> in <script type="math/tex">\mathbb {R}^3</script>. Let <script type="math/tex">f:S\subset \mathbb {R}^3\rightarrow \mathbb {R}</script> be a continuous function which
+is defined on the surface <script type="math/tex">S</script>. We define the <em>surface integral</em> of <script type="math/tex">f</script> over <script type="math/tex">\vec {X}</script> to be
+<script type="math/tex; mode=display"> \iint _{\vec {X}} f\;dS = \iint _D f(\vec {X}(s,t))\|\vec {X}_s\times \vec {X}_t\|\;dsdt. </script>
+</div>
+<a 
+ id="Q1-1-3"></a>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Scalar surface integral computations</h3>
+<!--l. 58--><p class="noindent" >Let’s look at some examples of computing scalar surface integrals.
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-2001r3"></a>Let’s integrate the function <script type="math/tex">f(x,y,z) = z^2</script> over the sphere of radius <script type="math/tex">2</script> centered at the origin, which
+can be parametrized as <script type="math/tex; mode=display"> \vec {X}(s,t) = (2\cos s\sin t, 2\sin s \sin t, 2\cos t), </script> for <script type="math/tex"> 0 \leq s\leq 2\pi </script> and <script type="math/tex">0\leq t\leq \pi </script>.
+<!--l. 67--><p class="noindent" >First, let’s find the derivatives <script type="math/tex">\vec {X}_s</script> and <script type="math/tex">\vec {X}_t</script>. </p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{X}_s(s,t) &= (-2\sin s\sin t, 2\cos s\sin t, 0)
+\vec{X}_t(s,y) &= (2\cos s\cos t, 2\sin s\cos t, -2\sin t)
+\end{align*}</script>
+<!--l. 72--><p class="noindent" >Next,  we’ll  find  the  cross  product,  <script type="math/tex">\vec {X}_s\times \vec {X}_t</script>.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{X}_s(s,t)\times \vec{X}_t(s,t) &= (-2\sin s\sin t, 2\cos s\sin t, 0)\times (2\cos s\cos t, 2\sin s\cos t, -2\sin t) \\
+&= \text{det}\begin{pmatrix}
+\vec{i} & \vec{j} & \vec{k}\\
+-2\sin s\sin t & 2\cos s\sin t & 0\\
+2\cos s\cos t & 2\sin s\cos t & -2\sin t
+\end{pmatrix}\\
+&= (2\cos s\sin t)(-2\sin t)\vec{i} - (-2\sin s\sin t)(-2\sin t)\vec{j} + (-2\sin s\sin t)(2\sin s\cos t)\vec{k} - (2\cos s\sin t)(2\cos s\cos t)\vec{k}\\
+&= (-4\cos s\sin^2t,-4\sin s\sin^2 t,-4\sin^2s\cos t\sin t - 4\cos^2 s\cos t\sin t)\\
+                                                                  
+
+                                                                  
+&= (-4\cos s\sin^2t,-4\sin s\sin^2 t, -4\cos t\sin t)
+\end{align*}</script>
+<!--l. 84--><p class="noindent" >The  length  of  this  vector  is
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\|\vec{X}_s(s,t)\times \vec{X}_t(s,t)\| &= \left\|(-4\cos s\sin^2t,-4\sin s\sin^2 t, -4\cos t\sin t)\right\|\\
+&= \sqrt{16\cos^2 s\sin^4t, 16\sin^2 s\sin^4 t, 16\cos^2 t\sin^2 t}\\
+&= \sqrt{16\sin^4t + 16\cos^2 t\sin^2 t}\\
+&= \sqrt{16\sin^2 t}\\
+&= 4|\sin t|
+\end{align*}</script>
+<!--l. 92--><p class="noindent" >Since <script type="math/tex">0\leq t \leq \pi </script>, this is <script type="math/tex">4\sin t</script>.
+</p><!--l. 94--><p class="noindent" >Now, we evaluate the scalar surface integral.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_{\vec{X}} f\;dS &= \iint_D f(\vec{X}(s,t))\|\vec{X}_s\times\vec{X}_t\|\;dsdt\\
+&= \int_0^{2\pi}\int_0^{\pi}f(2\cos s\sin t, 2\sin s \sin t, 2\cos t)\cdot 4\sin t\;dtds\\
+&= \int_0^{2\pi}\int_0^{\pi}4\cos^2 t)\cdot 4\sin t\;dtds\\
+&= \int_0^{2\pi}\left(-\frac{16}{3}\cos^3t\right)_{t = 0}^{t=\pi}\;ds\\
+&= \int_0^{2\pi}(16/3 + 16/3)\;ds\\
+&= \frac{64}{3}\pi
+\end{align*}</script>
+<!--l. 103--><p class="noindent" >So, we have <script type="math/tex">\iint _{\vec {X}} f\;dS = \frac {64}{3}\pi </script>.
+</div>
+</p>
+<div class="theorem-like problem-environment example" id="problem4"><a 
+ id="x1-2002r4"></a>Suppose the graph of the function <script type="math/tex">g(x,y) = xy</script> for <script type="math/tex">0\leq x\leq 2</script> and <script type="math/tex">0\leq y\leq 2</script> represents a small (very) snowy
+region, and the depth of the snow at a point <script type="math/tex">(x,y,xy)</script> is given by <script type="math/tex">4xy</script>, where <script type="math/tex">x</script> and <script type="math/tex">y</script> are in
+meters. Suppose also that we wish to find the total amount of snow over the
+region.
+<!--l. 109--><p class="noindent" >First, we need to figure out how to set this problem up using a scalar surface integral.
+Our surface is the graph of the function <script type="math/tex">g(x,y) = xy</script>, and we can parametrize this surface as <script type="math/tex; mode=display"> \vec {X}(s,t) = (s,t,st) </script> for <script type="math/tex">0\leq s\leq 2</script>
+and <script type="math/tex">0\leq t\leq 2</script>. If we define the function <script type="math/tex">f(x,y,z)=4xy</script>, then at a point <script type="math/tex">(s,t,st)</script> on the surface, we have <script type="math/tex">f(\vec {X}(s,t)) = 4st</script>. So, with
+this set up, we wish to evaluate the integral <script type="math/tex; mode=display"> \iint {\vec {X}}f\;dS. </script> First, we find the partial derivatives <script type="math/tex">\vec {X}_s</script>
+and <script type="math/tex">\vec {X}_t</script>. </p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{X}_s(s,t) &= (1, 0, t)\\
+\vec{X}_t(s,t) &= (0,1,s)
+\end{align*}</script>
+<!--l. 122--><p class="noindent" >We take the cross product of these vectors, to obtain
+                                                                  
+
+                                                                  
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\vec{X}_s(s,t)\times\vec{X}_t(s,t) &= \text{det}\begin{pmatrix}
+\vec{i} & \vec{j} & \vec{k}\\
+1 & 0 & t\\
+0 & 1 & s
+\end{pmatrix}\\
+&= (-t)\vec{i} + (-s)\vec{j} + \vec{k}.
+\end{align*}</script>
+<!--l. 131--><p class="noindent" >The length of this vector is <script type="math/tex; mode=display"> \|\vec {X}_s(s,t)\times \vec {X}_t(s,t)\| = \sqrt {t^2+s^2+1}. </script>
+</div> Now, we evaluate our scalar surface integral.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint{\vec{X}}f\;dS &= \int_0^2\int_0^2 f(s,t,st)\sqrt{t^2+s^2+1}\; dtds\\
+&= \int_0^2\int_0^2 4st\sqrt{t^2+s^2+1}\; dtds\\
+&= \int_0^2\left(2s\sqrt{t^2+s^2+1}^3\right)_{t = 0}^{t = 2}\;ds\\
+&= \int_0^2 \frac{4}{3}s\sqrt{s^2 + 5}^3\;ds\\
+&= \left(\frac{4}{15}\sqrt{s^2+5}^5\right)_{s = 0}^{s = 2}\\
+&= \frac{324}{5}
+\end{align*}</script>
+<!--l. 146--><p class="noindent" >So, the total volume of snow is <script type="math/tex">324/5\text { m}^3</script>.
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

@@ -1,0 +1,203 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Change of Variables in Double Integrals</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="substitution.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand how to change variables."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >When performing a <script type="math/tex">u</script>-substitution on a definite integral in single variable calculus, we
+paid careful attention to the following steps. </p>
+     <ul class="itemize1">
+     <li class="itemize">Changing the variable
+     </li>
+     <li class="itemize">Changing the differential
+     </li>
+     <li class="itemize">Changing the interval of integration</li></ul>
+<!--l. 18--><p class="noindent" >For example, making a <script type="math/tex">u</script>-substitution in the integral <script type="math/tex">\int _1^3 2x e^{x^2}\;dx</script>, we chose the change of variable <script type="math/tex">u=x^2</script>,
+changed the differential to <script type="math/tex">du = g'(x)dx</script>, and changed the bounds of integration to <script type="math/tex">1^2 = 1</script> and <script type="math/tex">3^2 = 9</script>. This
+gave us <script type="math/tex; mode=display"> \int _1^3 2x e^{x^2}\;dx = \int _1^9 e^u\;du, </script> which we could then evaluate.
+</p><!--l. 24--><p class="noindent" >We’ll now turn our attention to change of variables in double integrals, which will be
+a useful tool for evaluating these integrals. When we used <script type="math/tex">u</script>-substitution in single
+variable calculus, we often focused on making the <em>integrand</em> easier to integrate. That
+is, we wished to transform the integrand, so that it had a more obvious
+antiderivative.
+</p><!--l. 26--><p class="noindent" >In contract, when performing a change of variables on double integrals, we’re often
+more focused on how the change of variables affects the region of integration.
+Consider the following regions in <script type="math/tex">\mathbb {R}^2</script>. The region on the left can most easily be described
+using polar coordinates, while the region on the right can most easily be described
+using a linear change of coordinates.
+</p><!--l. 28--><p class="noindent" >PICTURE
+                                                                  
+
+                                                                  
+</p><!--l. 30--><p class="noindent" >For double integrals, rather than finding complicated combinations of elementary
+regions to describe a domain, it will be useful to make a change of coordinates in
+order to describe the domain of integration more simply.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>A linear change of coordinates</h3>
+<!--l. 34--><p class="noindent" >Let’s look at what happens when we make a linear change of coordinates. Consider
+the region <script type="math/tex">D</script> below, and consider the double integral <script type="math/tex">\iint _D (x+y)\;dxdy</script>.
+</p><!--l. 36--><p class="noindent" >PICTURE
+</p><!--l. 38--><p class="noindent" >The region <script type="math/tex">D</script> can most easily be described with the inequalities </p><script type="math/tex; mode=display"> \begin{align*} 
+1\leq 2x+y \leq 3,\\
+0\leq x-3y \leq 1.
+\end{align*}</script>
+<!--l. 44--><p class="noindent" >This motivates the change of coordinates <script type="math/tex">u=2x+y</script> and <script type="math/tex">v=x-3y</script>. This is a linear change of
+coordinates, which can be represented with a matrix. That is, we can write
+<script type="math/tex; mode=display"> \begin {pmatrix} u\\ v \end {pmatrix} = \begin {pmatrix} 2 & 1\\ 1 & -3 \end {pmatrix} \begin {pmatrix} x\\ y \end {pmatrix}. </script> Now, let’s look at how this linear transformation changes the region of
+integration. In <script type="math/tex">(u,v)</script>-coordinates, our region of integration can be described as
+</p><script type="math/tex; mode=display"> \begin{align*} 
+1\leq u \leq 3,\\
+0\leq v \leq 1.
+\end{align*}</script>
+<!--l. 62--><p class="noindent" >This corresponds to a parallelogram in <script type="math/tex">(x,y)</script>-coordinates.
+</p><!--l. 64--><p class="noindent" >PICTURE
+</p><!--l. 66--><p class="noindent" >We can see that the linear transformation changes the domain of integration, and we
+will need to account for this as we make our change of coordinates.
+</p><!--l. 68--><p class="noindent" >We’ll begin with the simplest step, which is changing our integrand. If we take the
+equations <script type="math/tex">u=2x+y</script> and <script type="math/tex">v=x-3y</script>, and solve for <script type="math/tex">x</script> and <script type="math/tex">y</script>, we have </p><script type="math/tex; mode=display"> \begin{align*} 
+x &= \frac{3}{7}u + \frac{1}{7}v,
+y &= \frac{1}{7}u - \frac{2}{7}v.
+\end{align*}</script>
+<!--l. 73--><p class="noindent" >So,  our  integrand  becomes
+</p><script type="math/tex; mode=display"> \begin{align*} 
+x+y &= \left(\frac{3}{7}u + \frac{1}{7}v\right)+\left(\frac{1}{7}u - \frac{2}{7}v\right)\\
+&= \frac{4}{7}u - \frac{1}{7}v.
+\end{align*}</script>
+<!--l. 79--><p class="noindent" >Next, let’s look at our bounds of integration. Since the region of integration can be
+                                                                  
+
+                                                                  
+described using the bounds </p><script type="math/tex; mode=display"> \begin{align*} 
+1\leq u \leq 3,\\
+0\leq v \leq 1,
+\end{align*}</script>
+<!--l. 84--><p class="noindent" >our integral will have the form <script type="math/tex; mode=display"> \int _0^1\int _1^3 ?\;dudv. </script>
+</p><!--l. 89--><p class="noindent" >Finally, we need to consider how the change of coordinates affects the differential.
+That is, what will the area expansion factor be?
+</p><!--l. 91--><p class="noindent" >When we apply the linear transformation <script type="math/tex">\begin {pmatrix} 2 & 1\\ 1 & -3 \end {pmatrix}</script> to any rectangle, the area of the rectangle
+is multiplied by <script type="math/tex">\left |\text {det}\begin {pmatrix} 2 & 1\\ 1 & -3 \end {pmatrix}\right | = \left |2\cdot -3 - 1\cdot 1\right | = 7</script>.
+</p><!--l. 99--><p class="noindent" >So, when we change to <script type="math/tex">(u,v)</script>-coordinates, we need to divide by <script type="math/tex">7</script>, in order to account for this change
+in area. This gives us the change of coordinates, <script type="math/tex; mode=display"> \iint _D (x+y)\;dxdy =\int _0^1\int _1^3 \left (\frac {4}{7}u - \frac {1}{7}v\right )\frac {1}{7}dudv. </script> From here, we can evaluate the integral.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int_0^1\int_1^3 \left(\frac{4}{7}u - \frac{1}{7}v\right)\frac{1}{7}dudv
+&= \int_0^1 \left(\frac{2}{49}u^2 - \frac{1}{49}vu\right)|_{u=1}^{u=3}dv\\
+&= \int_0^1 \left(\frac{2}{49}3^2 - \frac{1}{49}v\cdot 3\right) - \left(\frac{2}{49}1^2 - \frac{1}{49}v\cdot 1\right)dv\\
+&= \int_0^1 \left(\frac{16}{49} - \frac{2}{49}v\right)dv\\
+&= \left(\frac{16}{49}v - \frac{1}{49}v^2\right)|_{v=0}^{v=1}\\
+&= \frac{15}{49}
+\end{align*}</script>
+<a 
+ id="Q1-1-3"></a>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Change of variables in general</h3>
+<!--l. 115--><p class="noindent" >Now, let’s look at change of variables for double integrals in general, where the
+change of coordinates might not be linear.
+</p><!--l. 117--><p class="noindent" >Suppose we are computing a double integral <script type="math/tex">\iint _D f(x,y)dxdy</script>, and suppose that <script type="math/tex">\vec {T}:\mathbb {R}^2\rightarrow \mathbb {R}^2</script> is a change of
+coordinates which maps some region <script type="math/tex">D^*</script> onto <script type="math/tex">D</script>. Suppose further that <script type="math/tex">T</script> is <script type="math/tex">\mathcal {C}^1</script>, and that <script type="math/tex">T</script> is
+one-to-one on <script type="math/tex">D^*</script>.
+</p><!--l. 119--><p class="noindent" >PICTURE
+</p><!--l. 121--><p class="noindent" >We think of the domain of <script type="math/tex">T</script> as being in <script type="math/tex">(u,v)</script>-coordinates, and the codomain of <script type="math/tex">T</script> as being in
+<script type="math/tex">(x,y)</script>-coordinates. So, the region <script type="math/tex">D^*</script> would be described in terms of <script type="math/tex">u</script> and <script type="math/tex">v</script>, and is mapped to <script type="math/tex">D</script>,
+which is described in terms of <script type="math/tex">x</script> and <script type="math/tex">y</script>.
+</p><!--l. 123--><p class="noindent" >We can see that our change of coordinates will have the form <script type="math/tex; mode=display"> \iint _D f(x,y)dxdy = \iint _{D^*} ? dudv, </script> but we still need to
+determine how the differential will change, by finding the area expansion
+factor.
+</p><!--l. 129--><p class="noindent" >Suppose we have a tiny rectangle <script type="math/tex">R</script> in <script type="math/tex">D^*</script>, and we apply the transformation <script type="math/tex">\vec {T}</script> to this
+rectangle, to obtain a region <script type="math/tex">\vec {T}(R)</script>.
+</p><!--l. 131--><p class="noindent" >PICTURE
+                                                                  
+
+                                                                  
+</p><!--l. 133--><p class="noindent" >We can approximate the transformation <script type="math/tex">\vec {T}</script> with the linear transformation
+given by its derivative matrix <script type="math/tex">D\vec {T}</script>, so the area of <script type="math/tex">\vec {T}(R)</script> can be approximated as <script type="math/tex; mode=display"> \text {area } \vec {T}(R) \approx \left |\text {det}(D\vec {T})\right |(\text {area }R). </script>
+This idea gives us our area expansion factor, and we change the differential
+according to <script type="math/tex; mode=display"> dxdy = \left |\text {det}(D\vec {T})\right |\;dudv. </script> Now, we can fully describe how to change variables in double
+integrals.
+</p>
+<div class="theorem-like problem-environment proposition" id="problem1"><a 
+ id="x1-2001r1"></a>Let <script type="math/tex">\vec {T}:\mathbb {R}^2\rightarrow \mathbb {R}^2</script> be a <script type="math/tex">C^1</script> function which maps a region <script type="math/tex">D^*\subset \mathbb {R}^2</script> onto a region <script type="math/tex">D\subset \mathbb {R}^2</script>, so that <script type="math/tex">\vec {T}</script> restricted to <script type="math/tex">D^*</script> is
+one-to-one. Suppose <script type="math/tex">f:D\rightarrow \mathbb {R}</script> is an integrable function. Then <script type="math/tex; mode=display"> \iint _D f(x,y)\;dxdy = \iint _{D^*} f(\vec {T}(u,v))\left |\text {det}(D\vec {T}(u,v))\right |\;dudv. </script>
+</div>
+<a 
+ id="Q1-1-5"></a>
+<h3 class="likesectionHead"><a 
+ id="x1-3000"></a>Polar coordinates</h3>
+<!--l. 152--><p class="noindent" >Consider the double integral <script type="math/tex">\iint _D (x^2+y^2)\;dxdy</script>, where <script type="math/tex">D</script> is the region below.
+</p><!--l. 154--><p class="noindent" >PICTURE
+</p><!--l. 156--><p class="noindent" >The region <script type="math/tex">D</script> can most easily be described using polar coordinates, so that
+</p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq r\leq 2,\\
+\pi/4\leq \theta\leq \pi/2.
+\end{align*}</script>
+<!--l. 161--><p class="noindent" >Recall that polar coordinates relate to Cartesian coordinates via </p><script type="math/tex; mode=display"> \begin{align*} 
+x &= r\cos\theta,\\
+y &= r\sin\theta.
+\end{align*}</script>
+<!--l. 166--><p class="noindent" >Thus, our transformation <script type="math/tex">T</script> is given by <script type="math/tex">T(r,\theta ) = (r\cos \theta , r\sin \theta )</script>. In order to see how we
+must change the differential in the double integral, we compute <script type="math/tex">\left |\text {det}(D\vec {T}(u,v))\right |</script>.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\left|\text{det}(D\vec{T}(u,v))\right| &= \left|\text{det}\begin{pmatrix}\cos\theta & \sin\theta \\ -r\sin\theta & r\cos\theta\end{pmatrix}\right|\\
+&= \left|\cos\theta\cdot r\cos\theta - \sin\theta \cdot -r\sin\theta \right|\\
+&= \left|r\right|\\
+\end{align*}</script>
+<!--l. 172--><p class="noindent" >Since we describe our region using only nonnegative values for <script type="math/tex">r</script>, the absolute value is
+unnecessary. Thus, our differential will change according to <script type="math/tex; mode=display"> dxdy = r\;drd\theta . </script> Finally, let’s look at our
+integrand. Using the substitutions <script type="math/tex">x = r\cos \theta </script> and <script type="math/tex">y = r\sin \theta </script>, we have <script type="math/tex; mode=display"> x^2 +y^2 = r^2\cos ^2\theta + r^2\sin ^2\theta = r^2. </script> Putting all of this together, we have our
+change of variables for the double integral, and we can evaluate our transformed integral.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_D (x^2+y^2)\;dxdy &= \int_{\pi/4}^{\pi/2}\int_0^2 r^2\cdot r\;drd\theta\\
+&= \int_{\pi/4}^{\pi/2}\int_0^2 r^3\;drd\theta\\
+&= \int_{\pi/4}^{\pi/2}\frac{1}{4}r^4|_{r = 0}^{r = 2}d\theta\\
+&= \int_{\pi/4}^{\pi/2}4d\theta\\
+                                                                  
+
+                                                                  
+&= 4\left(\frac{\pi}{2}-\frac{\pi}{4}\right)\\
+&= \pi.
+\end{align*}</script>
+<!--l. 190--><p class="noindent" >Notice that any time we change to polar coordinates, we will complete the same
+computation for the area expansion factor. That is, for changing to polar coordinates,
+we always have <script type="math/tex; mode=display"> dxdy = r\;drd\theta . </script>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

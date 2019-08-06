@@ -1,0 +1,106 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Fubini’s Theorem</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="fubini.tex" /> 
+<meta name="author" content="Melissa Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the connection between iterated integrals and double integrals."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >We’ve now seen two different approaches to finding the signed volume between the
+graph of a function <script type="math/tex">f:\mathbb {R}^2\rightarrow \mathbb {R}</script> and the <script type="math/tex">xy</script>-plane over some rectangle <script type="math/tex">R = [a,b]\times [c,d]</script>. First, we defined double
+integrals, motivated by approximating volume with boxes. <script type="math/tex; mode=display"> \iint _R f(x,y) dA = \lim _{n\rightarrow \infty } \sum _{i,j} f(\vec {c}_{ij})\Delta x\Delta y. </script> PICTURE
+</p><!--l. 18--><p class="noindent" >The second approach we took was using iterated integrals, which computed volume
+by finding the area of cross sections, and then integrating this area function. <script type="math/tex; mode=display"> V = \int _c^d\int _a^b f(x,y)dxdy = \int _a^b\int _c^d f(x,y)dydx </script>
+PICTURE
+</p><!--l. 24--><p class="noindent" >Although both of these methods were designed to compute the volume of the same
+region, for a function <script type="math/tex">f</script> that isn’t “nice enough,” they could theoretically give different
+answers, or one of them might not exist. In this section, we’ll explore the
+relationship between double integrals and iterated integrals through Fubini’s
+Theorem.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Fubini’s theorem</h3>
+<!--l. 28--><p class="noindent" >Fubini’s theorem gives us an equivalence between double integrals and iterated
+integrals, as we’d expect.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem1"><a 
+ id="x1-1001r1"></a><strong>Fubini’s Theorem.</strong> Let <script type="math/tex">f:R\subset \mathbb {R}^2\rightarrow \mathbb {R}</script> be a continuous function defined on a rectangle <script type="math/tex">R = [a,b]\times [c,d]</script>. Then
+<script type="math/tex; mode=display"> \iint _R f\;dA = \int _c^d\int _a^b f(x,y)\;dxdy = \int _a^b\int _c^d f(x,y)\;dydx. </script>
+</div>
+<!--l. 37--><p class="noindent" >Notice that Fubini’s theorem requires that we have a continuous function. In
+many cases where the a function has a limited number of discontinuities,
+we’ll be able to piece together some integrals to compute a double integral.
+                                                                  
+
+                                                                  
+We’ll return to this idea when we compute double integrals over arbitrary
+regions.
+</p><!--l. 39--><p class="noindent" >Now, we’ll prove Fubini’s theorem.
+</p><!--l. 41--><p class="noindent" >
+</p>
+<div class="proof">
+<!--l. 42--><p class="noindent" ><span class="head">
+</p><dl class="trivlist"><dt class="trivlist">
+Proof   </dt><dd 
+class="trivlist"></span>Since <script type="math/tex">f</script> is a continuous function, it is integrable, so <script type="math/tex">\iint _R f\;dA</script> exists.
+<!--l. 44--><p class="noindent" >BLAAAAAHHH                                                                                 <script type="math/tex">\blacksquare </script></p></dd></dl>
+</div>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-1002r2"></a>We’ll compute the double integral <script type="math/tex">\iint _{[-1,1]\times [2,3]} sin(x)e^{y^2}dA</script>. Because <script type="math/tex">f(x,y) = sin(x)e^{y^2}</script> is a continuous function, we can apply
+Fubini’s theorem and compute the double integral using iterated integrals. Then,
+<script type="math/tex; mode=display"> \begin{align*} 
+\iint_{[-1,1]\times [2,3]} sin(x)e^{y^2}dA &= \int_{-1}^1\int_2^3sin(x)e^{y^2} dydx\\
+&= \int_{-1}^1sin(x)\left(\int_2^3e^{y^2} dy\right)dx.
+\end{align*}</script>
+<!--l. 53--><p class="noindent" >Here, we run into a problem computing <script type="math/tex">\int _2^3e^{y^2} dy</script>. This integral isn’t possible
+to evaluate precisely using common methods from single variable calculus.
+Instead, let’s compute the double integral using the other iterated
+integral, where we integrate with respect to <script type="math/tex">x</script> first, then with respect to <script type="math/tex">y</script>.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_{[-1,1]\times [2,3]} sin(x)e^{y^2}dA &= \int_2^3\int_{-1}^1 sin(x)e^{y^2} dxdy\\
+&= \int_2^3\left(-\cos(x)e^{y^2}\right)|_{x = -1}^{x = 1}dy\\
+&= \int_2^3\left(-\cos(1)e^{y^2} + \cos(-1)e^{y^2}\right)dy
+\end{align*}</script>
+<!--l. 59--><p class="noindent" >Since <script type="math/tex">\cos (1) = \cos (-1)</script>, the terms in the integrand cancel, and we’re left with <script type="math/tex; mode=display"> \iint _{[-1,1]\times [2,3]} sin(x)e^{y^2}dA = 0. </script> For this function, it
+turned out that one of the iterated integrals was easier to compute than the other,
+and Fubini’s theorem allowed us to choose which one to compute.
+</div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

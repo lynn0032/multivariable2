@@ -1,0 +1,90 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Green’s  Theorem  Examples</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="greens_theorem_ex.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand how Green's Theorem can be used to more easily compute integrals."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >We’ve seen how Green’s theorem relates a vector line integral over the boundary of a
+region to a double integral over the region.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem1"><a 
+ id="x1-17r1"></a><strong>Green’s Theorem.</strong> Let <script type="math/tex">D</script> be a closed an bounded region in <script type="math/tex">\mathbb {R}^2</script>, whose boundary <script type="math/tex">\partial D</script>
+consists of finitely many simple and piecewise smooth curves. Let <script type="math/tex">\vec {F}</script> be a <script type="math/tex">\mathcal {C}^1</script> vector field
+defined on <script type="math/tex">D</script>, written in components as <script type="math/tex">\vec {F}(x,y) = (M(x,y), N(x,y))</script>. Then <script type="math/tex; mode=display"> \oint _{\partial D}\vec {F}\cdot d\vec {s} = \iint _D \left (\frac {\partial N}{\partial x} - \frac {\partial M}{\partial y}\right )\;dA. </script>
+</div>
+<!--l. 21--><p class="noindent" >Now, we’ll look at several examples of using Green’s theorems to simplify some
+computations.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Green’s theorem examples</h3>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-1001r2"></a>Consider the integral <script type="math/tex">\oint _C \vec {F}\cdot d\vec {s}</script>, where <script type="math/tex">\vec {F}(x,y) = (x^2, e^y)</script>, and <script type="math/tex">C</script> is the unit circle, oriented counterclockwise.
+<!--l. 28--><p class="noindent" >PICTURE
+</p><!--l. 30--><p class="noindent" >By Green’s theorem, this is equivalent to a double integral over the unit disc. That is,
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\oint_C \vec{F}\cdot d\vec{s} &= \iint_D \left(\frac{\partial}{\partial x}e^y - \frac{\partial}{\partial y}x^2\right)\;dA\\
+&= \iint_D 0\;dA\\
+&= 0.
+\end{align*}</script>
+<!--l. 36--><p class="noindent" ></div>
+                                                                  
+
+                                                                  
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-1002r3"></a>Consider the integral <script type="math/tex">\oint _C \vec {F}\cdot d\vec {s}</script>, where <script type="math/tex">\vec {F}(x,y) = (y, -x)</script>, and <script type="math/tex">C</script> is the unit circle, oriented <em>clockwise</em>.
+<!--l. 41--><p class="noindent" >PICTURE
+</p><!--l. 43--><p class="noindent" >Let <script type="math/tex">D</script> be the unit disc, enclosed by the unit circle. Although this curve isn’t positively
+oriented, we can still use Green’s theorem to help evaluate our line integral. This will
+require a sign change.
+</p>
+<script type="math/tex; mode=display"> \begin{align*} 
+\oint_C\vec{F}\cdot d\vec{s} &= - \oint_{-C}\vec{F}\cdot d\vec{s}\\
+&= -\iint_D \left(\frac{\partial}{\partial x}(-x) - \frac{\partial}{\partial y}(y)\right)\;dA\\
+&= -\iint_D \left(-2\right)\;dA\\
+&= 2\cdot (\text{area of }D)\\
+&= 2\pi.
+\end{align*}</script>
+<!--l. 52--><p class="noindent" ></div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

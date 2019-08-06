@@ -1,0 +1,163 @@
+\documentclass{ximera}  
+
+\title{Change of Variables in Triple Integrals}  
+\author{Melissa Lynn}
+\outcome{Understand how to change coordinates in triple integrals.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle 
+
+When working with double integrals, we found that it was sometimes advantageous to change coordinates. This was often used to make the region of integration easier to describe.
+
+When we change from one coordinate system to another, this can change volumes and areas. To account for this, we incorporated a scaling factor into our differential.
+
+More precisely, if we have a change of coordinates given by a function $T:\mathbb{R}^2\rightarrow\mathbb{R}^2$, we need to consider how this transformation affects the area of a small rectangle. We can some linear algebra, along with the derivative matrix of $T$, and see that area is scaled by approximately $\text{det}(D\vec{T}(u,v))$.
+
+PICTURE
+
+Below, we repeat the entire statement for change of variables in double integrals.
+
+\begin{proposition}
+Let $\vec{T}:\mathbb{R}^2\rightarrow\mathbb{R}^2$ be a $C^1$ function which maps a region $D^*\subset\mathbb{R}^2$ onto a region $D\subset\mathbb{R}^2$, so that $\vec{T}$ restricted to $D^*$ is one-to-one. Suppose $f:D\rightarrow\mathbb{R}$ is an integrable function. Then
+\[
+\iint_D f(x,y)\;dxdy = \iint_{D^*} f(\vec{T}(u,v))\left|\text{det}(D\vec{T}(u,v))\right|\;dudv.
+\]
+\end{proposition} 
+
+In this section, we'll see how we can change coordinates in triple integrals.
+
+\section*{Change of variables in triple integrals}
+
+Suppose we have a transformation $\vec{T}:\mathbb{R}^3\rightarrow\mathbb{R}^3$ giving our desired change of coordinates. As with double integrals, we need to consider how this transformation scales. That is, if we have a parallelepiped in $\mathbb{R}^3$, how does applying $T$ affect the volume?
+
+PICTURE
+
+We can approximate the transformation $\vec{T}$ using its derivative matrix, and the absolute value of the determinant of $D\vec{T}$ then gives the scaling factor. So, we have the following result for change of variables in triple integrals.
+
+\begin{proposition}
+Let $\vec{T}:\mathbb{R}^3\rightarrow\mathbb{R}^3$ be a $\mathcal{C}^1$ function which maps a region $D^*\subset\mathbb{R}^3$ onto a region $D\subset\mathbb{R}^3$, so that $\vec{T}$ restricted to $D^*$ is one-to-one. Suppose $f:D\rightarrow\mathbb{R}$ is an integrable function. Then
+\[
+\iiint_D f(x,y,z)\;dxdydz = \iiint_{D^*} f(\vec{T}(u,v,w))\left|\text{det}(D\vec{T}(u,v,w))\right|\;dudvdw.
+\]
+\end{proposition}
+
+We'll look at examples of this, where we convert to cylindrical and spherical coordinates.
+
+\section*{Cylindrical coordinates}
+
+\begin{example}
+Consider the cylinder $D$ pictured below, bounded by $x^2+y^2=1$, $z=0$, and $z=2$.
+
+PICTURE
+
+Consider the integral $\iiint_D x\;dxdydz$. We'll evaluate this integral by converting to cylindrical coordinates.
+
+The cylinder $D$ can be described in cylindrical coordinates by
+\begin{align*}
+0\leq &\theta \leq 2\pi\\
+0\leq &r\leq 1\\
+0\leq z\leq 2,
+\end{align*}
+and these with provide the bounds for our transformed integral.
+
+Recall the relationship between Cartesian coordinates and cylindrical coordinates,
+\begin{align*}
+x &= r\cos \theta\\
+y &= r\sin\theta\\
+z &= z.
+\end{align*}
+Then if $\vec{T}(\theta, r, z) = (r\cos\theta, r\sin\theta, z)$ is the transformation taking cylindrical coordinate to Cartesian coordinates, we have
+\begin{align*}
+\text{det}(D\vec{T}) &= \text{det}\begin{pmatrix}
+\frac{\partial}{\partial \theta} r\cos\theta & \frac{\partial}{\partial r} r\cos\theta & \frac{\partial}{\partial z} r\cos\theta\\
+\frac{\partial}{\partial \theta} r\sin\theta & \frac{\partial}{\partial r} r\cos\theta & \frac{\partial}{\partial z} r\sin\theta\\
+\frac{\partial}{\partial \theta} z & \frac{\partial}{\partial r} r\cos\theta & \frac{\partial}{\partial z} z
+\end{pmatrix}\\
+&= \text{det}\begin{pmatrix}
+-r\sin\theta & \cos\theta & 0\\
+r\cos\theta & \sin\theta & 0\\
+0 & 0 & 1
+\end{pmatrix}\\
+&= -r\sin^2\theta -r\cos^2\theta\\
+&= -r.
+\end{align*}
+Since $r$ is nonnegative, the absolute value of this is $r$. Now, we can complete our change of variables.
+\[
+\iiint_D x\;dxdydz = \int_0^2\int_0^1\int_0^{2\pi}(r\cos\theta)r\;d\theta drdz
+\]
+We can then evaluate the integral.
+\begin{align*}
+\int_0^2\int_0^1\int_0^{2\pi}(r\cos\theta)r\;d\theta drdz &= \int_0^2\int_0^1(r^2\sin\theta)_0^{2\pi}\; drdz\\
+&= \int_0^2\int_0^1 0\; drdz\\
+&= 0
+\end{align*}
+\end{example}
+
+In general, the change in differential from cylindrical coordinates to Cartesian coordinates is given by
+\[
+dxdydz = r\;drd\theta dz.
+\]
+
+\section*{Spherical coordinates}
+
+\begin{example}
+Consider the solid sphere $D$ of radius $1$ centered at the origin.
+
+PICTURE
+
+The volume of this sphere is given by
+\[
+\text{volume}(D) = \iiint_D 1\;dV.
+\]
+We'll compute this volume by changing to spherical coordinates. In spherical coordinates, the sphere $D$ can be described with the inequalities
+\begin{align*}
+0\leq &\rho\leq 1,\\
+0\leq &\theta\leq 2\pi,\\
+0\leq &\phi\leq \pi.
+\end{align*}
+These will provide the bounds for our iterated integral.
+
+Now, consider the transformation
+\[
+\vec{T}(\rho,\theta,\phi) = (\rho\cos\theta\sin\phi, \rho\sin\theta\sin\phi,\rho\cos\phi),
+\]
+which converts from spherical coordinates to Cartesian coordinates. We find the scaling factor for this transformation.
+\begin{align*}
+\text{det}(D\vec{T}) &= \text{det}\begin{pmatrix}
+\frac{\partial}{\partial \rho}\rho\cos\theta\sin\phi & \frac{\partial}{\partial \theta}\rho\cos\theta\sin\phi & \frac{\partial}{\partial \phi}\rho\cos\theta\sin\phi\\
+\frac{\partial}{\partial \rho} \rho\sin\theta\sin\phi & \frac{\partial}{\partial \theta}\rho\sin\theta\sin\phi & \frac{\partial}{\partial \phi}\rho\sin\theta\sin\phi\\
+\frac{\partial}{\partial \rho}\rho\cos\phi & \frac{\partial}{\partial \theta}\rho\cos\phi & \frac{\partial}{\partial \phi}\rho\cos\phi
+\end{pmatrix}\\
+&= \text{det}\begin{pmatrix}
+\cos\theta\sin\phi & -\rho\sin\theta\sin\phi & \rho\cos\theta\cos\phi\\
+\sin\theta\sin\phi & \rho\cos\theta\sin\phi & \rho\sin\theta\cos\phi\\
+\cos\phi & 0 & -\rho\sin\phi
+\end{pmatrix}\\
+&= -\cos\phi\left(-\rho^2\sin^2\theta\sin\phi\cos\phi - \rho^2\cos^2\theta\sin\phi\cos\phi\right) + \rho\sin\theta\left(\rho\cos^2\theta\sin^2\phi + \rho\sin^2\theta\sin^2\phi\right)\\
+&= -\cos\phi\left(-\rho^2\sin\phi\cos\phi\right) + \rho\sin\theta\left(\rho\sin^2\phi\right)\\
+&= \rho^2\sin\phi\cos^2\phi + \rho^2\sin^3\phi\\
+&= \rho^2\sin\phi
+\end{align*}
+Notice that this is nonnegative, since $0\leq \phi\leq \pi$. Now, we can complete our change of variables.
+\[
+\iiint_D 1\;dV = \int_0^{2\pi}\int_0^\pi\int_0^1 (\rho^2\sin\phi)\;d\rho d\phi d\theta
+\]
+We then evaluate our integral to find the volume of the sphere.
+\begin{align*}
+\int_0^{2\pi}\int_0^{\pi}\int_0^1 (\rho^2\sin\phi)\;d\rho d\phi d\theta &= \int_0^{2\pi}\int_0^{\pi}\left(\frac{1}{3}\rho^3\sin\phi\right)_0^1 \; d\phi d\theta\\
+&= \int_0^{2\pi}\int_0^{\pi}\left(\frac{1}{3}\sin\phi\right)\; d\phi d\theta\\
+&= \int_0^{2\pi}\left(-\frac{1}{3}\cos\phi\right)_0^{\pi}\; d\theta\\
+&= \int_0^{2\pi}\left(\frac{2}{3}\right)\; d\theta\\
+&= \frac{4}{3}\pi
+\end{align*}
+Thus, we have that the volume of the unit sphere is $\frac{4}{3}\pi$.
+\end{example}
+
+In general, the change in differential from spherical to Cartesian coordinates is
+\[
+dxdydz = \rho^2\sin\phi\;d\rho d\theta d\phi.
+\]
+
+\end{document}

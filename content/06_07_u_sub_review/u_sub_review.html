@@ -1,0 +1,150 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Review  of  u-substitution</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="u_sub_review.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Revisit $u$-substitution from single variable calculus, in preparation for substitution in double integrals."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >One of the most commonly used strategies for evaluating single variable integrals is
+<script type="math/tex">u</script>-substitution. For example, suppose we wish to evaluate the integral <script type="math/tex">\int _1^3 2x e^{x^2}\;dx</script>. Here, it’s
+useful to make the substitution <script type="math/tex">u=x^2</script>, and this allows us to evaluate the integral.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int_1^3 2x e^{x^2}\;dx &= \int_1^9 e^u\;du\\
+&= e^u |_{u=1}^{u=9}\\
+&= e^9 - e
+\end{align*}</script>
+<!--l. 18--><p class="noindent" >We would like to apply the same ideas to double integrals, in order to make
+evaluation possible in more cases. Before we do this, we’ll review the details of single
+variable <script type="math/tex">u</script>-substitution, in order to prepare for the more difficult two variable
+case.
+</p><!--l. 20--><p class="noindent" >There are three important parts of this process that we wish to highlight here.
+</p>
+     <ul class="itemize1">
+     <li class="itemize">Changing the variable
+     </li>
+     <li class="itemize">Changing the differential
+     </li>
+     <li class="itemize">Changing the interval of integration</li></ul>
+<a 
+ id="Q1-1-1"></a>
+                                                                  
+
+                                                                  
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Changing the variable</h3>
+<!--l. 30--><p class="noindent" >Choosing the change of variable is the most important step of <script type="math/tex">u</script>-substitution. Suppose
+we are performing a <script type="math/tex">u</script>-substitution on a definite integral <script type="math/tex">\int _a^b F(x)dx</script>. Here, we make a choice
+for <script type="math/tex">u</script> as a function of <script type="math/tex">x</script>, so we write <script type="math/tex">u=g(x)</script> for some function <script type="math/tex">g</script>. This choice is often
+made in conjunction with planning for the change of differential. That is, we
+choose <script type="math/tex">u=g(x)</script> in a way so that the integrand can be written as <script type="math/tex; mode=display"> F(x) = f(g(x))g'(x), </script> for some function
+<script type="math/tex">f</script>.
+</p><!--l. 36--><p class="noindent" >For example, consider the integral <script type="math/tex">\int _1^3 2x e^{x^2}\;dx</script>. To evaluate this integral, we choose <script type="math/tex">u = g(x)</script> for <script type="math/tex">g(x)=x^2</script>, since
+then the integrand can be written as <script type="math/tex; mode=display"> 2x e^{x^2} = g'(x) e^{g(x)}. </script>
+</p><!--l. 41--><p class="noindent" >Choosing a “good” substitution often requires experience and intuition, built through
+trying different substitutions, and determining what works well. A common strategy
+for choosing substitutions is to look for a composition of functions, and taking <script type="math/tex">u</script> to be
+the “inner” function. In our example, we have the composition <script type="math/tex">e^{x^2}</script>, and took
+<script type="math/tex">u=x^2</script>.
+<a 
+ id="Q1-1-3"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Changing the interval of integration</h3>
+<!--l. 45--><p class="noindent" >Once we’ve made a choice of substitution <script type="math/tex">u=g(x)</script>, we start to tranform our integral to be
+with respect to <script type="math/tex">u</script>. As part of this process, we need to change the bounds of the
+integral. The new bounds will be <script type="math/tex">c = g(a)</script> and <script type="math/tex">d = g(b)</script>. In order to see why this is necessary, let’s
+look at the area represented by the definite integral <script type="math/tex">\int _a^b F(x)dx</script>.
+</p><!--l. 47--><p class="noindent" >PICTURE
+</p><!--l. 49--><p class="noindent" >Here, we are finding the area under the graph of the function <script type="math/tex">F(x)</script> on the closed interval
+from <script type="math/tex">x=a</script> to <script type="math/tex">x=b</script>. When we make a <script type="math/tex">u</script>-substitution, we are evaluating a different integral <script type="math/tex">\int _c^d f(u)du</script>. This
+represents the area under the function <script type="math/tex">f(u)</script> over the closed interval from <script type="math/tex">c</script> to <script type="math/tex">d</script>. Since our
+new integral is with respect the <script type="math/tex">u</script>, it doesn’t make sense to use the old bounds <script type="math/tex">x=a</script> and
+<script type="math/tex">x=b</script>, since these were bounds for the variable <script type="math/tex">x</script>. Instead, we need to find the
+bounds on <script type="math/tex">u</script> which correspond to the old bounds on <script type="math/tex">x</script>. When we look at how the
+function <script type="math/tex">g</script> affects <script type="math/tex">a</script> and <script type="math/tex">b</script>, this gives us our new bounds, <script type="math/tex">c=g(a)</script> and <script type="math/tex">d = g(b)</script>. We can also
+think about this as looking at how <script type="math/tex">g</script> affects the closed interval <script type="math/tex">[a,b]</script>. If <script type="math/tex">g</script> is an
+increasing function, then the image of the interval <script type="math/tex">[a,b]</script> under <script type="math/tex">g</script> is the closed interval
+<script type="math/tex">[g(a), g(b)]</script>.
+</p><!--l. 51--><p class="noindent" >PICTURE
+</p><!--l. 53--><p class="noindent" >So, when we’re converting an area over the interval <script type="math/tex">[a,b]</script> using the function <script type="math/tex">g</script>, we will be
+working with an area over the interval <script type="math/tex">[g(a),g(b)]</script>.
+</p><!--l. 55--><p class="noindent" >PICTURE
+</p><!--l. 57--><p class="noindent" >To phrase this change more generally, when we make a change of variable, we need to
+consider how this substitution affects the domain of integration.
+                                                                  
+
+                                                                  
+<a 
+ id="Q1-1-5"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-3000"></a>Changing the differential</h3>
+<!--l. 61--><p class="noindent" >The final step necessary for a <script type="math/tex">u</script>-substitution is to change the differential, so we have an
+integral with respect to <script type="math/tex">u</script> instead of <script type="math/tex">x</script>. We often think about this step as making the
+replacement <script type="math/tex; mode=display"> du = g'(x)dx, </script> but why is this change necessary? To see this, let’s think back to the
+definition of a definite integral. We approximate the area under a curve with
+rectangles, and then take the limit as the width of the rectangles goes to
+zero.
+</p><!--l. 67--><p class="noindent" >PICTURE
+</p><!--l. 69--><p class="noindent" >Now, suppose we are approximating the area under a curve with eight rectangles.
+Then, suppose we make a change of variables <script type="math/tex">u=g(x)</script>, and let’s look at how this affects the
+rectangles.
+</p><!--l. 71--><p class="noindent" >PICTURE
+</p><!--l. 73--><p class="noindent" >Here, we see that the width of the rectangles are affected by the change <script type="math/tex">u=g(x)</script>.
+This stretches or shrinks the rectangles. The proportion of this stretching or
+shrinking is determined by the rate of change of the function <script type="math/tex">g</script>, so by <script type="math/tex">g'(x)</script>. This is
+where the change in differential comes in - we make the replacement <script type="math/tex">du = g'(x)dx</script> in
+order to account for the stretching or shrinking caused by the substitution
+<script type="math/tex">u=g(x)</script>.
+</p><!--l. 75--><p class="noindent" >To phrase this change more generally, when we make a change of variable,
+we need to consider how the substitution affects the shape and size of the
+domain of integration, and account for this with an expansion factor, such as
+<script type="math/tex">g'(x)</script>.
+<a 
+ id="Q1-1-7"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-4000"></a>Double Integrals</h3>
+<!--l. 79--><p class="noindent" >In the next section, we’ll look at how we can change variables in double integrals, and
+we’ll see how this process resembles <script type="math/tex">u</script>-substitution from single variable calculus. When
+making the change of variables, we will again need to consider how to change the
+domain of integration, as well as the differential.
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

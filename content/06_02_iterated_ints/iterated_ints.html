@@ -1,0 +1,132 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Iterated Integrals</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="iterated_ints.tex" /> 
+<meta name="author" content="Melissa Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the geometric interpretation of iterated integrals, and compute them."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >We’ve defined double integrals to compute the signed volume between the graph of a
+function <script type="math/tex">f:\mathbb {R}^2\rightarrow \mathbb {R}</script> and the <script type="math/tex">xy</script>-plane.
+</p><!--l. 14--><p class="noindent" >PICTURE
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a 
+ id="x1-17r1"></a>Let <script type="math/tex">f:R\subset \mathbb {R}^2\rightarrow \mathbb {R}</script> be a function defined on a rectangle <script type="math/tex">R</script> in <script type="math/tex">\mathbb {R}^2</script>. The <em>double integral</em> of <script type="math/tex">f</script> over <script type="math/tex">R</script> is <script type="math/tex; mode=display"> \iint _R f(x,y) dA = \lim _{n\rightarrow \infty } \sum _{i,j} f(\vec {c}_{ij})\Delta x\Delta y, </script>
+provided this limit exists.
+</div>
+<!--l. 24--><p class="noindent" >Although this definition has a useful geometric interpretation, and we can use it to
+approximate double integrals, it isn’t practical for computing double integrals.
+Instead, we’ll compute using iterated integrals.
+</p><!--l. 26--><p class="noindent" >For now, we’ll focus on a different geometric interpretation of volume, and see how
+this can be computed using iterated integrals. Then, in the next section, we’ll see how
+double integrals can be computed using iterated integrals.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Iterated integrals</h3>
+<!--l. 30--><p class="noindent" >Back in single variable calculus, we were able to compute the volume of some solids
+using cross sections.
+</p><!--l. 32--><p class="noindent" >PICTURE
+</p><!--l. 34--><p class="noindent" >Once we found the area <script type="math/tex">A(x)</script> of a cross section at <script type="math/tex">x</script>, we were able to compute
+volume by integrating this function <script type="math/tex">A(x)</script>. <script type="math/tex; mode=display"> V = \int _a^b A(x)dx </script> We’ll use the same idea for iterated
+integrals
+                                                                  
+
+                                                                  
+</p><!--l. 40--><p class="noindent" >Suppose we wish to integrate a function <script type="math/tex">f:\mathbb {R}^2\rightarrow \mathbb {R}</script> over a rectangle <script type="math/tex">R = [a,b] \times [c,d]</script>.
+</p><!--l. 42--><p class="noindent" >PICTURE
+</p><!--l. 44--><p class="noindent" >To find the area of the cross section at <script type="math/tex">x</script>, we integrate <script type="math/tex">f(x,y)</script> from <script type="math/tex">y=c</script> to <script type="math/tex">y=d</script>. This gives us <script type="math/tex; mode=display"> A(x) = \int _c^d f(x,y)dy. </script> Now
+that we have the area of a cross section, we can compute the volume of the region by
+integrating over our <script type="math/tex">x</script> values. </p><script type="math/tex; mode=display"> \begin{align*} 
+V &= \int_a^b A(x)dx\\
+&= \int_a^b\left(\int_c^d f(x,y)dy\right)dx\\
+&= \int_a^b\int_c^d f(x,y)dydx\\
+\end{align*}</script>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-1001r2"></a>We’ll use such an iterated integral to compute the volume between <script type="math/tex">f(x,y) = x^2y</script> and <script type="math/tex">xy</script>-plane, over
+the rectangle <script type="math/tex">[0,2]\times [1,2]</script>. <script type="math/tex; mode=display"> \begin{align*} 
+V &=\int_0^2\int_1^2 x^2y\;dydx\\
+&=  \int_0^2\left(\int_1^2 x^2y\;dy\right)dx\\
+&= \int_0^2\left(\frac{1}{2}x^2y^2|_{y=1}^{y=2}\right)dx\\
+&= \int_0^2\left(2x^2 - \frac{1}{2}x^2\right)dx\\
+&= \int_0^2\frac{3}{2}x^2\;dx\\
+&= \frac{1}{2}x^3|_{x=0}^{x=2}\\
+&= \frac{1}{2}\cdot 2^3 - \frac{1}{2}\cdot 0^3\\
+&= 4
+\end{align*}</script>
+<!--l. 67--><p class="noindent" ></div>
+</p><!--l. 69--><p class="noindent" >Alternatively, we can find the volume by taking cross sections which are constant
+with respect to <script type="math/tex">y</script>.
+</p><!--l. 71--><p class="noindent" >PICTURE
+</p><!--l. 73--><p class="noindent" >Then, we can compute the area of the cross section at <script type="math/tex">y</script> by integrating <script type="math/tex">f(x,y)</script> from <script type="math/tex">x=a</script> to <script type="math/tex">x=b</script>. This
+gives us <script type="math/tex; mode=display"> A(y) = \int _a^b f(x,y)dx. </script> Then, we compute the volume of the region by integrating the function <script type="math/tex">A(y)</script> over
+our range of <script type="math/tex">y</script> values. </p><script type="math/tex; mode=display"> \begin{align*} 
+V &= \int_c^d A(y)dy\\
+&= \int_c^d\left(\int_a^b f(x,y)dx\right)dy\\
+&= \int_c^d\int_a^b f(x,y)dxdy
+\end{align*}</script>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-1002r3"></a>We’ll use an iterated integral to compute the volume between <script type="math/tex">f(x,y) = x^2y</script> and <script type="math/tex">xy</script>-plane,
+over the rectangle <script type="math/tex">[0,2]\times [1,2]</script>. This time, we’ll integrate with respect to <script type="math/tex">y</script> first.
+<script type="math/tex; mode=display"> \begin{align*} 
+V &=\int_1^2\int_0^2 x^2y\;dxdy\\
+&=  \int_1^2\left(\int_0^2 x^2y\;dx\right)dy\\
+&= \int_1^2\left(\frac{1}{3}x^3y|_{x=0}^{x=2}\right)dy\\
+                                                                  
+
+                                                                  
+&= \int_1^2\left(\frac{8}{3}y - 0\right)dy\\
+&= \frac{8}{3}\int_1^2\frac{8}{3}y\;dy\\
+&= \frac{8}{3}\left(\frac{1}{2}y^2|_{y=1}^{x=2}\right)\\
+&= \frac{8}{3}\cdot\left(4 - \frac{1}{2}\right)\\
+&= 4
+\end{align*}</script>
+<!--l. 96--><p class="noindent" ></div>
+</p><!--l. 98--><p class="noindent" >Notice that iterated integrals are computed by just computing one integral after
+another, which is why they are called “iterated.”
+</p><!--l. 100--><p class="noindent" >At this point, you might be wondering why we bothered defining double integrals at
+all. Iterated integrals are relatively easy to compute, and can also be used to find
+volume, which makes them seem like a much better choice. In many situations,
+double integrals and iterated integrals are perfectly interchangeable, and we will
+explore this in the next section. However, there exist some strange functions where
+iterated integrals won’t be defined, and yet the double integral will exist.
+Because of this, double integrals are a more general concept than iterated
+integrals.
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

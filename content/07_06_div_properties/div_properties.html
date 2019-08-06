@@ -1,0 +1,126 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Properties  of  Divergence</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="div_properties.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the relationship between divergence and curl, and the divergence theorem in the plane."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >We’ve defined the divergence of a vector field, and seen how this can be used as a
+measure of local expansion or contraction.
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a 
+ id="x1-17r1"></a>Let <script type="math/tex">\vec {F}:\mathbb {R}^n\rightarrow \mathbb {R}^n</script> be a differentiable vector field. Then the <em>divergence</em> of <script type="math/tex">\vec {F}</script> is <script type="math/tex">\nabla \cdot \vec {F}</script>.
+</div>
+<!--l. 18--><p class="noindent" >In this section, we’ll explore some properties of divergence, and how it relates to
+topics we covered previously.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Divergence and curl</h3>
+<!--l. 22--><p class="noindent" >Consider a three-dimensional <script type="math/tex">\mathcal {C}^2</script> vector field <script type="math/tex">\vec {F}(x,y,z) = (M(x,y,z), N(x,y,z), P(x,y,z))</script>. We can compute the curl
+of <script type="math/tex">\vec {F}</script> as <script type="math/tex; mode=display"> \nabla \times \vec {F} = \left (\frac {\partial P}{\partial y} - \frac {\partial N}{\partial z}, \frac {\partial M}{\partial z} - \frac {\partial P}{\partial x}, \frac {\partial N}{\partial x} - \frac {\partial M}{\partial y}\right ). </script> Notice that we can view <script type="math/tex">\nabla \times \vec {F}</script> as a function from <script type="math/tex">\mathbb {R}^3</script> to <script type="math/tex">\mathbb {R}^3</script>. So, we can
+view it as a vector field, and compute its divergence. This gives us
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\nabla\cdot (\nabla\times \vec{F}) &= \nabla\cdot \left(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}, \frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}, \frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\\
+&= \frac{\partial}{\partial x}\left(\frac{\partial P}{\partial y} - \frac{\partial N}{\partial z}\right) + \frac{\partial}{\partial y}\left(\frac{\partial M}{\partial z} - \frac{\partial P}{\partial x}\right) + \frac{\partial}{\partial z}\left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\\
+&= \frac{\partial^2 P}{\partial x \partial y} - \frac{\partial^2 N}{\partial x \partial z} + \frac{\partial^2 M}{\partial y \partial z} - \frac{\partial^2 P}{\partial y\partial x} + \frac{\partial^2 N}{\partial z\partial x} - \frac{\partial^2 M}{\partial z\partial y}.
+\end{align*}</script>
+<!--l. 33--><p class="noindent" >Now, since <script type="math/tex">\vec {F}</script> is <script type="math/tex">\mathcal {C}^2</script>, Clairaut’s theorem tells us that the order of the mixed partials doesn’t matter. That is,
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\frac{\partial^2 M}{\partial y \partial z} &= \frac{\partial^2 M}{\partial z \partial y},\\
+\frac{\partial^2 N}{\partial x \partial z} &= \frac{\partial^2 N}{\partial z \partial x},\\
+                                                                  
+
+                                                                  
+\frac{\partial^2 P}{\partial x \partial y} &= \frac{\partial^2 P}{\partial y \partial x}.
+\end{align*}</script>
+<!--l. 39--><p class="noindent" >So, all of the terms above cancel, and we’re left with <script type="math/tex; mode=display"> \nabla \cdot (\nabla \times \vec {F}) = 0. </script> Using a similar argument, the
+same result holds for two-dimensional vector fields.
+</p>
+<div class="theorem-like problem-environment proposition" id="problem2"><a 
+ id="x1-1001r2"></a>Let <script type="math/tex">\vec {F}</script> be an <script type="math/tex">n</script>-dimensional <script type="math/tex">\mathcal {C}^2</script> vector field, for <script type="math/tex">n=2</script> or <script type="math/tex">n=3</script>. Then <script type="math/tex; mode=display"> \nabla \cdot (\nabla \times \vec {F}) = 0. </script>
+</div>
+<a 
+ id="Q1-1-3"></a>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Divergence theorem in the plane</h3>
+<!--l. 54--><p class="noindent" >Consider a region <script type="math/tex">D</script>, satisfying the hypotheses of Green’s theorem. That is, let <script type="math/tex">D</script> be a
+closed an bounded region in <script type="math/tex">\mathbb {R}^2</script>, whose boundary <script type="math/tex">\partial D</script> consists of finitely many simple and
+piecewise smooth curves.
+</p><!--l. 56--><p class="noindent" >PICTURE
+</p><!--l. 58--><p class="noindent" >Let <script type="math/tex">\vec {F}</script> be a <script type="math/tex">\mathcal {C}^1</script> vector field defined on <script type="math/tex">D</script>. Since <script type="math/tex">\nabla \cdot \vec {F}</script> is a scalar valued function, we can integrate
+it over <script type="math/tex">D</script>. Let’s think about what the integral <script type="math/tex; mode=display"> \iint _D \nabla \cdot \vec {F}\;dA </script> represents. Since the divergence <script type="math/tex">\nabla \cdot \vec {F}</script>
+gives the microscopic expansion or contraction of the vector field, the double
+integral <script type="math/tex">\iint _D \nabla \cdot \vec {F}\;dA</script> represents the total expansion or contraction across the region <script type="math/tex">D</script>.
+Another way to say this is that <script type="math/tex">\iint _D \nabla \cdot \vec {F}\;dA</script> gives the total net flow across the region
+<script type="math/tex">D</script>.
+</p><!--l. 64--><p class="noindent" >PICTURE
+</p><!--l. 66--><p class="noindent" >Now, let’s try to relate this total net flow to something happening on the boundary,
+analogously to Green’s theorem.
+</p><!--l. 68--><p class="noindent" >Suppose we approximate the region <script type="math/tex">D</script> with a bunch of small rectangles. When we look
+at the flow across one of the interior rectangle edges, any flow out of one rectangle
+will flow into another rectangle. So all of the flow happening inside of the region will
+cancel out in the double integral, and the only flow that matters happens across the
+edge.
+</p><!--l. 70--><p class="noindent" >How can we measure the flow across the edge? If <script type="math/tex">\vec {n}</script> is the unit normal vector pointing
+outside of the boundary curve, then we can measure the flow through a boundary
+point with <script type="math/tex">\vec {F}\cdot \vec {n}</script>.
+</p><!--l. 72--><p class="noindent" >PICTURE
+</p><!--l. 74--><p class="noindent" >This works because if <script type="math/tex">\vec {F}</script> and <script type="math/tex">\vec {n}</script> are in the same direction, there is positive flow out of the
+region. If <script type="math/tex">\vec {F}</script> and <script type="math/tex">\vec {n}</script> are perpendicular, there is zero flow across the boundary at that
+point.
+</p><!--l. 76--><p class="noindent" >So, we can find the total flow across the boundary by computing the scalar line
+integral <script type="math/tex; mode=display"> \oint _{\partial D}\vec {F}\cdot \vec {n} ds. </script>
+</p><!--l. 82--><p class="noindent" >The above argument provides a sketch of a proof for the following theorem,
+                                                                  
+
+                                                                  
+sometimes called the divergence theorem in the plane.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem3"><a 
+ id="x1-2001r3"></a>Let <script type="math/tex">D</script> be a closed an bounded region in <script type="math/tex">\mathbb {R}^2</script>, whose boundary <script type="math/tex">\partial D</script> consists of finitely many
+simple and piecewise smooth curves. Let <script type="math/tex">\vec {F}:D\subset \mathbb {R}^2\rightarrow \mathbb {R}^2</script> be a <script type="math/tex">\mathcal {C}^1</script> vector field, and suppose that <script type="math/tex">\vec {n}</script> is the
+outward pointing normal vector to the boundary of <script type="math/tex">D</script>. Then <script type="math/tex; mode=display"> \oint _{\partial D}\vec {F}\cdot \vec {n}\;ds = \iint _D \nabla \cdot \vec {F}\;dA. </script>
+</div>
+<!--l. 91--><p class="noindent" >This theorem has applications similar to Green’s theorem; we can use it to more
+easily compute some integrals.
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

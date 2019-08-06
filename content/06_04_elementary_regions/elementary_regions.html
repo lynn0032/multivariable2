@@ -1,0 +1,124 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Elementary  Regions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="elementary_regions.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Identify and describe elementary regions."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >We’ve defined double integrals over rectangles, and we’ve used Fubini’s theorem to
+convert them to iterated integrals, which are straightforward to compute. But what if
+we need to integrate a function over a region that isn’t a rectangle?
+</p><!--l. 14--><p class="noindent" >For example, consider the region below, which is bounded by the curves <script type="math/tex">y=x^2</script>, <script type="math/tex">y=x^2+1</script>, <script type="math/tex">x=1</script>, and
+<script type="math/tex">x=2</script>.
+</p><!--l. 16--><p class="noindent" >PICTURE
+</p><!--l. 18--><p class="noindent" >We can describe this region as the set of points <script type="math/tex">(x,y)</script> such that <script type="math/tex">1\leq x\leq 2</script> and <script type="math/tex">x^2\leq y\leq x^2+1</script>. Here, we can
+describe the region by bounding the <script type="math/tex">x</script>-coordinate with constants, and bounding the
+<script type="math/tex">y</script>-coordinate with continuous functions of <script type="math/tex">x</script>. We’ll soon see that this kind of description
+translates easily to integration, and this is our first example of an elementary
+region.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Elementary regions</h3>
+<!--l. 22--><p class="noindent" >We give the definition of elementary regions, which will be the most natural regions
+to integrate over.
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a 
+ id="x1-1001r1"></a>The following are types of <em>elementary regions</em>.
+<!--l. 27--><p class="noindent" >Suppose a region <script type="math/tex">R</script> can be described as the set of points <script type="math/tex">(x,y)</script> such that
+</p><script type="math/tex; mode=display"> \begin{align*} 
+a\leq &x\leq b\text{, and}\\
+f(x)\leq &y \leq g(x),
+                                                                  
+
+                                                                  
+\end{align*}</script>
+<!--l. 32--><p class="noindent" >where <script type="math/tex">f(x)</script> and <script type="math/tex">g(x)</script> are continuous functions. Then we say that <script type="math/tex">R</script> is <em><script type="math/tex">x</script>-simple</em>.
+</p><!--l. 34--><p class="noindent" >Suppose a region <script type="math/tex">R</script> can be described as the set of points <script type="math/tex">(x,y)</script> such that
+</p><script type="math/tex; mode=display"> \begin{align*} 
+c\leq & y\leq d\text{, and}\\
+f(y)\leq & x \leq g(y),
+\end{align*}</script>
+<!--l. 39--><p class="noindent" >where <script type="math/tex">f(y)</script> and <script type="math/tex">g(y)</script> are continuous functions. Then we say that <script type="math/tex">R</script> is <em><script type="math/tex">y</script>-simple</em>.
+</div>
+</p><!--l. 42--><p class="noindent" >We’ll now look at some examples of <script type="math/tex">x</script>-simple and <script type="math/tex">y</script>-simple regions. Note that some
+regions are both <script type="math/tex">x</script>-simple and <script type="math/tex">y</script>-simple.
+</p>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-1002r2"></a>Consider the region <script type="math/tex">R</script> below, which is bounded by the graphs of <script type="math/tex">y=x^2</script> and <script type="math/tex">x=y^2</script>.
+<!--l. 47--><p class="noindent" >PICTURE
+</p><!--l. 49--><p class="noindent" >This region is both <script type="math/tex">x</script>-simple and <script type="math/tex">y</script>-simple. To see that it is <script type="math/tex">x</script>-simple, we can describe <script type="math/tex">R</script> as
+the set of points <script type="math/tex">(x,y)</script> such that </p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq &x\leq 1\text{, and}\\
+x^2\leq y\leq \sqrt{x}.
+\end{align*}</script>
+<!--l. 54--><p class="noindent" >To see that <script type="math/tex">R</script> is <script type="math/tex">y</script>-simple, we can describe it as the set of points <script type="math/tex">(x,y)</script> such that
+</p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq &y\leq 1\text{, and}\\
+y^2\leq &x\leq \sqrt{y}.
+\end{align*}</script>
+<!--l. 59--><p class="noindent" ></div>
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-1003r3"></a>Consider the region <script type="math/tex">R</script> below, which is bounded by the graphs of <script type="math/tex">y=\cos x</script>, <script type="math/tex">y=1</script>, <script type="math/tex">x=-\pi </script>, and
+<script type="math/tex">x=\pi </script>.
+<!--l. 64--><p class="noindent" >PICTURE
+</p><!--l. 66--><p class="noindent" >This region is <script type="math/tex">x</script>-simple, since <script type="math/tex">R</script> is the set of points <script type="math/tex">(x,y)</script> such that
+</p><script type="math/tex; mode=display"> \begin{align*} 
+-\pi\leq &x\leq \pi\text{, and}\\
+\cos x\leq &y\leq 1.
+\end{align*}</script>
+<!--l. 71--><p class="noindent" >The region <script type="math/tex">R</script> is not <script type="math/tex">y</script>-simple, since any inequality <script type="math/tex">f(y)\leq x\leq g(y)</script> cannot have a “hole” in the middle.
+However, <script type="math/tex">R</script> is the union of two <script type="math/tex">y</script>-simple regions <script type="math/tex">R_1</script> and <script type="math/tex">R_2</script>, where <script type="math/tex">R_1</script> is the set of points <script type="math/tex">(x,y)</script> such
+                                                                  
+
+                                                                  
+that </p><script type="math/tex; mode=display"> \begin{align*} 
+-1\leq &y\leq 1\text{, and}\\
+-\pi\leq &x\leq -\arccos y,
+\end{align*}</script>
+<!--l. 76--><p class="noindent" >and <script type="math/tex">R_2</script> is the set of points <script type="math/tex">(x,y)</script> such that </p><script type="math/tex; mode=display"> \begin{align*} 
+-1\leq &y\leq 1\text{, and}\\
+\arccos y\leq &x\leq 1.
+\end{align*}</script>
+<!--l. 81--><p class="noindent" ></div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

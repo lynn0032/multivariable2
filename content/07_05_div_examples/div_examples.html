@@ -1,0 +1,106 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Further Examples of Divergence</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="div_examples.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Explore further examples of computing and understanding the geometry of divergence."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >We’ve defined the divergence of a vector field, and seen how this can be used as a
+measure of local expansion or contraction.
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a 
+ id="x1-17r1"></a>Let <script type="math/tex">\vec {F}:\mathbb {R}^n\rightarrow \mathbb {R}^n</script> be a differentiable vector field. Then the <em>divergence</em> of <script type="math/tex">\vec {F}</script> is <script type="math/tex">\nabla \cdot \vec {F}</script>.
+</div>
+<!--l. 18--><p class="noindent" >In this section, we’ll explore additional examples of computing divergence, and
+interpreting our answers geometrically.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Divergence examples</h3>
+<!--l. 22--><p class="noindent" >Consider the vector field <script type="math/tex">\vec {F}(x,y) = \left (\frac {x}{(x^2+y^2)^p},\frac {y}{(x^2+y^2)^p} \right )</script>, for various values of <script type="math/tex">p</script>. Graphing this for various values of <script type="math/tex">p</script>
+gives us a sense of the behavior of the vector field.
+</p><!--l. 24--><p class="noindent" >PICTURE
+</p><!--l. 26--><p class="noindent" >Let’s compute the divergence, and see what this tells us about the behavior of the vector field.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\nabla\cdot \vec{F}(x,y) &= \frac{\partial}{\partial x}\left(\frac{x}{(x^2+y^2)^p}\right) + \frac{\partial}{\partial y}\left(\frac{y}{(x^2+y^2)^p}\right) \\
+&= \frac{(x^2+y^2)^p - 2px(x^2+y^2)^{p-1}x}{(x^2+y^2)^{2p}} + \frac{(x^2+y^2)^p - 2py(x^2+y^2)^{p-1}y}{(x^2+y^2)^{2p}}\\
+&= \frac{(x^2+y^2) - 2px^2}{(x^2+y^2)^{p+1}} + \frac{(x^2+y^2) - 2py^2}{(x^2+y^2)^{p+1}}\\
+&= \frac{2(x^2+y^2) - 2p(x^2+y^2)}{(x^2+y^2)^{p+1}}\\
+&= \frac{2(1-p)}{(x^2+y^2)^p}\\
+\end{align*}</script>
+                                                                  
+
+                                                                  
+<!--l. 34--><p class="noindent" >From this, we can see that the sign of the divergence will depend on the value of <script type="math/tex">p</script>. In
+particular </p>
+     <ul class="itemize1">
+     <li class="itemize">If <script type="math/tex">p<1</script>, then the divergence is <div class="multiple-choice" id="problem2"><span class="choice correct "   id="choice1">positive.</span> <span class="choice  "   id="choice2">negative.</span> <span class="choice  "   id="choice3">zero.</span> </div>
+     </li>
+     <li class="itemize">If <script type="math/tex">p>1</script>, then the divergence is <div class="multiple-choice" id="problem3"><span class="choice  "   id="choice4">positive.</span> <span class="choice correct "   id="choice5">negative.</span> <span class="choice  "   id="choice6">zero.</span> </div>
+     </li>
+     <li class="itemize">If <script type="math/tex">p=1</script>, then the divergence is <div class="multiple-choice" id="problem4"><span class="choice  "   id="choice7">positive.</span> <span class="choice  "   id="choice8">negative.</span> <span class="choice correct "   id="choice9">zero.</span> </div>
+     </li></ul>
+<!--l. 55--><p class="noindent" >Let’s look at how this manifests itself in the graph of <script type="math/tex">\vec {F}</script>, with the local expansion or
+contraction of the vector field.
+</p><!--l. 57--><p class="noindent" >For <script type="math/tex">p=\frac {1}{2}</script>, we graph the vector field <script type="math/tex">\vec {F}(x,y) = \left (\frac {x}{(x^2+y^2)^{1/2}},\frac {y}{(x^2+y^2)^{1/2}} \right )</script>.
+</p><!--l. 59--><p class="noindent" >PICTURE
+</p><!--l. 61--><p class="noindent" >Here, if we look at a tiny ball around a point, we see that there are more vectors
+exiting the ball than coming into it, and the vectors exiting the ball are
+longer, so we have local expansion. This matches with the divergence being
+positive.
+</p><!--l. 63--><p class="noindent" >For <script type="math/tex">p = 1</script>, we graph the vector field <script type="math/tex">\vec {F}(x,y) = \left (\frac {x}{(x^2+y^2)},\frac {y}{(x^2+y^2)} \right )</script>.
+</p><!--l. 65--><p class="noindent" >PICTURE
+</p><!--l. 67--><p class="noindent" >Here, if we look at a tiny ball around a point, we see that there are more
+vectors exiting the ball than coming into it. However, the vectors exiting
+the ball are shorter than the vectors entering the ball. Because of this, it’s
+difficult to estimate the sign of the divergence from the graph. As it turns
+out, there is perfect cancellation, so the divergence of the vector field is
+zero.
+</p><!--l. 69--><p class="noindent" >For <script type="math/tex">p=2</script>, we graph the vector field <script type="math/tex">\vec {F}(x,y) = \left (\frac {x}{(x^2+y^2)^2},\frac {y}{(x^2+y^2)^2} \right )</script>.
+</p><!--l. 71--><p class="noindent" >PICTURE
+</p><!--l. 73--><p class="noindent" >Here, if we look at a tiny ball around a point, we see that there are more vectors
+exiting the ball than coming into it. However, the vectors exiting the ball are shorter
+than the vectors entering the ball. Because of this, it’s difficult to estimate the sign of
+the divergence from the graph. In this case, the longer vectors entering the ball more
+than cancel out the shorter vectors exiting the ball, and the divergence of the vector
+field turns out to be negative.
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

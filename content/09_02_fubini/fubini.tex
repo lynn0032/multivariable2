@@ -1,0 +1,65 @@
+\documentclass{ximera}  
+
+\title{Fubini's Theorem for Triple Integrals}  
+\author{Melissa Lynn}
+\outcome{Evaluate triple integrals using Fubini's theorem.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+When we studied double integrals, we found that we could most easily compute double integrals as iterated integrals. This was possible because of Fubini's theorem.
+
+\begin{theorem}
+\textbf{Fubini's Theorem.} Let $f:R\subset\mathbb{R}^2\rightarrow\mathbb{R}$ be a continuous function defined on a rectangle $R = [a,b]\times [c,d]$. Then
+\[
+\iint_R f\;dA = \int_c^d\int_a^b f(x,y)\;dxdy = \int_a^b\int_c^d f(x,y)\;dydx.
+\]
+\end{theorem}
+
+In this section, we'll see that we can prove a version of Fubini's theorem for triple integrals, so we can evaluate triple integrals using iterated integrals.
+
+\section*{Fubini's theorem for triple integrals}
+
+The statement of Fubini's theorem for triple integrals is unsurprisingly similar to the statement for double integrals. Notice that there are six different ways that the iterated integrals can be ordered.
+
+\begin{theorem}
+\textbf{Fubini's Theorem.} Let $f:B\subset\mathbb{R}^3\rightarrow\mathbb{R}$ be a continuous function defined on a box $B= [m,n]\times[p,q]\times[r,s]$ in $\mathbb{R}^3$. Then
+\begin{align*}
+\iiint_B f\;dV &= \int_r^s\int_p^q\int_m^n f(x,y,z)\;dxdydz\\
+&= \int_p^q\int_r^s\int_m^n f(x,y,z)\;dxdzdy\\
+&= \int_p^q\int_m^n\int_r^s f(x,y,z)\;dzdxdy\\
+&= \int_r^s\int_m^n\int_p^q f(x,y,z)\;dydxdz\\
+&= \int_m^n\int_r^s\int_p^q f(x,y,z)\;dydzdx\\
+&= \int_m^n\int_p^q\int_r^s f(x,y,z)\;dzdydx.
+\end{align*}
+\end{theorem}
+
+The proof of this theorem echoes the proof for double integrals, so we will omit it here. We'll now look at an example of using iterated integrals to evaluate triple integrals, which is possible as a result of Fubini's theorem.
+
+\begin{example}
+We'll integrate the function $f(x,y,z) = x+2y+3z$ over the box $B = [0,1]\times [0,2]\times[0,3]$. Since $f$ is a continuous function, Fubini's theorem applies, and we can evaluate the triple integral as an iterated integral.
+\begin{align*}
+\iiint_B f\;dV &= \int_0^1\int_0^2\int_0^3 (x+2y+3z)\;dzdydx\\
+&= \int_0^1\int_0^2 \left(xz+2yz + \frac{3}{2}z^2\right)_{z=0}^{z=3}\;dydx\\
+&= \int_0^1\int_0^2 \left(3x+6y+\frac{27}{2}\right)\;dydx\\
+&= \int_0^1 \left(3xy+3y^2+\frac{27}{2}y\right)_{y=0}^{y=2}\;dx\\
+&= \int_0^1\left(6x+12+27\right)\;dx\\
+&= \left(3x^2+39x\right)_{x=0}^{x=1}\\
+&= 42
+\end{align*}
+Alternatively, we could use a different order of integration for the iterated integral, and we should see that we'll get the same result. Here, we'll choose the order $dydxdz$.
+\begin{align*}
+\iiint_B f\;dV &= \int_0^3\int_0^1\int_0^2 (x+2y+3z)\;dydxdz\\
+&= \int_0^3\int_0^1 (xy+y^2+3zy)_{y=0}^{y=2}\;dxdz\\
+&= \int_0^3\int_0^1 (2x+4+6z)\;dxdz\\
+&= \int_0^3 (x^2+4x+6zx)_{x=0}^{x=1}\;dz\\
+&= \int_0^3 (1+4+6z)\;dz\\
+&= (5z+3z^2)_{z=0}^{z=3}\\
+&= 42
+\end{align*}
+Indeed, we have the same result.
+\end{example}
+
+\end{document}

@@ -1,0 +1,125 @@
+\documentclass{ximera}  
+
+\title{More on Stokes Theorem}  
+\author{Melissa Lynn}
+\outcome{Understand additional ways that Stokes theorem can be used, and learn some connections to earlier material.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+We've seen how Stokes theorem relates the line integral of a vector field over the boundary of a surface with the double integral of curl over the entire surface, given consistent orientations.
+
+PICTURE
+
+\begin{theorem}
+\textbf{Stokes Theorem.} Suppose $S$ is a smooth and bounded surface in $\mathbb{R}^3$, and that $\partial S$ consists of finitely many closed, simple, and piecewise $\mathcal{C}^1$ curves. Suppose further that $S$ and $\partial S$ are consistently oriented. Let $\vec{F}$ be a $\mathcal{C}^1$ vector field, which is defined on $S$. Then
+\[
+\oint_{\partial S}\vec{F}\cdot d\vec{s} = \iint_S \nabla\times \vec{F}\cdot d\vec{S},
+\]
+where $\nabla\times \vec{F}$ denotes the curl of $\vec{F}$.
+\end{theorem}
+
+We'll now look at another way to use Stokes theorem, as well as some ways Stokes theorem can be used to understand earlier material.
+
+\section*{Replacing a surface}
+
+In the following example, we'll see how Stokes theorem can be used to evaluate a double integral over a surface, by replacing the surface with a different surface that has the same boundary.
+
+\begin{example}
+Consider the paraboloid $S$ defined by the equation $z = 1-x^2-y^2$, for $z\geq 0$, oriented with the upward pointing normal vector.
+
+PICTURE
+
+Also consider the vector field $\vec{F} = (x^2, z^2, y^3, z)$, and notice that the curl of $\vec{F}$ is
+\[
+\nabla\times \vec{F} = (3y^2z-2z, 0, 0).
+\]
+Suppose we wish to evaluate the vector surface integral $\iint_S (3y^2z-2z, 0, 0)\;d\vec{S}$. We have a few options for how we could approach evaluating this surface integral. We could parametrize $S$ and evalute directly, or we could apply Stokes theorem, and integral $\vec{F}$ over the boundary of $S$ instead.
+
+Notice that the boundary of $S$ is the unit circle in the $xy$-plane, pictured below.
+
+PICTURE
+
+Although this approach is possible by Stokes theorem, it doesn't necessarily seem any easier than evaluating the surface integral directly. However, notice that $\partial S$ is also the boundary of a simpler surface, the unit disc $D$ in the $xy$-plane.
+
+PICTURE
+
+Because of this, we can apply Stokes theorem twice, to get
+\[
+\iint_S \nabla\times \vec{F}\;d\vec{S} = \oint_{\partial S} \vec{F}\cdot d\vec{s} = \iint_D \nabla\times \vec{F}\;d\vec{S}.
+\]
+So, we'll evaluate $\iint_D \nabla\times \vec{F}\;d\vec{S}$. Now, $D$ lies in the $xy$-plane, and $\nabla\times \vec{F}(x,y,z) = (3y^2z-2z, 0, 0)$. So, when $z=0$, $\nabla\times \vec{F}(x,y,z) = (0,0,0)$. This means that the vector field $\nabla\times \vec{F}$ is zero on the disc $D$. Putting all of this together,
+\begin{align*}
+\iint_S \nabla\times \vec{F}\;d\vec{S} &= \oint_{\partial S} \vec{F}\cdot d\vec{s}\\
+ &= \iint_D \nabla\times \vec{F}\;d\vec{S}\\
+ &= \iint_D (0,0,0)\;d\vec{S}\\
+ &= 0.
+\end{align*}
+In this case, we were able to use Stokes theorem to replace our surface integral with a different surface integral, over a surface with the same boundary. This gave us a much easier integral to evaluate.
+\end{example}
+
+\section*{Stokes theorem and circulation}
+
+Now, we'll use Stokes theorem to show that if the curl of a vector field $\vec{F}$ is zero, then $\vec{F}$ has no circulation over any (reasonably nice) closed curve.
+
+\begin{proposition}
+Let $\vec{F}:D\subset\mathbb{R}^3\rightarrow\mathbb{R}^3$ be a $\mathcal{C}^1$ vector field defined on an open and simply connected domain $D$, and suppose that $\nabla \times\vec{F} = (0,0,0)$. Let $C$ be a closed, simple, and piecewise $\mathcal{C}^1$ curve contained in $D$. Then 
+\[
+\oint_C\vec{F}\cdot d\vec{s} = 0.
+\]
+\end{proposition}
+
+We'll give a sketch of a proof of this proposition, glossing over some of the details.
+
+\begin{proof}
+Since $D$ is open and simply connected, there is some smooth surface $S$ in $D$ such that $C$ is the boundary of $D$. A rigorous proof of this assertion is very involved, so we'll skip over this detail.
+
+Furthermore, we can orient $D$ so that Stokes theorem will apply. Then we have
+\[
+\oint_C\vec{F}\cdot d\vec{s} = \iint_S\nabla\times \vec{F}\cdot d\vec{S}.
+\]
+Since the curl of $\vec{F}$ is zero, this gives us
+\[
+\oint_C\vec{F}\cdot d\vec{s}=0,
+\]
+as desired.
+\end{proof}
+
+\section*{Curl as microscopic rotation}
+
+We've previously discussed how curl represents microscopic rotation, and we've given some geometric justification for why this should be the case. We'll now use Stokes theorem to provide further justification that curl represents microscopic rotation.
+
+Consider a point $\vec{a}$ in $\mathbb{R}^3$, and let $S_r$ be a small disc of radius $r$, centered at $\vec{a}$, with unit normal vector $\vec{n}$.
+
+PICTURE
+
+Applying Stokes theorem to this disc, we have
+\[
+\int_{\partial S_r}\vec{F}\cdot d\vec{s} = \iint_{S_r} (\nabla\times \vec{F})\cdot \vec{n}\;dS
+\]
+Since we are integrating over a very small surface, we can approximate the integrand with a constant, 
+\[
+(\nabla\times \vec{F}(x,y,z))\cdot \vec{n} \approx (\nabla\times \vec{F})(\vec{a})\cdot \vec{n}.
+\]
+Then our integral can be approximated as
+\begin{align*}
+\int_{\partial S_r}\vec{F}\cdot d\vec{s} &= \iint_{S_r} (\nabla\times \vec{F})\cdot \vec{n}\;dS\\
+&\approx \iint_{S_r} (\nabla\times \vec{F})(\vec{a})\cdot \vec{n}\;dS\\
+& = \pi r^2\;(\nabla\times \vec{F})(\vec{a})\cdot \vec{n}.
+\end{align*}
+This means that 
+\[
+(\nabla\times \vec{F})(\vec{a})\cdot \vec{n} \approx \frac{1}{\pi r^2}\int_{S_r}\vec{F}\cdot d\vec{s}.
+\]
+As $r$ approaches zero, this approximation becomes arbitrarily good, so we have
+\[
+(\nabla\times \vec{F})(\vec{a})\cdot \vec{n} = \lim_{r\rightarrow 0^+} \frac{1}{\pi r^2}\int_{S_r}\vec{F}\cdot d\vec{s}.
+\]
+The quantity on the right represents the circulation or rotation at the point $\vec{a}$ and in the plane perpendicular to $\vec{n}$, so we see that $(\nabla\times \vec{F})(\vec{a})\cdot \vec{n}$ measures this rotation.
+
+Furthermore, notice that $(\nabla\times \vec{F})(\vec{a})\cdot \vec{n}$ is largest when $\vec{n}$ and $\nabla\times \vec{F}(\vec{a})$ point in the same direction. This means that the curl gives the axis of rotation.
+
+Putting this together, we have that $(\nabla\times \vec{F})(\vec{a})$ gives the axis of rotation induced by $\vec{F}$ at $\vec{a}$, and provides a measure of this microscopic rotation. 
+\end{document}

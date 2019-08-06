@@ -27,3 +27,14 @@
 \outcome {Understand the relationship between divergence and curl, and the divergence theorem in the plane.}
 \outcome {Compute the surface area of a parametric surface.}
 \outcome {Compute and understand the geometric meaning of scalar surface integrals.}
+\outcome {Understand how to choose an orientation of a surface, and that some surfaces are not orientable.}
+\outcome {Compute and understand the geometric meaning of vector surface integrals.}
+\outcome {Understand the statement of Stokes theorem, and its geometric interpretation.}
+\outcome {Understand additional ways that Stokes theorem can be used, and learn some connections to earlier material.}
+\outcome {Understand the geometric ideas behind the definition of a triple integral.}
+\outcome {Evaluate triple integrals using Fubini's theorem.}
+\outcome {Evaluate triple integrals over elementary regions, and change the order of integration. Focus on visualizing regions.}
+\outcome {Understand how to change coordinates in triple integrals.}
+\outcome {Understand the statement and geometric idea of the divergence theorem.}
+\outcome {Understand how the divergence theorem can be used.}
+\outcome {See the similarities between the various special cases of Stokes theorem we've covered.}

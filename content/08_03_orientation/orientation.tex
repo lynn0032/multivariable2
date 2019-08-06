@@ -1,0 +1,162 @@
+\documentclass{ximera}  
+
+\title{Orientatation of a Surface}  
+\author{Melissa Lynn}
+\outcome{Understand how to choose an orientation of a surface, and that some surfaces are not orientable.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+Suppose you have water flowing through some filter, and you'd like a measure of how much water is going through the filter. If we represent the water flow with a vector field and the filter with a surface in $\mathbb{R}^3$, we can conceptualize this question as measuring the flow of the vector field through a surface.
+
+PICTURE
+
+Now, depending on your perspective, you might view the flow as either positive flow or negative flow. In the picture above, if you view the left of the surface as ``inside'' and the right of the surface as ``outside,'' the water is leaving, so we'd view this as negative flow.
+
+PICTURE
+
+However, if you view the left of the surface as ``outside'' and the right of the surface as ``inside,'' the water is entering, so we'd view this as positive flow.
+
+PICTURE
+
+In order to define integrals to compute the flow of a vector field through a surface, we first need to define mathematically what it means to choose an ``inside'' and an ``outside'' for a surface. This brings us to orientation.
+
+\section*{Orientation}
+
+Mathematically, a choice of orientation for a surface means a consistent choice of normal vector across the entire surface. We can think of the normal vector as giving the direction of positive flow through the surface.
+
+\begin{definition}
+Let $S\subset\mathbb{R}^3$ be a surface in $\mathbb{R}^3$. An \emph{orientation} on $S$ is a continuous function $\vec{n}:S\rightarrow\mathbb{R}^3$ such that $\vec{n}(\vec{x})$ is a unit vector and is perpendicular $S$ at the point $\vec{x}$.
+
+We say that the surface $S$ is \emph{orientable} if such a function $\vec{n}$ exists. We say that the surface $S$ is \emph{oriented} if such a function $\vec{n}$ has been chosen.
+\end{definition}
+
+Let's look at some examples of orientations.
+
+\begin{example}
+Consider the plane $S$ defined by $x=0$ in $\mathbb{R}^3$.
+
+PICTURE
+
+There are only two possible orientations for this plane, given by
+\[
+\vec{n}(\vec{x}) = (1,0,0)
+\]
+for all $\vec{x}$ in $S$, and by
+\[
+-\vec{n}(\vec{x}) = (-1,0,0)
+\]
+for all $\vec{x}$ in $S$.
+
+PICTURE
+
+Because there are only two choices for orientation, we can indicate the chosen orientation with just a single vector.
+
+PICTURE
+\end{example}
+
+\begin{example}
+Consider the unit sphere $S$ defined by $x^2+y^2+z^2$ in $\mathbb{R}^3$.
+
+PICTURE
+
+There are only two possible orientations for this sphere, given by
+\[
+\vec{n}(\vec{x}) = \frac{\vec{x}}{\|\vec{x}\|}
+\]
+for all $\vec{x}$ in $\vec{S}$, and by
+\[
+-\vec{n}(\vec{x}) = \frac{-\vec{x}}{\|\vec{x}\|}
+\]
+for all $\vec{x}$ in $\vec{S}$.
+
+PICTURE
+
+Because there are only two choices for orientation, we can indicate the chosen orientation with just a single vector.
+\end{example}
+
+Based on the examples above, you might conjecture that every surface has exactly two orientations. This is almost true: any orientable, connected surface has exactly two orientations. However, there are some surfaces which are not orientable, as we will now see.
+
+\section*{Non-orientable surfaces}
+
+For some surfaces $S$, it's impossible to define a continuous function $\vec{n}:S\rightarrow\mathbb{R}^3$ such that $\vec{n}(\vec{x})$ is a unit vector and is perpendicular $S$ at the point $\vec{x}$. We say that these surfaces are non-orientable.
+
+Our first example of a non-orientable surface is a m\"{o}bius strip.
+
+\begin{example}
+A m\"{o}bius strip is a looped surface with a single twist, as pictured below.
+
+PICTURE
+
+Let's see what happens when we try to chose an orientation on the m\"{o}bius strip. If we choose a normal vector at a point, in order for $\vec{n}$ to be continuous, this forces the choice of normal vector at nearby points.
+
+PICTURE
+
+Continuing this around the surface, we have a problem: we eventually get two normal vectors at the same point, pointing in opposite directions.
+
+PICTURE
+
+This is because it is impossible to choose unit normal vectors continuously on the m\"{o}bius strip. Thus, the m\"{o}bius strip is non-orientable.
+
+You might also hear this described as ``the m\"{o}bius strip only has one side.''
+\end{example}
+
+\begin{example}
+Another, trickier example of a non-orientable surface is the Klein bottle. The Klein bottle actually exists in four dimensions, and can't be embedded in three dimensions without intersecting itself. This makes it difficult to visualize! Below, we have a three-dimensional representation of the Klein bottle. When the Klein bottle is embedded in $\mathbb{R}^4$, the highlighted self-intersection does not occur.
+
+PICTURE
+
+The Klein bottle has the same issue as the m\"{o}bius strip. If we try to continuously choose a normal vector across the entire surface, we contradict ourselves, because the Klein bottle only has one side.
+\end{example}
+
+Fortunately, we will focus on orientable surfaces.
+
+\section*{Finding an orientation}
+
+Now that we've defined an orientation for a surface, we will determine how to find an orientation in practice. This means finding a function $\vec{n}:S\rightarrow\mathbb{R}^3$ such that $\vec{n}(\vec{x})$ is a unit vector and is perpendicular $S$ at the point $\vec{x}$. The function $\vec{n}$ gives a unit normal vector at each point on the surface.
+
+Suppose we have a surface $S$ parametrized by $\vec{X}(s,t)$ in $\mathbb{R}^3$. If we find the tangent vectors $\vec{X}_s$ and $\vec{X}_t$ to the grid curves, these vectors will be parallel to the surface $S$. Then, if we take the cross product of these vectors, we obtain a vector $\vec{X}_s\times \vec{X}_t$ which is perpendicular to the surface $S$.
+
+PICTURE
+
+Now, it could be that $\vec{X}_s\times \vec{X}_t$ is the zero vector. Let's assume that our parametrization is such that $\vec{X}_s\times\vec{X}_t$ is never zero, and is a continuous function of $s$ and $t$. Then, we can normalize $\vec{X}_s\times \vec{X}_t$ by dividing by its length. This gives us a unit vector which is perpendicular the surface. So, we can define
+\[
+\vec{n}(s,t) = \frac{\vec{X}_s\times\vec{X}_t}{\|\vec{X}_s\times\vec{X}_t\|},
+\]
+and this gives us an orientation on $S$.
+
+Let's use this idea to show that a surface is orientable.
+
+\begin{example}
+Consider the paraboloid parametrized by $vec{X}(s,t) = (s, t, s^2+t^2)$ for $0\leq s,t\leq 1$.
+
+PICTURE
+
+We will show that this surface is orientable, by finding an orientation.
+
+First, let's find the partial derivatives $\vec{X}_s$ and $\vec{X}_t$.
+\begin{align*}
+\vec{X}_s(s,t) &= (1,0,2s)\\
+\vec{X}_t(s,t) &= (0,1,2t)
+\end{align*}
+Next, we find the cross product $\vec{X}_s\times\vec{X}_t$.
+\begin{align*}
+\vec{X}_s(s,t)\times\vec{X}_t(s,t) &= \text{det}\begin{pmatrix}
+\vec{i} & \vec{j} & \vec{k}\\
+1 & 0 & 2s\\
+0 & 1 & 2t
+\end{pmatrix}\\
+&= (-2s)\vec{i} + (-2t)\vec{j} + \vec{k}\\
+&= (-2s,-2t,1)
+\end{align*}
+Notice that this is never the zero vector, no matter the values of $s$ and $t$. So, we can normalize $\vec{X}_s\times\vec{X}_t$, to obtain a unit vector. This gives us our orientation, giving a normal vector to the surface at all points.
+\begin{align*}
+\vec{n}(s,t) &= \frac{\vec{X}_s\times\vec{X}_t}{\|\vec{X}_s\times\vec{X}_t\|}\\
+&= \frac{(-2s,-2t,1)}{\sqrt{4s^2+4t^2+1}}\\
+&= \left(\frac{-2s}{\sqrt{4s^2+4t^2+1}}, \frac{-2t}{\sqrt{4s^2+4t^2+1}}, \frac{1}{\sqrt{4s^2+4t^2+1}}\right)
+\end{align*}
+\end{example}
+
+\end{document}

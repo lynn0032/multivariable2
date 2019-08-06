@@ -1,0 +1,102 @@
+\documentclass{ximera}  
+
+%\usepackage{ esint }
+
+\title{The Divergence Theorem}  
+\author{Melissa Lynn}
+\outcome{Understand the statement and geometric idea of the divergence theorem.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle 
+
+Given a region $D$ and vector field $\vec{F}$ in $\mathbb{R}^2$, we found that the double integral of the curl of $\vec{F}$ over $D$ is equal to the vector line integral of $\vec{F}$ over the boundary of $D$. This result is called Green's theorem.
+
+\begin{theorem}
+\textbf{Green's Theorem.} Let $D$ be a closed an bounded region in $\mathbb{R}^2$, whose boundary $\partial D$ consists of finitely many simple and piecewise smooth curves. Let $\vec{F}$ be a $\mathcal{C}^1$ vector field defined on $D$, written in components as $\vec{F}(x,y) = (M(x,y), N(x,y))$. Then
+\[
+\oint_{\partial D}\vec{F}\cdot d\vec{s} = \iint_D \left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\;dA.
+\]
+\end{theorem}
+
+In order to apply Green's theorem, we require that the boundary be positively oriented with respect to the region. This means that, as we traverse the boundary in the indicated direction, the region will be on our right.
+
+PICTURE
+
+We'll now work towards a version of Green's theorem for solid regions in $\mathbb{R}^3$, and this result will be called the divergence theorem.
+
+\section*{Requirements on the boundary}
+
+As with Green's theorem, we need to be careful about orientation.
+
+Suppose we have a solid region $W$ in $\mathbb{R}^3$, whose boundary $\partial W$ is an orientable surface. We say that $\partial W$ is \emph{positively oriented} if its normal vector points away from the region $W$.
+
+For regions which don't have any holes, this always means the outward pointing normal vector.
+
+PICTURE
+
+For a region with a hole, this can be a bit trickier, but we still choose the normal vector(s) to point away from the region $W$.
+
+PICTURE
+
+\begin{example}
+Which of the boundaries below are positively oriented?
+
+\begin{multipleChoice}
+\choice{Positively oriented}
+\choice{Not positively oriented}
+\end{multipleChoice}
+\end{example}
+
+In addition to being positively oriented, we will require that the boundary surfaces be closed. A surface is \emph{closed} if it has no boundary curves.
+
+For example, the following surfaces are closed.
+
+PICTURE
+
+The following surfaces are not closed, since they have boundary curves.
+
+PICTURE
+
+\begin{example}
+Which are of surfaces below are closed?
+
+\begin{multipleChoice}
+\choice{Closed}
+\choice{Not closed}
+\end{multipleChoice}
+\end{example}
+
+Notice that saying a surface is a closed surface means something different from saying that a surface is closed as a set. This is an example of very confusing terminology in math, where a single word is used to mean two different things!
+
+\section*{Divergence theorem}
+
+Now, suppose we have a vector field $\vec{F}$ defined on a solid region $W$ with a positively oriented boundary. Now, consider the triple integral
+\[
+\iiint_W \nabla\cdot \vec{F}\;dV.
+\]
+Let's figure out what this integral represents. Recall that the divergence of a vector field measures the local expansion or contraction of a vector field. When we integrate the divergence over a region, we obtain the total net expansion or contraction of the vector field over that region.
+
+PICTURE
+
+However, if we look at points on the interior of the region, any expansion or contraction stays within the region. So, in the integral, it would be canceled by expansion or contraction at nearby points. This means that everything in the interior of the region cancels, and we are left with considering what happens on the boundary. The total net expansion or contraction on the boundary is equivalent to the flow of the vector field across the boundary, which leads us to a flux integral.
+
+PICTURE
+
+This is the geometric intuition behind the divergence theorem, which we now state.
+
+\begin{theorem}
+\textbf{Divergence Theorem.} Let $W$ be a solid region in $\mathbb{R}^3$, with boundary $\partial W$. Suppose that $\partial W$ consists of finitely many orientable, piecewise smooth, and closed surfaces, which are positively oriented with respect to $W$. Let $\vec{F}$ be a $\mathcal{C}^1$ vector field defined on $W$. Then
+\[
+\oiint_{\partial W} \vec{F}\cdot d\vec{S} = \iiint_W \nabla\cdot \vec{F}\;dV.
+\]
+\end{theorem}
+
+We'll now prove the divergence theorem.
+
+\begin{proof}
+INSERT PROOF HERE.
+\end{proof}
+
+\end{document}

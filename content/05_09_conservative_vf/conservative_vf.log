@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=latex 2018.4.16)  19 JUL 2019 09:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=latex 2018.4.16)  28 JUL 2019 16:39
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1681,140 +1681,7 @@ l.21 --- TeX4ht warning --- \usepackage{tex4ht} again? ---
 l.30 --- TeX4ht warning --- if \RequirePackage[tex4ht]{hyperref} or \usepackage
 [tex4ht]{hyperref} was used try instead, repectively, \RequirePackage{hyperref}
  or \usepackage{hyperref} ---
-) (/usr/local/texlive/2018/texmf-dist/tex/generic/xypic/xypic.sty
-(/usr/local/texlive/2018/texmf-dist/tex/generic/xypic/xy.sty
-(/usr/local/texlive/2018/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing:
-catcodes, docmode,
-(/usr/local/texlive/2018/texmf-dist/tex/generic/xypic/xyrecat.tex)
-(/usr/local/texlive/2018/texmf-dist/tex/generic/xypic/xyidioms.tex)
-
- Xy-pic version 3.8.9 <2013/10/06>
- Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
- Xy-pic is free software: see the User's Guide for details.
-
-Loading kernel: messages; fonts; allocations: state,
-\X@c=\dimen195
-\Y@c=\dimen196
-\U@c=\dimen197
-\D@c=\dimen198
-\L@c=\dimen199
-\R@c=\dimen256
-\Edge@c=\toks55
-\X@p=\dimen257
-\Y@p=\dimen258
-\U@p=\dimen259
-\D@p=\dimen260
-\L@p=\dimen261
-\R@p=\dimen262
-\Edge@p=\toks56
-\X@origin=\dimen263
-\Y@origin=\dimen264
-\X@xbase=\dimen265
-\Y@xbase=\dimen266
-\X@ybase=\dimen267
-\Y@ybase=\dimen268
-\X@min=\dimen269
-\Y@min=\dimen270
-\X@max=\dimen271
-\Y@max=\dimen272
-\lastobjectbox@=\box48
-\zerodotbox@=\box49
-\almostz@=\dimen273
- direction,
-\d@X=\dimen274
-\d@Y=\dimen275
-\K@=\count191
-\KK@=\count192
-\Direction=\count193
-\K@dXdY=\dimen276
-\K@dYdX=\dimen277
-\xyread@=\read3
-\xywrite@=\write6
-\csp@=\count194
-\quotPTK@=\dimen278
-
-utility macros; pictures: \xy, positions,
-\swaptoks@@=\toks57
-\connectobjectbox@@=\box50
- objects,
-\styletoks@=\toks58
- decorations;
-kernel objects: directionals, circles, text; options; algorithms: directions,
-edges, connections;  Xy-pic loaded)
-
-LaTeX Warning: You have requested package `xypic',
-               but the package provides `xy'.
-
-Package: xy 2013/10/06 Xy-pic version 3.8.9
-) (/usr/local/texlive/2018/texmf-dist/tex/generic/xypic/xyv2.tex
- Xy-pic option: Version 2 Compatibility v.3.8
-
-Xy-pic Warning: `\stop' redefined.
-
-(/usr/local/texlive/2018/texmf-dist/tex/generic/xypic/xyframe.tex
- Xy-pic option: Frame and Bracket extension v.3.14 loaded)
-(/usr/local/texlive/2018/texmf-dist/tex/generic/xypic/xymatrix.tex
- Xy-pic option: Matrix feature v.3.14
-\Row=\count195
-\Col=\count196
-\queue@=\toks59
-\queue@@=\toks60
-\qcount@=\count197
-\qcount@@=\count198
-\matrixsize@=\count199
- loaded)
-(/usr/local/texlive/2018/texmf-dist/tex/generic/xypic/xyarrow.tex
- Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded) loaded))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/setspace/setspace.sty
-Package: setspace 2011/12/19 v6.7a set line spacing
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/xspace.sty
-Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks61
-\verbatim@line=\toks62
-\verbatim@in@stream=\read4
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
-Package: tikz-cd 2014/10/30 v0.9e Commutative diagrams with tikz
-
-(/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/usepackage.4ht)
-(/usr/local/texlive/2018/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
-(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarymatrix.code.tex
-File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.4)
-)
-(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryquotes.code.tex
-File: tikzlibraryquotes.code.tex 2014/03/21 v3.0.1a (rcs-revision 1.4)
-)
-(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
-meta.code.tex
-File: pgflibraryarrows.meta.code.tex 2015/05/13 v3.0.1a (rcs-revision 1.13)
-\pgfarrowinset=\dimen279
-\pgfarrowlength=\dimen280
-\pgfarrowwidth=\dimen281
-\pgfarrowlinewidth=\dimen282
-)))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/dashbox/dashbox.sty
-Package: dashbox 2001/12/11 v1.14 Dashed and layered boxes
-\dashlength=\skip61
-\dashdash=\skip62
-\layersize=\skip63
-\d@shedsavebox=\box51
-\d@shedboxwidth=\skip64
-\d@shedboxtotalheight=\skip65
-\l@yersavebox=\box52
-\l@yerwidth=\skip66
-\l@yerboxwidth=\skip67
-\l@yertotalheight=\skip68
-\l@yerlineheight=\skip69
-\l@yervoffset=\skip70
-\c@l@yercount=\count266
-)
-(/Users/Melissa/Library/texmf/tex/latex/ximeraLatex/ximera.cfg
+) (/Users/Melissa/Library/texmf/tex/latex/ximeraLatex/ximera.cfg
 (/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/tex4ht.4ht
 version 2017-05-09-09:21
 --------------------------------------
@@ -1828,14 +1695,14 @@ version 2017-05-09-09:21
 version 2018-03-29-15:50
 
 --- needs --- tex4ht conservative_vf ---
-\tmp:cnt=\count267
+\tmp:cnt=\count191
 \openout15 = `conservative_vf.tmp'.
 
 (./conservative_vf.tmp)
-\tmp:dim=\skip71
+\tmp:dim=\skip61
  (./conservative_vf.xref)
-\:refout=\write7
-\openout7 = `conservative_vf.xref'.
+\:refout=\write6
+\openout6 = `conservative_vf.xref'.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/html4.4ht
@@ -1912,8 +1779,8 @@ on `imgdir:.../'
 (/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/html4-math.4ht
 version 2017-03-30-16:04
 )
-\:tokwrite=\toks63
-\:tokpage=\toks64
+\:tokwrite=\toks55
+\:tokpage=\toks56
 --------------------------------------
 --- Note --- for back links to toc, use the command line option `sections+'
 --------------------------------------
@@ -1923,8 +1790,8 @@ version 2017-03-30-16:04
 --------------------------------------
 \openout15 = `conservative_vf.4ct'.
 
-\:tocout=\write8
-\openout8 = `conservative_vf.4tc'.
+\:tocout=\write7
+\openout7 = `conservative_vf.4tc'.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/html4.4ht
@@ -2050,19 +1917,19 @@ version 2017-03-30-16:04
 (/Users/Melissa/Library/texmf/tex/latex/ximeraLatex/ximera.4ht
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
-\MT@toks=\toks65
-\MT@count=\count268
+\MT@toks=\toks57
+\MT@count=\count192
 LaTeX Info: Redefining \textls on input line 793.
-\MT@outer@kern=\dimen283
+\MT@outer@kern=\dimen195
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count269
+\MT@listname@count=\count193
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 913.
 LaTeX Info: Redefining \lslig on input line 913.
-\MT@outer@space=\skip72
+\MT@outer@space=\skip62
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -2083,7 +1950,7 @@ l.51 \Configure
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-\c@identification=\count270
+\c@identification=\count194
 
 /Users/Melissa/Library/texmf/tex/latex/ximeraLatex/ximera.4ht:69: LaTeX Error: 
 Environment xarmaBoost undefined in `ximera.cfg'.
@@ -2110,8 +1977,8 @@ l.71 \ConfigureQuestionEnv{shuffle}{shuffle}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-\c@imagealt=\count271
-\c@choiceId=\count272
+\c@imagealt=\count195
+\c@choiceId=\count196
 /Users/Melissa/Library/texmf/tex/latex/ximeraLatex/ximera.4ht:234: Illegal para
 meter number in definition of \desmos.
 <to be read again> 
@@ -2371,7 +2238,7 @@ version 2017-03-30-16:04
 (/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/hyperref.4ht
 version 2016-01-12-16:05
 LaTeX Info: Redefining \autoref on input line 95.
-\Hy@SectionHShift=\skip73
+\Hy@SectionHShift=\skip63
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/html4.4ht
 version 2018-02-21-09:31
@@ -2380,24 +2247,6 @@ version 2018-02-21-09:31
 version 2017-03-30-16:04
 ))
 (/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/pd1enc.4ht
-version 2009-05-21-09:32
-
-(/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/html4.4ht
-version 2018-02-21-09:31
-)
-(/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/html4-math.4ht
-version 2017-03-30-16:04
-))
-(/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/xy.4ht
-version 2009-05-21-09:32
-
-(/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/html4.4ht
-version 2018-02-21-09:31
-)
-(/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/html4-math.4ht
-version 2017-03-30-16:04
-))
-(/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/verbatim.4ht
 version 2009-05-21-09:32
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/tex4ht/html4.4ht
@@ -2416,8 +2265,9 @@ runsystem(sed -i "/@/d" conservative_vf.jax)...executed.
 
 runsystem(sed -i "s/##\\([0-9]\\)/#\\1/g" conservative_vf.jax)...executed.
 
-\eqtoks=\toks66
 
+l.53 --- TeX4ht warning --- \Configure{verbatiminput}? ---
+\eqtoks=\toks58
 (./conservative_vf.oc) (./conservative_vf.aux)
 \openout1 = `conservative_vf.aux'.
 
@@ -2442,8 +2292,8 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into
 your preamble.
  on input line 158.
 
-\c@lstlisting=\count273
-\AtBeginShipoutBox=\box53
+\c@lstlisting=\count197
+\AtBeginShipoutBox=\box48
 Package hyperref Info: Link coloring ON on input line 158.
 LaTeX Info: Redefining \ref on input line 158.
 LaTeX Info: Redefining \pageref on input line 158.
@@ -2465,13 +2315,6 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 )
-Overfull \hbox (18389.2243pt too wide) in paragraph at lines 158--12
-\OT1/cmr/m/n/10 Lynn[][][][][][][][][][][][][][][][][] 
- []
-
-[1
-
-] [2]
 
 ./conservative_vf.tex:12: LaTeX Error: Environment abstract undefined.
 
@@ -2513,23 +2356,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [3]
-[4] [5] [6] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 210.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
+) [1
+
+]
+[2] [3] [4] [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
  (./conservative_vf.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 210.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 210.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 212.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 212.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 212.
  ) 
 Here is how much of TeX's memory you used:
- 37611 strings out of 492650
- 823254 string characters out of 6129648
- 1208338 words of memory out of 5000000
- 40645 multiletter control sequences out of 15000+600000
- 7419 words of font info for 32 fonts, out of 8000000 for 9000
+ 34947 strings out of 492650
+ 774055 string characters out of 6129648
+ 1100921 words of memory out of 5000000
+ 38058 multiletter control sequences out of 15000+600000
+ 6546 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,6n,98p,4134b,867s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,6n,98p,1228b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on conservative_vf.dvi (8 pages, 96352 bytes).
+Output written on conservative_vf.dvi (6 pages, 28580 bytes).

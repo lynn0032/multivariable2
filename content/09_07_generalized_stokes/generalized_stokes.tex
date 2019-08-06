@@ -1,0 +1,105 @@
+\documentclass{ximera}  
+
+%\usepackage{ esint }
+
+\title{Generalized Stokes}  
+\author{Melissa Lynn}
+\outcome{See the similarities between the various special cases of Stokes theorem we've covered.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle 
+
+Throughout calculus, we've seen many different theorems which relate integrals over some region with behavior on the boundary of the region. The earliest example of this is in the fundamental theorem of calculus, also called the evaluation theorem.
+
+\begin{theorem}
+\textbf{Fundamental Theorem of Calculus}
+
+Let $f$ be a continuous function on a closed interval $[a,b]$, and let $F$ be an antiderivative of $f$. Then
+\[
+\int_a^b f(x)\;dx = F(b) - F(a).
+\]
+\end{theorem}
+
+Here, we integrate over the closed interval $[a,b]$, and the boundary of this region consists of two points, $a$ and $b$. Also, the integrand $f$ is the derivative of the function $F$, which is evaluated at the endpoints.
+
+We saw similar behavior for line integrals of conservative vector fields, in the fundamental theorem of line integrals.
+
+\begin{theorem}
+\textbf{Fundamental Theorem of Line Integrals}
+
+Let $f:X\subset \mathbb{R}^n\rightarrow \mathbb{R}$ be $C^1$, where $X$ is open and path-connected. Then if $C$ is any piecewise $C^1$ curve from $\textbf{A}$ to $\textbf{B}$, then
+\[
+\int_C\nabla f\cdot d\textbf{s} = f(\textbf{B})-f(\textbf{A})
+\]
+\end{theorem}
+
+Here, we integrate over the curve $C$, and the boundary of this curve is the two points $\vec{A}$ and $\vec{B}$. The integrand, $\nabla f$, is the gradient of the function $f$, which is evaluated at the endpoints.
+
+Next, we went up a dimension, to consider regions in $\mathbb{R}^2$, through Green's theorem.
+
+\begin{theorem}
+\textbf{Green's Theorem}
+
+Let $D$ be a closed an bounded region in $\mathbb{R}^2$, whose boundary $\partial D$ consists of finitely many simple and piecewise smooth curves. Let $\vec{F}$ be a $\mathcal{C}^1$ vector field defined on $D$, written in components as $\vec{F}(x,y) = (M(x,y), N(x,y))$. Then
+\[
+\oint_{\partial D}\vec{F}\cdot d\vec{s} = \iint_D \left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\;dA.
+\]
+\end{theorem}
+
+We have a double integral over a region $D$, compared to a line integral over the boundary of $D$. When we look at the integrand of the double integral, $\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}$ is the two-dimensional curl of the vector field $\vec{F}$.
+
+Considering surfaces in $\mathbb{R}^3$, we next arrived at Stokes theorem.
+
+\begin{theorem}
+\textbf{Stokes Theorem}
+
+Suppose $S$ is a smooth and bounded surface in $\mathbb{R}^3$, and that $\partial S$ consists of finitely many closed, simple, and piecewise $\mathcal{C}^1$ curves. Suppose further that $S$ and $\partial S$ are consistently oriented. Let $\vec{F}$ be a $\mathcal{C}^1$ vector field, which is defined on $S$. Then
+\[
+\oint_{\partial S}\vec{F}\cdot d\vec{s} = \iint_S \nabla\times \vec{F}\cdot d\vec{S},
+\]
+where $\nabla\times \vec{F}$ denotes the curl of $\vec{F}$.
+\end{theorem}
+
+Similar to Green's theorem, we have a double integral over a surface $S$, compared to a line integral over the boundary of $S$. The integrand of the double integral is the curl of the vector field $\vec{F}$.
+
+Finally, the divergence theorem related a triple integral over a region in $\mathbb{R}^3$ with a flux integral over the boundary of the region.
+
+\begin{theorem}
+\textbf{Divergence Theorem}
+
+Let $W$ be a solid region in $\mathbb{R}^3$, with boundary $\partial W$. Suppose that $\partial W$ consists of finitely many orientable, piecewise smooth, and closed surfaces, which are positively oriented with respect to $W$. Let $\vec{F}$ be a $\mathcal{C}^1$ vector field defined on $W$. Then
+\[
+\oiint_{\partial W} \vec{F}\cdot d\vec{S} = \iiint_W \nabla\cdot \vec{F}\;dV.
+\]
+\end{theorem}
+
+The integrand of the triple integral is the divergence of the vector field $\vec{F}$.
+
+\section*{Generalized Stokes theorem}
+
+In all of these theorems, we equated an integral over a region with an integral over its boundary. In each case, the integrand of the higher-dimensional integral was some sort of derivative.
+
+There is a theorem which in encompasses all of these results, as well as similar results for even higher dimensions. This result appears in an area of math called differential geometry, and is called the generalized Stokes theorem. Without going into too much detail, we give an approximate statement of this theorem here.
+
+\begin{theorem}
+\textbf{Generalized Stokes Theorem}
+
+Let $\Omega$ be an $n$-dimensional \emph{manifold}. Essentially, this means that $\Omega$ is a nice, smooth region in some $\mathbb{R}^n$. The sphere is an example of a two-dimensional manifold in $\mathbb{R}^3$.
+
+Let $\partial\Omega$ be the boundary of $\Omega$, positively oriented.
+
+Let $\omega$ be a \emph{differential form}. Roughly speaking, a differential form is something you integrate, and it consists of both the integrand and the differential from an integral. An example of a one-dimensional differential form is $x^2\;dx$.
+
+Let $d$ be a differential operator. Roughly, this means taking some sort of derivative. It could be the single variable operator $\frac{d}{dx}$, or the del operator $\nabla$.
+
+Under the right conditions, we have
+\[
+\int_{\Omega} d\omega = \int_{\partial \Omega}\omega.
+\]
+
+So, integrating $d\omega$ over the region $\Omega$ is equivalent to integrating $\omega$ over the boundary $\partial \Omega$.
+\end{theorem}
+
+\end{document}

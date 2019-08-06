@@ -1,0 +1,163 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Double Integrals over Elementary Regions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="di_elementary.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Set up and evaluate double integrals over elementary regions."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >We’ve defined double integrals over rectangles, by approximating the volume under a
+surface with boxes.
+</p><!--l. 14--><p class="noindent" >PICTURE
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a 
+ id="x1-17r1"></a>Let <script type="math/tex">f:R\subset \mathbb {R}^2\rightarrow \mathbb {R}</script> be a function defined on a rectangle <script type="math/tex">R</script> in <script type="math/tex">\mathbb {R}^2</script>. The <em>double integral</em> of <script type="math/tex">f</script> over <script type="math/tex">R</script> is <script type="math/tex; mode=display"> \iint _R f(x,y) dA = \lim _{n\rightarrow \infty } \sum _{i,j} f(\vec {c}_{ij})\Delta x\Delta y, </script>
+provided this limit exists.
+</div>
+<!--l. 24--><p class="noindent" >We used Fubini’s theorem to show that we can evaluate double integrals using
+iterated integrals.
+</p><!--l. 26--><p class="noindent" >Now, we would like to define and evaluate double integrals over regions which aren’t
+rectangles. We will start by defining these double integrals.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Double integrals over an arbitrary region</h3>
+<!--l. 30--><p class="noindent" >Suppose we wish to integrate a function <script type="math/tex">f:X\subset \mathbb {R}^2\rightarrow \mathbb {R}</script> over a bounded region <script type="math/tex">D\subset X</script> contained in the
+domain of <script type="math/tex">f</script>. This region, <script type="math/tex">D</script>, may be an elementary region, but this is not required for
+the definition.
+</p><!--l. 32--><p class="noindent" >PICTURE
+</p><!--l. 34--><p class="noindent" >We will define the double integral of <script type="math/tex">f</script> over <script type="math/tex">D</script>, using a double integral over a rectangle.
+That is, consider a function <script type="math/tex">f^{\text {ext}}</script>, which is defined to be equal to <script type="math/tex">f</script> on <script type="math/tex">D</script>, and zero
+elsewhere.
+</p>
+                                                                  
+
+                                                                  
+<div class="theorem-like problem-environment definition" id="problem2"><a 
+ id="x1-1001r2"></a>Let <script type="math/tex">f^{\text {ext}}:\mathbb {R}^2\rightarrow \mathbb {R}</script> be the function defined by <script type="math/tex; mode=display"> f^{\text {ext}}(x,y) = \begin {cases} f(x,y), & (x,y)\in D\\ 0, & (x,y)\notin D \end {cases}. </script>
+</div>
+<!--l. 46--><p class="noindent" >Now, let <script type="math/tex">R</script> be a rectangle containing <script type="math/tex">D</script>. Since <script type="math/tex">D</script> is bounded, such a rectangle exists. Then,
+we can see that the volume under <script type="math/tex">f</script> and over <script type="math/tex">D</script> is equivalent to the the volume under <script type="math/tex">f^{\text {ext}}</script>
+and over <script type="math/tex">R</script>.
+</p><!--l. 48--><p class="noindent" >PICTURE
+</p><!--l. 50--><p class="noindent" >Thus, we define the double integral of <script type="math/tex">f</script> over <script type="math/tex">D</script> using the double integral of <script type="math/tex">f^{\text {ext}}</script> over
+<script type="math/tex">R</script>.
+</p>
+<div class="theorem-like problem-environment definition" id="problem3"><a 
+ id="x1-1002r3"></a>Let <script type="math/tex">D</script> be a bounded region in <script type="math/tex">\mathbb {R}^2</script>, and let <script type="math/tex">R</script> be a rectangle containing <script type="math/tex">D</script>. Let <script type="math/tex">f:X\subset \mathbb {R}^2\rightarrow \mathbb {R}</script> be
+a function defined on <script type="math/tex">D</script>. Then we define the <em>double integral of <script type="math/tex">f</script> over <script type="math/tex">D</script></em> to be
+<script type="math/tex; mode=display"> \iint _D f\;dA = \iint _R f^{\text {ext}}\;dA. </script>
+</div>
+<!--l. 59--><p class="noindent" >Although this provides us with a definition for double integrals, this definition isn’t
+very useful for evaluating double integrals. Next, we’ll look at how we can evaluate
+double integrals over elementary regions.
+<a 
+ id="Q1-1-3"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Evaluating double integrals over elementary regions</h3>
+<!--l. 63--><p class="noindent" >When <script type="math/tex">D</script> is an elementary regions, we can describe it using inequalities, and then use
+these inequalities for the bounds of integration.
+</p>
+<div class="theorem-like problem-environment proposition" id="problem4"><a 
+ id="x1-2001r4"></a>Consider an <script type="math/tex">x</script>-simple region <script type="math/tex">D</script>, which can be described as the set of points <script type="math/tex">(x,y)</script> such that
+<script type="math/tex; mode=display"> \begin{align*} 
+a\leq &x\leq b\text{, and}\\
+g(x)\leq &y \leq h(x),
+\end{align*}</script>
+<!--l. 71--><p class="noindent" >where <script type="math/tex">g(x)</script> and <script type="math/tex">h(x)</script> are continuous functions. Then we can evaluate the double integral of a
+function <script type="math/tex">f(x,y)</script> over <script type="math/tex">D</script> as <script type="math/tex; mode=display"> \iint _D f(x,y)\;dA = \int _a^b\int _{g(x)}^{h(x)} f(x,y)\;dydx. </script>
+</p><!--l. 76--><p class="noindent" >Consider a <script type="math/tex">y</script>-simple region <script type="math/tex">D</script>, which can be described as the set of points <script type="math/tex">(x,y)</script> such that
+</p><script type="math/tex; mode=display"> \begin{align*} 
+c\leq & y\leq d\text{, and}\\
+g(y)\leq & x \leq h(y),
+\end{align*}</script>
+<!--l. 81--><p class="noindent" >where <script type="math/tex">g(y)</script> and <script type="math/tex">h(y)</script> are continuous functions. Then we can evaluate the double integral of a
+function <script type="math/tex">f(x,y)</script> over <script type="math/tex">D</script> as <script type="math/tex; mode=display"> \iint _D f(x,y)\;dA = \int _c^d\int _{g(y)}^{h(y)} f(x,y)\;dxdy. </script>
+</div>
+</p><!--l. 87--><p class="noindent" >Let’s look at how we can evaluate double integrals over elementary regions.
+                                                                  
+
+                                                                  
+</p>
+<div class="theorem-like problem-environment example" id="problem5"><a 
+ id="x1-2002r5"></a>Consider the <script type="math/tex">x</script>-simple region <script type="math/tex">D</script> below, which is bounded by the curves <script type="math/tex">x=-1</script>, <script type="math/tex">x=1</script>, <script type="math/tex">y=0</script>, and
+<script type="math/tex">y=x^2</script>.
+<!--l. 92--><p class="noindent" >PICTURE
+</p><!--l. 94--><p class="noindent" >Let’s integrate the function <script type="math/tex">f(x,y)=x^2y</script> over this region. Since <script type="math/tex">D</script> can be described with the
+inequalities </p><script type="math/tex; mode=display"> \begin{align*} 
+-1\leq &x\leq 1\text{, and}\\
+0\leq &y\leq x^2.
+\end{align*}</script>
+<!--l. 99--><p class="noindent" >We have </p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_D f\;dA &= \int_{-1}^1\int_0^{x^2}x^2y\;dydx\\
+&=\int_{-1}^1\left(\frac{1}{2}x^2y^2|_{y=0}^{y=x^2}\right)\;dx\\
+&= \int_{-1}^1\left(\frac{1}{2}x^2(x^2)^2 - 0\right)\;dx\\
+&= \int_{-1}^1\left(\frac{1}{2}x^6\right)\;dx\\
+&= \left(\frac{1}{14}x^7\right)|_{x=-1}^{x=1}\\
+&= \left(\frac{1}{14}\cdot 1^7\right) - \left(\frac{1}{14}\cdot (-1)^7\right)\\
+&= \frac{1}{7}.
+\end{align*}</script>
+<!--l. 109--><p class="noindent" ></div>
+</p><!--l. 111--><p class="noindent" >When evaluating these double integrals, it can be very useful to start be drawing the
+region of integration, in order to determine the bounds.
+</p>
+<div class="theorem-like problem-environment example" id="problem6"><a 
+ id="x1-2003r6"></a>We’ll evaluate the double integral <script type="math/tex">\iint _D f\;dA</script>, where <script type="math/tex">f(x,y) = \sin (y^2)</script> and <script type="math/tex">D</script> is the region below.
+<!--l. 116--><p class="noindent" >PICTURE
+</p><!--l. 118--><p class="noindent" >The region <script type="math/tex">D</script> is <script type="math/tex">y</script>-simple, and can be described with the inequalities
+</p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq &y\leq \sqrt{\pi}\text{, and}\\
+-y\leq &x\leq y.
+\end{align*}</script>
+<!--l. 123--><p class="noindent" >We evaluate the double integral. </p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_D f\;dA &= \int_0^{\sqrt{\pi}}\int_{-y}^y \sin(y^2)\;dxdy\\
+&= \int_0^{\sqrt{\pi}}\left(\sin(y^2)x\right)|_{x={-y}}^{x=y}\;dy\\
+&= \int_0^{\sqrt{\pi}}\left(2y\sin(y^2)\right)\;dy\\
+&= \left(-\cos(y^2)\right)|_{y=0}^{y=\sqrt{\pi}}\\
+&= -\cos(\sqrt{\pi}^2) + \cos(0^2)\\
+&= 2
+                                                                  
+
+                                                                  
+\end{align*}</script>
+<!--l. 132--><p class="noindent" ></div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

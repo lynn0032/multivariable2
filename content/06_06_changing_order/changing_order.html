@@ -1,0 +1,125 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Changing the Order of Integration</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="changing_order.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Change the order of integration in double integrals over elementary regions."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >Consider the integral <script type="math/tex">\iint _D \sin (y^2)\;dA</script>, where <script type="math/tex">D</script> is the region below.
+</p><!--l. 14--><p class="noindent" >PICTURE
+</p><!--l. 16--><p class="noindent" >The region <script type="math/tex">D</script> is <script type="math/tex">x</script>-simple, and can be described with the inequalities
+</p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq &x\leq \sqrt{\pi}\text{, and}\\
+0\leq &y\leq 2x
+\end{align*}</script>
+<!--l. 21--><p class="noindent" >Thus, we can write the double integral as <script type="math/tex; mode=display"> \iint _D f\;dA = \int _0^{\sqrt {\pi }}\int _0^{2x}\sin (y^2)\;dy\;dx. </script>
+</p><!--l. 26--><p class="noindent" >Alternatively, the region <script type="math/tex">D</script> is <script type="math/tex">y</script>-simple, and can be described with the inequalities
+</p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq &y\leq \frac{1}{2}\sqrt{\pi}\text{, and}\\
+0\leq &x\leq \frac{y}{2}.
+\end{align*}</script>
+<!--l. 31--><p class="noindent" >Thus, we can write the double integral as <script type="math/tex; mode=display"> \iint _D f\;dA = \int _0^{\sqrt {\pi }/2}\int _0^{y/2} \sin (y^2)\;dxdy. </script>
+</p><!--l. 36--><p class="noindent" >Notice that for the first integral, we integrate with respect to <script type="math/tex">y</script> and then with
+respect to <script type="math/tex">x</script>. For the other integral, we integrate with respect to <script type="math/tex">x</script> and then
+with respect to <script type="math/tex">y</script>. These integrals can be used to evaluate the double integral
+of the same function over the same region, so they should give the same
+value.
+</p><!--l. 38--><p class="noindent" >Let’s see what happens when we evaluate each of the integrals. For the first integral,
+we have <script type="math/tex; mode=display"> \iint _D f\;dA = \int _0^{\sqrt {\pi }}\int _0^{2x}\sin (y^2)\;dy\;dx. </script> Here, we’re stuck right away. We don’t have a nice, easy formula for an
+antiderivative of <script type="math/tex">\sin (y^2)</script>.
+                                                                  
+
+                                                                  
+</p><!--l. 44--><p class="noindent" >Maybe we’ll have better luck with the second integral.
+</p>
+<script type="math/tex; mode=display"> \begin{align*} 
+\iint_D f\;dA &= \int_0^{\sqrt{\pi}/2}\int_0^{y/2} \sin(y^2)\;dxdy\\
+&= \int_0^{\sqrt{\pi}/2}\left(\sin(y^2)x\right)|_{x=0}^{x=y/2}\;dy\\
+&= \int_0^{\sqrt{\pi}/2}\left(\frac{y}{2}\sin(y^2)\right)\;dy\\
+&= \left(-\frac{1}{4}\cos(y^2)\right)|_{y=0}^{y=\sqrt{\pi}}\\
+&= -\frac{1}{4}\cos(\sqrt{\pi}^2) + \frac{1}{4}\cos(0^2)\\
+&= \frac{1}{2}
+\end{align*}</script>
+<!--l. 55--><p class="noindent" >In this example, evaluate the integral with respect to <script type="math/tex">x</script> and then <script type="math/tex">y</script> was much easier
+than integrating with respect to <script type="math/tex">y</script> and then <script type="math/tex">x</script>.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Changing the order of integration</h3>
+<!--l. 59--><p class="noindent" >As in the example above, sometimes a certain order of integration will be easier than
+the other, and it can be useful to change the order of integration. When we do this,
+it’s important to pay careful attention to the bounds, and it can be useful to sketch
+the region of integration.
+</p><!--l. 61--><p class="noindent" >Let’s look at some examples of changing the order of integration.
+</p>
+<div class="theorem-like problem-environment example" id="problem1"><a 
+ id="x1-1001r1"></a>Consider the integral <script type="math/tex; mode=display"> \int _0^2\int _{x^2}^{2x} x^3\;dydx. </script> We could evaluate this integral directly, but instead, we’ll
+change the order of integration for this integral, and then evaluate the resulting
+integral. In order to change the order of integration, we’ll start by sketching the
+region of integration.
+<!--l. 70--><p class="noindent" >PICTURE
+</p><!--l. 72--><p class="noindent" >We can describe this region using the inequalities </p><script type="math/tex; mode=display"> \begin{align*} 
+0\leq &y\leq 4\text{, and}\\
+y/2 \leq &x\leq \sqrt{y}.
+\end{align*}</script>
+<!--l. 77--><p class="noindent" >So, we can change the order of integration, writing <script type="math/tex; mode=display"> \int _0^2\int _{x^2}^{2x} x^3\;dydx = \int _0^4\int _{y/2}^{\sqrt {y}}x^3\;dxdy. </script> Evaluating our new integral, we have
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int_0^4\int_{y/2}^{\sqrt{y}}x^3\;dxdy &= \int_0^4\left(\frac{1}{4}x^4\right)|_{x=y/2}^{x=\sqrt{y}}dy\\
+&= \int_0^4\left(\frac{1}{4}\sqrt{y}^4 - \frac{1}{4}\left(\frac{y}{2}\right)^4\right)dy\\
+&= \int_0^4\left(\frac{1}{4}y^2 - \frac{1}{64}y^4\right)dy\\
+&= \left(\frac{1}{12}y^3 - \frac{1}{320}y^5\right)|_{y=0}^{y=4}\\
+                                                                  
+
+                                                                  
+&= 32/15.
+\end{align*}</script>
+<!--l. 89--><p class="noindent" ></div>
+</p>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-1002r2"></a>Now, consider the integral <script type="math/tex">\int _0^2\int _0^{x+1}x^2y\;dydx</script>. We’ll change the order of integration for this integral. To
+do this, we start by sketching the region of integration.
+<!--l. 94--><p class="noindent" >PICTURE
+</p><!--l. 96--><p class="noindent" >We can describe this region as points <script type="math/tex">(x,y)</script> with <script type="math/tex">0\leq y\leq 3</script>, but the bounds for <script type="math/tex">x</script> change. When <script type="math/tex">0\leq y\leq 1</script>, the
+bounds for <script type="math/tex">x</script> are <script type="math/tex">0\leq x\leq 2</script>. When <script type="math/tex">1 \leq y\leq 3</script>, the bounds for <script type="math/tex">x</script> are <script type="math/tex">y-1\leq x\leq 2</script>. Because of this, we need two integrals.
+That is, we have <script type="math/tex; mode=display"> \int _0^2\int _0^{x+1}x^2y\;dydx = \int _0^1\int _0^2 x^2y\;dydx + \int _1^3\int _{y-1}^2 x^2y\;dxdy. </script> We could then evaluate these integrals.
+</div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

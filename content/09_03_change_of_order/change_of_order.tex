@@ -1,0 +1,277 @@
+\documentclass{ximera}  
+
+\title{Triple Integrals over Elementary Regions}  
+\author{Melissa Lynn}
+\outcome{Evaluate triple integrals over elementary regions, and change the order of integration. Focus on visualizing regions.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+In this section, we'll look at how we can evaluate triple integrals over elementary regions. This will be similar to integrating double integrals over elementary regions, so we'll start with a quick review.
+
+\section*{Review of double integrals over elementary regions}
+
+To define a double integral over a region $D$, we used an extension function in order to leverage our definition of double integrals over rectangles. This extension function was defined as
+\[
+f^{\text{ext}}(x,y) = \begin{cases}
+f(x,y), & (x,y)\in D\\
+0, & (x,y)\notin D
+\end{cases}.
+\]
+We were then able to define the double integral of $f$ over $D$ using a double integral of $f^{\text{ext}}$ over a rectangle containing $D$.
+
+\begin{definition}
+Let $D$ be a bounded region in $\mathbb{R}^2$, and let $R$ be a rectangle containing $D$. Let $f:X\subset\mathbb{R}^2\rightarrow\mathbb{R}$ be a function defined on $D$. Then we define the \emph{double integral of $f$ over $D$} to be
+\[
+\iint_D f\;dA = \iint_R f^{\text{ext}}\;dA.
+\]
+\end{definition}
+
+We describe elementary regions in $\mathbb{R}^2$ using inequalities, which then provide our bounds of integration.
+
+\begin{proposition}
+Consider an $x$-simple region $D$, which can be described as the set of points $(x,y)$ such that
+\begin{align*}
+a\leq &x\leq b\text{, and}\\
+g(x)\leq &y \leq h(x),
+\end{align*}
+where $g(x)$ and $h(x)$ are continuous functions. Then we can evaluate the double integral of a function $f(x,y)$ over $D$ as
+\[
+\iint_D f(x,y)\;dA = \int_a^b\int_{g(x)}^{h(x)} f(x,y)\;dydx.
+\]
+
+Consider a $y$-simple region $D$, which can be described as the set of points $(x,y)$ such that
+\begin{align*}
+c\leq & y\leq d\text{, and}\\
+g(y)\leq & x \leq h(y),
+\end{align*}
+where $g(y)$ and $h(y)$ are continuous functions. Then we can evaluate the double integral of a function $f(x,y)$ over $D$ as
+\[
+\iint_D f(x,y)\;dA = \int_c^d\int_{g(y)}^{h(y)} f(x,y)\;dxdy.
+\]
+\end{proposition}
+
+When we wished to change the order of integration, it was important to visualize the region of integration, in order to correctly transform the inequalities.
+
+\section*{Triple integrals over elementary regions}
+
+We'll now define the triple integral of a function $f$ over a bounded region $D$ in $\mathbb{R}^3$.
+
+\begin{definition}
+Let $f:D\subset\mathbb{R}^3\rightarrow\mathbb{R}$ be a function defined on a bounded region $D$ in $\mathbb{R}^3$. We define an extension function by
+\[
+f^{\text{ext}}(x,y,z) = \begin{cases}
+f(x,y,z), & (x,y,z)\in D\\
+0, & (x,y,z)\notin D
+\end{cases}.
+\]
+Let $B$ be a box containing $D$. We define the \emph{triple integral of $f$ over $D$} to be
+\[
+\iiint_D f\;dV = \iiint_B f^{\text{ext}}\;dV.
+\]
+\end{definition}
+
+As with double integrals, we could most easily evaluate integrals over elementary regions, which we now define in $\mathbb{R}^3$.
+
+\begin{definition}
+An \emph{elementary region} $D$ in $\mathbb{R}^3$ is the set of points $(x,y,z)$ which can be described as one of the following:
+\begin{itemize}
+\item $a\leq x\leq b$, $f_1(x)\leq y \leq f_2(x)$, and $g_1(x,y)\leq z\leq g_2(x,y)$, where $f_1$, $f_2$, $g_1$ and $g_2$ are continuous functions. In this case,
+\[
+\iiint_D f\;dv = \int_a^b\int_{f_1(x)}^{f_2(x)}\int_{g_1(x,y)}^{g_2(x,y)}f\;dzdydx.
+\]
+\item $a\leq x\leq b$, $f_1(x)\leq z \leq f_2(x)$, and $g_1(x,z)\leq y\leq g_2(x,z)$, where $f_1$, $f_2$, $g_1$ and $g_2$ are continuous functions. In this case,
+\[
+\iiint_D f\;dv = \int_a^b\int_{f_1(x)}^{f_2(x)}\int_{g_1(x,z)}^{g_2(x,z)}f\;dydzdx.
+\]
+\item $a\leq y\leq b$, $f_1(y)\leq x \leq f_2(y)$, and $g_1(x,y)\leq z\leq g_2(x,y)$, where $f_1$, $f_2$, $g_1$ and $g_2$ are continuous functions. In this case,
+\[
+\iiint_D f\;dv = \int_a^b\int_{f_1(y)}^{f_2(y)}\int_{g_1(x,y)}^{g_2(x,y)}f\;dzdxdy.
+\]
+\item $a\leq y\leq b$, $f_1(y)\leq z \leq f_2(y)$, and $g_1(y,z)\leq x\leq g_2(y,z)$, where $f_1$, $f_2$, $g_1$ and $g_2$ are continuous functions. In this case,
+\[
+\iiint_D f\;dv = \int_a^b\int_{f_1(y)}^{f_2(y)}\int_{g_1(y,z)}^{g_2(y,z)}f\;dxdzdy.
+\]
+\item $a\leq z\leq b$, $f_1(z)\leq x \leq f_2(z)$, and $g_1(x,z)\leq y\leq g_2(x,z)$, where $f_1$, $f_2$, $g_1$ and $g_2$ are continuous functions. In this case,
+\[
+\iiint_D f\;dv = \int_a^b\int_{f_1(z)}^{f_2(z)}\int_{g_1(x,z)}^{g_2(x,z)}f\;dydxdz.
+\]
+\item $a\leq z\leq b$, $f_1(z)\leq y \leq f_2(z)$, and $g_1(y,z)\leq x\leq g_2(y,z)$, where $f_1$, $f_2$, $g_1$ and $g_2$ are continuous functions. In this case,
+\[
+\iiint_D f\;dv = \int_a^b\int_{f_1(z)}^{f_2(z)}\int_{g_1(y,z)}^{g_2(y,z)}f\;dxdydz.
+\]
+\end{itemize}
+\end{definition}
+
+Since there are so many different types of elementary regions in $\mathbb{R}^3$, we will not bother to distinguish between them. 
+
+We'll now look at an example of evaluating triple integrals over elementary regions in $\mathbb{R}^3$.
+
+\begin{example}
+Consider the region $D$ in $\mathbb{R}^3$ bounded by the surfaces $x=1$, $y=-x^2$, $y=x^2$, $z = -1$, and $z=xy^2$, pictured below.
+
+PICTURE
+
+This region can be described with the inequalities
+\begin{align*}
+0\leq &x\leq 1,\\
+-x^2\leq &y\leq x^2,\\
+-1\leq &z\leq xy^2.
+\end{align*}
+So, we can integrate the function $f(x,y,z) = xz$ over $D$ as
+\begin{align*}
+\iiint_D f\;dV &= \int_0^1\int_{-x^2}^{x^2}\int_{-1}^{xy^2} xz\;dzdydx\\
+&= \int_0^1\int_{-x^2}^{x^2}\left(\frac{1}{2}xz^2\right)_{z = -1}^{z = xy^2}\;dydx\\
+&= \int_0^1\int_{-x^2}^{x^2}\left(\frac{1}{2}x^3y^4-\frac{1}{2}x\right)\;dydx\\
+&= \int_0^1 \left(\frac{1}{10}x^3y^5 - \frac{1}{2}xy\right)_{y=-x^2}^{y=x^2}\;dx\\
+&= \int_0^1 \left(\left(\frac{1}{10}x^{13} - \frac{1}{4}x^3\right) - \left(-\frac{1}{10}x^{13} + \frac{1}{4}x^3\right)\right)\;dx\\
+&= \int_0^1\left(\frac{1}{5}x^{13} - \frac{1}{2}x^3\right)\;dx\\
+&= \left(\frac{1}{70}x^{14} - \frac{1}{8}x^4\right)_{x = 0}^{x=1}\\
+&= \frac{1}{70} - \frac{1}{8}\\
+&= -\frac{31}{280}.
+\end{align*}
+\end{example}
+
+\section*{Changing the order of integration}
+
+Now let's look at how we can change the order of integration in a triple integral. The most challenging part of this process is accurately visualizing the domain of integration from different perspectives. It can be helpful to think of the ``shadow'' that the region casts on the $xy$-, $xz$-, and $yz$-planes, in order to more effectively visualize the region.
+
+\begin{example}
+Consider the region $D$ in the first octant, bounded by the plane $x+2y+3z = 6$. This region is pictured below, along with its projections onto the $xy$-, $xz$-, and $yz$-planes. 
+
+PICTURE
+
+We'll set up integrals over this region, with three different orders of integration.
+
+First, let's set up a $dzdydx$ integral. Here, it's helpful to look at the projection of $D$ onto the $xy$-plane.
+
+PICTURE
+
+We see that this projection can be described with the inequalities
+\begin{align*}
+0\leq &x\leq 6,\\
+0\leq &y\leq \frac{6-x}{2}.
+\end{align*}
+
+Then, we also have $0\leq z\leq \frac{6-2y-x}{3}$. So we can set up an integral
+\[
+\iiint_D f\;dV = \int_0^6\int_0^{(6-x)/2}\int_0^{(6-2y-x)/3} f\;dzdydx.
+\]
+
+Next, let's set up a $dzdxdy$ integral. Again, we'll look at the projection of $D$ onto the $xy$-plane. 
+
+PICTURE
+
+From a different perspective, this projection can be described with the inequalities
+\begin{align*}
+0\leq &y\leq 3,\\
+0\leq &x\leq 6-2y.
+\end{align*}
+
+We also have $0\leq z\leq \frac{6-2y-x}{3}$, so we can set up an integral
+\[
+\iiint_D f\;dV = \int_0^3\int_0^{6-2y}\int_0^{(6-2y-x)/3} f\;dzdxdy.
+\]
+
+Finally, we'll set up a $dxdydz$ integral. Here, it will be helpful to look at the projection of $D$ onto the $yz$-plane.
+
+PICTURE
+
+This projection can be described with the inequalities
+\begin{align*}
+0\leq &y\leq 3,\\
+0\leq &z\leq \frac{6-2y}{3}.
+\end{align*}
+
+We also have $0\leq x\leq 6-2y-3z$, so we can set up an integral
+\[
+\iiint_D f\;dV = \int_0^3\int_0^{(6-2y)/3}\int_0^{6-2y-3z} f\;dxdydz.
+\]
+\end{example}
+
+\begin{example}
+Consider the integral
+\[
+\int_1^3\int_{-x}^0\int_0^{x+y} e^{x^2}y\;dzdydx.
+\]
+We'll change the order of integration to $dxdydz$. To do this, we first need to figure out what the domain of integration looks like. From the bounds on $x$ and $y$, we have the inequalities
+\begin{align*}
+1\leq &x\leq 3,\\
+-x\leq y\leq 0.
+\end{align*}
+These determine the following region in the $xy$-plane.
+
+PICTURE
+
+Putting this together with the bounds $0\leq z\leq x+y$, we can visualize our region of integration in $\mathbb{R}^3$.
+
+PICTURE
+
+Below, we have the projection of this region onto the $yz$-plane.
+
+PICTURE
+
+We can describe the projection with the inequalities
+\begin{align*}
+-3\leq &y\leq 0,\\
+0\leq &z\leq y+3.\\
+\end{align*}
+Over this projection, the $x$-coordinates in our region are bounded by the planes $z=x+y$ and $x=3$. In inequalities, this can be written
+\[
+y-z\leq x\leq 3.
+\]
+So, we have
+\[
+\int_1^3\int_{-x}^0\int_0^{x+y} e^{x^2}y\;dzdydx = \int_{-3}^0\int_0^{y+3}\int_{y-z}^3 e^{x^2}y\;dxdydz
+\]
+
+\end{example}
+
+\section*{Volume of an elementary region}
+
+When working with double integrals, we discovered that we could find the area of a region in $\mathbb{R}^2$ by integrating $1$ over the region. That is,
+\[
+\text{area}(D) = \iint_D 1\;dA.
+\]
+
+Similarly, we can find the volume of a region in $\mathbb{R}^3$ by integrating $1$ over the region.
+
+\begin{proposition}
+If $D$ is an elementary region in $\mathbb{R}^3$, then
+\[
+\text{volume}(D) = \iiint_D 1\;dV.
+\]
+\end{proposition}
+
+Let's look at an example of using this to compute volume.
+
+\begin{example}
+Let $D$ be the region in the first octant bounded by the plane $x+y+z=1$. We'll find the volume of this region.
+
+PICTURE
+
+The region $D$ can be described with the inequalities
+\begin{align*}
+0\leq x\leq 1,\\
+0\leq y\leq 1-x,\\
+0\leq z\leq 1-x-y.
+\end{align*}
+So we have
+\begin{align*}
+\text{volume}(D) = \int_0^1\int_0^{1-x}\int_0^{1-x-y} 1\;dzdydx\\
+&= \int_0^1\int_0^{1-x}(z)_0^{1-x-y} \;dydx\\
+&= \int_0^1\int_0^{1-x}1-x-y \;dydx\\
+&= \int_0^1\left(y-xy-\frac{1}{2}y^2\right)_0^{1-x} \;dx\\
+&= \int_0^1\left((1-x)-x(1-x)-\frac{1}{2}(1-x)^2\right) \;dx\\
+&= \int_0^1\left(1-x-x+x^2-\frac{1}{2}+x-\frac{1}{2}x^2\right) \;dx\\
+&= \int_0^1\left(\frac{1}{2}-x+\frac{1}{2}x^2\right) \;dx\\
+&= \left(\frac{1}{2}x-\frac{1}{2}x^2+\frac{1}{6}x^3\right)_{x=0}^{x=1}\\
+&= \frac{1}{6}.
+\end{align*}
+Thus, the volume of the region $D$ is $\frac{1}{6}$.
+\end{example}
+
+
+\end{document}

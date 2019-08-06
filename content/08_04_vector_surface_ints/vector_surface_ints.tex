@@ -1,0 +1,167 @@
+\documentclass{ximera}  
+
+\title{Vector Surface Integrals}  
+\author{Melissa Lynn}
+\outcome{Compute and understand the geometric meaning of vector surface integrals.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+Suppose you have water flowing through some filter, and you'd like a measure of how much water is going through the filter. If we represent the water flow with a vector field and the filter with a surface in $\mathbb{R}^3$, we can conceptualize this question as measuring the flow of the vector field through a surface.
+
+PICTURE
+
+We will find a way to integrate a vector field over a surface, so that the integral will represent the flow of the vector field through the surface.
+
+We've discussed how the orientation of the surface will affect whether we view the flow as positive or negative. An orientation on a surface is a continuous choice of unit normal vector on the surface, and the normal vector indicates the direction of positive flow.
+
+PICTURE
+
+As we begin to construct our definition of vector surface integrals, let's start with the special case where our surface is the plane $x = 0$ in $\mathbb{R}^3$, and our vector field is constant, $\vec{F} = \vec{c}$.
+
+If $\vec{c}$ is parallel to the plane $x=0$, there is no flow through the surface, so it makes sense that the vector line integral should be zero.
+
+PICTURE
+
+We can also see that the flow through the surface will be largest when $\vec{c}$ is perpendicular to the plane.
+
+PICTURE
+
+So, the flow is zero when the vector field is parallel to the surface, and the flow is largest when the vector field is perpendicular to the surface. This indicates that we should be comparing the vector field $\vec{F}$ to a normal vector $\vec{n}$ to the surface, and considering the dot product $\vec{F}\cdot \vec{n}$.
+
+This brings us to the definition of vector surface integrals.
+
+\section*{Vector surface integrals}
+
+Let $\vec{X}:D\subset\mathbb{R}^2\rightarrow\mathbb{R}^3$ be a parametrization of a surface $S$ in $\mathbb{R}^3$, so that $\vec{X}_s\times\vec{X}_t$ is continuous and nonzero. Let $\vec{F}$ be a vector field defined on $S$. We would like to find the flow of $\vec{F}$ through the surface $S$, and we have seen that this can be done by integrating $\vec{F}\cdot \vec{n}$ over $S$, where $\vec{n} = \frac{\vec{X}_s\times\vec{X}_t}{\|\vec{X}_s\times\vec{X}_t\|}$ is the normal vector giving the orientation on $\vec{X}$. That is, we have the integral
+\[
+\iint_S\vec{F}\cdot \vec{n}\;dS.
+\]
+
+Evaluating a vector surface integral as a scalar surface integral isn't ideal; let's take a look at this integral to see if we can simplify things. By the definition of scalar surface integrals, we have
+\begin{align*}
+\iint_{\vec{X}}\vec{F}\cdot d\vec{S} &= \iint_S\vec{F}\cdot \vec{n}\;dS\\
+&= \iint_D (\vec{F}(\vec{X}(s,t))\cdot\vec{n}(s,t))\|\vec{X}_s\times\vec{X}_t\|\;dsdt\\
+&= \iint_D \left(\vec{F}(\vec{X}(s,t))\cdot\frac{\vec{X}_s\times\vec{X}_t}{\|\vec{X}_s\times\vec{X}_t\|}\right)\|\vec{X}_s\times\vec{X}_t\|\;dsdt\\
+&= \iint_D \vec{F}(\vec{X}(s,t))\cdot (\vec{X}_s\times\vec{X}_t)\;dsdt.
+\end{align*}
+
+We make this our definition of vector surface integrals.
+
+\begin{definition}
+Let $\vec{X}:D\subset\mathbb{R}^2\rightarrow\mathbb{R}^3$ be a parametrization of a surface $S$ in $\mathbb{R}^3$, so that $\vec{X}_s\times\vec{X}_t$ is continuous and nonzero. Let $\vec{F}$ be a vector field defined on $S$. The \emph{vector line integral} of $\vec{F}$ over $\vec{X}$ is
+\[
+\iint_{\vec{X}}\vec{F}\cdot d\vec{S} = \iint_D \vec{F}(\vec{X}(s,t))\cdot (\vec{X}_s\times\vec{X}_t)\;dsdt.
+\]
+\end{definition}
+
+\section*{Computing vector surface integrals}
+
+We'll now look at an example of computing vector surface integrals.
+
+\begin{example}
+Let's evaluate the vector surface integral of $\vec{F}(x,y,z) = (yz, xz, xy)$ over the paraboloid parametrized by
+\[
+\vec{X}(s,t) = (s, t, s^2+t^2),
+\]
+for $0\leq s,t\leq 1$.
+
+PICTURE
+
+First, let's find the partial derivatives $\vec{X}_s$ and $\vec{X}_t$.
+\begin{align*}
+\vec{X}_s(s,t) &= (1,0,2s)\\
+\vec{X}_t(s,t) &= (0,1,2t)
+\end{align*}
+Next, we find the cross product $\vec{X}_s\times\vec{X}_t$.
+\begin{align*}
+\vec{X}_s(s,t)\times\vec{X}_t(s,t) &= \text{det}\begin{pmatrix}
+\vec{i} & \vec{j} & \vec{k}\\
+1 & 0 & 2s\\
+0 & 1 & 2t
+\end{pmatrix}\\
+&= (-2s)\vec{i} + (-2t)\vec{j} + \vec{k}\\
+&= (-2s,-2t,1)
+\end{align*}
+Now, we evaluate the vector surface integral,
+\begin{align*}
+\iint_{\vec{X}}\vec{F}\cdot d\vec{S} &= \iint_D \vec{F}(\vec{X}(s,t))\cdot (\vec{X}_s\times\vec{X}_t)\;dsdt\\
+&= \int_0^1\int_0^1\vec{F}(s, t, s^2+t^2)\cdot (-2s,-2t,1)\;dsdt\\
+&= \int_0^1\int_0^1 (s^2t+t^3, s^3+st^2, st)\cdot (-2s,-2t,1)\;dsdt\\
+&= \int_0^1\int_0^1 -2s^3t-2st^3 + -2s^3t -2st^3 + st\;dsdt\\
+&= \int_0^1\int_0^1 -4s^3t-4st^3 + st\;dsdt\\
+&= \int_0^1 \left(-s^4t - 2s^2t^3 + \frac{1}{2}s^2 t\right)_{s = 0}^{s = 1}\;dt\\
+&= \int_0^1 -t - 2t^3 + \frac{1}{2}t\;dt\\
+&= \int_0^1 -\frac{1}{2}t - 2t^3\;dt\\
+&= \left(-\frac{1}{4}t^2 - \frac{1}{2}t^4\right)_{t=0}^{t=1}\\
+&= -\frac{1}{4} - \frac{1}{2}\\
+&= \frac{3}{4}.
+\end{align*}
+\end{example}
+
+\section*{Choice of orientation}
+
+When we were figuring out how to define an orientation on a surface, we noticed that the orientation will affect the sign of a vector surface integral. That is, if the normal vector is in approximately the same direction as the vector field, the flow will be positive. However, the opposite orientation should give negative flow.
+
+PICTURE
+
+Let's see how this manifests itself in our definition of a vector surface integral, 
+\[
+\iint_{\vec{X}}\vec{F}\cdot d\vec{S} = \iint_D \vec{F}(\vec{X}(s,t))\cdot (\vec{X}_s\times\vec{X}_t)\;dsdt.
+\]
+
+This uses the orientation $\vec{n}(s,t) = \frac{\vec{X}_s\times\vec{X}_t}{\|\vec{X}_s\times\vec{X}_t\|}$. Every orientable closed surface has exactly two orientations, and the other orientation is given by $-\vec{n}(s,t) = -\frac{\vec{X}_s\times\vec{X}_t}{\|\vec{X}_s\times\vec{X}_t\|}$. When we replace the normal vector $\vec{X}_s\times\vec{X}_t$ in the vector surface integral with the opposite normal vector, $-(\vec{X}_s\times\vec{X}_t)$, we get
+\[
+\iint_D \vec{F}(\vec{X}(s,t))\cdot -(\vec{X}_s\times\vec{X}_t)\;dsdt = -\iint_D \vec{F}(\vec{X}(s,t))\cdot (\vec{X}_s\times\vec{X}_t)\;dsdt,
+\]
+as we'd hope.
+
+Thus, if we're attempting to evaluate a vector surface integral, and we find that our parametrization gives the wrong orientation, we can fix this by changing the sign of the normal vector. We'll see how this works in an example.
+
+\begin{example}
+Consider the vector field $\vec{F}(x,y,z) = (x,y,z)$, and let $S$ be the unit sphere, oriented with the outward pointing normal vector.
+
+PICTURE
+
+The sphere can be parametrized as
+\[
+\vec{X}(s,t) = (\cos s \sin t, \sin s \sin t, \cos t)
+\]
+for $0\leq s\leq 2\pi$ and $0\leq t\leq \pi$.
+
+We start by computing the partial derivatives, $\vec{X}_s$ and $\vec{X}_t$.
+\begin{align*}
+\vec{X}_s(s,t) &= (-\sin s \sin t, \cos s \sin t, 0)\\
+\vec{X}_t(s,t) &= (\cos s\cos t, \sin s\cos t, -\sin t)
+\end{align*}
+Now, we compute the cross product
+\begin{align*}
+\vec{X}_s(s,t)\times \vec{X}_t(s,t) &= \text{det}\begin{pmatrix}
+\vec{i} & \vec{j} & \vec{k}\\
+-\sin s \sin t & \cos s \sin t & 0\\
+\cos s\cos t & \sin s\cos t & -\sin t
+\end{pmatrix}\\
+&= (-\cos s\sin^2 t)\vec{i} + (-\sin s\sin^2 t)\vec{j} + (-\sin^2 s\sin t\cos t - \cos^2 s\sin t\cos t)\vec{k}\\
+&=  (-\cos s\sin^2 t,-\sin s\sin^2 t,-\sin t\cos t).
+\end{align*}
+Notice that this is the inward pointing normal vector, but the surface was oriented with the outward pointing normal vector. We can salvage our computation by using the normal vector $-\vec{X}_s\times \vec{X}_t$ instead. 
+
+Now, we can evaluate the vector surface integral.
+\begin{align*}
+\iint_{\vec{X}}\vec{F}\cdot d\vec{S} &= \iint_D \vec{F}(\vec{X}(s,t))\cdot -(\vec{X}_s\times\vec{X}_t)\;dsdt\\
+&= \int_0^\pi\int_0^{2\pi} \vec{F}(\cos s \sin t, \sin s \sin t, \cos t)\cdot (\cos s\sin^2 t,\sin s\sin^2 t,\sin t\cos t)\;dsdt\\
+&= \int_0^\pi\int_0^{2\pi} (\cos s \sin t, \sin s \sin t, \cos t)\cdot (\cos s\sin^2 t,\sin s\sin^2 t,\sin t\cos t)\;dsdt\\
+&= \int_0^\pi\int_0^{2\pi} \cos^2 s\sin^3 t + \sin^2 s\sin^3 t + \sin t\cos^2 t\;dsdt\\
+&= \int_0^\pi\int_0^{2\pi} \sin^3 t + \sin t\cos^2 t\;dsdt\\
+&= \int_0^\pi\int_0^{2\pi} \sin t\;dsdt\\
+&= \int_0^\pi 2\pi\sin t\;dt\\
+&= (-2\pi\cos t)_{t=0}^{t = \pi}\\
+&= 2\pi +2\pi\\
+&= 4\pi.
+\end{align*}
+\end{example}
+
+
+\end{document}

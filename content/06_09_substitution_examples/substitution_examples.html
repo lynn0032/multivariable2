@@ -1,0 +1,129 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Additional Examples of Change of Variables</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="substitution_examples.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Solidify the ability to change variables in double integrals."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >Recall how we can perform a change of variables in a double integral.
+</p>
+<div class="theorem-like problem-environment proposition" id="problem1"><a 
+ id="x1-17r1"></a>Let <script type="math/tex">\vec {T}:\mathbb {R}^2\rightarrow \mathbb {R}^2</script> be a <script type="math/tex">C^1</script> function which maps a region <script type="math/tex">D^*\subset \mathbb {R}^2</script> onto a region <script type="math/tex">D\subset \mathbb {R}^2</script>, so that <script type="math/tex">\vec {T}</script> restricted to <script type="math/tex">D^*</script> is
+one-to-one. Suppose <script type="math/tex">f:D\rightarrow \mathbb {R}</script> is an integrable function. Then <script type="math/tex; mode=display"> \iint _D f(x,y)\;dxdy = \iint _{D^*} f(\vec {T}(u,v))\left |\text {det}(D\vec {T}(u,v))\right |\;dudv. </script>
+</div>
+<!--l. 21--><p class="noindent" >In this section, we’ll look at some further examples of changes of variables, and
+encounter some common challenges along the way.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Examples</h3>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-1001r2"></a>We will evaluate the double integral <script type="math/tex">\iint _D 2xy\;dA</script>, where <script type="math/tex">D</script> is the region below, bounded by the
+lines <script type="math/tex">y=2x</script>, <script type="math/tex">y=-2x</script>, and <script type="math/tex">y=x+3</script>.
+<!--l. 28--><p class="noindent" >PICTURE
+</p><!--l. 30--><p class="noindent" >If we take <script type="math/tex">u=y-2x</script> and <script type="math/tex">v=y+2x</script>, then the lines <script type="math/tex">y=2x</script> and <script type="math/tex">y=-2x</script> correspond to <script type="math/tex">u=0</script> and <script type="math/tex">v=0</script>, respectively. Solving for <script type="math/tex">x</script>
+and <script type="math/tex">y</script> in terms of <script type="math/tex">u</script> and <script type="math/tex">v</script>, we have </p><script type="math/tex; mode=display"> \begin{align*} 
+x &= \frac{u+v}{2},\\
+y &= \frac{v-u}{4},
+\end{align*}</script>
+<!--l. 35--><p class="noindent" >and the change of coordinates is given by <script type="math/tex">\vec {T}(u,v) = \left (\frac {u+v}{2}, \frac {v-u}{4}\right )</script>. From this, we compute
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\left|\text{det}(D\vec{T}(u,v))\right| &= \left|\text{det}\begin{pmatrix}1/2 & 1/2\\ -1/4 & 1/4\end{pmatrix}\right|\\
+&= \frac{1}{4}.
+                                                                  
+
+                                                                  
+\end{align*}</script>
+<!--l. 41--><p class="noindent" >The line <script type="math/tex">y=x+3</script> corresponds to <script type="math/tex">\frac {v-u}{4} = \frac {u+v}{2} + 3</script>, which can be simplified to <script type="math/tex">v= -3u-12</script>.
+</p><!--l. 43--><p class="noindent" >PICTURE
+</p><!--l. 45--><p class="noindent" >So, in <script type="math/tex">uv</script>-coordinates, our region can be described by the inequalities </p><script type="math/tex; mode=display"> \begin{align*} 
+-4\leq u\leq 0,\\
+-3u-12\leq v\leq 0.
+\end{align*}</script>
+<!--l. 51--><p class="noindent" >Putting  all  of  this  together,  we  have
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_D 2xy\;dA &= \int_{-4}^0\int_{-3u-12}^0 2\frac{u+v}{2}\frac{v-u}{4}\cdot\frac{1}{4}dvdu\\
+&= \int_{-4}^0\int_{-3u-12}^0 \frac{v^2-u^2}{16}dvdu\\
+&= \int_{-4}^0\left(\frac{v^3}{48}-\frac{u^2v}{16}\right)|_{v = -3u-12}^{v=0}\;du\\
+&= \int_{-4}^0\left(\frac{(-3u-12)^3}{48}-\frac{u^2(-3u-12)}{16}\right)\;du\\
+&= \int_{-4}^0\left(\frac{-3u^3}{8} - 6u^2 - 27u - 36\right)\;du\\
+&= \left(\frac{-3u^4}{32} - 2u^3 - \frac{27u^2}{2} - 36u\right)|_{u=-4}^{u=0}\\
+&= 32
+\end{align*}</script>
+<!--l. 63--><p class="noindent" ></div>
+</p><!--l. 65--><p class="noindent" >Sometimes, we may be able to carry out a change of variables without explicitly
+finding the transformation <script type="math/tex">\vec {T}</script>. We see this in the next example.
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-1002r3"></a>We will evaluate the double integral <script type="math/tex">\iint _D (x+y)dA</script>, where <script type="math/tex">D</script> is the region below.
+<!--l. 70--><p class="noindent" >PICTURE
+</p><!--l. 72--><p class="noindent" >Since <script type="math/tex">D</script> can be described with the inequalities </p><script type="math/tex; mode=display"> \begin{align*} 
+1\leq xy\leq 4,\\
+0\leq y-x \leq 2,
+\end{align*}</script>
+<!--l. 77--><p class="noindent" >we will change to the coordinates <script type="math/tex">u=xy</script> and <script type="math/tex">v=y-x</script>. Now, in order to find the area expansion
+factor <script type="math/tex">\left |\text {det}(D\vec {T}(u,v))\right |</script>, we would typically find the transformation <script type="math/tex">\vec {T}</script>. That is, we would find <script type="math/tex">x</script> and <script type="math/tex">y</script> in
+terms of <script type="math/tex">u</script> and <script type="math/tex">v</script>. However, in this situation, it’s difficult to solve for <script type="math/tex">x</script> and <script type="math/tex">y</script>. Fortunately,
+we will be able to work around this issue.
+</p><!--l. 79--><p class="noindent" >Although we don’t have the transformation <script type="math/tex">\vec {T}(u,v)</script>, we do have the inverse transformation, <script type="math/tex">\vec {T}^{-1}</script>,
+which is defined by <script type="math/tex; mode=display"> \vec {T}^{-1}(x,y) = (xy, y-x). </script> Since <script type="math/tex">\vec {T}</script> and <script type="math/tex">\vec {T}^{-1}</script> are inverse transformations, their derivative
+matrices <script type="math/tex">D\vec {T}</script> and <script type="math/tex">D\vec {T}^{-1}</script> are also inverses. In order make use of this fact, we compute
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\left|\text{det}(D\vec{T}^{-1}(x,y))\right| &= \left|\text{det}\begin{pmatrix}y & x\\
+                                                                  
+
+                                                                  
+-1 & 1\end{pmatrix}\right|\\
+&= \left|y+x\right|.
+\end{align*}</script>
+<!--l. 89--><p class="noindent" >Then, from properties of derivatives and inverse matrices, we have <script type="math/tex; mode=display"> \left |\text {det}(D\vec {T}(u,v))\right | = \frac {1}{\left |y+x\right |}, </script> If we write <script type="math/tex">x</script> and <script type="math/tex">y</script>
+in terms of <script type="math/tex">u</script> and <script type="math/tex">v</script>.
+</p><!--l. 95--><p class="noindent" >At first glance, this doesn’t seem particularly useful, since we’d still need to
+find <script type="math/tex">x</script> and <script type="math/tex">y</script> in terms of <script type="math/tex">u</script> and <script type="math/tex">v</script>! However, let’s take a look at our integrand,
+which is <script type="math/tex">x+y</script>. Since <script type="math/tex">x+y\geq 0</script> on our region, we have <script type="math/tex">\frac {1}{\left |y+x\right |} = \frac {1}{y+x}</script>. So, when we make our change of
+coordinates, the integrand will cancel with the area expansion factor. This gives us
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_D (x+y)dA &= \int_1^4\int_0^2 1\;dvdu\\
+&= 6.
+\end{align*}</script>
+<!--l. 100--><p class="noindent" ></div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

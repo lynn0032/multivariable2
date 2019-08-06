@@ -1,0 +1,140 @@
+\documentclass{ximera}  
+
+\title{Stokes Theorem}  
+\author{Melissa Lynn}
+\outcome{Understand the statement of Stokes theorem, and its geometric interpretation.}
+
+\begin{document}  
+\begin{abstract}  
+\end{abstract}  
+\maketitle  
+
+Recall that Green's theorem gave us a relationship between a double integral over a region in $\mathbb{R}^2$, and the line integral of a vector field over the boundary.
+
+\begin{theorem}
+\textbf{Green's Theorem.} Let $D$ be a closed an bounded region in $\mathbb{R}^2$, whose boundary $\partial D$ consists of finitely many simple and piecewise smooth curves. Let $\vec{F}$ be a $\mathcal{C}^1$ vector field defined on $D$, written in components as $\vec{F}(x,y) = (M(x,y), N(x,y))$. Then
+\[
+\oint_{\partial D}\vec{F}\cdot d\vec{s} = \iint_D \left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\;dA.
+\]
+\end{theorem}
+
+For Green's theorem to hold, it was important that the boundary be oriented so that if you traverse the boundary in the given direction, the region is on your left.
+
+PICTURE
+
+Green's theorem applies to regions in $\mathbb{R}^2$, and we will now work towards generalizing Green's theorem to surfaces in $\mathbb{R}^3$. This result will be called Stokes theorem, and our first step towards Stokes theorem will be determining how to  orient the boundary of a surface in $\mathbb{R}^3$.
+
+\section*{Orientation}
+
+Consider a surface in $\mathbb{R}^3$.
+
+PICTURE
+
+We could try to orient this surface according to the same rule as Green's theorem, but that would be ambiguous. Whether or not the surface is on the left of the boundary would depend on the direction from which you viewed the surface.
+
+PICTURE
+
+In order to orient the boundary consistently with the surface, we need to be given an orientation for the surface. We say that normal vector points in the direction of the positive side of the surface. Then, we will determine how to orient the boundary by looking at the surface from the positive side.
+
+PICTURE
+
+As with Green's theorem, if you traverse the boundary with your head pointing in the positive direction, the surface will be on your left. Here are a couple of other ways to think about this:
+\begin{itemize}
+\item The boundary is oriented counterclockwise if you view it from the positive side.
+\item The boundary follows the right hand rule with the orientation of the surface: if you point your right thumb in the direction of the normal vector, your fingers curl in the direction of the orientation on the boundary.
+\end{itemize}
+
+PICTURES/VIDEO
+
+\begin{example}
+For each of the surfaces below, determine the direction in which the boundary should be oriented.
+
+EXAMPLES/PICTURES
+\end{example}
+
+\section*{Stokes theorem}
+
+We're now ready to state Stokes theorem.
+
+\begin{theorem}
+\textbf{Stokes Theorem.} Suppose $S$ is a smooth and bounded surface in $\mathbb{R}^3$, and that $\partial S$ consists of finitely many closed, simple, and piecewise $\mathcal{C}^1$ curves. Suppose further that $S$ and $\partial S$ are consistently oriented. Let $\vec{F}$ be a $\mathcal{C}^1$ vector field, which is defined on $S$. Then
+\[
+\oint_{\partial S}\vec{F}\cdot d\vec{s} = \iint_S \nabla\times \vec{F}\cdot d\vec{S},
+\]
+where $\nabla\times \vec{F}$ denotes the curl of $\vec{F}$.
+\end{theorem}
+
+The proof of Stokes theorem follows the same idea as Green's theorem: when we integrate the curl of $\vec{F}$ over $S$, we are ``adding up'' all of the microscopic rotation of the vector field over the surface, and this is equal to the global circulation over the boundary, since circulation on the interior of the surface will cancel. Because of the similarity to the proof of Green's theorem, we will omit a complete proof of Stokes theorem.
+
+Instead, let's look at some examples of Stokes theorem in action.
+
+\begin{example}
+Consider the upper unit hemisphere pictured below, oriented with the upward pointing normal vector.
+
+PICTURE
+
+Consider the vector field $\vec{F}(x,y,z) = (y^2, -xy, z^2)$. We'll verify Stokes theorem for this surface and vector field, by computing both the line integral over the boundary and the double integral over the surface.
+
+Let's begin with the line integral over the boundary. In order to be consistent with the orientation of the surface, we orient the boundary as indicated below.
+
+PICTURE
+
+Then, we can parametrize the boundary as
+\[
+\vec{x}(t) = (\cos t, \sin t, 0),
+\]
+for $0\leq t\leq 2\pi$. Integrating $\vec{F}$ over this path, we have
+\begin{align*}
+\oint_{\partial S} \vec{F}\cdot d\vec{s} &= \int_0^{2\pi} \vec{F}(\vec{x}(t))\cdot \vec{x}'(t)\;dt\\
+&= \int_0^{2\pi}\vec{F}(\cos t, \sin t, 0)\cdot (-\sin t, \cos t, 0)\;dt\\
+&= \int_0^{2\pi}(\sin^2 t, -\cos t\sin t, 0)\cdot (-\sin t, \cos t, 0)\;dt\\
+&= \int_0^{2\pi} -\sin^3 t -\cos^2 t\sin t\;dt\\
+&= \int_0^{2\pi} -\sin t\;dt\\
+&= (\cos t)_{t = 0}^{2\pi}\\
+&= 0.
+\end{align*}
+For comparison, we integrate $\nabla\times\vec{F}$ over the surface $S$. We can parametrize $S$ as
+\[
+\vec{X}(s,t) = (\cos s\sin t, \sin s\sin t, \cos t),
+\]
+for $0\leq s\leq 2\pi$ and $0\leq t\leq \pi/2$. We'll now compute the normal vector, $\vec{X}_s\times \vec{X}_t$.
+\begin{align*}
+\vec{X}_s(s,t)\times\vec{X}_t(s,t) &= (-\sin s\sin t, \cos s\sin t, 0)\times (\cos s\cos t, \sin s\cos t, -\sin t)\\
+&= (-\cos s\sin^2 t,-\sin s\sin^2 t,-\sin t\cos t)
+\end{align*}
+Notice that this is the downward pointing normal vector, so does not represent the correct orientation. So, we will work with $(\cos s\sin^2 t,\sin s\sin^2 t,\sin t\cos t)$ as the normal vector instead.
+
+Now, let's integrate $\nabla\times\vec{F}$ over $S$.
+\begin{align*}
+\iint_S \nabla\times\vec{F}\cdot d\vec{S} &= \iint_S (0,0,-3y)\cdot d\vec{S}\\
+&= \int_0^{\pi/2}\int_0^{2\pi} (0,0,-3\sin s\sin t)\cdot (-\cos s\sin^2 t,-\sin s\sin^2 t,-\sin t\cos t)\;dsdt\\
+&= \int_0^{\pi/2}\int_0^{2\pi} -3\sin s\sin^2 t \cos t\;dsdt\\
+&= \int_0^{\pi/2}(3\cos s\sin^2t\cos t)_{s = 0}^{s = 2\pi}\;dt\\
+&= \int_0^{\pi/2} 0\;dt\\
+&= 0.
+\end{align*}
+
+So, we have verified that Stokes theorem holds in this case.
+\end{example}
+
+\begin{example}
+Consider the surface $S$ pictured below, and the vector field $\vec{F}(x,y,z) = (x,y,z)$.
+
+PICTURE
+
+Suppose we wish to integrate $\vec{F}$ over the boundary of $S$. We could try to parametrize $S$ and evaluate this line integral directly, but this would be very difficult! Instead, let's try applying Stokes theorem. In this case, Stokes theorem is particularly effective, since
+\begin{align*}
+\nabla \times\vec{F}(x,y,z) &= \nabla\times (x,y,z)\\
+&= (0,0,0).
+\end{align*}
+So, we have
+\begin{align*}
+\oint_{\partial S}\vec{F}\cdot d\vec{s} &= \iint_S\nabla\times\vec{F}\cdot d\vec{S}\\
+&= \iint_S (0,0,0)\cdot d\vec{S}\\
+&= 0.
+\end{align*}
+\end{example}
+
+
+
+\end{document}

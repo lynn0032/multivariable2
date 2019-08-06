@@ -1,0 +1,169 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>Green’s Theorem</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="greens_theorem.tex" /> 
+<meta name="author" content="Melissa Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the statement of Green's theorem, and its geometric justification."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 12--><p class="noindent" >Suppose you are standing at the only door of an initially empty cafeteria, and you
+keep a count of how many people enter and exit the cafeteria: for each person who
+enters, you add one, and for each person who leaves, you subtract one. By keeping
+track of everyone who’s entering and exiting, you know the exact count of everyone
+who’s in the cafeteria at any given time.
+</p><!--l. 14--><p class="noindent" >Green’s theorem follows the same idea, but for a curve enclosing a region in
+<script type="math/tex">\mathbb {R}^2</script>.
+</p><!--l. 16--><p class="noindent" >PICTURE
+</p><!--l. 18--><p class="noindent" >If we look at how a vector field acts on the boundary curve, this tells us something
+about what’s happening inside of the enclosed region. We’ll state this more precisely
+soon, but we first need to discuss how to orient the boundary.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Orientation</h3>
+<!--l. 22--><p class="noindent" >Suppose we have a closed, bounded region <script type="math/tex">D</script> whose boundary consists of finitely many
+piecewise smooth curves. We write <script type="math/tex">\partial D</script> for the boundary of <script type="math/tex">D</script>.
+</p><!--l. 24--><p class="noindent" >PICTURE
+</p><!--l. 26--><p class="noindent" >We say that the boundary <script type="math/tex">\partial D</script> is <em>positively oriented</em> if, as you traverse the curve in the
+indicated direction, the region is on your left.
+</p>
+<div class="theorem-like problem-environment example" id="problem1"><a 
+ id="x1-1001r1"></a>Each of the boundary curves below is positively oriented.
+<!--l. 31--><p class="noindent" >PICTURE
+                                                                  
+
+                                                                  
+</p><!--l. 33--><p class="noindent" >Each of the boundary curves below is <em>not</em> positively oriented.
+</p><!--l. 35--><p class="noindent" >PICTURE
+</div>
+<a 
+ id="Q1-1-3"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Green’s Theorem</h3>
+<!--l. 40--><p class="noindent" >Now, we are ready to state Green’s Theorem.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem2"><a 
+ id="x1-2001r2"></a><strong>Green’s Theorem.</strong> Let <script type="math/tex">D</script> be a closed an bounded region in <script type="math/tex">\mathbb {R}^2</script>, whose boundary <script type="math/tex">\partial D</script>
+consists of finitely many simple and piecewise smooth curves. Let <script type="math/tex">\vec {F}</script> be a <script type="math/tex">\mathcal {C}^1</script> vector field
+defined on <script type="math/tex">D</script>, written in components as <script type="math/tex">\vec {F}(x,y) = (M(x,y), N(x,y))</script>. Then <script type="math/tex; mode=display"> \oint _{\partial D}\vec {F}\cdot d\vec {s} = \iint _D \left (\frac {\partial N}{\partial x} - \frac {\partial M}{\partial y}\right )\;dA. </script>
+</div>
+<!--l. 49--><p class="noindent" >Let’s look at an example where we apply Green’s theorem to simplify computation of
+a vector line integral.
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-2002r3"></a>Let <script type="math/tex">C</script> be the curve below, enclosing the unit square <script type="math/tex">[0,1]\times [0,1]</script>, and consider vector field
+<script type="math/tex">\vec {F}(x,y)= (xy + e^x, x+y^4)</script>.
+<!--l. 54--><p class="noindent" >PICTURE
+</p><!--l. 56--><p class="noindent" >Suppose we wish to evaluate the vector line integral <script type="math/tex">\int _C\vec {F}\cdot d\vec {s}</script>. We could do this
+directly, but this would involve evaluating four separate line integrals, one
+on each side of the square. Instead, we’ll use Green’s Theorem to compute
+a double integral over the square <script type="math/tex">D = [0,1]\times [0,1]</script>, since <script type="math/tex">\partial D = C</script>. By Green’s theorem, we have
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int_C\vec{F}\cdot d\vec{s} &= \iint_D \left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right)\;dA\\
+&= \iint_D\left(1 - x\right)\;dA\\
+&= \int_0^1\int_0^1(1-x)\;dxdy\\
+&= \int_0^1 \left(x - \frac{x^2}{2}\right)|_{x=0}^{x=1}\;dy\\
+&= \int_0^1\left(1 - \frac{1}{2}\right)\;dy\\
+&= \frac{1}{2}.
+\end{align*}</script>
+<!--l. 66--><p class="noindent" >In this example, we saw how Green’s theorem can be used to more easily compute
+some vector line integrals.
+</div>
+<a 
+ id="Q1-1-5"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-3000"></a>Proof of Green’s theorem</h3>
+<!--l. 71--><p class="noindent" >Now that we’ve seen how Green’s theorem can useful, let’s sketch a proof of it. This
+                                                                  
+
+                                                                  
+proof will require some approximations, and a perfectly rigorous proof would require
+showing that these approximations can be made arbitrarily accurate. However, in the
+interest of brevity, we will gloss over those details.
+</p><!--l. 73--><p class="noindent" >
+</p>
+<div class="proof">
+<!--l. 74--><p class="noindent" ><span class="head">
+</p><dl class="trivlist"><dt class="trivlist">
+Proof   </dt><dd 
+class="trivlist"></span>In  order  to  prove  Green’s  theorem,  we  will  make  use  of  two
+approximation. We begin by deriving these approximations.
+<!--l. 76--><p class="noindent" >Consider the path <script type="math/tex">\vec {x}(t) = (t,y_0)</script> for <script type="math/tex">t\in [x_0, x_0+\Delta x]</script>. Then <script type="math/tex">\vec {x}'(t) = (1,0)</script>, and if we write <script type="math/tex">F(x,y) = (M(x,y), N(x,y))</script>, we have
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int_{\vec{x}}\vec{F}\cdot d\vec{s} &= \int_{x_0}^{x_0+\Delta x} (M(t,y_0), N(t,y_0))\cdot (1,0)\;dt\\
+&= \int_x^{x_0+\Delta x} M(t,y_0)\;dt
+\end{align*}</script>
+<!--l. 81--><p class="noindent" >For small <script type="math/tex">\Delta x</script>, the area represented by this definite integral can be approximated with a
+single rectangle.
+</p><!--l. 83--><p class="noindent" >PICTURE
+</p><!--l. 85--><p class="noindent" >That is, the integral can be approximated by <script type="math/tex">M(x_0,y_0)\Delta x</script>. Thus, we have <script type="math/tex; mode=display"> \int _{\vec {x}}\vec {F}\cdot d\vec {s}\approx M(x_0,y_0)\Delta x. </script>
+</p><!--l. 90--><p class="noindent" >Using a similar argument for the path <script type="math/tex">\vec {y}(t) = (x_0, t)</script> for <script type="math/tex">t\in [y_0, y_0+\Delta y]</script>, we have the approximation
+<script type="math/tex; mode=display"> \int _{\vec {y}}\vec {F}\cdot d\vec {s} = N(x_0, y_0)\Delta y. </script>
+</p><!--l. 95--><p class="noindent" >Now that we have the approximations that we need, we’ll look at the special case of
+Green’s theorem on a tiny rectangle. We’ll then use this special case to prove the
+general case for Green’s theorem.
+</p><!--l. 97--><p class="noindent" >Consider the rectangle <script type="math/tex">R</script> below, with corners <script type="math/tex">(x_0, y_0)</script>, <script type="math/tex">(x_0+\Delta x, y_0)</script>, <script type="math/tex">(x_0+\Delta x, y_0+\Delta y)</script>, and <script type="math/tex">(x_0, y_0+\Delta y)</script>. We label the sides of this
+rectangle <script type="math/tex">C_1</script>, <script type="math/tex">C_2</script>, <script type="math/tex">C_3</script>, and <script type="math/tex">C_4</script>.
+</p><!--l. 99--><p class="noindent" >PICTURE
+</p><!--l. 101--><p class="noindent" >If <script type="math/tex">C</script> is the entire boundary of the rectangle, we have <script type="math/tex; mode=display"> \oint _C\vec {F}\cdot d\vec {s} = \int _{C_1}\vec {F}\cdot d\vec {s} + \int _{C_2}\vec {F}\cdot d\vec {s} + \int _{C_3}\vec {F}\cdot d\vec {s} + \int _{C_4}\vec {F}\cdot d\vec {s}. </script> Using the approximations from
+above, we then have <script type="math/tex; mode=display"> \oint _C\vec {F}\cdot d\vec {s} \approx M(x_0,y_0)\Delta x + N(x_0+\Delta x, y_0)\Delta y - M(x_0, y_0+\Delta y)\Delta x - N(x_0,y_0)\Delta y </script> For small <script type="math/tex">\Delta x</script>. Regrouping this approximation, we have <script type="math/tex; mode=display"> \oint _C\vec {F}\cdot d\vec {s} \approx \left (\frac {N(x_0+\Delta x, y_0) - N(x_0, y_0)}{\Delta x} - \frac {M(x_0, y_0+\Delta y) - M(x_0,y_0)}{\Delta y}\right )\Delta x\Delta y. </script> As <script type="math/tex">\Delta x</script> and <script type="math/tex">\Delta y</script>
+go to <script type="math/tex">0</script>, this approaches <script type="math/tex">\left (N_x(x_0,y_0)-M_y(x_0,y_0)\right ) \Delta x\Delta y</script>.
+</p><!--l. 115--><p class="noindent" >Furthermore, for a small rectangle, the volume <script type="math/tex">\iint _R N_x-My\;dA</script> can be approximated with a single
+box, with volume <script type="math/tex">\left (N_x(x_0,y_0)-M_y(x_0,y_0)\right ) \Delta x\Delta y</script>. Putting all of this together, we have the approximation
+<script type="math/tex; mode=display"> \oint _C\vec {F}\cdot d\vec {s}\approx \iint _R N_x-My\;dA. </script>
+</p><!--l. 120--><p class="noindent" >Now, suppose we have a closed region <script type="math/tex">D</script>, and fill <script type="math/tex">D</script> with tiny rectangles that share
+common edges.
+</p><!--l. 122--><p class="noindent" >PICTURE
+</p><!--l. 124--><p class="noindent" >Notice that if all of the rectangles are positively oriented, the adjoining edges have opposite
+directions. This means that vector line integrals over these edges will cancel. This gives us
+                                                                  
+
+                                                                  
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\oint_{\partial D}\vec{F}\cdot d\vec{s}&\approx \oint_{\partial B_1}\vec{F}\cdot d\vec{s} + \cdots + \oint_{\partial B_n}\vec{F}\cdot d\vec{s}\\
+&\approx \iint_{B_1}N_x-M_y\;dA + \cdots + \iint_{B_n}N_x-M_y\;dA\\
+&\approx \iint_D N_x - M_y\;dA.
+\end{align*}</script>
+<!--l. 130--><p class="noindent" >As the boxes get smaller, this approximation improves, giving us the conclusion of
+Green’s Theorem.                                                                                <script type="math/tex">\blacksquare </script></p></dd></dl>
+</div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+
