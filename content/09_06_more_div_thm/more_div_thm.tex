@@ -1,7 +1,5 @@
 \documentclass{ximera}  
 
-\usepackage{ esint }
-
 \title{More on the Divergence Theorem}  
 \author{Melissa Lynn}
 \outcome{Understand how the divergence theorem can be used.}
@@ -16,7 +14,7 @@ We've seen that the divergence theorem related a flux integral over a the bounda
 \begin{theorem}
 \textbf{Divergence Theorem.} Let $W$ be a solid region in $\mathbb{R}^3$, with boundary $\partial W$. Suppose that $\partial W$ consists of finitely many orientable, piecewise smooth, and closed surfaces, which are positively oriented with respect to $W$. Let $\vec{F}$ be a $\mathcal{C}^1$ vector field defined on $W$. Then
 \[
-\oiint_{\partial W} \vec{F}\cdot d\vec{S} = \iiint_W \nabla\cdot \vec{F}\;dV.
+\iint_{\partial W} \vec{F}\cdot d\vec{S} = \iiint_W \nabla\cdot \vec{F}\;dV.
 \]
 \end{theorem}
 
@@ -37,7 +35,7 @@ If we tried to compute this flux integral directly, it would be very difficult t
 
 Notice that $S$ is the boundary of the solid unit sphere $D$, and $S$ is positively oriented relative to $D$. So, we can apply the divergence theorem, and we have
 \[
-\oiint_{S} \vec{F}\cdot d\vec{S} = \iiint_D \nabla\cdot \vec{F}\;dV.
+\iint_{S} \vec{F}\cdot d\vec{S} = \iiint_D \nabla\cdot \vec{F}\;dV.
 \]
 Before we begin to compute the triple integral, we need to find the divergence of $\vec{F}$.
 \begin{align*}
@@ -49,19 +47,19 @@ Since the divergence of $\vec{F}$ is zero, we have
 \[
  \iiint_D \nabla\cdot \vec{F}\;dV = 0,
 \]
-so $\oiint_{S} \vec{F}\cdot d\vec{S}  = 0$ as well. 
+so $\iint_{S} \vec{F}\cdot d\vec{S}  = 0$ as well. 
 \end{example}
 
 \begin{example}
 Consider the solid unit cube $D = [0,1]\times [0,1]\times [0,1]$ in $\mathbb{R}^3$,  and let $\vec{F}(x,y,z) = \left(x^2 + \sin(yz), e^{z}, xz\right)$. Consider the flux integral
 \[
-\oiint_{\partial D} \vec{F}\cdot d\vec{S},
+\iint_{\partial D} \vec{F}\cdot d\vec{S},
 \]
 where $\partial D$ is oriented with the outward pointing normal vector.
 
 Evaluating this flux integral directly would require splitting it up into six integrals, one for each face of the unit cube. Instead, it will be much easier to use the divergence theorem. From this, we have
 \[
-\oiint_{\partial D} \vec{F}\cdot d\vec{S} = \iiint_D \nabla\cdot \vec{F}\;dV.
+\iint_{\partial D} \vec{F}\cdot d\vec{S} = \iiint_D \nabla\cdot \vec{F}\;dV.
 \]
 We'll start by finding the divergence of $\vec{F}$.
 \begin{align*}
@@ -80,7 +78,7 @@ Now, we'll integrate the divergence over the solid unit cube.
 \end{align*}
 So, using the divergence theorem, we have
 \[
-\oiint_{\partial D} \vec{F}\cdot d\vec{S} = \frac{3}{2}.
+\iint_{\partial D} \vec{F}\cdot d\vec{S} = \frac{3}{2}.
 \]
 \end{example}
 
@@ -101,7 +99,7 @@ PICTURE
 
 Now, we can apply the divergence theorem over the region $W$ and it's boundary. This gives us
 \begin{align*}
-\oiint_{-S\cup D} \vec{F}\cdot d\vec{S} = \iiint_W \nabla\cdot \vec{F}\;dV.
+\iint_{-S\cup D} \vec{F}\cdot d\vec{S} = \iiint_W \nabla\cdot \vec{F}\;dV.
 \end{align*}
 Let's start with the right side of this equation, and we'll compute the divergence of $\vec{F}$.
 \begin{align*}
@@ -117,9 +115,9 @@ When we integrate this over $W$, we have
 \end{align*}
 since $W$ is half of the solid unit sphere.
 
-Next, let's look at the left side of the equation, $\oiint_{-S\cup D} \vec{F}\cdot d\vec{S}$. Splitting this up into two surface integrals, we have
+Next, let's look at the left side of the equation, $\iint_{-S\cup D} \vec{F}\cdot d\vec{S}$. Splitting this up into two surface integrals, we have
 \[
-\oiint_{-S\cup D} \vec{F}\cdot d\vec{S} = -\iint_S\vec{F}\cdot d\vec{S} + \iint_D\vec{F}\cdot d\vec{S}.
+\iint_{-S\cup D} \vec{F}\cdot d\vec{S} = -\iint_S\vec{F}\cdot d\vec{S} + \iint_D\vec{F}\cdot d\vec{S}.
 \]
 We'll now compute the surface integral $\iint_D\vec{F}\cdot d\vec{S}$ directly. At first glance, this might not seem like much of an improvement over our original problem. However, here we are integrating over the unit disc in the $xy$-plane, where $z=0$. When $z=0$, the vector field $\vec{F}$ becomes much simpler. This will make the computation reasonable.
 
@@ -160,7 +158,7 @@ We'll now use the divergence theorem for an extra check on our geometric underst
 
 Let $B_r$ be a small, solid ball of radius $r$ centered at a point $\vec{a}$ in $\mathbb{R}^3$. Let $\vec{F}$ be a $\mathcal{C}^1$ vector field defined near $\vec{a}$. By the divergence theorem, we have
 \[
-\oiint_{\partial B_r} \vec{F}\cdot d\vec{S} = \iiint_{B_r} \nabla\cdot \vec{F}\;dV
+\iint_{\partial B_r} \vec{F}\cdot d\vec{S} = \iiint_{B_r} \nabla\cdot \vec{F}\;dV
 \]
 Since $B_r$ is a small ball, we can approximate the triple integral $\iiint_{B_r} \nabla\cdot \vec{F}\;dV$ with
 \[
@@ -168,15 +166,15 @@ Since $B_r$ is a small ball, we can approximate the triple integral $\iiint_{B_r
 \]
 So, we have
 \[
-\oiint_{\partial B_r} \vec{F}\cdot d\vec{S} \approx \pi r \left(\nabla\cdot \vec{F}\right),
+\iint_{\partial B_r} \vec{F}\cdot d\vec{S} \approx \pi r \left(\nabla\cdot \vec{F}\right),
 \]
 which gives us 
 \[
-\nabla\cdot \vec{F} \approx \frac{1}{\pi r}\oiint_{\partial B_r} \vec{F}\cdot d\vec{S}.
+\nabla\cdot \vec{F} \approx \frac{1}{\pi r}\iint_{\partial B_r} \vec{F}\cdot d\vec{S}.
 \]
 When we take $r\rightarrow 0$, this approximation because more and more accurate, so we have
 \[
-\nabla\cdot \vec{F} = \lim_{r\rightarrow 0} \frac{1}{\pi r}\oiint_{\partial B_r} \vec{F}\cdot d\vec{S}.
+\nabla\cdot \vec{F} = \lim_{r\rightarrow 0} \frac{1}{\pi r}\iint_{\partial B_r} \vec{F}\cdot d\vec{S}.
 \]
 The flux integral on the right measures the flow across the small sphere centered at $\vec{a}$, so by taking the limit, we are measuring how much the vector field is flowing ``into'' or ``out of'' the point $\vec{a}$, giving us local contraction or expansion.
 

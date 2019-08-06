@@ -1,0 +1,140 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>The  Divergence  Theorem</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="divergence_thm.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the statement and geometric idea of the divergence theorem."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 14--><p class="noindent" >Given a region <script type="math/tex">D</script> and vector field <script type="math/tex">\vec {F}</script> in <script type="math/tex">\mathbb {R}^2</script>, we found that the double integral of the curl of <script type="math/tex">\vec {F}</script>
+over <script type="math/tex">D</script> is equal to the vector line integral of <script type="math/tex">\vec {F}</script> over the boundary of <script type="math/tex">D</script>. This result is called
+Green’s theorem.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem1"><a 
+ id="x1-17r1"></a><strong>Green’s Theorem.</strong> Let <script type="math/tex">D</script> be a closed an bounded region in <script type="math/tex">\mathbb {R}^2</script>, whose boundary <script type="math/tex">\partial D</script>
+consists of finitely many simple and piecewise smooth curves. Let <script type="math/tex">\vec {F}</script> be a <script type="math/tex">\mathcal {C}^1</script> vector field
+defined on <script type="math/tex">D</script>, written in components as <script type="math/tex">\vec {F}(x,y) = (M(x,y), N(x,y))</script>. Then <script type="math/tex; mode=display"> \oint _{\partial D}\vec {F}\cdot d\vec {s} = \iint _D \left (\frac {\partial N}{\partial x} - \frac {\partial M}{\partial y}\right )\;dA. </script>
+</div>
+<!--l. 23--><p class="noindent" >In order to apply Green’s theorem, we require that the boundary be positively
+oriented with respect to the region. This means that, as we traverse the boundary in
+the indicated direction, the region will be on our right.
+</p><!--l. 25--><p class="noindent" >PICTURE
+</p><!--l. 27--><p class="noindent" >We’ll now work towards a version of Green’s theorem for solid regions in <script type="math/tex">\mathbb {R}^3</script>, and this
+result will be called the divergence theorem.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Requirements on the boundary</h3>
+<!--l. 31--><p class="noindent" >As with Green’s theorem, we need to be careful about orientation.
+</p><!--l. 33--><p class="noindent" >Suppose we have a solid region <script type="math/tex">W</script> in <script type="math/tex">\mathbb {R}^3</script>, whose boundary <script type="math/tex">\partial W</script> is an orientable surface. We say
+that <script type="math/tex">\partial W</script> is <em>positively oriented</em> if its normal vector points away from the region
+<script type="math/tex">W</script>.
+</p><!--l. 35--><p class="noindent" >For regions which don’t have any holes, this always means the outward pointing
+                                                                  
+
+                                                                  
+normal vector.
+</p><!--l. 37--><p class="noindent" >PICTURE
+</p><!--l. 39--><p class="noindent" >For a region with a hole, this can be a bit trickier, but we still choose the normal
+vector(s) to point away from the region <script type="math/tex">W</script>.
+</p><!--l. 41--><p class="noindent" >PICTURE
+</p>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-1001r2"></a>Which of the boundaries below are positively oriented?
+<div class="multiple-choice" id="problem3"><span class="choice  "   id="choice1">Positively oriented</span> <span class="choice  "   id="choice2">Not positively oriented</span> </div>
+</div>
+<!--l. 52--><p class="noindent" >In addition to being positively oriented, we will require that the boundary surfaces be
+closed. A surface is <em>closed</em> if it has no boundary curves.
+</p><!--l. 54--><p class="noindent" >For example, the following surfaces are closed.
+</p><!--l. 56--><p class="noindent" >PICTURE
+</p><!--l. 58--><p class="noindent" >The following surfaces are not closed, since they have boundary curves.
+</p><!--l. 60--><p class="noindent" >PICTURE
+</p>
+<div class="theorem-like problem-environment example" id="problem4"><a 
+ id="x1-1002r3"></a>Which are of surfaces below are closed?
+<div class="multiple-choice" id="problem5"><span class="choice  "   id="choice3">Closed</span> <span class="choice  "   id="choice4">Not closed</span> </div>
+</div>
+<!--l. 71--><p class="noindent" >Notice that saying a surface is a closed surface means something different from
+saying that a surface is closed as a set. This is an example of very confusing
+terminology in math, where a single word is used to mean two different
+things!
+<a 
+ id="Q1-1-3"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Divergence theorem</h3>
+<!--l. 75--><p class="noindent" >Now, suppose we have a vector field <script type="math/tex">\vec {F}</script> defined on a solid region <script type="math/tex">W</script> with a positively
+oriented boundary. Now, consider the triple integral <script type="math/tex; mode=display"> \iiint _W \nabla \cdot \vec {F}\;dV. </script> Let’s figure out what this
+integral represents. Recall that the divergence of a vector field measures the local
+expansion or contraction of a vector field. When we integrate the divergence over a
+region, we obtain the total net expansion or contraction of the vector field over that
+region.
+</p><!--l. 81--><p class="noindent" >PICTURE
+</p><!--l. 83--><p class="noindent" >However, if we look at points on the interior of the region, any expansion or
+contraction stays within the region. So, in the integral, it would be canceled by
+expansion or contraction at nearby points. This means that everything in the interior
+                                                                  
+
+                                                                  
+of the region cancels, and we are left with considering what happens on the boundary.
+The total net expansion or contraction on the boundary is equivalent to
+the flow of the vector field across the boundary, which leads us to a flux
+integral.
+</p><!--l. 85--><p class="noindent" >PICTURE
+</p><!--l. 87--><p class="noindent" >This is the geometric intuition behind the divergence theorem, which we now
+state.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem6"><a 
+ id="x1-2001r4"></a><strong>Divergence Theorem.</strong> Let <script type="math/tex">W</script> be a solid region in <script type="math/tex">\mathbb {R}^3</script>, with boundary <script type="math/tex">\partial W</script>. Suppose that <script type="math/tex">\partial W</script>
+consists of finitely many orientable, piecewise smooth, and closed surfaces, which are
+positively oriented with respect to <script type="math/tex">W</script>. Let <script type="math/tex">\vec {F}</script> be a <script type="math/tex">\mathcal {C}^1</script> vector field defined on <script type="math/tex">W</script>. Then
+<script type="math/tex; mode=display"> \oiint _{\partial W} \vec {F}\cdot d\vec {S} = \iiint _W \nabla \cdot \vec {F}\;dV. </script>
+</div>
+<!--l. 96--><p class="noindent" >We’ll now prove the divergence theorem.
+</p><!--l. 98--><p class="noindent" >
+</p>
+<div class="proof">
+<!--l. 99--><p class="noindent" ><span class="head">
+</p><dl class="trivlist"><dt class="trivlist">
+Proof   </dt><dd 
+class="trivlist"></span>INSERT PROOF HERE.                                                          <script type="math/tex">\blacksquare </script></dd></dl>
+</div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

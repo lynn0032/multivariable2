@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  6 AUG 2019 14:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  6 AUG 2019 14:45
 entering extended mode
- \write18 enabled.
- file:line:error style messages enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
-**\PassOptionsToClass{tikzexport}{ximera}\PassOptionsToClass{xake}{ximera}\Pass
-OptionsToClass{xake}{xourse}\nonstopmode\input{divergence_thm.tex}
+**divergence_thm.tex
 (./divergence_thm.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/Users/Melissa/Library/texmf/tex/latex/ximeraLatex/ximera.cls
 Document Class: ximera 2018/10/28 v1.00 Simultaneously write print and online i
 nteractive materials
@@ -789,13 +789,6 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzl
-ibraryexternal.code.tex
-(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzexternalshared.code.tex))
-\openout3 = `divergence_thm.auxlock'.
-
-
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
@@ -936,23 +929,24 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \openout8 = `divergence_thm.jax'.
 
 )
-No file divergence_thm.aux.
+(./divergence_thm.aux)
 \openout1 = `divergence_thm.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count191
@@ -971,62 +965,48 @@ LaTeX Font Info:    ... okay on input line 9.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 9.
+ on input line 7.
 
 \c@lstlisting=\count197
 \AtBeginShipoutBox=\box48
-Package hyperref Info: Link coloring ON on input line 9.
-LaTeX Info: Redefining \ref on input line 9.
-LaTeX Info: Redefining \pageref on input line 9.
-LaTeX Info: Redefining \nameref on input line 9.
+Package hyperref Info: Link coloring ON on input line 7.
+LaTeX Info: Redefining \ref on input line 7.
+LaTeX Info: Redefining \pageref on input line 7.
+LaTeX Info: Redefining \nameref on input line 7.
+(./divergence_thm.out) (./divergence_thm.out)
 \@outlinefile=\write9
 \openout9 = `divergence_thm.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 12.
+LaTeX Font Info:    Try loading font information for U+msa on input line 10.
+
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 12.
+LaTeX Font Info:    Try loading font information for U+msb on input line 10.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2]
-./divergence_thm.tex:92: Undefined control sequence.
-l.92 \oiint
-           _{\partial W} \vec{F}\cdot d\vec{S} = \iiint_W \nabla\cdot \vec{F...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+] [2] [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
 
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
- (./divergence_thm.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
-
-
-Package rerunfilecheck Warning: File `divergence_thm.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `divergence_thm.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  33F2D1245D23A2BC37F604EFC38B19FF;58.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
+(./divergence_thm.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 100.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
+Package rerunfilecheck Info: File `divergence_thm.out' has not changed.
+(rerunfilecheck)             Checksum: 33F2D1245D23A2BC37F604EFC38B19FF;58.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
  ) 
 Here is how much of TeX's memory you used:
- 29667 strings out of 492649
- 699236 string characters out of 6129622
- 869011 words of memory out of 5000000
- 32996 multiletter control sequences out of 15000+600000
+ 29361 strings out of 492649
+ 688655 string characters out of 6129622
+ 858566 words of memory out of 5000000
+ 32692 multiletter control sequences out of 15000+600000
  12351 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,8n,98p,867b,650s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,8n,98p,742b,650s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
@@ -1041,10 +1021,10 @@ texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/te
 xlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on divergence_thm.pdf (3 pages, 149214 bytes).
+Output written on divergence_thm.pdf (3 pages, 149303 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 100 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  15 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

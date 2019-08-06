@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  6 AUG 2019 14:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  6 AUG 2019 14:45
 entering extended mode
- \write18 enabled.
- file:line:error style messages enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
-**\PassOptionsToClass{tikzexport}{ximera}\PassOptionsToClass{xake}{ximera}\Pass
-OptionsToClass{xake}{xourse}\nonstopmode\input{more_div_thm.tex}
+**more_div_thm.tex
 (./more_div_thm.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/Users/Melissa/Library/texmf/tex/latex/ximeraLatex/ximera.cls
 Document Class: ximera 2018/10/28 v1.00 Simultaneously write print and online i
 nteractive materials
@@ -789,13 +789,6 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzl
-ibraryexternal.code.tex
-(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzexternalshared.code.tex))
-\openout3 = `more_div_thm.auxlock'.
-
-
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
@@ -936,23 +929,24 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \openout8 = `more_div_thm.jax'.
 
 )
-No file more_div_thm.aux.
+(./more_div_thm.aux)
 \openout1 = `more_div_thm.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count191
@@ -971,192 +965,68 @@ LaTeX Font Info:    ... okay on input line 9.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 9.
+ on input line 7.
 
 \c@lstlisting=\count197
 \AtBeginShipoutBox=\box48
-Package hyperref Info: Link coloring ON on input line 9.
-LaTeX Info: Redefining \ref on input line 9.
-LaTeX Info: Redefining \pageref on input line 9.
-LaTeX Info: Redefining \nameref on input line 9.
+Package hyperref Info: Link coloring ON on input line 7.
+LaTeX Info: Redefining \ref on input line 7.
+LaTeX Info: Redefining \pageref on input line 7.
+LaTeX Info: Redefining \nameref on input line 7.
+(./more_div_thm.out) (./more_div_thm.out)
 \@outlinefile=\write9
 \openout9 = `more_div_thm.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 12.
+LaTeX Font Info:    Try loading font information for U+msa on input line 10.
+
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 12.
+LaTeX Font Info:    Try loading font information for U+msb on input line 10.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-./more_div_thm.tex:19: Undefined control sequence.
-l.19 \oiint
-           _{\partial W} \vec{F}\cdot d\vec{S} = \iiint_W \nabla\cdot \vec{F...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+) [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-./more_div_thm.tex:40: Undefined control sequence.
-l.40 \oiint
-           _{S} \vec{F}\cdot d\vec{S} = \iiint_D \nabla\cdot \vec{F}\;dV.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+] [2] [3] [4] [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 184.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 184.
 
-[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-]
-./more_div_thm.tex:52: Undefined control sequence.
-<recently read> \oiint 
-                       
-l.52 so $\oiint
-               _{S} \vec{F}\cdot d\vec{S}  = 0$ as well.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./more_div_thm.tex:58: Undefined control sequence.
-l.58 \oiint
-           _{\partial D} \vec{F}\cdot d\vec{S},
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./more_div_thm.tex:64: Undefined control sequence.
-l.64 \oiint
-           _{\partial D} \vec{F}\cdot d\vec{S} = \iiint_D \nabla\cdot \vec{F...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./more_div_thm.tex:83: Undefined control sequence.
-l.83 \oiint
-           _{\partial D} \vec{F}\cdot d\vec{S} = \frac{3}{2}.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[2]
-./more_div_thm.tex:105: Undefined control sequence.
-<argument>  \oiint 
-                   _{-S\cup D} \vec {F}\cdot d\vec {S} = \iiint _W \nabla \c...
-l.105 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./more_div_thm.tex:105: Undefined control sequence.
-<argument>  \oiint 
-                   _{-S\cup D} \vec {F}\cdot d\vec {S} = \iiint _W \nabla \c...
-l.105 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./more_div_thm.tex:120: Undefined control sequence.
-<recently read> \oiint 
-                       
-l.120 ...at the left side of the equation, $\oiint
-                                                  _{-S\cup D} \vec{F}\cdot d...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./more_div_thm.tex:122: Undefined control sequence.
-l.122 \oiint
-            _{-S\cup D} \vec{F}\cdot d\vec{S} = -\iint_S\vec{F}\cdot d\vec{S...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[3] [4]
-./more_div_thm.tex:163: Undefined control sequence.
-l.163 \oiint
-            _{\partial B_r} \vec{F}\cdot d\vec{S} = \iiint_{B_r} \nabla\cdot...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./more_div_thm.tex:171: Undefined control sequence.
-l.171 \oiint
-            _{\partial B_r} \vec{F}\cdot d\vec{S} \approx \pi r \left(\nabla...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./more_div_thm.tex:175: Undefined control sequence.
-l.175 ...dot \vec{F} \approx \frac{1}{\pi r}\oiint
-                                                  _{\partial B_r} \vec{F}\cd...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./more_div_thm.tex:179: Undefined control sequence.
-l.179 ...im_{r\rightarrow 0} \frac{1}{\pi r}\oiint
-                                                  _{\partial B_r} \vec{F}\cd...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 186.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
- (./more_div_thm.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
-
-
-Package rerunfilecheck Warning: File `more_div_thm.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `more_div_thm.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  BFC263EBE953357AD3BE2BCC7B86B82E;66.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
+(./more_div_thm.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 184.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 184.
+Package rerunfilecheck Info: File `more_div_thm.out' has not changed.
+(rerunfilecheck)             Checksum: BFC263EBE953357AD3BE2BCC7B86B82E;66.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 184.
  ) 
 Here is how much of TeX's memory you used:
- 29664 strings out of 492649
- 699166 string characters out of 6129622
- 872989 words of memory out of 5000000
- 32995 multiletter control sequences out of 15000+600000
+ 29358 strings out of 492649
+ 688577 string characters out of 6129622
+ 862562 words of memory out of 5000000
+ 32691 multiletter control sequences out of 15000+600000
  12345 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,16n,98p,865b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,16n,98p,740b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texliv
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on more_div_thm.pdf (5 pages, 178274 bytes).
+PDF statistics:
+ 112 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+

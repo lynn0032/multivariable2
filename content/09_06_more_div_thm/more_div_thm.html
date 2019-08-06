@@ -1,0 +1,202 @@
+<!doctype html> 
+<html lang="en"> 
+<head> <title>More on the Divergence Theorem</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="more_div_thm.tex" /> 
+<meta name="author" content="Melissa
+Lynn" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand how the divergence theorem can be used."/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\ungraded }[0]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                 </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+</div>   <div class="maketitle"></div>
+<!--l. 14--><p class="noindent" >We’ve seen that the divergence theorem related a flux integral over a the
+boundary of a region in <script type="math/tex">\mathbb {R}^3</script> with a triple integral of the divergence over the
+region.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem1"><a 
+ id="x1-17r1"></a><strong>Divergence Theorem.</strong> Let <script type="math/tex">W</script> be a solid region in <script type="math/tex">\mathbb {R}^3</script>, with boundary <script type="math/tex">\partial W</script>. Suppose that <script type="math/tex">\partial W</script>
+consists of finitely many orientable, piecewise smooth, and closed surfaces, which are
+positively oriented with respect to <script type="math/tex">W</script>. Let <script type="math/tex">\vec {F}</script> be a <script type="math/tex">\mathcal {C}^1</script> vector field defined on <script type="math/tex">W</script>. Then
+<script type="math/tex; mode=display"> \oiint _{\partial W} \vec {F}\cdot d\vec {S} = \iiint _W \nabla \cdot \vec {F}\;dV. </script>
+</div>
+<!--l. 23--><p class="noindent" >We’ll now look at some examples of how the divergence theorem can be applied to
+simplify computation.
+<a 
+ id="Q1-1-1"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Divergence theorem examples</h3>
+<div class="theorem-like problem-environment example" id="problem2"><a 
+ id="x1-1001r2"></a>Let <script type="math/tex">S</script> be the unit sphere in <script type="math/tex">\mathbb {R}^3</script>, oriented with the outward pointing normal vector.
+<!--l. 30--><p class="noindent" >PICTURE
+</p><!--l. 32--><p class="noindent" >Let <script type="math/tex">\vec {F}(x,y,z) = \left (\cos (ye^z), x^{100}z^{1000}, e^{\sin (xy^2)}\right )</script>, and we’ll consider the flux integral <script type="math/tex; mode=display"> \iint _S\vec {F}\cdot d\vec {S}. </script> If we tried to compute this flux integral
+directly, it would be very difficult to work with the vector field <script type="math/tex">\vec {F}</script>. Instead, we’ll apply
+the divergence theorem.
+</p><!--l. 38--><p class="noindent" >Notice that <script type="math/tex">S</script> is the boundary of the solid unit sphere <script type="math/tex">D</script>, and <script type="math/tex">S</script> is positively oriented
+relative to <script type="math/tex">D</script>. So, we can apply the divergence theorem, and we have <script type="math/tex; mode=display"> \oiint _{S} \vec {F}\cdot d\vec {S} = \iiint _D \nabla \cdot \vec {F}\;dV. </script> Before we
+begin to compute the triple integral, we need to find the divergence of <script type="math/tex">\vec {F}</script>.
+                                                                  
+
+                                                                  
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\nabla\cdot \vec{F}(x,y,z) &= \nabla \cdot \left(\cos(ye^z), x^{100}z^{1000}, e^{\sin(xy^2)}\right)\\
+&= \frac{\partial}{\partial x}\cos(ye^z) + \frac{\partial}{\partial y}x^{100}z^{1000} +  \frac{\partial}{\partial z}e^{\sin(xy^2)}\\
+&= 0
+\end{align*}</script>
+<!--l. 48--><p class="noindent" >Since the divergence of <script type="math/tex">\vec {F}</script> is zero, we have <script type="math/tex; mode=display"> \iiint _D \nabla \cdot \vec {F}\;dV = 0, </script> so <script type="math/tex">\oiint _{S} \vec {F}\cdot d\vec {S} = 0</script> as well.
+</div>
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a 
+ id="x1-1002r3"></a>Consider the solid unit cube <script type="math/tex">D = [0,1]\times [0,1]\times [0,1]</script> in <script type="math/tex">\mathbb {R}^3</script>, and let <script type="math/tex">\vec {F}(x,y,z) = \left (x^2 + \sin (yz), e^{z}, xz\right )</script>. Consider the flux integral <script type="math/tex; mode=display"> \oiint _{\partial D} \vec {F}\cdot d\vec {S}, </script> where <script type="math/tex">\partial D</script> is
+oriented with the outward pointing normal vector.
+<!--l. 62--><p class="noindent" >Evaluating this flux integral directly would require splitting it up into six integrals,
+one for each face of the unit cube. Instead, it will be much easier to use the
+divergence theorem. From this, we have <script type="math/tex; mode=display"> \oiint _{\partial D} \vec {F}\cdot d\vec {S} = \iiint _D \nabla \cdot \vec {F}\;dV. </script> We’ll start by finding the divergence of <script type="math/tex">\vec {F}</script>.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\nabla\cdot \vec{F}(x,y,z) &= \nabla\cdot \left(x^2 + \sin(yz), e^{z}, xz\right)\\
+&=\frac{\partial}{\partial x}(x^2 + \sin(yz)) + \frac{\partial}{\partial y}(e^{z}) + \frac{\partial}{\partial z}(xz)\\
+&= 2x+0+x\\
+&= 3x
+\end{align*}</script>
+<!--l. 73--><p class="noindent" >Now, we’ll integrate the divergence over the solid unit cube.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+ \iiint_D \nabla\cdot \vec{F}\;dV &= \int_0^1\int_0^1\int_0^1 3x\;dzdydx\\
+ &= \int_0^1\int_0^13x\;dydx\\
+ &= \int_0^1 3x\;dx\\
+ &= \left(\frac{3}{2}x^2\right)_{x=0}^{x=1}\\
+ &= \frac{3}{2}
+\end{align*}</script>
+<!--l. 81--><p class="noindent" >So, using the divergence theorem, we have <script type="math/tex; mode=display"> \oiint _{\partial D} \vec {F}\cdot d\vec {S} = \frac {3}{2}. </script>
+</div>
+</p>
+<div class="theorem-like problem-environment example" id="problem4"><a 
+ id="x1-1003r4"></a>Let <script type="math/tex">S</script> be the upper half of the unit sphere, oriented with the downward pointing
+normal vector.
+<!--l. 90--><p class="noindent" >PICTURE
+</p><!--l. 92--><p class="noindent" >Let <script type="math/tex">\vec {F} = \left (y\sin (z), xz^10, z+1\right )</script>, and consider the surface integral <script type="math/tex">\iint _S\vec {F}\cdot d\vec {S}</script>. This isn’t the simplest vector field, so
+we would like to find an alternative approach. However, <script type="math/tex">S</script> is not a closed
+surface, so it isn’t immediately obvious how we could apply the divergence
+theorem.
+                                                                  
+
+                                                                  
+</p><!--l. 94--><p class="noindent" >If we let <script type="math/tex">W</script> be the solid upper hemisphere, then the boundary of <script type="math/tex">W</script> is <script type="math/tex">S\cup D</script>, where <script type="math/tex">D</script> is the unit
+disc in the <script type="math/tex">xy</script>-plane.
+</p><!--l. 96--><p class="noindent" >PICTURE
+</p><!--l. 98--><p class="noindent" >We do still have an issue here - <script type="math/tex">S</script> was oriented with the <em>downward</em> pointing normal
+vector, so is not positively oriented relative to <script type="math/tex">W</script>. Fortunately, we can account for
+this by writing <script type="math/tex">\partial W = -S\cup D</script>, where <script type="math/tex">D</script> is oriented with the downward pointing normal
+vector.
+</p><!--l. 100--><p class="noindent" >PICTURE
+</p><!--l. 102--><p class="noindent" >Now, we can apply the divergence theorem over the region <script type="math/tex">W</script> and it’s boundary. This gives us
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\oiint_{-S\cup D} \vec{F}\cdot d\vec{S} = \iiint_W \nabla\cdot \vec{F}\;dV.
+\end{align*}</script>
+<!--l. 106--><p class="noindent" >Let’s start with the right side of this equation, and we’ll compute the divergence of <script type="math/tex">\vec {F}</script>.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\nabla\cdot \vec{F} &= \nabla \cdot \left(y\sin(z), xz^10, z+1\right)\\
+&= \frac{\partial}{\partial x}y\sin(z) + \frac{\partial}{\partial y}xz^10 \frac{\partial}{\partial z} (z+1)\\
+&= 0+0+1\\
+&= 1
+\end{align*}</script>
+<!--l. 113--><p class="noindent" >When we integrate this over <script type="math/tex">W</script>, we have </p><script type="math/tex; mode=display"> \begin{align*} 
+\iiint_W 1\;dV &= (\text{volume of }W)\\
+&= \frac{2}{3}\pi,
+\end{align*}</script>
+<!--l. 118--><p class="noindent" >since <script type="math/tex">W</script> is half of the solid unit sphere.
+</p><!--l. 120--><p class="noindent" >Next, let’s look at the left side of the equation, <script type="math/tex">\oiint _{-S\cup D} \vec {F}\cdot d\vec {S}</script>. Splitting this up into two surface
+integrals, we have <script type="math/tex; mode=display"> \oiint _{-S\cup D} \vec {F}\cdot d\vec {S} = -\iint _S\vec {F}\cdot d\vec {S} + \iint _D\vec {F}\cdot d\vec {S}. </script> We’ll now compute the surface integral <script type="math/tex">\iint _D\vec {F}\cdot d\vec {S}</script> directly. At first glance,
+this might not seem like much of an improvement over our original problem.
+However, here we are integrating over the unit disc in the <script type="math/tex">xy</script>-plane, where <script type="math/tex">z=0</script>. When <script type="math/tex">z=0</script>,
+the vector field <script type="math/tex">\vec {F}</script> becomes much simpler. This will make the computation
+reasonable.
+</p><!--l. 126--><p class="noindent" >We can parametrize <script type="math/tex">D</script> as <script type="math/tex">\vec {X}(s,t) = (s\cos t, s\sin t, 0)</script> for <script type="math/tex">0\leq s\leq 1</script> and <script type="math/tex">0\leq t\leq 2\pi </script>. To compute the surface integral, we compute the normal vector,
+<script type="math/tex">X_s\times X_t</script>. </p><script type="math/tex; mode=display"> \begin{align*} 
+X_s(s,t) \times X_t(s,t) &= (\cos t, \sin t, 0)\times (-s\sin t, s\cos t, 0)\\
+&= \text{det}\begin{pmatrix}
+\vec{i} & \vec{j} & \vec{k}\\
+\cos t & \sin t & 0\\
+-s\sin t & s\cos t & 0
+\end{pmatrix}\\
+                                                                  
+
+                                                                  
+&= (s\cos^2 t + s\sin^2 t)\vec{k}
+&= (0,0,s)
+\end{align*}</script>
+<!--l. 137--><p class="noindent" >This is the upward pointing normal vector, so we need to
+adjust with a sign change. We now compute the surface integral.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_D \vec{F}\cdot d\vec{S} &= \int_0^1\int_0^{2\pi}\vec{F}(s\cos t, s\sin t, 0)\cdot (0,0,-s)\;dtds\\
+&= \int_0^1\int_0^{2\pi} (0,0,1)\cdot (0,0,-s)\;dtds\\
+&= \int_0^1\int_0^{2\pi} -s\;dtds\\
+&= \int_0^1 -2\pi s\;ds\\
+&= \left(-\pi s^2\right)_{s=0}^{s=1}\\
+&= -\pi
+\end{align*}</script>
+<!--l. 146--><p class="noindent" >Now we have enough information to find <script type="math/tex">\iint _S\vec {F}\cdot d\vec {S}</script>. Putting all of this together, we have
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\iint_S\vec{F}\cdot d\vec{S} &= \iint_D\vec{F}\cdot d\vec{S} - \iiint_W \nabla\cdot \vec{F}\;dV\\
+ &= -\pi -\frac{2}{3}\pi\\
+ &= -\frac{5}{3}\pi,
+\end{align*}</script>
+<!--l. 152--><p class="noindent" >Completing our computation.
+</p><!--l. 154--><p class="noindent" >In this example, we were able to evaluate a surface integral, by creating a closed
+surface to which we could apply the divergence theorem.
+</div>
+<a 
+ id="Q1-1-3"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Geometric interpretation of divergence</h3>
+<!--l. 159--><p class="noindent" >We’ll now use the divergence theorem for an extra check on our geometric
+understanding of divergence, as local expansion or contraction of a vector
+field.
+</p><!--l. 161--><p class="noindent" >Let <script type="math/tex">B_r</script> be a small, solid ball of radius <script type="math/tex">r</script> centered at a point <script type="math/tex">\vec {a}</script> in <script type="math/tex">\mathbb {R}^3</script>. Let <script type="math/tex">\vec {F}</script> be a <script type="math/tex">\mathcal {C}^1</script> vector field
+defined near <script type="math/tex">\vec {a}</script>. By the divergence theorem, we have <script type="math/tex; mode=display"> \oiint _{\partial B_r} \vec {F}\cdot d\vec {S} = \iiint _{B_r} \nabla \cdot \vec {F}\;dV </script> Since <script type="math/tex">B_r</script> is a small ball, we can
+approximate the triple integral <script type="math/tex">\iiint _{B_r} \nabla \cdot \vec {F}\;dV</script> with <script type="math/tex; mode=display"> (\text {volume of }B_r)\left (\nabla \cdot \vec {F}\right ) = \pi r \left (\nabla \cdot \vec {F}\right ) . </script> So, we have <script type="math/tex; mode=display"> \oiint _{\partial B_r} \vec {F}\cdot d\vec {S} \approx \pi r \left (\nabla \cdot \vec {F}\right ), </script> which gives us <script type="math/tex; mode=display"> \nabla \cdot \vec {F} \approx \frac {1}{\pi r}\oiint _{\partial B_r} \vec {F}\cdot d\vec {S}. </script> When we
+take <script type="math/tex">r\rightarrow 0</script>, this approximation because more and more accurate, so we have <script type="math/tex; mode=display"> \nabla \cdot \vec {F} = \lim _{r\rightarrow 0} \frac {1}{\pi r}\oiint _{\partial B_r} \vec {F}\cdot d\vec {S}. </script>
+The flux integral on the right measures the flow across the small sphere
+centered at <script type="math/tex">\vec {a}</script>, so by taking the limit, we are measuring how much the vector
+field is flowing “into” or “out of” the point <script type="math/tex">\vec {a}</script>, giving us local contraction or
+                                                                  
+
+                                                                  
+expansion.
+</p><!--l. 183--><p class="noindent" >Thus, we see that the divergence of a vector field measures the local expansion or
+contraction of a vector field.
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+
